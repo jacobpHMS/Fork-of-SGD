@@ -1,0 +1,91 @@
+[gd_scene load_steps=2 format=3 uid="uid://de6jp8r3kq2mf"]
+
+[ext_resource type="Script" path="res://scripts/TransferUI.gd" id="1_transfer"]
+
+[node name="TransferUI" type="PanelContainer"]
+visible = false
+offset_left = 400.0
+offset_top = 200.0
+offset_right = 900.0
+offset_bottom = 600.0
+script = ExtResource("1_transfer")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="TitleBar" type="HBoxContainer" parent="VBox"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="VBox/TitleBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.4, 0.7, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "Transfer Cargo"
+vertical_alignment = 1
+
+[node name="CloseBtn" type="Button" parent="VBox/TitleBar"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "X"
+
+[node name="HSeparator" type="HSeparator" parent="VBox"]
+layout_mode = 2
+
+[node name="Content" type="VBoxContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="HBox" type="HBoxContainer" parent="VBox/Content"]
+layout_mode = 2
+
+[node name="PlayerSide" type="VBoxContainer" parent="VBox/Content/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBox/Content/HBox/PlayerSide"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 1, 0.5, 1)
+text = "Your Ship"
+horizontal_alignment = 1
+
+[node name="CargoList" type="ItemList" parent="VBox/Content/HBox/PlayerSide"]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+
+[node name="TargetSide" type="VBoxContainer" parent="VBox/Content/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBox/Content/HBox/TargetSide"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.8, 1, 1)
+text = "Target Ship"
+horizontal_alignment = 1
+
+[node name="CargoList" type="ItemList" parent="VBox/Content/HBox/TargetSide"]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+
+[node name="TransferControls" type="HBoxContainer" parent="VBox/Content"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBox/Content/TransferControls"]
+layout_mode = 2
+text = "Amount:"
+
+[node name="AmountInput" type="LineEdit" parent="VBox/Content/TransferControls"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+placeholder_text = "10.0"
+
+[node name="ToTargetBtn" type="Button" parent="VBox/Content/TransferControls"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "To Target ->"
+
+[node name="ToPlayerBtn" type="Button" parent="VBox/Content/TransferControls"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "<- To Player"

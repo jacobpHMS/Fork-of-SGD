@@ -1,0 +1,156 @@
+{
+  "version": "1.0",
+  "type": "container",
+  "description": "Cargo container parameters for dropped loot and collectibles",
+  "parameter_count": 18,
+
+  "categories": {
+    "container_type": {
+      "name": "Container Type",
+      "parameters": {
+        "shape_type": {
+          "type": "enum",
+          "values": ["cubic", "spherical", "cylindrical", "crate"],
+          "default": "cubic",
+          "description": "Physical shape of container"
+        },
+        "container_material": {
+          "type": "enum",
+          "values": ["metal", "reinforced", "standard", "fragile"],
+          "default": "standard",
+          "description": "Container durability"
+        }
+      }
+    },
+    "visual": {
+      "name": "Visual Properties",
+      "parameters": {
+        "hue": {
+          "type": "float",
+          "min": 0.0,
+          "max": 360.0,
+          "default": 200.0,
+          "variance_min": -30.0,
+          "variance_max": 30.0,
+          "description": "Color hue in degrees"
+        },
+        "saturation": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.6,
+          "variance_min": -0.2,
+          "variance_max": 0.2,
+          "description": "Color saturation"
+        },
+        "metallic": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.7,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Metallic appearance"
+        },
+        "glow_intensity": {
+          "type": "float",
+          "min": 0.0,
+          "max": 2.0,
+          "default": 0.5,
+          "variance_min": -0.2,
+          "variance_max": 0.3,
+          "description": "Glow/emission intensity"
+        },
+        "panel_count": {
+          "type": "int",
+          "min": 0,
+          "max": 8,
+          "default": 3,
+          "variance_min": -1,
+          "variance_max": 2,
+          "description": "Number of paneling details"
+        },
+        "weathering": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.3,
+          "variance_min": -0.1,
+          "variance_max": 0.3,
+          "description": "Surface wear and damage"
+        }
+      }
+    },
+    "content_indicators": {
+      "name": "Content Indicators",
+      "parameters": {
+        "label_visible": {
+          "type": "bool",
+          "default": true,
+          "description": "Show content type label"
+        },
+        "hazard_stripes": {
+          "type": "bool",
+          "default": false,
+          "description": "Show hazard warning stripes"
+        },
+        "content_glow_color": {
+          "type": "enum",
+          "values": ["none", "blue", "green", "red", "yellow", "orange"],
+          "default": "blue",
+          "description": "Glow color indicating content type"
+        }
+      }
+    }
+  },
+
+  "presets": {
+    "mineral_standard": {
+      "name": "Standard Mineral Container",
+      "description": "Basic solid mineral storage",
+      "parameters": {
+        "shape_type": "cubic",
+        "hue": 30.0,
+        "metallic": 0.8,
+        "glow_intensity": 0.2,
+        "content_glow_color": "none"
+      }
+    },
+    "gas_pressurized": {
+      "name": "Pressurized Gas Canister",
+      "description": "High-pressure gas storage",
+      "parameters": {
+        "shape_type": "cylindrical",
+        "hue": 200.0,
+        "metallic": 0.9,
+        "glow_intensity": 0.8,
+        "hazard_stripes": true,
+        "content_glow_color": "blue"
+      }
+    },
+    "liquid_tank": {
+      "name": "Liquid Storage Tank",
+      "description": "Sealed liquid container",
+      "parameters": {
+        "shape_type": "cylindrical",
+        "hue": 190.0,
+        "metallic": 0.7,
+        "glow_intensity": 0.5,
+        "content_glow_color": "blue"
+      }
+    },
+    "ammo_crate": {
+      "name": "Ammunition Crate",
+      "description": "Reinforced ammo storage",
+      "parameters": {
+        "shape_type": "cubic",
+        "container_material": "reinforced",
+        "hue": 15.0,
+        "metallic": 0.6,
+        "glow_intensity": 0.3,
+        "hazard_stripes": true,
+        "content_glow_color": "red"
+      }
+    }
+  }
+}

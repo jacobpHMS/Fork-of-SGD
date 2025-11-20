@@ -1,0 +1,458 @@
+keys,en,de
+ui_yes,Yes,Ja
+ui_no,No,Nein
+ui_ok,OK,OK
+ui_cancel,Cancel,Abbrechen
+ui_confirm,Confirm,Bestätigen
+ui_close,Close,Schließen
+ui_save,Save,Speichern
+ui_load,Load,Laden
+ui_delete,Delete,Löschen
+ui_back,Back,Zurück
+ui_next,Next,Weiter
+ui_settings,Settings,Einstellungen
+ui_quit,Quit,Beenden
+skill_mining,Mining,Bergbau
+skill_refining,Refining,Raffinierung
+skill_combat,Combat,Kampf
+skill_trading,Trading,Handel
+skill_engineering,Engineering,Ingenieurwesen
+skill_navigation,Navigation,Navigation
+skill_autominer_ai,Autominer AI,Autominer KI
+skill_level,Level,Stufe
+skill_xp,XP,EP
+skill_datacard,Datacard,Datenkarte
+skill_datacard_owned,Datacard Owned,Datenkarte vorhanden
+skill_no_datacard,No Datacard,Keine Datenkarte
+skill_efficiency_penalty,Efficiency Penalty,Effizienzmalus
+skill_level_up,Level Up!,Stufenaufstieg!
+skill_xp_gained,XP Gained,EP erhalten
+skill_datacard_acquired,Datacard Acquired,Datenkarte erworben
+temp_temperature,Temperature,Temperatur
+temp_coolant,Coolant,Kühlmittel
+temp_status,Status,Status
+temp_normal,Normal,Normal
+temp_elevated,Elevated,Erhöht
+temp_warning,Warning,Warnung
+temp_critical,CRITICAL,KRITISCH
+temp_damage,Heat Damage,Hitzeschaden
+temp_coolant_low,Coolant Low,Kühlmittel niedrig
+temp_coolant_depleted,Coolant Depleted,Kühlmittel leer
+temp_emergency_shutdown,Emergency Shutdown,Notabschaltung
+temp_celsius,°C,°C
+temp_runtime,Runtime,Laufzeit
+temp_minutes,minutes,Minuten
+energy_power,Power,Energie
+energy_generation,Generation,Erzeugung
+energy_consumption,Consumption,Verbrauch
+energy_balance,Balance,Bilanz
+energy_buffer,Energy Buffer,Energiepuffer
+energy_status,Energy Status,Energiestatus
+energy_optimal,Optimal,Optimal
+energy_moderate,Moderate,Moderat
+energy_low,Low,Niedrig
+energy_critical,Critical,Kritisch
+energy_depleted,Depleted,Erschöpft
+energy_generator,Generator,Generator
+energy_consumer,Consumer,Verbraucher
+energy_solar,Solar,Solar
+energy_fusion,Fusion,Fusion
+energy_fission,Fission,Fission
+energy_antimatter,Antimatter,Antimaterie
+energy_active,Active,Aktiv
+energy_inactive,Inactive,Inaktiv
+energy_overload,Overload,Überlast
+energy_efficiency,Efficiency,Effizienz
+energy_fuel,Fuel,Treibstoff
+energy_grid_overload,Grid Overload,Netzüberlastung
+craft_crafting,Crafting,Herstellung
+craft_recipe,Recipe,Rezept
+craft_materials,Materials,Materialien
+craft_required,Required,Benötigt
+craft_available,Available,Verfügbar
+craft_queue,Queue,Warteschlange
+craft_progress,Progress,Fortschritt
+craft_time_remaining,Time Remaining,Verbleibende Zeit
+craft_energy_cost,Energy Cost,Energiekosten
+craft_skill_required,Skill Required,Benötigte Fertigkeit
+craft_quality_required,Quality Required,Benötigte Qualität
+craft_pure_materials,Pure Materials,Reine Materialien
+craft_station_required,Station Required,Station benötigt
+craft_start,Start Crafting,Herstellung starten
+craft_cancel,Cancel Crafting,Herstellung abbrechen
+craft_complete,Crafting Complete,Herstellung abgeschlossen
+craft_failed,Crafting Failed,Herstellung fehlgeschlagen
+craft_insufficient_materials,Insufficient Materials,Unzureichende Materialien
+craft_insufficient_skill,Insufficient Skill,Unzureichende Fertigkeit
+craft_tier_ore,Raw Ore,Roherz
+craft_tier_mineral,Mineral,Mineral
+craft_tier_pure_mineral,Pure Mineral,Reines Mineral
+craft_tier_component,Component,Komponente
+craft_tier_complex,Complex Component,Komplexe Komponente
+craft_tier_module,Module,Modul
+craft_tier_item,Item,Gegenstand
+station_station,Station,Station
+station_dock,Dock,Andocken
+station_undock,Undock,Abdocken
+station_docked,Docked,Angedockt
+station_docking_range,Docking Range,Andockreichweite
+station_docking_full,Docking Full,Andockplätze voll
+station_too_far,Too Far,Zu weit entfernt
+station_type_outpost,Mining Outpost,Bergbauaußenposten
+station_type_refinery,Refinery,Raffinerie
+station_type_factory,Factory,Fabrik
+station_type_advanced_factory,Advanced Factory,Fortgeschrittene Fabrik
+station_type_shipyard,Shipyard,Werft
+station_type_trading_post,Trading Post,Handelsposten
+station_type_research,Research Lab,Forschungslabor
+station_services,Services,Dienstleistungen
+station_refinery_service,Refinery Service,Raffinerie-Service
+station_factory_service,Factory Service,Fabrik-Service
+station_trading_service,Trading Service,Handels-Service
+station_storage,Storage,Lagerung
+station_cargo_transfer,Cargo Transfer,Frachttransfer
+station_upgrade,Upgrade Station,Station aufrüsten
+fleet_fleet,Fleet,Flotte
+fleet_ship,Ship,Schiff
+fleet_automation,Automation,Automatisierung
+fleet_manual,Manual,Manuell
+fleet_basic,Basic,Basis
+fleet_extended,Extended,Erweitert
+fleet_automatic,Automatic,Automatisch
+fleet_task,Task,Aufgabe
+fleet_idle,Idle,Untätig
+fleet_mining,Mining,Bergbau läuft
+fleet_returning,Returning to Base,Kehrt zur Basis zurück
+fleet_docking,Docking,Dockt an
+fleet_unloading,Unloading,Entlädt
+fleet_refining,Refining,Raffiniert
+fleet_repairing,Repairing,Repariert
+fleet_hull,Hull,Hülle
+fleet_cargo,Cargo,Fracht
+fleet_cargo_full,Cargo Full,Fracht voll
+fleet_needs_repair,Needs Repair,Benötigt Reparatur
+fleet_active,Active,Aktiv
+fleet_inactive,Inactive,Inaktiv
+fleet_home_station,Home Station,Heimatstation
+fleet_stats,Fleet Statistics,Flottenstatistiken
+fleet_total_ships,Total Ships,Gesamte Schiffe
+fleet_active_ships,Active Ships,Aktive Schiffe
+fleet_mining_ships,Mining Ships,Bergbauschiffe
+fleet_docked_ships,Docked Ships,Angedockte Schiffe
+ore_ore,Ore,Erz
+ore_asteroid,Asteroid,Asteroid
+ore_mining,Mining,Abbau
+ore_amount,Amount,Menge
+ore_depleted,Depleted,Erschöpft
+ore_iron,Iron Ore,Eisenerz
+ore_copper,Copper Ore,Kupfererz
+ore_titanium,Titanium Ore,Titanerz
+ore_gold,Gold Ore,Golderz
+ore_platinum,Platinum Ore,Platinerz
+ore_exotic,Exotic Ore,Exotisches Erz
+refinery_refining,Refining,Raffinierung
+refinery_processing,Processing,Verarbeitung
+refinery_quality_standard,Standard Quality,Standardqualität
+refinery_quality_pure,Pure Quality,Reine Qualität
+refinery_material_loss,Material Loss,Materialverlust
+refinery_processing_time,Processing Time,Verarbeitungszeit
+refinery_yield,Yield,Ertrag
+module_module,Module,Modul
+module_install,Install,Installieren
+module_uninstall,Uninstall,Deinstallieren
+module_tier,Tier,Stufe
+module_cpu_usage,CPU Usage,CPU-Auslastung
+module_power_draw,Power Draw,Energieverbrauch
+module_active,Active,Aktiv
+module_inactive,Inactive,Inaktiv
+module_mining_laser,Mining Laser,Bergbaulaser
+module_shield,Shield Generator,Schildgenerator
+module_weapon,Weapon,Waffe
+module_engine,Engine,Antrieb
+module_cargo_hold,Cargo Hold,Frachtraum
+perf_performance,Performance,Leistung
+perf_fps,FPS,FPS
+perf_frame_time,Frame Time,Frame-Zeit
+perf_optimization,Optimization,Optimierung
+perf_batch_processing,Batch Processing,Stapelverarbeitung
+perf_spatial_grid,Spatial Grid,Räumliches Gitter
+perf_update_interval,Update Interval,Aktualisierungsintervall
+select_select,Select,Auswählen
+select_selected,Selected,Ausgewählt
+select_deselect,Deselect,Abwählen
+select_select_all,Select All,Alles auswählen
+select_multi_select,Multi-Select,Mehrfachauswahl
+select_box_select,Box Select,Boxauswahl
+interact_click,Click,Klicken
+interact_double_click,Double-Click,Doppelklick
+interact_right_click,Right-Click,Rechtsklick
+interact_drag,Drag,Ziehen
+interact_drop,Drop,Ablegen
+interact_context_menu,Context Menu,Kontextmenü
+cmd_move_to,Move To,Bewegen nach
+cmd_attack,Attack,Angreifen
+cmd_mine,Mine,Abbauen
+cmd_dock,Dock,Andocken
+cmd_follow,Follow,Folgen
+cmd_patrol,Patrol,Patrouillieren
+cmd_stop,Stop,Stoppen
+cmd_hold_position,Hold Position,Position halten
+notif_warning,Warning,Warnung
+notif_error,Error,Fehler
+notif_success,Success,Erfolg
+notif_info,Information,Information
+notif_ship_destroyed,Ship Destroyed,Schiff zerstört
+notif_ore_depleted,Ore Depleted,Erz erschöpft
+notif_cargo_full,Cargo Full,Fracht voll
+notif_low_fuel,Low Fuel,Wenig Treibstoff
+notif_low_power,Low Power,Wenig Energie
+notif_under_attack,Under Attack,Unter Beschuss
+time_seconds,seconds,Sekunden
+time_minutes,minutes,Minuten
+time_hours,hours,Stunden
+time_days,days,Tage
+measure_units,units,Einheiten
+measure_meters,meters,Meter
+measure_kilometers,kilometers,Kilometer
+measure_percent,percent,Prozent
+measure_per_second,per second,pro Sekunde
+quality_quality,Quality,Qualität
+quality_standard,Standard,Standard
+quality_pure,Pure,Rein
+quality_tier,Tier,Stufe
+quality_level,Level,Stufe
+quality_grade,Grade,Güte
+res_credits,Credits,Credits
+res_minerals,Minerals,Mineralien
+res_components,Components,Komponenten
+res_fuel,Fuel,Treibstoff
+res_antimatter,Antimatter,Antimaterie
+res_helium,Helium-3,Helium-3
+res_uranium,Uranium,Uran
+res_deuterium,Deuterium,Deuterium
+camera_follow,Follow,Folgen
+camera_free,Free Camera,Freie Kamera
+camera_focus,Focus,Fokussieren
+camera_zoom_in,Zoom In,Hineinzoomen
+camera_zoom_out,Zoom Out,Herauszoomen
+camera_pan,Pan,Schwenken
+save_save_game,Save Game,Spiel speichern
+save_load_game,Load Game,Spiel laden
+save_autosave,Autosave,Automatisches Speichern
+save_quicksave,Quicksave,Schnellspeicherung
+save_overwrite,Overwrite,Überschreiben
+save_slot,Save Slot,Speicherplatz
+save_last_saved,Last Saved,Zuletzt gespeichert
+tooltip_show,Show Tooltip,Tooltip anzeigen
+tooltip_hide,Hide Tooltip,Tooltip ausblenden
+debug_debug_mode,Debug Mode,Debug-Modus
+debug_performance_stats,Performance Stats,Leistungsstatistik
+debug_spawn_ship,Spawn Ship,Schiff erzeugen
+debug_spawn_ore,Spawn Ore,Erz erzeugen
+debug_clear_all,Clear All,Alles löschen
+debug_reload,Reload,Neu laden
+cargo_type,Cargo Type,Frachttyp
+cargo_general,General Cargo,Allgemeine Fracht
+cargo_ore,Ore,Erz
+cargo_mineral,Mineral,Mineral
+cargo_component,Component,Komponente
+cargo_liquid,Liquid,Flüssigkeit
+cargo_gas,Gas,Gas
+cargo_hazmat,Hazardous Material,Gefahrgut
+cargo_perishable,Perishable,Verderblich
+cargo_vehicle,Vehicle,Fahrzeug
+cargo_compression,Compression,Kompression
+cargo_compression_none,No Compression,Keine Kompression
+cargo_compression_basic,Basic Compression,Basis-Kompression
+cargo_compression_advanced,Advanced Compression,Erweiterte Kompression
+cargo_compression_elite,Elite Compression,Elite-Kompression
+cargo_capacity,Cargo Capacity,Frachtkapazität
+cargo_used,Cargo Used,Verwendete Fracht
+cargo_free,Free Space,Freier Platz
+cargo_volume,Volume,Volumen
+cargo_cubic_meters,m³,m³
+cargo_multiplier,Multiplier,Multiplikator
+cargo_pressurized,Pressurized,Druckbeaufschlagt
+cargo_pressure,Pressure,Druck
+cargo_pressure_level,Pressure Level,Druckniveau
+cargo_pressure_psi,PSI,PSI
+cargo_pressure_normal,Normal Pressure,Normaler Druck
+cargo_pressure_low,Low Pressure,Niedriger Druck
+cargo_pressure_critical,Critical Pressure,Kritischer Druck
+cargo_pressure_failing,Pressure Failing,Druckausfall
+cargo_pressure_catastrophic,CATASTROPHIC FAILURE,KATASTROPHALER AUSFALL
+cargo_emergency_vent,Emergency Vent,Notentlüftung
+cargo_venting,Venting,Entlüftet
+cargo_safety_systems,Safety Systems,Sicherheitssysteme
+cargo_explosion_risk,Explosion Risk,Explosionsgefahr
+cargo_heat_generation,Heat Generation,Wärmeerzeugung
+station_size,Station Size,Stationsgröße
+station_small,Small Station,Kleine Station
+station_medium,Medium Station,Mittlere Station
+station_large,Large Station,Große Station
+station_sockets,Module Sockets,Modul-Sockel
+station_sockets_total,Total Sockets,Gesamte Sockel
+station_sockets_available,Available Sockets,Verfügbare Sockel
+station_sockets_used,Used Sockets,Verwendete Sockel
+station_module,Station Module,Stationsmodul
+station_module_refinery,Refinery Module,Raffinerie-Modul
+station_module_factory,Factory Module,Fabrik-Modul
+station_module_shipyard,Shipyard Module,Werft-Modul
+station_module_trading,Trading Module,Handels-Modul
+station_module_military,Military Module,Militär-Modul
+station_module_utility,Utility Module,Versorgungs-Modul
+station_module_socket_expander,Socket Expander,Sockel-Erweiterer
+station_install_module,Install Module,Modul installieren
+station_remove_module,Remove Module,Modul entfernen
+station_socket_required,Sockets Required,Benötigte Sockel
+station_socket_unlocked,Sockets Unlocked,Freigeschaltete Sockel
+item_category,Category,Kategorie
+item_ore,Ore,Erz
+item_mineral,Mineral,Mineral
+item_component,Component,Komponente
+item_module,Module,Modul
+item_ship,Ship,Schiff
+item_cargo,Cargo,Fracht
+item_ammo,Ammunition,Munition
+item_consumable,Consumable,Verbrauchsmaterial
+item_rarity,Rarity,Seltenheit
+item_common,Common,Gewöhnlich
+item_uncommon,Uncommon,Ungewöhnlich
+item_rare,Rare,Selten
+item_exotic,Exotic,Exotisch
+item_legendary,Legendary,Legendär
+item_tier_0,Tier 0: Raw Materials,Stufe 0: Rohstoffe
+item_tier_1,Tier 1: Basic Processed,Stufe 1: Basis verarbeitet
+item_tier_2,Tier 2: Refined,Stufe 2: Raffiniert
+item_tier_3,Tier 3: Components,Stufe 3: Komponenten
+item_tier_4,Tier 4: Complex,Stufe 4: Komplex
+item_tier_5,Tier 5: Modules,Stufe 5: Module
+item_tier_6,Tier 6: Advanced,Stufe 6: Fortgeschritten
+item_price,Price,Preis
+item_base_price,Base Price,Basispreis
+item_market_price,Market Price,Marktpreis
+item_sell_price,Sell Price,Verkaufspreis
+item_buy_price,Buy Price,Kaufpreis
+item_stack_size,Stack Size,Stapelgröße
+item_description,Description,Beschreibung
+ship_class,Ship Class,Schiffsklasse
+ship_explorer,Explorer,Erkunder
+ship_miner,Miner,Bergbauschiff
+ship_fighter,Fighter,Jäger
+ship_corvette,Corvette,Korvette
+ship_frigate,Frigate,Fregatte
+ship_trader,Trader,Händler
+ship_transport,Transport,Transporter
+ship_police,Police,Polizei
+ship_pirate,Pirate,Pirat
+ship_size,Ship Size,Schiffsgröße
+ship_small,Small,Klein
+ship_medium,Medium,Mittel
+ship_large,Large,Groß
+ship_capital,Capital,Kapital
+ship_hull,Hull,Hülle
+ship_shields,Shields,Schilde
+ship_energy,Energy,Energie
+ship_fuel,Fuel,Treibstoff
+ship_speed,Speed,Geschwindigkeit
+ship_acceleration,Acceleration,Beschleunigung
+ship_turn_rate,Turn Rate,Drehrate
+ship_mass,Mass,Masse
+ship_weapon_slots,Weapon Slots,Waffenslots
+ship_module_slots,Module Slots,Modulslots
+ship_utility_slots,Utility Slots,Versorgungs-Slots
+ship_salvage,Salvage,Bergen
+ship_salvage_value,Salvage Value,Bergungswert
+ship_destroyed,Destroyed,Zerstört
+ship_disabled,Disabled,Deaktiviert
+ship_damaged,Damaged,Beschädigt
+ai_behavior,AI Behavior,KI-Verhalten
+ai_none,Player Controlled,Spielerkontrolliert
+ai_miner,Mining AI,Bergbau-KI
+ai_trader,Trading AI,Handels-KI
+ai_patrol,Patrol AI,Patrouille-KI
+ai_aggressive,Aggressive AI,Aggressive KI
+ai_defensive,Defensive AI,Defensive KI
+ai_flee,Flee AI,Flucht-KI
+ai_escort,Escort AI,Eskorte-KI
+ai_pirate,Pirate AI,Piraten-KI
+ai_state,AI State,KI-Status
+ai_idle,Idle,Untätig
+ai_searching,Searching,Sucht
+ai_mining,Mining,Baut ab
+ai_trading,Trading,Handelt
+ai_patrolling,Patrolling,Patrouilliert
+ai_attacking,Attacking,Greift an
+ai_fleeing,Fleeing,Flieht
+ai_escorting,Escorting,Eskortiert
+ai_docking,Docking,Dockt an
+ai_aggression,Aggression,Aggression
+ai_courage,Courage,Mut
+ai_skill,Skill,Fertigkeit
+ai_target,Target,Ziel
+faction_faction,Faction,Fraktion
+faction_player,Player,Spieler
+faction_neutral,Neutral,Neutral
+faction_police,Police Force,Polizei
+faction_pirates,Pirates,Piraten
+faction_miners_guild,Miners Guild,Bergbau-Gilde
+faction_traders_guild,Traders Guild,Händler-Gilde
+faction_military,Military,Militär
+faction_reputation,Reputation,Ruf
+faction_friendly,Friendly,Freundlich
+faction_neutral_rep,Neutral,Neutral
+faction_hostile,Hostile,Feindlich
+faction_allied,Allied,Verbündet
+faction_enemy,Enemy,Feind
+combat_combat,Combat,Kampf
+combat_damage,Damage,Schaden
+combat_damage_kinetic,Kinetic Damage,Kinetischer Schaden
+combat_damage_thermal,Thermal Damage,Thermischer Schaden
+combat_damage_explosive,Explosive Damage,Explosiver Schaden
+combat_resistance,Resistance,Widerstand
+combat_armor,Armor,Panzerung
+combat_shield,Shield,Schild
+combat_penetration,Penetration,Durchschlag
+combat_weapon,Weapon,Waffe
+combat_fire_rate,Fire Rate,Feuerrate
+combat_accuracy,Accuracy,Genauigkeit
+combat_range,Range,Reichweite
+combat_ammo,Ammunition,Munition
+economy_economy,Economy,Wirtschaft
+economy_market,Market,Markt
+economy_supply,Supply,Angebot
+economy_demand,Demand,Nachfrage
+economy_price,Price,Preis
+economy_buy,Buy,Kaufen
+economy_sell,Sell,Verkaufen
+economy_profit,Profit,Gewinn
+economy_loss,Loss,Verlust
+economy_margin,Margin,Marge
+economy_credits,Credits,Credits
+economy_transaction,Transaction,Transaktion
+economy_trade_route,Trade Route,Handelsroute
+auto_automation,Automation,Automatisierung
+auto_automatic,Automatic,Automatisch
+auto_manual,Manual,Manuell
+auto_enabled,Enabled,Aktiviert
+auto_disabled,Disabled,Deaktiviert
+auto_route,Route,Route
+auto_waypoint,Waypoint,Wegpunkt
+auto_loop,Loop,Schleife
+auto_return_to_base,Return to Base,Zurück zur Basis
+auto_auto_refine,Auto-Refine,Auto-Raffinierung
+auto_auto_sell,Auto-Sell,Auto-Verkauf
+ore_aluminum,Aluminum Ore,Aluminiumerz
+ore_silicon,Silicon Ore,Siliziumerz
+ore_uranium,Uranium Ore,Uranerz
+ore_nickel,Nickel Ore,Nickelerz
+ore_lithium,Lithium Ore,Lithiumerz
+ore_crystal,Energy Crystal,Energiekristall
+ore_dark_matter,Dark Matter,Dunkle Materie
+mineral_aluminum,Aluminum,Aluminium
+mineral_silicon,Silicon,Silizium
+mineral_uranium,Uranium,Uran
+mineral_nickel,Nickel,Nickel
+mineral_lithium,Lithium,Lithium
+mineral_crystal,Energy Crystal,Energiekristall
+mineral_dark_matter,Dark Matter,Dunkle Materie

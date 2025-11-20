@@ -1,0 +1,358 @@
+{
+  "version": "1.0",
+  "type": "weapon_flak_scatter",
+  "description": "Flak/Scatter Gun weapon parameters - 36 parameters",
+  "categories": {
+    "projectile_shape": {
+      "description": "Individual projectile appearance - 5 parameters",
+      "parameters": {
+        "projectile_base_shape": {
+          "type": "enum",
+          "values": ["sphere", "cylinder", "spike", "fragment", "tracer", "shell"],
+          "default": "fragment",
+          "description": "Basic projectile geometry"
+        },
+        "projectile_size": {
+          "type": "float",
+          "min": 4,
+          "max": 32,
+          "default": 12,
+          "variance_min": -2,
+          "variance_max": 4,
+          "description": "Pixel size"
+        },
+        "projectile_elongation": {
+          "type": "float",
+          "min": 0.5,
+          "max": 3.0,
+          "default": 1.2,
+          "variance_min": -0.2,
+          "variance_max": 0.5,
+          "description": "Length/width ratio"
+        },
+        "projectile_spin": {
+          "type": "float",
+          "min": 0,
+          "max": 720,
+          "default": 180,
+          "variance_min": -90,
+          "variance_max": 180,
+          "description": "Rotation per second (degrees)"
+        },
+        "projectile_color_variance": {
+          "type": "float",
+          "min": 0.0,
+          "max": 60,
+          "default": 10,
+          "variance_min": -5,
+          "variance_max": 15,
+          "description": "HSV hue variation between projectiles"
+        }
+      }
+    },
+    "launch_behavior": {
+      "description": "How projectiles are fired - 5 parameters",
+      "parameters": {
+        "scatter_angle": {
+          "type": "float",
+          "min": 0,
+          "max": 90,
+          "default": 15,
+          "variance_min": -5,
+          "variance_max": 10,
+          "description": "Spread cone angle (degrees)"
+        },
+        "projectile_count": {
+          "type": "int",
+          "min": 1,
+          "max": 20,
+          "default": 5,
+          "variance_min": -1,
+          "variance_max": 3,
+          "description": "Projectiles per shot"
+        },
+        "launch_pattern": {
+          "type": "enum",
+          "values": ["random", "cone", "line", "circle", "spiral"],
+          "default": "cone",
+          "description": "Spatial distribution pattern"
+        },
+        "velocity_variance": {
+          "type": "float",
+          "min": 0.0,
+          "max": 0.5,
+          "default": 0.2,
+          "variance_min": -0.05,
+          "variance_max": 0.15,
+          "description": "Speed variation between projectiles"
+        },
+        "launch_delay": {
+          "type": "float",
+          "min": 0.0,
+          "max": 0.2,
+          "default": 0.02,
+          "variance_min": -0.01,
+          "variance_max": 0.05,
+          "description": "Time offset between projectiles (seconds)"
+        }
+      }
+    },
+    "trail_effect": {
+      "description": "Motion trail behind projectiles - 7 parameters",
+      "parameters": {
+        "trail_length": {
+          "type": "float",
+          "min": 8,
+          "max": 128,
+          "default": 32,
+          "variance_min": -8,
+          "variance_max": 16,
+          "description": "Trail length in pixels"
+        },
+        "trail_width": {
+          "type": "float",
+          "min": 1,
+          "max": 8,
+          "default": 2,
+          "variance_min": -0.5,
+          "variance_max": 1.0,
+          "description": "Trail thickness in pixels"
+        },
+        "trail_segments": {
+          "type": "int",
+          "min": 4,
+          "max": 32,
+          "default": 12,
+          "variance_min": -3,
+          "variance_max": 5,
+          "description": "Number of trail particles"
+        },
+        "trail_fade_time": {
+          "type": "float",
+          "min": 0.1,
+          "max": 2.0,
+          "default": 0.5,
+          "variance_min": -0.1,
+          "variance_max": 0.3,
+          "description": "Trail fade duration (seconds)"
+        },
+        "trail_color_shift": {
+          "type": "float",
+          "min": -60,
+          "max": 60,
+          "default": 0,
+          "variance_min": -15,
+          "variance_max": 15,
+          "description": "Color gradient along trail (HSV hue)"
+        },
+        "trail_turbulence": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.2,
+          "variance_min": -0.1,
+          "variance_max": 0.3,
+          "description": "Trail wave/wobble amount"
+        },
+        "trail_opacity_curve": {
+          "type": "enum",
+          "values": ["linear", "exponential", "smooth", "sharp"],
+          "default": "exponential",
+          "description": "Fade-out function"
+        }
+      }
+    },
+    "impact_effects": {
+      "description": "Hit/miss explosion effects - 6 parameters",
+      "parameters": {
+        "impact_radius": {
+          "type": "float",
+          "min": 16,
+          "max": 128,
+          "default": 48,
+          "variance_min": -8,
+          "variance_max": 16,
+          "description": "Explosion radius (pixels)"
+        },
+        "impact_particle_count": {
+          "type": "int",
+          "min": 10,
+          "max": 100,
+          "default": 30,
+          "variance_min": -5,
+          "variance_max": 15,
+          "description": "Particles on impact"
+        },
+        "impact_flash_intensity": {
+          "type": "float",
+          "min": 0.5,
+          "max": 2.0,
+          "default": 1.2,
+          "variance_min": -0.2,
+          "variance_max": 0.4,
+          "description": "Flash brightness multiplier"
+        },
+        "impact_shockwave": {
+          "type": "bool",
+          "default": true,
+          "description": "Enable pressure wave ring"
+        },
+        "impact_shockwave_speed": {
+          "type": "float",
+          "min": 100,
+          "max": 500,
+          "default": 250,
+          "variance_min": -50,
+          "variance_max": 100,
+          "description": "Shockwave expansion speed (pixels/s)"
+        },
+        "impact_screen_shake": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.2,
+          "variance_min": -0.05,
+          "variance_max": 0.15,
+          "description": "Camera shake trauma"
+        }
+      }
+    },
+    "visual_modifiers": {
+      "description": "Glow and appearance - 6 parameters",
+      "parameters": {
+        "glow_intensity": {
+          "type": "float",
+          "min": 0.0,
+          "max": 3.0,
+          "default": 0.8,
+          "variance_min": -0.2,
+          "variance_max": 0.5,
+          "description": "Emissive glow strength"
+        },
+        "glow_radius": {
+          "type": "float",
+          "min": 4,
+          "max": 32,
+          "default": 12,
+          "variance_min": -2,
+          "variance_max": 4,
+          "description": "Glow extent (pixels)"
+        },
+        "core_brightness": {
+          "type": "float",
+          "min": 0.5,
+          "max": 2.0,
+          "default": 1.2,
+          "variance_min": -0.2,
+          "variance_max": 0.3,
+          "description": "Center brightness"
+        },
+        "edge_falloff": {
+          "type": "float",
+          "min": 0.1,
+          "max": 1.0,
+          "default": 0.6,
+          "variance_min": -0.1,
+          "variance_max": 0.2,
+          "description": "Glow fade-out curve"
+        },
+        "heat_distortion": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.1,
+          "variance_min": -0.05,
+          "variance_max": 0.15,
+          "description": "Background warping effect"
+        },
+        "muzzle_flash_duration": {
+          "type": "float",
+          "min": 0.05,
+          "max": 0.3,
+          "default": 0.1,
+          "variance_min": -0.02,
+          "variance_max": 0.05,
+          "description": "Barrel flash time (seconds)"
+        }
+      }
+    },
+    "tier_scaling": {
+      "description": "Tier-based adjustments - 3 parameters",
+      "parameters": {
+        "tier": {
+          "type": "int",
+          "min": 1,
+          "max": 6,
+          "default": 1,
+          "description": "Weapon tier (T1-T6)"
+        },
+        "damage_visual_scale": {
+          "type": "float",
+          "min": 0.5,
+          "max": 2.0,
+          "default": 1.0,
+          "variance_min": -0.1,
+          "variance_max": 0.2,
+          "description": "Size multiplier based on DPS"
+        },
+        "tier_color_intensity": {
+          "type": "float",
+          "min": 0.5,
+          "max": 2.0,
+          "default": 1.0,
+          "variance_min": -0.1,
+          "variance_max": 0.3,
+          "description": "Higher tiers = more saturated"
+        }
+      }
+    }
+  },
+  "tier_presets": {
+    "T1_Basic_Flak": {
+      "projectile_shape": {
+        "projectile_base_shape": "fragment",
+        "projectile_size": 10,
+        "projectile_elongation": 1.0,
+        "projectile_spin": 120,
+        "projectile_color_variance": 5
+      },
+      "launch_behavior": {
+        "scatter_angle": 20,
+        "projectile_count": 3,
+        "launch_pattern": "cone",
+        "velocity_variance": 0.15,
+        "launch_delay": 0.03
+      },
+      "trail_effect": {
+        "trail_length": 24,
+        "trail_width": 1.5,
+        "trail_segments": 8,
+        "trail_fade_time": 0.4,
+        "trail_color_shift": 0,
+        "trail_turbulence": 0.1,
+        "trail_opacity_curve": "exponential"
+      },
+      "impact_effects": {
+        "impact_radius": 32,
+        "impact_particle_count": 15,
+        "impact_flash_intensity": 0.8,
+        "impact_shockwave": false,
+        "impact_shockwave_speed": 150,
+        "impact_screen_shake": 0.05
+      },
+      "visual_modifiers": {
+        "glow_intensity": 0.5,
+        "glow_radius": 8,
+        "core_brightness": 1.0,
+        "edge_falloff": 0.5,
+        "heat_distortion": 0.05,
+        "muzzle_flash_duration": 0.08
+      },
+      "tier_scaling": {
+        "tier": 1,
+        "damage_visual_scale": 0.8,
+        "tier_color_intensity": 0.7
+      }
+    }
+  }
+}

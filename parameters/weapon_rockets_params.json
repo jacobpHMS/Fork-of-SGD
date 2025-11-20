@@ -1,0 +1,392 @@
+{
+  "version": "1.0",
+  "type": "weapon_rockets",
+  "description": "Rocket/Missile weapon parameters - Guided projectiles with smoke trails, thrust effects, and explosive warheads",
+  "parameter_count": 38,
+
+  "categories": {
+    "rocket_body": {
+      "name": "Rocket Body",
+      "description": "Physical rocket/missile appearance",
+      "parameters": {
+        "rocket_length": {
+          "type": "float",
+          "min": 0.5,
+          "max": 4.0,
+          "default": 1.5,
+          "variance_min": -0.2,
+          "variance_max": 0.2,
+          "description": "Length of rocket body in meters"
+        },
+        "rocket_diameter": {
+          "type": "float",
+          "min": 0.1,
+          "max": 0.8,
+          "default": 0.3,
+          "variance_min": -0.05,
+          "variance_max": 0.05,
+          "description": "Diameter of rocket body"
+        },
+        "body_shape": {
+          "type": "enum",
+          "values": ["cylindrical", "conical", "dart", "bulky", "sleek"],
+          "default": "cylindrical",
+          "description": "Overall rocket shape profile"
+        },
+        "fin_count": {
+          "type": "int",
+          "min": 0,
+          "max": 6,
+          "default": 4,
+          "variance_min": -1,
+          "variance_max": 1,
+          "description": "Number of stabilizer fins"
+        },
+        "fin_size": {
+          "type": "float",
+          "min": 0.0,
+          "max": 0.5,
+          "default": 0.2,
+          "variance_min": -0.05,
+          "variance_max": 0.05,
+          "description": "Size of fins relative to body"
+        },
+        "warhead_size": {
+          "type": "float",
+          "min": 0.8,
+          "max": 1.5,
+          "default": 1.1,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Warhead bulge at nose (1.0 = same diameter as body)"
+        },
+        "body_color_hue": {
+          "type": "float",
+          "min": 0.0,
+          "max": 360.0,
+          "default": 0.0,
+          "variance_min": -15.0,
+          "variance_max": 15.0,
+          "description": "Body paint color hue in degrees"
+        },
+        "body_metallic": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.8,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Metallic appearance of body"
+        }
+      }
+    },
+
+    "propulsion": {
+      "name": "Propulsion & Thrust",
+      "description": "Engine thrust visual effects",
+      "parameters": {
+        "thrust_intensity": {
+          "type": "float",
+          "min": 0.0,
+          "max": 3.0,
+          "default": 1.5,
+          "variance_min": -0.2,
+          "variance_max": 0.3,
+          "description": "Brightness/intensity of engine thrust"
+        },
+        "thrust_length": {
+          "type": "float",
+          "min": 0.5,
+          "max": 3.0,
+          "default": 1.2,
+          "variance_min": -0.2,
+          "variance_max": 0.2,
+          "description": "Length of thrust cone behind rocket"
+        },
+        "thrust_color": {
+          "type": "enum",
+          "values": ["orange", "blue", "white", "cyan", "yellow"],
+          "default": "orange",
+          "description": "Color of engine thrust"
+        },
+        "thrust_flicker_speed": {
+          "type": "float",
+          "min": 0.0,
+          "max": 20.0,
+          "default": 8.0,
+          "variance_min": -2.0,
+          "variance_max": 2.0,
+          "description": "Speed of thrust flicker/pulsation in Hz"
+        },
+        "thrust_flicker_amount": {
+          "type": "float",
+          "min": 0.0,
+          "max": 0.5,
+          "default": 0.2,
+          "variance_min": -0.05,
+          "variance_max": 0.05,
+          "description": "Amount of thrust intensity variation"
+        },
+        "afterburner_particles": {
+          "type": "int",
+          "min": 0,
+          "max": 50,
+          "default": 15,
+          "variance_min": -5,
+          "variance_max": 5,
+          "description": "Number of hot particle trails"
+        }
+      }
+    },
+
+    "trail_effects": {
+      "name": "Trail Effects",
+      "description": "Smoke and contrails",
+      "parameters": {
+        "smoke_trail_density": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.6,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Density/opacity of smoke trail"
+        },
+        "smoke_trail_width": {
+          "type": "float",
+          "min": 0.1,
+          "max": 2.0,
+          "default": 0.5,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Width of smoke trail"
+        },
+        "smoke_color": {
+          "type": "enum",
+          "values": ["white", "gray", "black", "brown"],
+          "default": "white",
+          "description": "Color of exhaust smoke"
+        },
+        "smoke_turbulence": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.4,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Amount of smoke swirl/turbulence"
+        },
+        "contrail_fade_time": {
+          "type": "float",
+          "min": 0.5,
+          "max": 5.0,
+          "default": 2.0,
+          "variance_min": -0.3,
+          "variance_max": 0.3,
+          "description": "Time for trail to fade away in seconds"
+        },
+        "spiral_trail": {
+          "type": "bool",
+          "default": false,
+          "description": "Spiral/corkscrew smoke pattern"
+        },
+        "spiral_frequency": {
+          "type": "float",
+          "min": 0.5,
+          "max": 5.0,
+          "default": 2.0,
+          "variance_min": -0.3,
+          "variance_max": 0.3,
+          "description": "Frequency of spiral rotation in Hz"
+        }
+      }
+    },
+
+    "guidance": {
+      "name": "Guidance & Motion",
+      "description": "Homing and flight behavior",
+      "parameters": {
+        "initial_velocity": {
+          "type": "float",
+          "min": 5.0,
+          "max": 100.0,
+          "default": 30.0,
+          "variance_min": -5.0,
+          "variance_max": 5.0,
+          "description": "Launch velocity in m/s"
+        },
+        "acceleration": {
+          "type": "float",
+          "min": 0.0,
+          "max": 50.0,
+          "default": 10.0,
+          "variance_min": -2.0,
+          "variance_max": 2.0,
+          "description": "Thrust acceleration in m/s²"
+        },
+        "max_speed": {
+          "type": "float",
+          "min": 20.0,
+          "max": 200.0,
+          "default": 80.0,
+          "variance_min": -10.0,
+          "variance_max": 10.0,
+          "description": "Maximum flight speed in m/s"
+        },
+        "homing_enabled": {
+          "type": "bool",
+          "default": true,
+          "description": "Target tracking enabled"
+        },
+        "homing_strength": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.7,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Strength of target tracking (0=dumb fire, 1=perfect tracking)"
+        },
+        "turn_rate": {
+          "type": "float",
+          "min": 10.0,
+          "max": 360.0,
+          "default": 90.0,
+          "variance_min": -20.0,
+          "variance_max": 20.0,
+          "description": "Maximum turn rate in degrees/second"
+        },
+        "wobble_amount": {
+          "type": "float",
+          "min": 0.0,
+          "max": 0.3,
+          "default": 0.05,
+          "variance_min": -0.02,
+          "variance_max": 0.02,
+          "description": "Flight path wobble/instability"
+        },
+        "spin_rate": {
+          "type": "float",
+          "min": 0.0,
+          "max": 720.0,
+          "default": 180.0,
+          "variance_min": -30.0,
+          "variance_max": 30.0,
+          "description": "Rocket body spin in degrees/second"
+        }
+      }
+    },
+
+    "warhead": {
+      "name": "Warhead & Impact",
+      "description": "Explosion and detonation effects",
+      "parameters": {
+        "explosion_radius": {
+          "type": "float",
+          "min": 1.0,
+          "max": 20.0,
+          "default": 5.0,
+          "variance_min": -0.5,
+          "variance_max": 1.0,
+          "description": "Explosion blast radius in meters"
+        },
+        "explosion_force": {
+          "type": "float",
+          "min": 0.5,
+          "max": 3.0,
+          "default": 1.5,
+          "variance_min": -0.2,
+          "variance_max": 0.3,
+          "description": "Physical force multiplier"
+        },
+        "shrapnel_count": {
+          "type": "int",
+          "min": 0,
+          "max": 100,
+          "default": 30,
+          "variance_min": -10,
+          "variance_max": 10,
+          "description": "Number of shrapnel fragments on impact"
+        },
+        "screen_shake": {
+          "type": "float",
+          "min": 0.0,
+          "max": 2.0,
+          "default": 0.5,
+          "variance_min": -0.1,
+          "variance_max": 0.2,
+          "description": "Camera shake intensity on detonation"
+        },
+        "flash_brightness": {
+          "type": "float",
+          "min": 0.5,
+          "max": 3.0,
+          "default": 1.8,
+          "variance_min": -0.2,
+          "variance_max": 0.3,
+          "description": "Explosion flash brightness"
+        }
+      }
+    }
+  },
+
+  "presets": {
+    "light_homing": {
+      "name": "Light Homing Missile",
+      "description": "Fast, agile tracking missile",
+      "parameters": {
+        "rocket_length": 1.0,
+        "rocket_diameter": 0.2,
+        "body_shape": "sleek",
+        "fin_count": 4,
+        "homing_strength": 0.9,
+        "turn_rate": 180.0,
+        "max_speed": 120.0,
+        "explosion_radius": 3.0
+      }
+    },
+    "heavy_torpedo": {
+      "name": "Heavy Torpedo",
+      "description": "Slow but devastating capital ship killer",
+      "parameters": {
+        "rocket_length": 3.5,
+        "rocket_diameter": 0.6,
+        "body_shape": "bulky",
+        "fin_count": 6,
+        "homing_strength": 0.5,
+        "turn_rate": 30.0,
+        "max_speed": 40.0,
+        "explosion_radius": 15.0,
+        "explosion_force": 2.5
+      }
+    },
+    "dumbfire_rocket": {
+      "name": "Dumbfire Rocket",
+      "description": "Unguided high-speed rocket",
+      "parameters": {
+        "rocket_length": 1.2,
+        "body_shape": "dart",
+        "homing_enabled": false,
+        "homing_strength": 0.0,
+        "max_speed": 150.0,
+        "acceleration": 30.0,
+        "explosion_radius": 4.0
+      }
+    },
+    "swarm_missile": {
+      "name": "Swarm Micro-Missile",
+      "description": "Small fast missiles for swarm attacks",
+      "parameters": {
+        "rocket_length": 0.6,
+        "rocket_diameter": 0.15,
+        "body_shape": "cylindrical",
+        "fin_count": 3,
+        "homing_strength": 0.7,
+        "turn_rate": 240.0,
+        "max_speed": 100.0,
+        "explosion_radius": 2.0,
+        "thrust_intensity": 2.0
+      }
+    }
+  }
+}

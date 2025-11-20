@@ -1,0 +1,233 @@
+[gd_scene load_steps=2 format=3 uid="uid://permanentinfopanel001"]
+
+[ext_resource type="Script" path="res://scripts/PermanentInfoPanel.gd" id="1"]
+
+[node name="PermanentInfoPanel" type="PanelContainer"]
+custom_minimum_size = Vector2(1920, 270)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -270.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Column1" type="PanelContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(288, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Column1"]
+layout_mode = 2
+
+[node name="HistoryLog" type="PanelContainer" parent="HBoxContainer/Column1/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.6
+
+[node name="Label" type="Label" parent="HBoxContainer/Column1/VBoxContainer/HistoryLog"]
+layout_mode = 2
+text = "History Log"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/Column1/VBoxContainer/HistoryLog"]
+layout_mode = 2
+offset_top = 24.0
+offset_right = 284.0
+offset_bottom = 150.0
+
+[node name="HistoryList" type="VBoxContainer" parent="HBoxContainer/Column1/VBoxContainer/HistoryLog/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="WorldEvents" type="PanelContainer" parent="HBoxContainer/Column1/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
+
+[node name="Label" type="Label" parent="HBoxContainer/Column1/VBoxContainer/WorldEvents"]
+layout_mode = 2
+text = "World Events"
+horizontal_alignment = 1
+
+[node name="EventsList" type="VBoxContainer" parent="HBoxContainer/Column1/VBoxContainer/WorldEvents"]
+layout_mode = 2
+offset_top = 24.0
+offset_right = 284.0
+offset_bottom = 100.0
+
+[node name="Column2" type="PanelContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(672, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.35
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Column2"]
+layout_mode = 2
+
+[node name="PanelSelector" type="OptionButton" parent="HBoxContainer/Column2/VBoxContainer"]
+layout_mode = 2
+text = "Mining Scanner (4 Circles)"
+
+[node name="ContentContainer" type="PanelContainer" parent="HBoxContainer/Column2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Column3" type="PanelContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(672, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.35
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Column3"]
+layout_mode = 2
+
+[node name="PanelSelector" type="OptionButton" parent="HBoxContainer/Column3/VBoxContainer"]
+layout_mode = 2
+text = "Cargo Overview"
+
+[node name="ContentContainer" type="PanelContainer" parent="HBoxContainer/Column3/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Column4" type="PanelContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(288, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Column4"]
+layout_mode = 2
+
+[node name="TabContainer" type="TabContainer" parent="HBoxContainer/Column4/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.75
+
+[node name="Mining" type="VBoxContainer" parent="HBoxContainer/Column4/VBoxContainer/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Label" type="Label" parent="HBoxContainer/Column4/VBoxContainer/TabContainer/Mining"]
+layout_mode = 2
+text = "Mining Controls
+[F1]"
+horizontal_alignment = 1
+
+[node name="StartMiningBtn" type="Button" parent="HBoxContainer/Column4/VBoxContainer/TabContainer/Mining"]
+layout_mode = 2
+text = "Start Mining"
+
+[node name="StopMiningBtn" type="Button" parent="HBoxContainer/Column4/VBoxContainer/TabContainer/Mining"]
+layout_mode = 2
+text = "Stop Mining"
+
+[node name="AutoTargetBtn" type="Button" parent="HBoxContainer/Column4/VBoxContainer/TabContainer/Mining"]
+layout_mode = 2
+text = "Auto-Target"
+
+[node name="Cargo" type="VBoxContainer" parent="HBoxContainer/Column4/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/Column4/VBoxContainer/TabContainer/Cargo"]
+layout_mode = 2
+text = "Cargo Management
+[F2]"
+horizontal_alignment = 1
+
+[node name="OpenOreCargoBtn" type="Button" parent="HBoxContainer/Column4/VBoxContainer/TabContainer/Cargo"]
+layout_mode = 2
+text = "Open Ore Cargo"
+
+[node name="OpenGeneralCargoBtn" type="Button" parent="HBoxContainer/Column4/VBoxContainer/TabContainer/Cargo"]
+layout_mode = 2
+text = "Open General Cargo"
+
+[node name="OpenGasCargoBtn" type="Button" parent="HBoxContainer/Column4/VBoxContainer/TabContainer/Cargo"]
+layout_mode = 2
+text = "Open Gas Cargo"
+
+[node name="Ship" type="VBoxContainer" parent="HBoxContainer/Column4/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/Column4/VBoxContainer/TabContainer/Ship"]
+layout_mode = 2
+text = "Ship Systems
+[F3]"
+horizontal_alignment = 1
+
+[node name="ModulesBtn" type="Button" parent="HBoxContainer/Column4/VBoxContainer/TabContainer/Ship"]
+layout_mode = 2
+text = "Modules"
+
+[node name="FittingsBtn" type="Button" parent="HBoxContainer/Column4/VBoxContainer/TabContainer/Ship"]
+layout_mode = 2
+text = "Fittings"
+
+[node name="RepairBtn" type="Button" parent="HBoxContainer/Column4/VBoxContainer/TabContainer/Ship"]
+layout_mode = 2
+text = "Repair"
+
+[node name="Target" type="VBoxContainer" parent="HBoxContainer/Column4/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/Column4/VBoxContainer/TabContainer/Target"]
+layout_mode = 2
+text = "Target Info
+[F4]"
+horizontal_alignment = 1
+
+[node name="TargetNameLabel" type="Label" parent="HBoxContainer/Column4/VBoxContainer/TabContainer/Target"]
+layout_mode = 2
+text = "Target: None"
+
+[node name="ScanBtn" type="Button" parent="HBoxContainer/Column4/VBoxContainer/TabContainer/Target"]
+layout_mode = 2
+text = "Scan"
+
+[node name="MineBtn" type="Button" parent="HBoxContainer/Column4/VBoxContainer/TabContainer/Target"]
+layout_mode = 2
+text = "Mine"
+
+[node name="Tactical" type="VBoxContainer" parent="HBoxContainer/Column4/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 4
+
+[node name="Label" type="Label" parent="HBoxContainer/Column4/VBoxContainer/TabContainer/Tactical"]
+layout_mode = 2
+text = "Tactical Overview
+[F5]"
+horizontal_alignment = 1
+
+[node name="DScanBtn" type="Button" parent="HBoxContainer/Column4/VBoxContainer/TabContainer/Tactical"]
+layout_mode = 2
+text = "D-Scan"
+
+[node name="OverviewBtn" type="Button" parent="HBoxContainer/Column4/VBoxContainer/TabContainer/Tactical"]
+layout_mode = 2
+text = "Overview"
+
+[node name="ShipStatus" type="PanelContainer" parent="HBoxContainer/Column4/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+
+[node name="StatusLabel" type="Label" parent="HBoxContainer/Column4/VBoxContainer/ShipStatus"]
+layout_mode = 2
+text = "Ship Status:
+Status: Idle
+Speed: 0.0 m/s
+Energy: 100%"

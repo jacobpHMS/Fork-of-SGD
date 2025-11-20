@@ -1,0 +1,261 @@
+[gd_scene load_steps=9 format=3 uid="uid://cjqx8y5qb3wyx"]
+
+[ext_resource type="Script" path="res://scripts/Main.gd" id="1_main"]
+[ext_resource type="Texture2D" uid="uid://b0dn5ydvx1yrs" path="res://assets/space_hintergrund.png" id="2_bg"]
+[ext_resource type="PackedScene" uid="uid://dpvh71h8e1syd" path="res://scenes/Player.tscn" id="3_player"]
+[ext_resource type="PackedScene" uid="uid://b8xhv3r2ks4wd" path="res://scenes/RadialMenu.tscn" id="4_radial"]
+[ext_resource type="Script" path="res://scripts/ShipStatusUI.gd" id="5_ship_status"]
+[ext_resource type="PackedScene" uid="uid://cx7hn8q2pf9yd" path="res://scenes/NPCShip.tscn" id="6_npc_ship"]
+[ext_resource type="PackedScene" uid="uid://de6jp8r3kq2mf" path="res://scenes/TransferUI.tscn" id="7_transfer"]
+[ext_resource type="PackedScene" uid="uid://bq8xr4m2pf7yd" path="res://scenes/EjectUI.tscn" id="8_eject"]
+[ext_resource type="PackedScene" uid="uid://permanentinfopanel001" path="res://scenes/PermanentInfoPanel.tscn" id="9_permanent_info"]
+[ext_resource type="Script" path="res://scripts/TacticalOverview.gd" id="10_tactical"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_main")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -100
+texture = ExtResource("2_bg")
+centered = true
+
+[node name="Player" parent="." instance=ExtResource("3_player")]
+
+[node name="OreContainer" type="Node2D" parent="." groups=["ore_container"]]
+
+[node name="NPCShip" parent="." instance=ExtResource("6_npc_ship")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CameraButton" type="Button" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 180.0
+offset_bottom = 50.0
+text = "📷 Focus Ship (F)"
+
+[node name="RightPanel" type="PanelContainer" parent="CanvasLayer/UI"]
+visible = false
+script = ExtResource("10_tactical")
+layout_mode = 0
+offset_left = 1200.0
+offset_top = 100.0
+offset_right = 1550.0
+offset_bottom = 900.0
+
+[node name="VBox" type="VBoxContainer" parent="CanvasLayer/UI/RightPanel"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="CanvasLayer/UI/RightPanel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "TACTICAL OVERVIEW"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/UI/RightPanel/VBox"]
+layout_mode = 2
+
+[node name="FilterButtons" type="HBoxContainer" parent="CanvasLayer/UI/RightPanel/VBox"]
+layout_mode = 2
+alignment = 1
+
+[node name="AllBtn" type="Button" parent="CanvasLayer/UI/RightPanel/VBox/FilterButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+button_pressed = true
+text = "All"
+
+[node name="ShipsBtn" type="Button" parent="CanvasLayer/UI/RightPanel/VBox/FilterButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Ships"
+
+[node name="OresBtn" type="Button" parent="CanvasLayer/UI/RightPanel/VBox/FilterButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Ores"
+
+[node name="StationsBtn" type="Button" parent="CanvasLayer/UI/RightPanel/VBox/FilterButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Stations"
+
+[node name="EnemiesBtn" type="Button" parent="CanvasLayer/UI/RightPanel/VBox/FilterButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Enemies"
+
+[node name="HSeparator2" type="HSeparator" parent="CanvasLayer/UI/RightPanel/VBox"]
+layout_mode = 2
+
+[node name="ObjectList" type="ItemList" parent="CanvasLayer/UI/RightPanel/VBox"]
+custom_minimum_size = Vector2(330, 600)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HSeparator3" type="HSeparator" parent="CanvasLayer/UI/RightPanel/VBox"]
+layout_mode = 2
+
+[node name="DetailsLabel" type="Label" parent="CanvasLayer/UI/RightPanel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 1, 0.5, 1)
+text = "Select object for details"
+autowrap_mode = 2
+
+[node name="BottomPanel" type="PanelContainer" parent="CanvasLayer/UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -120.0
+offset_right = 250.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBox" type="VBoxContainer" parent="CanvasLayer/UI/BottomPanel"]
+layout_mode = 2
+
+[node name="InventoryLabel" type="Label" parent="CanvasLayer/UI/BottomPanel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "CARGO HOLD"
+horizontal_alignment = 1
+
+[node name="CargoInfo" type="Label" parent="CanvasLayer/UI/BottomPanel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 1, 0.5, 1)
+text = "0 / 500 m³"
+horizontal_alignment = 1
+
+[node name="MinerPanel" type="HBoxContainer" parent="CanvasLayer/UI/BottomPanel/VBox"]
+layout_mode = 2
+alignment = 1
+
+[node name="Miner1Container" type="VBoxContainer" parent="CanvasLayer/UI/BottomPanel/VBox/MinerPanel"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Miner1Btn" type="Button" parent="CanvasLayer/UI/BottomPanel/VBox/MinerPanel/Miner1Container"]
+layout_mode = 2
+toggle_mode = true
+text = "MINER 1 [1]"
+
+[node name="Miner1Progress" type="ProgressBar" parent="CanvasLayer/UI/BottomPanel/VBox/MinerPanel/Miner1Container"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+max_value = 10.0
+show_percentage = false
+
+[node name="Miner2Container" type="VBoxContainer" parent="CanvasLayer/UI/BottomPanel/VBox/MinerPanel"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Miner2Btn" type="Button" parent="CanvasLayer/UI/BottomPanel/VBox/MinerPanel/Miner2Container"]
+layout_mode = 2
+toggle_mode = true
+text = "MINER 2 [2]"
+
+[node name="Miner2Progress" type="ProgressBar" parent="CanvasLayer/UI/BottomPanel/VBox/MinerPanel/Miner2Container"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+max_value = 10.0
+show_percentage = false
+
+[node name="ShipStatus" type="PanelContainer" parent="CanvasLayer/UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -500.0
+offset_right = 260.0
+offset_bottom = -10.0
+grow_vertical = 0
+script = ExtResource("5_ship_status")
+
+[node name="VBox" type="VBoxContainer" parent="CanvasLayer/UI/ShipStatus"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="CanvasLayer/UI/ShipStatus/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "SHIP STATUS"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/UI/ShipStatus/VBox"]
+layout_mode = 2
+
+[node name="SpeedLabel" type="Label" parent="CanvasLayer/UI/ShipStatus/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 1, 0.5, 1)
+text = "Speed: 0.0 m/s"
+
+[node name="ShieldLabel" type="Label" parent="CanvasLayer/UI/ShipStatus/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.8, 1, 1)
+text = "Shield: 1000"
+
+[node name="ArmorLabel" type="Label" parent="CanvasLayer/UI/ShipStatus/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.3, 1)
+text = "Armor: 500"
+
+[node name="HullLabel" type="Label" parent="CanvasLayer/UI/ShipStatus/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.5, 0.3, 1)
+text = "Hull: 100%"
+
+[node name="ElecLabel" type="Label" parent="CanvasLayer/UI/ShipStatus/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.8, 1, 1)
+text = "Electronics: 100%"
+
+[node name="FuelLabel" type="Label" parent="CanvasLayer/UI/ShipStatus/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.3, 1)
+text = "Fuel: 1000 / 1000"
+
+[node name="HSeparator2" type="HSeparator" parent="CanvasLayer/UI/ShipStatus/VBox"]
+layout_mode = 2
+
+[node name="StatusLabel" type="Label" parent="CanvasLayer/UI/ShipStatus/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+theme_override_font_sizes/font_size = 12
+text = "Status: Idle"
+autowrap_mode = 2
+
+[node name="RadialMenu" parent="CanvasLayer/UI" instance=ExtResource("4_radial")]
+visible = false
+
+[node name="TransferUI" parent="CanvasLayer/UI" instance=ExtResource("7_transfer")]
+
+[node name="EjectUI" parent="CanvasLayer/UI" instance=ExtResource("8_eject")]
+
+[node name="PermanentInfoPanel" parent="CanvasLayer/UI" instance=ExtResource("9_permanent_info")]

@@ -1,0 +1,88 @@
+[gd_scene load_steps=2 format=3 uid="uid://bq8xr4m2pf7yd"]
+
+[ext_resource type="Script" path="res://scripts/EjectUI.gd" id="1_eject"]
+
+[node name="EjectUI" type="PanelContainer"]
+visible = false
+offset_left = 500.0
+offset_top = 300.0
+offset_right = 800.0
+offset_bottom = 600.0
+script = ExtResource("1_eject")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="TitleBar" type="HBoxContainer" parent="VBox"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="VBox/TitleBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.4, 0.7, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "Eject Cargo"
+vertical_alignment = 1
+
+[node name="CloseBtn" type="Button" parent="VBox/TitleBar"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "X"
+
+[node name="HSeparator" type="HSeparator" parent="VBox"]
+layout_mode = 2
+
+[node name="Content" type="VBoxContainer" parent="VBox"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="InfoLabel" type="Label" parent="VBox/Content"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+text = "Select item to eject:"
+
+[node name="CargoList" type="ItemList" parent="VBox/Content"]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="VBox/Content"]
+layout_mode = 2
+
+[node name="AmountControls" type="HBoxContainer" parent="VBox/Content"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBox/Content/AmountControls"]
+layout_mode = 2
+text = "Amount:"
+
+[node name="AmountInput" type="LineEdit" parent="VBox/Content/AmountControls"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "10.0"
+placeholder_text = "10.0"
+
+[node name="AmountSlider" type="HSlider" parent="VBox/Content/AmountControls"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1.0
+max_value = 100.0
+step = 0.1
+value = 10.0
+
+[node name="HSeparator2" type="HSeparator" parent="VBox/Content"]
+layout_mode = 2
+
+[node name="EjectBtn" type="Button" parent="VBox/Content"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+disabled = true
+text = "Eject"
+
+[node name="EjectAllBtn" type="Button" parent="VBox/Content"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.5, 0.3, 1)
+disabled = true
+text = "Eject All"

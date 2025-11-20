@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dy5hn7p9kf1xe"]
+
+[ext_resource type="Script" path="res://scripts/CargoCrate.gd" id="1_crate"]
+
+[node name="CargoCrate" type="Area2D"]
+collision_layer = 2
+collision_mask = 1
+script = ExtResource("1_crate")

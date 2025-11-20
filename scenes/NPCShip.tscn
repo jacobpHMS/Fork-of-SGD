@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cx7hn8q2pf9yd"]
+
+[ext_resource type="Script" path="res://scripts/NPCShip.gd" id="1_npc_ship"]
+[ext_resource type="Texture2D" path="res://assets/Player_ship_test/Player_test_ship_ruhe.png" id="2_ship"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1"]
+radius = 40.0
+
+[node name="NPCShip" type="CharacterBody2D" groups=["npc_ships"]]
+position = Vector2(-1060, -1060)
+script = ExtResource("1_npc_ship")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.6, 0.4, 1)
+rotation = -1.5708
+texture = ExtResource("2_ship")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -50.0
+offset_top = -60.0
+offset_right = 50.0
+offset_bottom = -40.0
+theme_override_colors/font_color = Color(0.5, 0.8, 1, 1)
+text = "NPC Test Ship"
+horizontal_alignment = 1

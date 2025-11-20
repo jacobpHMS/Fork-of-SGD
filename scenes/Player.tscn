@@ -1,0 +1,79 @@
+[gd_scene load_steps=12 format=3 uid="uid://dpvh71h8e1syd"]
+
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_player"]
+[ext_resource type="Texture2D" path="res://assets/Player_ship_test/Player_test_ship_ruhe.png" id="2_idle"]
+[ext_resource type="Texture2D" path="res://assets/Player_ship_test/Player_test_ship_bewegung_1.png" id="3_move1"]
+[ext_resource type="Texture2D" path="res://assets/Player_ship_test/Player_test_ship_bewegung_2.png" id="4_move2"]
+[ext_resource type="Texture2D" path="res://assets/Player_ship_test/Player_test_ship_bewegung_3.png" id="5_move3"]
+[ext_resource type="Texture2D" path="res://assets/Player_ship_test/Player_test_ship_bewegung_boost_1.png" id="6_boost1"]
+[ext_resource type="Texture2D" path="res://assets/Player_ship_test/Player_test_ship_bewegung_boost_2.png" id="7_boost2"]
+[ext_resource type="Texture2D" path="res://assets/Player_ship_test/Player_test_ship_bewegung_boost_3.png" id="8_boost3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1"]
+radius = 40.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_idle")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_move1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_move2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_move3")
+}],
+"loop": true,
+"name": &"moving",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_boost1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_boost2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_boost3")
+}],
+"loop": true,
+"name": &"boost",
+"speed": 12.0
+}]
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_player")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_1")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1")
+
+[node name="MiningLaser1" type="Line2D" parent="."]
+width = 3.0
+default_color = Color(0, 1, 0.5, 0.8)
+
+[node name="MiningLaser2" type="Line2D" parent="."]
+width = 3.0
+default_color = Color(0, 1, 0.5, 0.8)
+
+[node name="SelectionIndicator" type="AnimatedSprite2D" parent="."]
+visible = false
+modulate = Color(0, 1, 1, 0.5)
+rotation = 1.5708
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_1")
+animation = &"idle"

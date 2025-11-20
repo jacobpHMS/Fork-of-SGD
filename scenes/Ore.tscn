@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7qw3xhv8r2ks"]
+
+[ext_resource type="Script" path="res://scripts/Ore.gd" id="1_ore"]
+[ext_resource type="Texture2D" uid="uid://ciq34y5hvx8n1" path="res://assets/test_ore_Item.png" id="2_ore_sprite"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1"]
+radius = 20.0
+
+[node name="Ore" type="Area2D"]
+script = ExtResource("1_ore")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ore_sprite")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -30.0
+offset_top = -40.0
+offset_right = 30.0
+offset_bottom = -20.0
+theme_override_colors/font_color = Color(0.5, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 10
+text = "Ore"
+horizontal_alignment = 1

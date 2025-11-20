@@ -1,0 +1,89 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2qxr6p5yh8mc"]
+
+[ext_resource type="Script" path="res://scripts/MainMenu.gd" id="1_main_menu"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_main_menu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.05, 0.1, 1)
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -250.0
+offset_right = 200.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.7, 1, 1)
+theme_override_font_sizes/font_size = 48
+text = "Space Mining Game"
+horizontal_alignment = 1
+
+[node name="Spacer1" type="Control" parent="VBox"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="NewGameBtn" type="Button" parent="VBox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "New Game"
+
+[node name="ContinueBtn" type="Button" parent="VBox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Continue"
+
+[node name="LoadGameBtn" type="Button" parent="VBox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Load Game"
+
+[node name="OptionsBtn" type="Button" parent="VBox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Options"
+
+[node name="DevInfoBtn" type="Button" parent="VBox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Developer Info"
+
+[node name="Spacer2" type="Control" parent="VBox"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="QuitBtn" type="Button" parent="VBox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4, 0.4, 1)
+theme_override_font_sizes/font_size = 24
+text = "Quit"
