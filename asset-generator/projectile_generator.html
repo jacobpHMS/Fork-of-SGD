@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projectile Generator - SpaceGameDev</title>
+    <link rel="stylesheet" href="shared/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar-left">
+            <header>
+                <h1>🎨 Graphics Generator</h1>
+                <p class="tagline">Procedural Pixel Art for SpaceGameDev</p>
+                <a href="sfx.html" class="btn-sfx">🔊 SFX Generator →</a>
+            </header>
+
+            <section class="generator-types">
+                <h3>🔧 GENERATOR TYPE</h3>
+                <button class="type-btn" data-type="ship" onclick="location.href='ship_generator.html'">🚀 Ship</button>
+                <button class="type-btn" data-type="asteroid" onclick="location.href='asteroid_generator.html'">🪨 Asteroid</button>
+                <button class="type-btn active" data-type="projectile">💥 Projectile</button>
+                <button class="type-btn" data-type="laser" onclick="location.href='laser_generator.html'">⚡ Laser</button>
+                <button class="type-btn" data-type="scanner" onclick="location.href='scanner_generator.html'">📡 Scanner</button>
+                <button class="type-btn" data-type="effect" onclick="location.href='effect_generator.html'">✨ Effect</button>
+                <button class="type-btn" data-type="background" onclick="location.href='background_generator.html'">🌌 Background</button>
+            </section>
+
+            <section class="parameters">
+                <h3>💥 PROJECTILE GENERATOR</h3>
+
+                <label>Projectile Type:</label>
+                <select id="projectile_type">
+                    <option value="bullet">Bullet</option>
+                    <option value="missile">Missile</option>
+                    <option value="plasma">Plasma Ball</option>
+                    <option value="laser_bolt">Laser Bolt</option>
+                    <option value="rocket">Rocket</option>
+                </select>
+
+                <label>Size:</label>
+                <select id="size">
+                    <option value="16">16x16</option>
+                    <option value="32" selected>32x32</option>
+                    <option value="64">64x64</option>
+                </select>
+
+                <label>Speed Blur:</label>
+                <input type="range" id="speed_blur" min="0" max="1" value="0.3" step="0.01">
+                <span class="value">0.30</span>
+
+                <label>Trail Length:</label>
+                <input type="range" id="trail_length" min="0" max="20" value="5" step="1">
+                <span class="value">5</span>
+
+                <label>Glow Intensity:</label>
+                <input type="range" id="glow_intensity" min="0" max="2" value="1.0" step="0.01">
+                <span class="value">1.00</span>
+
+                <label>Core Size:</label>
+                <input type="range" id="core_size" min="0.2" max="1" value="0.5" step="0.01">
+                <span class="value">0.50</span>
+
+                <label>Particle Count:</label>
+                <input type="range" id="particle_count" min="0" max="20" value="5" step="1">
+                <span class="value">5</span>
+
+                <label>Rotation Angle:</label>
+                <input type="range" id="rotation" min="0" max="360" value="0" step="1">
+                <span class="value">0°</span>
+
+                <label>
+                    <input type="checkbox" id="animated" checked>
+                    Animated Trail
+                </label>
+
+                <button class="btn-generate" id="generate-btn">🎲 Generate Projectile</button>
+            </section>
+
+            <section class="color-palette">
+                <h3>🎨 COLOR PALETTE</h3>
+                <div class="palette-grid">
+                    <button class="palette-btn" data-palette="cyber_blue">Cyber Blue</button>
+                    <button class="palette-btn" data-palette="military_green">Military</button>
+                    <button class="palette-btn active" data-palette="pirate_red">Pirate Red</button>
+                    <button class="palette-btn" data-palette="trader_white">Trader</button>
+                    <button class="palette-btn" data-palette="alien_purple">Alien</button>
+                    <button class="palette-btn" data-palette="mining_orange">Mining</button>
+                    <button class="palette-btn" data-palette="police_black">Police</button>
+                    <button class="palette-btn" data-palette="medical_white">Medical</button>
+                    <button class="palette-btn" data-palette="fire">Fire</button>
+                    <button class="palette-btn" data-palette="ice">Ice</button>
+                    <button class="palette-btn" data-palette="toxic">Toxic</button>
+                    <button class="palette-btn" data-palette="energy">Energy</button>
+                </div>
+
+                <div class="custom-colors">
+                    <label>Primary: <input type="color" id="color-primary" value="#C0302C"></label>
+                    <label>Secondary: <input type="color" id="color-secondary" value="#8B1E1E"></label>
+                    <label>Accent: <input type="color" id="color-accent" value="#FF6B5A"></label>
+                    <label>Dark: <input type="color" id="color-dark" value="#200808"></label>
+                </div>
+            </section>
+        </aside>
+
+        <main class="canvas-area">
+            <div class="canvas-controls">
+                <button id="zoom-out">-</button>
+                <span id="zoom-level">8x</span>
+                <button id="zoom-in">+</button>
+                <button id="reset-view">🔥</button>
+                <button id="toggle-grid">📐</button>
+                <button id="center-view">○</button>
+
+                <label><input type="checkbox" id="show-background" checked> Background</label>
+                <label><input type="checkbox" id="show-glow" checked> Glow Effect</label>
+            </div>
+
+            <div class="canvas-wrapper">
+                <canvas id="main-canvas" width="512" height="512"></canvas>
+            </div>
+
+            <div class="canvas-status">
+                Ready - Pan: Click & Drag | Zoom: +/- or Mouse Wheel
+            </div>
+        </main>
+
+        <aside class="sidebar-right">
+            <section class="preview-panel">
+                <h3>👁️ PREVIEW</h3>
+                <div class="preview-wrapper">
+                    <canvas id="preview-canvas" width="128" height="128"></canvas>
+                </div>
+                <label><input type="checkbox" id="animate"> Animate</label>
+            </section>
+
+            <section class="database-panel">
+                <h3>📊 DATABASE INTEGRATION</h3>
+
+                <label>Asset Type:</label>
+                <select id="asset-type">
+                    <option value="projectile" selected>Projectile</option>
+                    <option value="bullet">Bullet</option>
+                    <option value="missile">Missile</option>
+                </select>
+
+                <label>Weapon Type:</label>
+                <input type="text" id="material" placeholder="z.B. plasma, kinetic" value="plasma">
+
+                <label>Damage Class:</label>
+                <select id="size-category">
+                    <option value="light">Light</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="heavy">Heavy</option>
+                </select>
+
+                <label>State:</label>
+                <select id="state">
+                    <option value="idle" selected>Idle</option>
+                    <option value="active">Active</option>
+                    <option value="impact">Impact</option>
+                </select>
+
+                <label>Auto Filename:</label>
+                <input type="text" id="auto-filename" readonly value="projectile_plasma_medium_idle_01">
+
+                <label>Item ID:</label>
+                <input type="text" id="item-id" value="PROJ_PLASMA_001">
+
+                <button class="btn-export" id="export-btn">📥 Export PNG + JSON</button>
+            </section>
+        </aside>
+    </div>
+
+    <script src="shared/seed-system.js"></script>
+    <script src="shared/color-palettes.js"></script>
+    <script src="shared/canvas-utils.js"></script>
+    <script src="shared/parameter-manager.js"></script>
+    <script src="generators/projectile_generator.js"></script>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            if (typeof ProjectileGenerator !== 'undefined') {
+                window.projectileGenerator = new ProjectileGenerator();
+                window.projectileGenerator.init();
+            }
+        });
+    </script>
+</body>
+</html>

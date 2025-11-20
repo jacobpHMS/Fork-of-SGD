@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flak/Scatter Weapon Generator - SpaceGameDev</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e1a 0%, #1a1f3a 100%);
+            color: #e0e0e0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(26, 31, 58, 0.6);
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border: 2px solid rgba(230, 126, 34, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #e67e22, #e74c3c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #95a5a6;
+            font-size: 1.1rem;
+        }
+
+        .main-layout {
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .sidebar {
+            background: rgba(26, 31, 58, 0.8);
+            border: 2px solid rgba(230, 126, 34, 0.2);
+            border-radius: 12px;
+            padding: 25px;
+            position: sticky;
+            top: 20px;
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+
+        .content {
+            background: rgba(26, 31, 58, 0.8);
+            border: 2px solid rgba(230, 126, 34, 0.2);
+            border-radius: 12px;
+            padding: 25px;
+        }
+
+        .control-section {
+            margin-bottom: 25px;
+        }
+
+        .control-section h3 {
+            color: #e67e22;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            border-bottom: 2px solid rgba(230, 126, 34, 0.3);
+            padding-bottom: 8px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            color: #95a5a6;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 8px 12px;
+            background: rgba(10, 14, 26, 0.8);
+            border: 1px solid rgba(230, 126, 34, 0.3);
+            border-radius: 6px;
+            color: #e0e0e0;
+            font-size: 0.95rem;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            outline: none;
+            border-color: #e67e22;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background: #e67e22;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .btn:hover {
+            background: #d35400;
+        }
+
+        .btn-secondary {
+            background: #95a5a6;
+        }
+
+        .btn-secondary:hover {
+            background: #7f8c8d;
+        }
+
+        .param-category {
+            background: rgba(10, 14, 26, 0.6);
+            border: 1px solid rgba(230, 126, 34, 0.2);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .category-header {
+            background: rgba(230, 126, 34, 0.1);
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .category-header:hover {
+            background: rgba(230, 126, 34, 0.2);
+        }
+
+        .category-title {
+            font-weight: bold;
+            color: #e67e22;
+            font-size: 1.1rem;
+        }
+
+        .param-count {
+            color: #7f8c8d;
+            font-size: 0.85rem;
+        }
+
+        .toggle-icon {
+            color: #e67e22;
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+
+        .param-list {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .param-list.expanded {
+            max-height: 3000px;
+            padding: 20px;
+        }
+
+        .param-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(127, 140, 141, 0.2);
+        }
+
+        .param-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .param-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .param-name {
+            color: #ecf0f1;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+        }
+
+        .param-type {
+            color: #9b59b6;
+            font-size: 0.85rem;
+            font-style: italic;
+        }
+
+        .param-description {
+            color: #95a5a6;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .param-control {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .param-control input[type="range"] {
+            flex: 1;
+            height: 8px;
+            background: rgba(230, 126, 34, 0.2);
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .param-control input[type="range"]::-webkit-slider-thumb {
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            background: #e67e22;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .param-control input[type="range"]::-moz-range-thumb {
+            width: 18px;
+            height: 18px;
+            background: #e67e22;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+        }
+
+        .param-value {
+            min-width: 60px;
+            padding: 5px 10px;
+            background: rgba(10, 14, 26, 0.8);
+            border: 1px solid rgba(230, 126, 34, 0.3);
+            border-radius: 4px;
+            text-align: center;
+            color: #e67e22;
+            font-family: 'Courier New', monospace;
+        }
+
+        .variance-controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .variance-label {
+            color: #7f8c8d;
+            font-size: 0.85rem;
+            margin-right: 10px;
+        }
+
+        .variance-input {
+            width: 70px;
+            padding: 4px 8px;
+            background: rgba(10, 14, 26, 0.8);
+            border: 1px solid rgba(230, 126, 34, 0.3);
+            border-radius: 4px;
+            color: #e0e0e0;
+            font-size: 0.85rem;
+        }
+
+        .canvas-container {
+            background: rgba(10, 14, 26, 0.8);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .canvas-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        #main-canvas {
+            border: 2px solid rgba(230, 126, 34, 0.3);
+            border-radius: 4px;
+        }
+
+        .sprite-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .sprite-grid h4 {
+            grid-column: 1 / -1;
+            color: #e67e22;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        
+        .sprite-grid #grid-info {
+            color: #95a5a6;
+            font-size: 0.9rem;
+            font-weight: normal;
+        }
+
+        .frame-canvas {
+            width: 100%;
+            aspect-ratio: 1;
+            border: 2px solid rgba(52, 152, 219, 0.3);
+            border-radius: 4px;
+            background: #000;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .frame-canvas:hover {
+            border-color: rgba(52, 152, 219, 0.6);
+            transform: scale(1.05);
+        }
+
+        .frame-canvas.active {
+            border-color: #3498db;
+            box-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
+            transform: scale(1.05);
+        }
+
+        .frame-canvas.empty {
+            background: rgba(52, 152, 219, 0.05);
+            border-style: dashed;
+        }
+
+        .stats-panel {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(10, 14, 26, 0.6);
+            border-radius: 8px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            color: #e67e22;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(230, 126, 34, 0.2);
+            color: #e67e22;
+            border: 1px solid #e67e22;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: all 0.2s;
+        }
+
+        .back-btn:hover {
+            background: #e67e22;
+            color: white;
+        }
+
+        .sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: rgba(10, 14, 26, 0.6);
+            border-radius: 4px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: rgba(230, 126, 34, 0.4);
+            border-radius: 4px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb:hover {
+            background: rgba(230, 126, 34, 0.6);
+        }
+
+        @media (max-width: 1200px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+                max-height: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../hub.html" class="back-btn">← Back to Hub</a>
+
+        <header>
+            <h1>💥 Flak/Scatter Weapon Generator</h1>
+            <p class="subtitle">36 Parameters - Multi-Projectile Area Denial System</p>
+        </header>
+
+        <div class="main-layout">
+            <!-- Left Sidebar - Controls -->
+            <div class="sidebar">
+                <!-- Seed & Preset Controls -->
+                <div class="control-section">
+                    <h3>🔑 Generation Controls</h3>
+
+                    <div class="input-group">
+                        <label>Weapon ID (Database)</label>
+                        <input type="text" id="item-id" value="WEAPON_FLAK_001" placeholder="e.g., WEAPON_FLAK_001">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Variant</label>
+                        <input type="text" id="variant" value="standard" placeholder="e.g., standard, heavy">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Seed (Auto-generated)</label>
+                        <input type="text" id="seed-display" readonly>
+                    </div>
+
+                    <div class="input-group">
+                        <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                            <input type="checkbox" id="use-seed-randomization" checked>
+                            <span>Use Seed Randomization</span>
+                        </label>
+                        <small style="color: #95a5a6; font-size: 0.85rem;">
+                            Unchecked: Manual parameter control<br>
+                            Checked: Seed-based variance applied
+                        </small>
+                    </div>
+
+                    <button class="btn" onclick="regenerate()">💥 Generate Weapon Effect</button>
+                    </div>
+
+                <!-- Sprite Sheet Controls -->
+                <div class="control-section">
+                    <h3>🎬 Sprite Sheet</h3>
+
+                    <div class="input-group">
+                        <label>Grid Layout</label>
+                        <select id="grid-layout">
+                            <option value="4x1">4x1 (4 frames, 1 row)</option>
+                            <option value="4x2" selected>4x2 (8 frames)</option>
+                            <option value="8x2">8x2 (16 frames)</option>
+                            <option value="16x2">16x2 (32 frames)</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-success" onclick="generateAllFrames()">🎬 Generate All Frames</button>
+                    <button class="btn btn-secondary" onclick="clearAllFrames()">🗑️ Clear All Frames</button>
+
+                    <div class="input-group">
+                        <label>Active Frame: <span id="active-frame-display">None</span></label>
+                        <small>Click a frame below to edit its parameters</small>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Pivot Point (Anchor)</label>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="number" id="pivot-x" value="0.5" step="0.1" min="0" max="1" style="flex: 1;" placeholder="X (0-1)">
+                            <input type="number" id="pivot-y" value="0.5" step="0.1" min="0" max="1" style="flex: 1;" placeholder="Y (0-1)">
+                        </div>
+                        <small>Center of rotation/attachment (0.5, 0.5 = center)</small>
+                    </div>
+                </div>
+
+                <!-- Export/Import -->
+                <div class="control-section">
+                    <h3>💾 Export</h3>
+                    <button class="btn btn-success" onclick="exportSpriteSheet()">🖼️ Export PNG Sprite Sheet</button>
+                    <button class="btn btn-secondary" onclick="exportConfig()">📥 Export JSON Config</button>
+                    <button class="btn btn-secondary" onclick="importConfig()">📤 Import JSON Config</button>
+                    <input type="file" id="file-input" accept=".json" style="display: none;">
+
+                    <div class="input-group">
+                        <label>Export Settings</label>
+                        <select id="export-scale">
+                            <option value="1">1x (128px per frame)</option>
+                            <option value="2" selected>2x (256px per frame)</option>
+                            <option value="4">4x (512px per frame)</option>
+                            <option value="8">8x (1024px per frame)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="control-section">
+                    <h3>📊 Statistics</h3>
+                    <div style="color: #95a5a6; font-size: 0.9rem; line-height: 1.8;">
+                        <div><strong>Parameters:</strong> <span style="color: #e67e22;">36</span></div>
+                        <div><strong>Categories:</strong> <span style="color: #e67e22;">4</span></div>
+                        <div><strong>Launch Patterns:</strong> <span style="color: #e67e22;">5</span></div>
+                        <div><strong>Seed System:</strong> <span style="color: #2ecc71;">CRC32</span></div>
+                        <div><strong>Reproducible:</strong> <span style="color: #2ecc71;">100%</span></div>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div class="control-section">
+                    <h3>📚 Resources</h3>
+                    <button class="btn btn-secondary" onclick="window.location.href='../wiki/index.html#flak'">📖 Parameter Wiki</button>
+                    <button class="btn btn-secondary" onclick="window.location.href='../examples/index.html'">🎯 View Examples</button>
+                    <button class="btn btn-secondary" onclick="window.location.href='../api/index.html'">⚙️ API Reference</button>
+                </div>
+            </div>
+
+            <!-- Right Content - Canvas & Parameters -->
+            <div class="content">
+                <!-- Canvas Display -->
+                <div class="canvas-container">
+                    <h3 style="color: #e67e22; margin-bottom: 15px;">Weapon Effect Preview</h3>
+                    <div class="canvas-wrapper">
+                        <canvas id="main-canvas" width="800" height="600"></canvas>
+                    </div>
+
+                    <!-- Animation Grid (8 Frames) -->
+                    <div class="sprite-grid" id="sprite-grid">
+                        <h4>8-Frame Animation Sequence (Impact & Spread)</h4>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="stats-panel">
+                        <div class="stat-item">
+                            <div class="stat-value" id="stat-projectiles">0</div>
+                            <div class="stat-label">Projectiles</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="stat-spread">0°</div>
+                            <div class="stat-label">Scatter Angle</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="stat-velocity">0</div>
+                            <div class="stat-label">Velocity (m/s)</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="stat-lifetime">0s</div>
+                            <div class="stat-label">Lifetime</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Parameter Categories -->
+                <div id="parameters-container">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load Dependencies -->
+    <script src="../shared/seed-system.js"></script>
+    <script src="../shared/parameter-manager.js"></script>
+
+    <script>
+        // Global instances
+        let seedSystem;
+        let paramManager;
+        let currentSeed;
+        // Frame management
+        let frameParameters = {};  // Stores parameters for each frame
+        let activeFrame = null;     // Currently selected frame index
+        let currentGridLayout = '4x2';  // Current grid layout
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', async () => {
+            try {
+                // Load parameter definitions
+                const response = await fetch('../parameters/weapon_flak_params.json');
+                const paramDefs = await response.json();
+
+                // Initialize systems
+                seedSystem = new SeedSystem();
+                paramManager = new ParameterManager(paramDefs);
+
+                // Generate UI
+                generateParameterUI();
+
+                // Set up event listeners
+                setupEventListeners();
+
+                // Build sprite grid
+                buildSpriteGrid();
+
+                // Initial generation
+                regenerate();
+
+            } catch (error) {
+                console.error('Initialization error:', error);
+                alert('Failed to load parameter definitions. Check console for details.');
+            }
+        });
+
+        function setupEventListeners() {
+            // Item ID and variant changes
+            document.getElementById('item-id').addEventListener('change', regenerate);
+            document.getElementById('variant').addEventListener('change', regenerate);
+
+            // Seed randomization toggle
+            document.getElementById('use-seed-randomization').addEventListener('change', regenerate);
+
+            // Grid layout change
+            document.getElementById('grid-layout').addEventListener('change', (e) => {
+                currentGridLayout = e.target.value;
+                buildSpriteGrid();
+            });
+        }
+
+        function generateParameterUI() {
+            const container = document.getElementById('parameters-container');
+            container.innerHTML = '';
+
+            const categories = paramManager.definitions.categories;
+
+            for (const [categoryId, category] of Object.entries(categories)) {
+                const categoryDiv = createCategoryUI(categoryId, category);
+                container.appendChild(categoryDiv);
+            }
+        }
+
+        function createCategoryUI(categoryId, category) {
+            const categoryDiv = document.createElement('div');
+            categoryDiv.className = 'param-category';
+
+            const paramCount = Object.keys(category.parameters).length;
+
+            // Header
+            const header = document.createElement('div');
+            header.className = 'category-header';
+            header.onclick = () => toggleCategory(categoryId);
+            header.innerHTML = `
+                <span class="category-title">${category.name || categoryId}</span>
+                <span class="param-count">${paramCount} Parameters</span>
+                <span class="toggle-icon" id="toggle-${categoryId}">▲</span>
+            `;
+            categoryDiv.appendChild(header);
+
+            // Parameter list (expanded by default)
+            const paramList = document.createElement('div');
+            paramList.className = 'param-list expanded';
+            paramList.id = `list-${categoryId}`;
+
+            for (const [paramKey, param] of Object.entries(category.parameters)) {
+                const paramItem = createParameterControl(paramKey, param);
+                paramList.appendChild(paramItem);
+            }
+
+            categoryDiv.appendChild(paramList);
+
+            return categoryDiv;
+        }
+
+        function createParameterControl(key, param) {
+            const item = document.createElement('div');
+            item.className = 'param-item';
+
+            const header = document.createElement('div');
+            header.className = 'param-header';
+            header.innerHTML = `
+                <span class="param-name">${key}</span>
+                <span class="param-type">${param.type}</span>
+            `;
+            item.appendChild(header);
+
+            const description = document.createElement('div');
+            description.className = 'param-description';
+            description.textContent = param.description || '';
+            item.appendChild(description);
+
+            // Control based on type
+            if (param.type === 'enum') {
+                const select = document.createElement('select');
+                select.id = `param-${key}`;
+                select.style.width = '100%';
+                select.style.padding = '8px';
+                select.style.background = 'rgba(10, 14, 26, 0.8)';
+                select.style.border = '1px solid rgba(230, 126, 34, 0.3)';
+                select.style.borderRadius = '6px';
+                select.style.color = '#e0e0e0';
+
+                param.values.forEach(value => {
+                    const option = document.createElement('option');
+                    option.value = value;
+                    option.textContent = value;
+                    select.appendChild(option);
+                });
+
+                select.value = param.default;
+                select.addEventListener('change', (e) => {
+                    paramManager.setValue(key, e.target.value);
+                    regenerate();
+                });
+
+                item.appendChild(select);
+
+            } else if (param.type === 'bool') {
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.id = `param-${key}`;
+                checkbox.checked = param.default;
+                checkbox.addEventListener('change', (e) => {
+                    paramManager.setValue(key, e.target.checked);
+                    regenerate();
+                });
+
+                const label = document.createElement('label');
+                label.appendChild(checkbox);
+                label.appendChild(document.createTextNode(' Enable'));
+                label.style.color = '#95a5a6';
+                item.appendChild(label);
+
+            } else {
+                // Numeric (float/int) with slider
+                const control = document.createElement('div');
+                control.className = 'param-control';
+
+                const slider = document.createElement('input');
+                slider.type = 'range';
+                slider.id = `param-${key}`;
+                slider.min = param.min;
+                slider.max = param.max;
+                slider.step = param.type === 'int' ? 1 : 0.01;
+                slider.value = param.default;
+
+                const valueDisplay = document.createElement('div');
+                valueDisplay.className = 'param-value';
+                valueDisplay.id = `value-${key}`;
+                valueDisplay.textContent = param.default;
+
+                slider.addEventListener('input', (e) => {
+                    const value = param.type === 'int'
+                        ? parseInt(e.target.value)
+                        : parseFloat(e.target.value);
+                    paramManager.setValue(key, value);
+                    valueDisplay.textContent = value.toFixed(param.type === 'int' ? 0 : 2);
+                    regenerate();
+                });
+
+                control.appendChild(slider);
+                control.appendChild(valueDisplay);
+                item.appendChild(control);
+
+                // Variance controls
+                if (param.variance_min !== undefined) {
+                    const varianceDiv = document.createElement('div');
+                    varianceDiv.className = 'variance-controls';
+                    varianceDiv.innerHTML = `
+                        <span class="variance-label">Variance:</span>
+                        <input type="number" class="variance-input" id="var-min-${key}"
+                               value="${param.variance_min}" step="0.01">
+                        <span style="color: #7f8c8d;">to</span>
+                        <input type="number" class="variance-input" id="var-max-${key}"
+                               value="${param.variance_max}" step="0.01">
+                    `;
+                    item.appendChild(varianceDiv);
+
+                    varianceDiv.querySelector(`#var-min-${key}`).addEventListener('change', (e) => {
+                        paramManager.setVarianceRange(key, parseFloat(e.target.value),
+                            paramManager.varianceRanges[key].max);
+                        regenerate();
+                    });
+
+                    varianceDiv.querySelector(`#var-max-${key}`).addEventListener('change', (e) => {
+                        paramManager.setVarianceRange(key, paramManager.varianceRanges[key].min,
+                            parseFloat(e.target.value));
+                        regenerate();
+                    });
+                }
+            }
+
+            return item;
+        }
+
+        function toggleCategory(categoryId) {
+            const list = document.getElementById(`list-${categoryId}`);
+            const icon = document.getElementById(`toggle-${categoryId}`);
+
+            if (list.classList.contains('expanded')) {
+                list.classList.remove('expanded');
+                icon.textContent = '▼';
+            } else {
+                list.classList.add('expanded');
+                icon.textContent = '▲';
+            }
+        }
+
+        function regenerate() {
+            const itemId = document.getElementById('item-id').value || 'WEAPON_FLAK_001';
+            const variant = document.getElementById('variant').value || 'standard';
+            const useSeedRandomization = document.getElementById('use-seed-randomization').checked;
+
+            // Generate seed (frame 0 for main canvas)
+            currentSeed = seedSystem.generateSeed('projectile', itemId, variant, 0);
+            document.getElementById('seed-display').value = currentSeed;
+
+            let params;
+
+            if (useSeedRandomization) {
+                // Create RNG and get randomized parameters
+                const rng = seedSystem.createRNG(currentSeed);
+                params = paramManager.getAllRandomized(rng);
+            } else {
+                // Use current manual parameter values
+                params = paramManager.currentValues;
+            }
+
+            // Render weapon effect
+            renderWeapon('main-canvas', params);
+
+            // Update stats
+            updateStats(params);
+        }
+
+        function generateAnimation() {
+            const itemId = document.getElementById('item-id').value || 'WEAPON_FLAK_001';
+            const variant = document.getElementById('variant').value || 'standard';
+
+            // Generate 8 frames
+            for (let frame = 0; frame < 8; frame++) {
+                const seed = seedSystem.generateSeed('projectile', itemId, variant, frame);
+                const rng = seedSystem.createRNG(seed);
+                const params = paramManager.getAllRandomized(rng);
+
+                renderWeapon(`frame-${frame}`, params, frame / 8);
+            }
+
+            alert('8-frame animation generated! Shows launch → impact → explosion sequence.');
+        }
+
+        function renderWeapon(canvasId, params, timeProgress = 0.5) {
+            const canvas = document.getElementById(canvasId);
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width;
+            const height = canvas.height;
+
+            // Clear canvas
+            ctx.fillStyle = '#000';
+            ctx.fillRect(0, 0, width, height);
+
+            // Origin point (weapon muzzle)
+            const originX = 50;
+            const originY = height / 2;
+
+            // Draw muzzle flash at t=0
+            if (timeProgress < 0.2) {
+                drawMuzzleFlash(ctx, originX, originY, params, timeProgress / 0.2);
+            }
+
+            // Draw projectiles in flight
+            drawProjectiles(ctx, originX, originY, width, height, params, timeProgress);
+
+            // Draw trails
+            if (params.trail_enabled) {
+                drawTrails(ctx, originX, originY, width, height, params, timeProgress);
+            }
+
+            // Draw impacts
+            if (timeProgress > 0.7) {
+                drawImpacts(ctx, width, height, params, (timeProgress - 0.7) / 0.3);
+            }
+        }
+
+        function drawMuzzleFlash(ctx, x, y, params, intensity) {
+            const flashSize = params.muzzle_flash_size * intensity;
+            const brightness = params.muzzle_flash_brightness;
+
+            // Main flash
+            const gradient = ctx.createRadialGradient(x, y, 0, x, y, flashSize);
+            gradient.addColorStop(0, `rgba(255, 200, 100, ${brightness})`);
+            gradient.addColorStop(0.3, `rgba(255, 150, 50, ${brightness * 0.6})`);
+            gradient.addColorStop(1, 'rgba(255, 100, 0, 0)');
+
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            ctx.arc(x, y, flashSize, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Spark particles
+            for (let i = 0; i < 20; i++) {
+                const angle = Math.random() * Math.PI * 2;
+                const distance = Math.random() * flashSize * 0.5;
+                const sx = x + Math.cos(angle) * distance;
+                const sy = y + Math.sin(angle) * distance;
+
+                ctx.fillStyle = `rgba(255, 255, 200, ${brightness})`;
+                ctx.fillRect(sx, sy, 3, 3);
+            }
+        }
+
+        function drawProjectiles(ctx, originX, originY, width, height, params, time) {
+            const count = params.projectile_count;
+            const spread = params.scatter_angle;
+            const velocity = params.projectile_velocity;
+            const size = params.projectile_size;
+            const pattern = params.launch_pattern;
+
+            for (let i = 0; i < count; i++) {
+                let angle;
+
+                switch (pattern) {
+                    case 'cone':
+                        angle = -spread / 2 + (spread * i / (count - 1 || 1));
+                        break;
+                    case 'spiral':
+                        angle = (i / count) * 360 + time * 180;
+                        break;
+                    case 'circle':
+                        angle = (i / count) * 360;
+                        break;
+                    case 'horizontal_line':
+                        angle = 0;
+                        break;
+                    case 'vertical_line':
+                        angle = 90;
+                        break;
+                    default:
+                        angle = -spread / 2 + (spread * i / (count - 1 || 1));
+                }
+
+                const rad = angle * Math.PI / 180;
+                const distance = velocity * time * 10;
+
+                const px = originX + Math.cos(rad) * distance;
+                const py = originY + Math.sin(rad) * distance;
+
+                // Draw projectile
+                const gradient = ctx.createRadialGradient(px, py, 0, px, py, size);
+                gradient.addColorStop(0, '#ffaa00');
+                gradient.addColorStop(0.5, '#ff5500');
+                gradient.addColorStop(1, 'rgba(255, 0, 0, 0)');
+
+                ctx.fillStyle = gradient;
+                ctx.beginPath();
+                ctx.arc(px, py, size, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Draw directional glow
+                ctx.shadowBlur = 15;
+                ctx.shadowColor = '#ff5500';
+                ctx.fillStyle = '#ffcc00';
+                ctx.beginPath();
+                ctx.arc(px, py, size * 0.5, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.shadowBlur = 0;
+            }
+        }
+
+        function drawTrails(ctx, originX, originY, width, height, params, time) {
+            const count = params.projectile_count;
+            const spread = params.scatter_angle;
+            const velocity = params.projectile_velocity;
+            const trailLength = params.trail_length;
+            const pattern = params.launch_pattern;
+
+            ctx.globalAlpha = 0.6;
+
+            for (let i = 0; i < count; i++) {
+                let angle;
+
+                switch (pattern) {
+                    case 'cone':
+                        angle = -spread / 2 + (spread * i / (count - 1 || 1));
+                        break;
+                    case 'spiral':
+                        angle = (i / count) * 360 + time * 180;
+                        break;
+                    case 'circle':
+                        angle = (i / count) * 360;
+                        break;
+                    default:
+                        angle = -spread / 2 + (spread * i / (count - 1 || 1));
+                }
+
+                const rad = angle * Math.PI / 180;
+                const distance = velocity * time * 10;
+
+                const px = originX + Math.cos(rad) * distance;
+                const py = originY + Math.sin(rad) * distance;
+
+                // Draw trail
+                for (let t = 0; t < 10; t++) {
+                    const trailDist = distance - (t / 10) * trailLength;
+                    if (trailDist < 0) continue;
+
+                    const tx = originX + Math.cos(rad) * trailDist;
+                    const ty = originY + Math.sin(rad) * trailDist;
+
+                    const alpha = 1 - (t / 10);
+                    ctx.fillStyle = `rgba(255, 150, 50, ${alpha * 0.3})`;
+                    ctx.fillRect(tx, ty, 2, 2);
+                }
+            }
+
+            ctx.globalAlpha = 1;
+        }
+
+        function drawImpacts(ctx, width, height, params, intensity) {
+            const shockwave = params.impact_shockwave;
+            const shrapnel = params.impact_shrapnel;
+
+            if (!shockwave && !shrapnel) return;
+
+            const impactX = width * 0.75;
+            const impactY = height / 2;
+
+            // Shockwave
+            if (shockwave) {
+                const radius = intensity * 150;
+                ctx.strokeStyle = `rgba(255, 150, 50, ${1 - intensity})`;
+                ctx.lineWidth = 3;
+                ctx.beginPath();
+                ctx.arc(impactX, impactY, radius, 0, Math.PI * 2);
+                ctx.stroke();
+
+                ctx.strokeStyle = `rgba(255, 200, 100, ${(1 - intensity) * 0.5})`;
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.arc(impactX, impactY, radius * 0.7, 0, Math.PI * 2);
+                ctx.stroke();
+            }
+
+            // Shrapnel
+            if (shrapnel) {
+                for (let i = 0; i < 30; i++) {
+                    const angle = Math.random() * Math.PI * 2;
+                    const distance = intensity * 100 * (0.5 + Math.random() * 0.5);
+                    const sx = impactX + Math.cos(angle) * distance;
+                    const sy = impactY + Math.sin(angle) * distance;
+
+                    ctx.fillStyle = `rgba(255, 100, 0, ${1 - intensity})`;
+                    ctx.fillRect(sx, sy, 2, 2);
+                }
+            }
+        }
+
+        function updateStats(params) {
+            document.getElementById('stat-projectiles').textContent = params.projectile_count || 0;
+            document.getElementById('stat-spread').textContent = (params.scatter_angle || 0).toFixed(0) + '°';
+            document.getElementById('stat-velocity').textContent = (params.projectile_velocity || 0).toFixed(0);
+            document.getElementById('stat-lifetime').textContent = (params.projectile_lifetime || 0).toFixed(2) + 's';
+        }
+
+                ctx.beginPath();
+                ctx.moveTo(vx, vy);
+                for (let j = 0; j < 5; j++) {
+                    const branchAngle = angle + (Math.random() - 0.5) * Math.PI / 2;
+                    const branchLength = 10 + Math.random() * 20;
+                    const bx = vx + Math.cos(branchAngle) * branchLength;
+                    const by = vy + Math.sin(branchAngle) * branchLength;
+                    ctx.lineTo(bx, by);
+                }
+                ctx.stroke();
+
+                ctx.shadowBlur = 0;
+            }
+        }
+
+        function updateStats(params) {
+            // Estimate vertices based on shape type
+            let vertexCount = 24;
+            if (params.shape_type === 'crystalline') {
+                vertexCount = params.facet_count || 8;
+            } else if (params.shape_type === 'sphere') {
+                vertexCount = 32;
+            }
+
+            document.getElementById('stat-vertices').textContent = vertexCount;
+            document.getElementById('stat-craters').textContent = Math.floor((params.crater_density || 0) * 0.5);
+            document.getElementById('stat-veins').textContent = params.ore_vein_count || 0;
+        }
+
+        // ========================================================================
+        // SPRITE SHEET FRAME MANAGEMENT
+        // ========================================================================
+
+        function buildSpriteGrid() {
+            const [cols, rows] = currentGridLayout.split('x').map(Number);
+            const totalFrames = cols * rows;
+
+            const grid = document.getElementById('sprite-grid');
+            const gridInfo = document.getElementById('grid-info');
+            gridInfo.textContent = `(${currentGridLayout} = ${totalFrames} frames)`;
+
+            // Clear existing frames
+            const existingFrames = grid.querySelectorAll('.frame-canvas');
+            existingFrames.forEach(f => f.remove());
+
+            // Update grid columns
+            grid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+
+            // Create frames
+            for (let i = 0; i < totalFrames; i++) {
+                const canvas = document.createElement('canvas');
+                canvas.id = `frame-${i}`;
+                canvas.className = 'frame-canvas empty';
+                canvas.width = 128;
+                canvas.height = 128;
+                canvas.dataset.frameIndex = i;
+
+                canvas.addEventListener('click', () => onFrameClick(i));
+
+                grid.appendChild(canvas);
+            }
+        }
+
+        function onFrameClick(frameIndex) {
+            // Deselect previous frame
+            if (activeFrame !== null) {
+                const prevCanvas = document.getElementById(`frame-${activeFrame}`);
+                if (prevCanvas) prevCanvas.classList.remove('active');
+            }
+
+            // Select new frame
+            activeFrame = frameIndex;
+            const canvas = document.getElementById(`frame-${frameIndex}`);
+            canvas.classList.add('active');
+
+            document.getElementById('active-frame-display').textContent = `Frame ${frameIndex}`;
+
+            // Load frame's parameters if they exist
+            if (frameParameters[frameIndex]) {
+                loadFrameParameters(frameIndex);
+            }
+        }
+
+        function saveCurrentFrameParameters() {
+            if (activeFrame === null) return;
+
+            // Save current UI parameters to the active frame
+            frameParameters[activeFrame] = {
+                ...paramManager.currentValues
+            };
+
+            console.log(`Saved parameters for frame ${activeFrame}`);
+        }
+
+        function loadFrameParameters(frameIndex) {
+            if (!frameParameters[frameIndex]) return;
+
+            // Load frame's parameters into UI
+            const params = frameParameters[frameIndex];
+
+            for (const [key, value] of Object.entries(params)) {
+                paramManager.setValue(key, value, false);
+            }
+
+            updateUIFromParameters();
+            regenerate();
+        }
+
+        function generateAllFrames() {
+            const useSeedRandomization = document.getElementById('use-seed-randomization').checked;
+            const itemId = document.getElementById('item-id').value || 'ORE_T1_001';
+            const variant = document.getElementById('variant').value || 'iron';
+
+            const [cols, rows] = currentGridLayout.split('x').map(Number);
+            const totalFrames = cols * rows;
+
+            for (let i = 0; i < totalFrames; i++) {
+                // Generate seed for this frame
+                const seed = seedSystem.generateSeed('asteroid', itemId, variant, i);
+                const rng = seedSystem.createRNG(seed);
+
+                let params;
+                if (useSeedRandomization) {
+                    params = paramManager.getAllRandomized(rng);
+                } else {
+                    params = { ...paramManager.currentValues };
+                }
+
+                // Store frame parameters
+                frameParameters[i] = params;
+
+                // Render frame
+                const canvas = document.getElementById(`frame-${i}`);
+                if (canvas) {
+                    canvas.classList.remove('empty');
+                    renderWeaponToCanvas(canvas, params);
+                }
+            }
+
+            alert(`Generated ${totalFrames} frames!`);
+        }
+
+        function clearAllFrames() {
+            const [cols, rows] = currentGridLayout.split('x').map(Number);
+            const totalFrames = cols * rows;
+
+            for (let i = 0; i < totalFrames; i++) {
+                const canvas = document.getElementById(`frame-${i}`);
+                if (canvas) {
+                    const ctx = canvas.getContext('2d');
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    canvas.classList.add('empty');
+                    canvas.classList.remove('active');
+                }
+            }
+
+            frameParameters = {};
+            activeFrame = null;
+            document.getElementById('active-frame-display').textContent = 'None';
+        }
+
+        function renderWeaponToCanvas(canvas, params) {
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width;
+            const height = canvas.height;
+
+            // Clear canvas
+            ctx.fillStyle = '#000';
+            ctx.fillRect(0, 0, width, height);
+
+            const centerX = width / 2;
+            const centerY = height / 2;
+            const baseRadius = Math.min(width, height) * 0.35;
+
+
+
+
+        function exportConfig() {
+            const config = {
+                itemId: document.getElementById('item-id').value,
+                variant: document.getElementById('variant').value,
+                seed: currentSeed,
+                parameters: paramManager.exportJSON()
+            };
+
+            const blob = new Blob([JSON.stringify(config, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `flak_${config.itemId}_${Date.now()}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function importConfig() {
+            const input = document.getElementById('file-input');
+            input.onchange = (e) => {
+                const file = e.target.files[0];
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    try {
+                        const config = JSON.parse(event.target.result);
+
+                        if (config.itemId) document.getElementById('item-id').value = config.itemId;
+                        if (config.variant) document.getElementById('variant').value = config.variant;
+                        if (config.parameters) {
+                            paramManager.importJSON(config.parameters);
+                        }
+
+                        regenerate();
+                        alert('Configuration loaded successfully!');
+                    } catch (error) {
+                        alert('Failed to load configuration: ' + error.message);
+                    }
+                };
+                reader.readAsText(file);
+            };
+            input.click();
+        }
+        // ========================================================================
+        // PNG SPRITE SHEET EXPORT
+        // ========================================================================
+
+        function exportSpriteSheet() {
+            const [cols, rows] = currentGridLayout.split('x').map(Number);
+            const totalFrames = cols * rows;
+            const scale = parseInt(document.getElementById('export-scale').value);
+            const frameSize = 128 * scale;
+            const pivotX = parseFloat(document.getElementById('pivot-x').value);
+            const pivotY = parseFloat(document.getElementById('pivot-y').value);
+
+            // Create export canvas
+            const exportCanvas = document.createElement('canvas');
+            exportCanvas.width = cols * frameSize;
+            exportCanvas.height = rows * frameSize;
+            const ctx = exportCanvas.getContext('2d');
+
+            // Fill background
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(0, 0, exportCanvas.width, exportCanvas.height);
+
+            // Check if any frames exist
+            let hasFrames = false;
+            for (let i = 0; i < totalFrames; i++) {
+                if (frameParameters[i]) {
+                    hasFrames = true;
+                    break;
+                }
+            }
+
+            if (!hasFrames) {
+                alert('No frames generated! Click "Generate All Frames" first.');
+                return;
+            }
+
+            // Render each frame
+            for (let i = 0; i < totalFrames; i++) {
+                const row = Math.floor(i / cols);
+                const col = i % cols;
+                const x = col * frameSize;
+                const y = row * frameSize;
+
+                if (frameParameters[i]) {
+                    // Create temporary canvas at export scale
+                    const tempCanvas = document.createElement('canvas');
+                    tempCanvas.width = frameSize;
+                    tempCanvas.height = frameSize;
+                    const tempCtx = tempCanvas.getContext('2d');
+
+                    // Scale up rendering
+                    tempCtx.scale(scale, scale);
+
+                    // Render asteroid
+                    renderWeaponToTempCanvas(tempCtx, frameParameters[i], 128);
+
+                    // Copy to export canvas
+                    ctx.drawImage(tempCanvas, x, y);
+
+                    // Draw pivot point marker (magenta crosshair)
+                    const pivotPxX = x + frameSize * pivotX;
+                    const pivotPxY = y + frameSize * pivotY;
+
+                    ctx.strokeStyle = '#ff00ff';
+                    ctx.lineWidth = 2;
+                    ctx.beginPath();
+                    ctx.moveTo(pivotPxX - 5, pivotPxY);
+                    ctx.lineTo(pivotPxX + 5, pivotPxY);
+                    ctx.moveTo(pivotPxX, pivotPxY - 5);
+                    ctx.lineTo(pivotPxX, pivotPxY + 5);
+                    ctx.stroke();
+                }
+            }
+
+            // Download
+            exportCanvas.toBlob((blob) => {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                const itemId = document.getElementById('item-id').value || 'asteroid';
+                a.download = `${itemId}_spritesheet_${currentGridLayout}_${frameSize}px.png`;
+                a.click();
+                URL.revokeObjectURL(url);
+
+                alert(`Exported ${cols}x${rows} sprite sheet!
+Size: ${exportCanvas.width}x${exportCanvas.height}px
+Pivot: (${pivotX}, ${pivotY})
+Scale: ${scale}x`);
+            });
+        }
+
+        function renderWeaponToTempCanvas(ctx, params, size) {
+            const centerX = size / 2;
+            const centerY = size / 2;
+            const baseRadius = size * 0.35;
+
+            // Apply elongation
+            const radiusX = baseRadius * params.elongation_x;
+            const radiusY = baseRadius * params.elongation_y;
+
+            // Draw asteroid
+            const gradient = ctx.createRadialGradient(
+                centerX - radiusX * 0.3, centerY - radiusY * 0.3, 0,
+                centerX, centerY, Math.max(radiusX, radiusY)
+            );
+
+            const hue = params.base_color_hue || 30;
+            gradient.addColorStop(0, `hsl(${hue}, 70%, 50%)`);
+            gradient.addColorStop(0.7, `hsl(${hue}, 50%, 30%)`);
+            gradient.addColorStop(1, `hsl(${hue}, 30%, 15%)`);
+
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            ctx.ellipse(centerX, centerY, radiusX, radiusY, 0, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Add ore glow
+            if (params.purity_glow > 0) {
+                ctx.shadowColor = `hsl(${hue + 30}, 100%, 60%)`;
+                ctx.shadowBlur = 15 * params.purity_glow;
+                ctx.strokeStyle = `hsla(${hue + 30}, 100%, 60%, ${params.purity_glow * 0.5})`;
+                ctx.lineWidth = 2;
+                ctx.stroke();
+            }
+        }
+
+
+    </script>
+</body>
+</html>

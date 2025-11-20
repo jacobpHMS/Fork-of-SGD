@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceGameDev Asset Generator - Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e1a 0%, #1a1f3a 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(26, 31, 58, 0.6);
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border: 2px solid rgba(52, 152, 219, 0.3);
+        }
+
+        h1 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #3498db, #9b59b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #95a5a6;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: rgba(26, 31, 58, 0.8);
+            border: 2px solid rgba(52, 152, 219, 0.2);
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            border-color: #3498db;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #3498db;
+        }
+
+        .card p {
+            color: #95a5a6;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            border-top: 1px solid rgba(127, 140, 141, 0.2);
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .badge-params {
+            background: rgba(52, 152, 219, 0.2);
+            color: #3498db;
+        }
+
+        .badge-new {
+            background: rgba(46, 204, 113, 0.2);
+            color: #2ecc71;
+        }
+
+        .badge-beta {
+            background: rgba(230, 126, 34, 0.2);
+            color: #e67e22;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin: 40px 0 20px 0;
+            color: #ecf0f1;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+
+        .quick-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: 2px solid #3498db;
+            background: transparent;
+            color: #3498db;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: #3498db;
+            color: white;
+        }
+
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+
+        .btn-success {
+            border-color: #2ecc71;
+            color: #2ecc71;
+        }
+
+        .btn-success:hover {
+            background: #2ecc71;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #7f8c8d;
+            border-top: 1px solid rgba(127, 140, 141, 0.2);
+            margin-top: 40px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2ecc71;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>🎨 SpaceGameDev Asset Generator</h1>
+            <p class="subtitle">Procedural Generation System V2 - 220+ Parameter Control</p>
+
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value">220+</div>
+                    <div class="stat-label">Parameters</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">10</div>
+                    <div class="stat-label">Generators</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Reproducible</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">60 FPS</div>
+                    <div class="stat-label">Performance</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Visual Asset Generators -->
+        <h2 class="section-title">🖼️ Visual Asset Generators</h2>
+        <div class="grid">
+            <!-- Asteroid Generator -->
+            <div class="card" onclick="window.location.href='generators/asteroid.html'">
+                <div class="card-icon">🪨</div>
+                <h2>Asteroid Generator</h2>
+                <p>Procedural asteroid shapes with ore veins, craters, and deformations. Full control over 27 parameters including shape type, surface detail, and material properties.</p>
+                <ul class="feature-list">
+                    <li>7 Shape types (sphere, ellipsoid, crystalline, etc.)</li>
+                    <li>Crater generation with depth control</li>
+                    <li>Ore vein system with branching</li>
+                    <li>T1-T6 tier presets</li>
+                </ul>
+                <div class="card-meta">
+                    <span class="badge badge-params">27 Parameters</span>
+                    <span class="badge badge-new">NEW</span>
+                </div>
+            </div>
+
+            <!-- Flak Weapon Generator -->
+            <div class="card" onclick="window.location.href='generators/weapon-flak.html'">
+                <div class="card-icon">💥</div>
+                <h2>Flak/Scatter Weapons</h2>
+                <p>Multi-projectile scatter guns with customizable spread patterns, trail effects, and impact visuals. 36 parameters for complete control.</p>
+                <ul class="feature-list">
+                    <li>5 Launch patterns (cone, spiral, circle, etc.)</li>
+                    <li>Trail effects with turbulence</li>
+                    <li>Impact shockwaves & screen shake</li>
+                    <li>Muzzle flash effects</li>
+                </ul>
+                <div class="card-meta">
+                    <span class="badge badge-params">36 Parameters</span>
+                    <span class="badge badge-new">NEW</span>
+                </div>
+            </div>
+
+            <!-- Container Generator -->
+            <div class="card" onclick="window.location.href='generators/container.html'">
+                <div class="card-icon">📦</div>
+                <h2>Container Generator</h2>
+                <p>Cargo containers for dropped loot and collectibles. Mineral, gas, liquid, and ammo types with customizable shapes and glow effects. 18 parameters for variety.</p>
+                <ul class="feature-list">
+                    <li>4 Container types (mineral, gas, liquid, ammo)</li>
+                    <li>4 Shape variants (cubic, cylindrical, spherical, crate)</li>
+                    <li>Hazard stripes & content indicators</li>
+                    <li>Weathering & damage effects</li>
+                </ul>
+                <div class="card-meta">
+                    <span class="badge badge-params">18 Parameters</span>
+                    <span class="badge badge-new">NEW</span>
+                </div>
+            </div>
+
+            <!-- Plasma Weapon Generator -->
+            <div class="card" onclick="window.location.href='generators/weapon-plasma.html'">
+                <div class="card-icon">⚡</div>
+                <h2>Plasma Weapons</h2>
+                <p>Energy-based weapons with blob shapes, electric arcs, and temperature-based blackbody radiation. 42 parameters for realistic plasma effects.</p>
+                <ul class="feature-list">
+                    <li>Temperature-based color (3000-10000K)</li>
+                    <li>Electric arc generation</li>
+                    <li>Charge phase buildup</li>
+                    <li>EMP impact flash</li>
+                </ul>
+                <div class="card-meta">
+                    <span class="badge badge-params">42 Parameters</span>
+                    <span class="badge badge-new">NEW</span>
+                </div>
+            </div>
+
+            <!-- Beam Weapon Generator -->
+            <div class="card" onclick="window.location.href='generators/weapon-beam.html'">
+                <div class="card-icon">🔴</div>
+                <h2>Beam/Laser Weapons</h2>
+                <p>Continuous beam weapons with distortion effects, pulse modes, and heat shimmer. 47 parameters including chromatic aberration and multi-beam support.</p>
+                <ul class="feature-list">
+                    <li>6 Beam types (solid, pulse, helix, etc.)</li>
+                    <li>Heat shimmer & distortion</li>
+                    <li>Multi-layer corona system</li>
+                    <li>Capital ship scaling</li>
+                </ul>
+                <div class="card-meta">
+                    <span class="badge badge-params">47 Parameters</span>
+                    <span class="badge badge-new">NEW</span>
+                </div>
+            </div>
+
+            <!-- Kinetic Weapon Generator -->
+            <div class="card" onclick="window.location.href='generators/weapon-kinetic.html'">
+                <div class="card-icon">🔫</div>
+                <h2>Kinetic Cannons</h2>
+                <p>Ballistic projectile weapons with muzzle flash, armor penetration, and ricochet effects. 32 parameters for realistic ballistics.</p>
+                <ul class="feature-list">
+                    <li>6 Shell types (APHE, HEAT, sabot, etc.)</li>
+                    <li>Muzzle flash animation</li>
+                    <li>Impact sparks & dents</li>
+                    <li>Shell casing ejection</li>
+                </ul>
+                <div class="card-meta">
+                    <span class="badge badge-params">32 Parameters</span>
+                    <span class="badge badge-new">NEW</span>
+                </div>
+            </div>
+
+            <!-- Rockets/Missiles Generator -->
+            <div class="card" onclick="window.location.href='generators/weapon-rockets.html'">
+                <div class="card-icon">🚀</div>
+                <h2>Rockets & Missiles</h2>
+                <p>Guided rockets with thrust effects, smoke trails, homing behavior, and explosive warheads. 38 parameters for missile variety.</p>
+                <ul class="feature-list">
+                    <li>5 Body shapes (cylindrical, conical, dart, etc.)</li>
+                    <li>Thrust flicker & afterburner particles</li>
+                    <li>Homing/dumbfire guidance modes</li>
+                    <li>Spiral smoke trails & shrapnel</li>
+                </ul>
+                <div class="card-meta">
+                    <span class="badge badge-params">38 Parameters</span>
+                    <span class="badge badge-new">NEW</span>
+                </div>
+            </div>
+
+            <!-- Capital Ship Weapons -->
+            <div class="card" onclick="window.location.href='generators/weapon-capital.html'">
+                <div class="card-icon">🛸</div>
+                <h2>Capital Ship Weapons</h2>
+                <p>Massive-scale weapons with multi-stage effects, screen shake, and debris fields. 36 parameters for epic capital ship combat.</p>
+                <ul class="feature-list">
+                    <li>Pre-fire venting effects</li>
+                    <li>Screen effects (shake, chromatic pulse)</li>
+                    <li>EMP & radiation effects</li>
+                    <li>Audio bass boost integration</li>
+                </ul>
+                <div class="card-meta">
+                    <span class="badge badge-params">36 Parameters</span>
+                    <span class="badge badge-new">NEW</span>
+                </div>
+            </div>
+
+            <!-- Legacy Graphics Generator -->
+            <div class="card" onclick="window.location.href='index.html'">
+                <div class="card-icon">🎨</div>
+                <h2>Legacy Graphics Generator</h2>
+                <p>Original multi-purpose graphics generator for ships, projectiles, effects, and backgrounds. Simple interface for quick asset creation.</p>
+                <ul class="feature-list">
+                    <li>Ship generation (multiple styles)</li>
+                    <li>Basic projectile creation</li>
+                    <li>Effect animations</li>
+                    <li>Background generation</li>
+                </ul>
+                <div class="card-meta">
+                    <span>Legacy Tool</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Audio Generators -->
+        <h2 class="section-title">🔊 Audio Generators</h2>
+        <div class="grid">
+            <!-- SFX Generator -->
+            <div class="card" onclick="window.location.href='sfx.html'">
+                <div class="card-icon">🎵</div>
+                <h2>SFX Generator</h2>
+                <p>Procedural sound synthesis with 5 synthesis methods, live waveform visualization, and real-time spectrogram. Fixed bugs in Phase 1!</p>
+                <ul class="feature-list">
+                    <li>Additive, FM, Subtractive synthesis</li>
+                    <li>Pulse wave (8-bit style)</li>
+                    <li>Physical modeling</li>
+                    <li>Sample processing & mixer</li>
+                </ul>
+                <div class="card-meta">
+                    <span class="badge badge-new">FIXED</span>
+                    <span>30+ Presets</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Documentation -->
+        <h2 class="section-title">📚 Documentation & Resources</h2>
+        <div class="grid">
+            <!-- Wiki -->
+            <div class="card" onclick="window.location.href='wiki/index.html'">
+                <div class="card-icon">📖</div>
+                <h2>Parameter Wiki</h2>
+                <p>Complete documentation of all 220+ parameters with descriptions, ranges, and usage examples. Interactive parameter browser.</p>
+                <div class="card-meta">
+                    <span class="badge badge-params">220+ Documented</span>
+                </div>
+            </div>
+
+            <!-- Examples -->
+            <div class="card" onclick="window.location.href='examples/index.html'">
+                <div class="card-icon">🎯</div>
+                <h2>Examples & Tutorials</h2>
+                <p>Step-by-step guides, preset showcases, and best practices for creating assets. Learn from example configurations.</p>
+                <div class="card-meta">
+                    <span>20+ Examples</span>
+                </div>
+            </div>
+
+            <!-- API Reference -->
+            <div class="card" onclick="window.location.href='api/index.html'">
+                <div class="card-icon">⚙️</div>
+                <h2>API Reference</h2>
+                <p>Technical documentation for the seed system, parameter manager, and Godot integration. For developers extending the system.</p>
+                <div class="card-meta">
+                    <span>Developer Docs</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="wiki/index.html" class="btn btn-primary">📖 View Full Wiki</a>
+            <a href="examples/index.html" class="btn">🎯 Browse Examples</a>
+            <a href="api/index.html" class="btn">⚙️ API Docs</a>
+            <a href="https://github.com/jacobpHMS/SpaceGameDev" class="btn btn-success">🔗 GitHub Repository</a>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p><strong>SpaceGameDev Asset Generator V2</strong></p>
+            <p>Phase 1 Complete - 220+ Parameters | Deterministic Seed System | 100% Reproducible</p>
+            <p style="margin-top: 15px; font-size: 0.85rem;">
+                Research: Houdini, Unity VFX Graph, Blender Geometry Nodes, Academic Papers<br>
+                Implementation: CRC32 Seed System, Parameter Manager, Advanced Audio Visualization
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

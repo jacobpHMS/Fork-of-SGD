@@ -1,0 +1,456 @@
+{
+  "version": "1.0",
+  "type": "asteroid_shape",
+  "description": "Comprehensive asteroid shape generation parameters - 27 parameters total",
+  "categories": {
+    "base_shape": {
+      "description": "Fundamental shape characteristics - 8 parameters",
+      "parameters": {
+        "shape_type": {
+          "type": "enum",
+          "values": ["sphere", "ellipsoid", "oblong", "irregular", "fragmented", "crystalline", "potato"],
+          "default": "irregular",
+          "description": "Base geometric primitive",
+          "ui_group": "Shape Type"
+        },
+        "elongation_x": {
+          "type": "float",
+          "min": 0.5,
+          "max": 2.0,
+          "default": 1.0,
+          "variance_min": -0.2,
+          "variance_max": 0.2,
+          "description": "X-axis stretching",
+          "ui_group": "Elongation"
+        },
+        "elongation_y": {
+          "type": "float",
+          "min": 0.5,
+          "max": 2.0,
+          "default": 1.0,
+          "variance_min": -0.2,
+          "variance_max": 0.2,
+          "description": "Y-axis stretching",
+          "ui_group": "Elongation"
+        },
+        "elongation_z": {
+          "type": "float",
+          "min": 0.5,
+          "max": 2.0,
+          "default": 1.0,
+          "variance_min": -0.2,
+          "variance_max": 0.2,
+          "description": "Z-axis stretching (3D rendering)",
+          "ui_group": "Elongation"
+        },
+        "asymmetry": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.3,
+          "variance_min": -0.1,
+          "variance_max": 0.3,
+          "description": "Overall shape irregularity",
+          "ui_group": "Shape Modifiers"
+        },
+        "roundness": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.5,
+          "variance_min": -0.2,
+          "variance_max": 0.2,
+          "description": "Edge sharpness (0=angular, 1=smooth)",
+          "ui_group": "Shape Modifiers"
+        },
+        "facet_count": {
+          "type": "int",
+          "min": 0,
+          "max": 32,
+          "default": 0,
+          "variance_min": -3,
+          "variance_max": 5,
+          "description": "Polygonalization for crystal look",
+          "ui_group": "Shape Modifiers"
+        },
+        "twist_angle": {
+          "type": "float",
+          "min": -180,
+          "max": 180,
+          "default": 0,
+          "variance_min": -30,
+          "variance_max": 30,
+          "description": "Rotation along Y-axis (degrees)",
+          "ui_group": "Shape Modifiers"
+        }
+      }
+    },
+    "surface_detail": {
+      "description": "Surface texture and features - 7 parameters",
+      "parameters": {
+        "roughness": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.5,
+          "variance_min": -0.15,
+          "variance_max": 0.15,
+          "description": "Overall surface bumpiness",
+          "ui_group": "Surface Quality"
+        },
+        "noise_scale": {
+          "type": "float",
+          "min": 0.5,
+          "max": 10.0,
+          "default": 2.0,
+          "variance_min": -0.5,
+          "variance_max": 1.0,
+          "description": "Frequency of surface noise",
+          "ui_group": "Noise Settings"
+        },
+        "noise_octaves": {
+          "type": "int",
+          "min": 1,
+          "max": 8,
+          "default": 3,
+          "variance_min": -1,
+          "variance_max": 2,
+          "description": "Number of noise layers (detail levels)",
+          "ui_group": "Noise Settings"
+        },
+        "noise_type": {
+          "type": "enum",
+          "values": ["perlin", "simplex", "voronoi", "worley"],
+          "default": "perlin",
+          "description": "Noise algorithm used",
+          "ui_group": "Noise Settings"
+        },
+        "crater_density": {
+          "type": "int",
+          "min": 0,
+          "max": 100,
+          "default": 15,
+          "variance_min": -5,
+          "variance_max": 10,
+          "description": "Number of impact craters",
+          "ui_group": "Craters"
+        },
+        "crater_depth": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.4,
+          "variance_min": -0.1,
+          "variance_max": 0.2,
+          "description": "Crater penetration depth",
+          "ui_group": "Craters"
+        },
+        "crater_size_variance": {
+          "type": "float",
+          "min": 0.5,
+          "max": 2.0,
+          "default": 1.0,
+          "variance_min": -0.2,
+          "variance_max": 0.3,
+          "description": "Crater radius variation",
+          "ui_group": "Craters"
+        }
+      }
+    },
+    "deformation": {
+      "description": "Shape deformations and breaks - 8 parameters",
+      "parameters": {
+        "dent_count": {
+          "type": "int",
+          "min": 0,
+          "max": 20,
+          "default": 5,
+          "variance_min": -2,
+          "variance_max": 5,
+          "description": "Number of concave indentations",
+          "ui_group": "Deformations"
+        },
+        "dent_depth": {
+          "type": "float",
+          "min": 0.0,
+          "max": 0.5,
+          "default": 0.2,
+          "variance_min": -0.05,
+          "variance_max": 0.1,
+          "description": "Dent depth relative to size",
+          "ui_group": "Deformations"
+        },
+        "bulge_count": {
+          "type": "int",
+          "min": 0,
+          "max": 15,
+          "default": 3,
+          "variance_min": -1,
+          "variance_max": 4,
+          "description": "Number of convex protrusions",
+          "ui_group": "Deformations"
+        },
+        "bulge_height": {
+          "type": "float",
+          "min": 0.0,
+          "max": 0.3,
+          "default": 0.1,
+          "variance_min": -0.03,
+          "variance_max": 0.08,
+          "description": "Bulge height relative to size",
+          "ui_group": "Deformations"
+        },
+        "break_count": {
+          "type": "int",
+          "min": 0,
+          "max": 10,
+          "default": 0,
+          "variance_min": 0,
+          "variance_max": 2,
+          "description": "Number of broken-off chunks",
+          "ui_group": "Fracturing"
+        },
+        "break_sharpness": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.8,
+          "variance_min": -0.2,
+          "variance_max": 0.1,
+          "description": "Edge sharpness of breaks",
+          "ui_group": "Fracturing"
+        },
+        "compression_axis_x": {
+          "type": "float",
+          "min": -1.0,
+          "max": 1.0,
+          "default": 0.0,
+          "variance_min": -0.3,
+          "variance_max": 0.3,
+          "description": "Directional compression X",
+          "ui_group": "Warping"
+        },
+        "warp_strength": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.0,
+          "variance_min": -0.1,
+          "variance_max": 0.3,
+          "description": "Non-uniform distortion amount",
+          "ui_group": "Warping"
+        }
+      }
+    },
+    "material": {
+      "description": "Surface materials and appearance - 8 parameters",
+      "parameters": {
+        "ore_vein_count": {
+          "type": "int",
+          "min": 0,
+          "max": 50,
+          "default": 5,
+          "variance_min": -2,
+          "variance_max": 10,
+          "description": "Number of visible ore veins",
+          "ui_group": "Ore Veins"
+        },
+        "ore_vein_width": {
+          "type": "float",
+          "min": 0.5,
+          "max": 10.0,
+          "default": 2.0,
+          "variance_min": -0.5,
+          "variance_max": 2.0,
+          "description": "Vein thickness in pixels",
+          "ui_group": "Ore Veins"
+        },
+        "ore_vein_branching": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.3,
+          "variance_min": -0.1,
+          "variance_max": 0.3,
+          "description": "Vein branching frequency",
+          "ui_group": "Ore Veins"
+        },
+        "purity_glow": {
+          "type": "float",
+          "min": 0.0,
+          "max": 3.0,
+          "default": 0.0,
+          "variance_min": -0.2,
+          "variance_max": 0.5,
+          "description": "Emissive glow strength (P0-P5)",
+          "ui_group": "Appearance"
+        },
+        "metallic": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.3,
+          "variance_min": -0.1,
+          "variance_max": 0.3,
+          "description": "Metallic reflection amount",
+          "ui_group": "Appearance"
+        },
+        "color_hue_shift": {
+          "type": "float",
+          "min": -180,
+          "max": 180,
+          "default": 0,
+          "variance_min": -30,
+          "variance_max": 30,
+          "description": "HSV hue rotation (degrees)",
+          "ui_group": "Color"
+        },
+        "saturation": {
+          "type": "float",
+          "min": 0.0,
+          "max": 2.0,
+          "default": 1.0,
+          "variance_min": -0.2,
+          "variance_max": 0.3,
+          "description": "Color saturation multiplier",
+          "ui_group": "Color"
+        },
+        "brightness": {
+          "type": "float",
+          "min": 0.3,
+          "max": 2.0,
+          "default": 1.0,
+          "variance_min": -0.2,
+          "variance_max": 0.3,
+          "description": "Overall brightness",
+          "ui_group": "Color"
+        }
+      }
+    }
+  },
+  "tier_presets": {
+    "T1_Iron": {
+      "base_shape": {
+        "shape_type": "irregular",
+        "elongation_x": 0.9,
+        "elongation_y": 1.1,
+        "elongation_z": 1.0,
+        "asymmetry": 0.4,
+        "roundness": 0.6,
+        "facet_count": 0,
+        "twist_angle": 0
+      },
+      "surface_detail": {
+        "roughness": 0.6,
+        "noise_scale": 2.5,
+        "noise_octaves": 3,
+        "noise_type": "perlin",
+        "crater_density": 20,
+        "crater_depth": 0.3,
+        "crater_size_variance": 1.2
+      },
+      "deformation": {
+        "dent_count": 6,
+        "dent_depth": 0.2,
+        "bulge_count": 3,
+        "bulge_height": 0.1,
+        "break_count": 0,
+        "break_sharpness": 0.5,
+        "compression_axis_x": 0.0,
+        "warp_strength": 0.1
+      },
+      "material": {
+        "ore_vein_count": 3,
+        "ore_vein_width": 1.5,
+        "ore_vein_branching": 0.2,
+        "purity_glow": 0.0,
+        "metallic": 0.2,
+        "color_hue_shift": -10,
+        "saturation": 0.5,
+        "brightness": 0.8
+      }
+    },
+    "T3_Titanium_Elongated": {
+      "base_shape": {
+        "shape_type": "ellipsoid",
+        "elongation_x": 1.6,
+        "elongation_y": 0.7,
+        "elongation_z": 1.0,
+        "asymmetry": 0.3,
+        "roundness": 0.5,
+        "facet_count": 0,
+        "twist_angle": 15
+      },
+      "surface_detail": {
+        "roughness": 0.5,
+        "noise_scale": 3.0,
+        "noise_octaves": 4,
+        "noise_type": "simplex",
+        "crater_density": 12,
+        "crater_depth": 0.35,
+        "crater_size_variance": 1.0
+      },
+      "deformation": {
+        "dent_count": 4,
+        "dent_depth": 0.15,
+        "bulge_count": 2,
+        "bulge_height": 0.08,
+        "break_count": 1,
+        "break_sharpness": 0.7,
+        "compression_axis_x": 0.2,
+        "warp_strength": 0.2
+      },
+      "material": {
+        "ore_vein_count": 8,
+        "ore_vein_width": 2.5,
+        "ore_vein_branching": 0.4,
+        "purity_glow": 0.5,
+        "metallic": 0.5,
+        "color_hue_shift": 20,
+        "saturation": 0.8,
+        "brightness": 1.1
+      }
+    },
+    "T5_Platinum_Crystalline": {
+      "base_shape": {
+        "shape_type": "crystalline",
+        "elongation_x": 1.1,
+        "elongation_y": 1.2,
+        "elongation_z": 0.9,
+        "asymmetry": 0.2,
+        "roundness": 0.2,
+        "facet_count": 16,
+        "twist_angle": -25
+      },
+      "surface_detail": {
+        "roughness": 0.3,
+        "noise_scale": 1.5,
+        "noise_octaves": 5,
+        "noise_type": "voronoi",
+        "crater_density": 5,
+        "crater_depth": 0.2,
+        "crater_size_variance": 0.8
+      },
+      "deformation": {
+        "dent_count": 2,
+        "dent_depth": 0.1,
+        "bulge_count": 5,
+        "bulge_height": 0.15,
+        "break_count": 2,
+        "break_sharpness": 0.95,
+        "compression_axis_x": 0.0,
+        "warp_strength": 0.05
+      },
+      "material": {
+        "ore_vein_count": 25,
+        "ore_vein_width": 3.5,
+        "ore_vein_branching": 0.7,
+        "purity_glow": 1.8,
+        "metallic": 0.9,
+        "color_hue_shift": -40,
+        "saturation": 1.5,
+        "brightness": 1.5
+      }
+    }
+  }
+}

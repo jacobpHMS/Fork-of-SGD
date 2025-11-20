@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphics Generator - SpaceGameDev</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Color Picker Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css"/>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h1>🎨 Graphics Generator</h1>
+                    <p class="subtitle">Procedural Pixel Art für SpaceGameDev</p>
+                </div>
+                <a href="sfx.html" class="btn btn-primary">🔊 SFX Generator →</a>
+            </div>
+        </header>
+
+        <!-- Main Layout -->
+        <div class="main-layout">
+            <!-- Left Sidebar - Controls -->
+            <aside class="sidebar sidebar-left">
+                <div class="panel">
+                    <h2>🎨 Generator Type</h2>
+                    <div class="button-group">
+                        <button class="btn btn-primary active" data-generator="ship">🚀 Ship</button>
+                        <button class="btn" data-generator="asteroid">🪨 Asteroid</button>
+                        <button class="btn" data-generator="projectile">💥 Projectile</button>
+                        <button class="btn" data-generator="effect">✨ Effect</button>
+                        <button class="btn" data-generator="background">🌌 Background</button>
+                    </div>
+                </div>
+
+                <!-- Ship Generator Controls -->
+                <div class="panel generator-controls" id="ship-controls">
+                    <h2>⚙️ Ship Generator</h2>
+
+                    <div class="control-group">
+                        <label>Size:</label>
+                        <select id="ship-size">
+                            <option value="16">16x16</option>
+                            <option value="32" selected>32x32</option>
+                            <option value="64">64x64</option>
+                            <option value="128">128x128</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Complexity:</label>
+                        <input type="range" id="ship-complexity" min="1" max="10" value="5">
+                        <span id="ship-complexity-value">5</span>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Faction Style:</label>
+                        <select id="ship-faction">
+                            <option value="angular">Angular (Military)</option>
+                            <option value="organic">Organic (Alien)</option>
+                            <option value="hybrid">Hybrid (Mixed)</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Symmetry:</label>
+                        <select id="ship-symmetry">
+                            <option value="vertical" selected>Vertical</option>
+                            <option value="horizontal">Horizontal</option>
+                            <option value="both">Both</option>
+                            <option value="radial">Radial (4-way)</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label>
+                            <input type="checkbox" id="ship-weapons" checked>
+                            Add Weapons
+                        </label>
+                    </div>
+
+                    <div class="control-group">
+                        <label>
+                            <input type="checkbox" id="ship-engines" checked>
+                            Add Engines
+                        </label>
+                    </div>
+
+                    <div class="control-group">
+                        <label>
+                            <input type="checkbox" id="ship-glow">
+                            Engine Glow
+                        </label>
+                    </div>
+
+                    <button class="btn btn-generate" id="ship-generate-btn">🎲 Generate Ship</button>
+                </div>
+
+                <!-- Asteroid Generator Controls -->
+                <div class="panel generator-controls" id="asteroid-controls" style="display:none;">
+                    <h2>⚙️ Asteroid Generator</h2>
+
+                    <div class="control-group">
+                        <label>Size:</label>
+                        <select id="asteroid-size">
+                            <option value="32">32x32 (Small)</option>
+                            <option value="64" selected>64x64 (Medium)</option>
+                            <option value="128">128x128 (Large)</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Ore Type:</label>
+                        <select id="asteroid-ore">
+                            <option value="iron">Iron</option>
+                            <option value="copper">Copper</option>
+                            <option value="gold">Gold</option>
+                            <option value="titanium">Titanium</option>
+                            <option value="uranium">Uranium</option>
+                            <option value="platinum">Platinum</option>
+                            <option value="crystal">Crystal</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Roughness:</label>
+                        <input type="range" id="asteroid-roughness" min="0" max="1" step="0.1" value="0.5">
+                        <span id="asteroid-roughness-value">0.5</span>
+                    </div>
+
+                    <div class="control-group">
+                        <label>
+                            <input type="checkbox" id="asteroid-craters" checked>
+                            Add Craters
+                        </label>
+                    </div>
+
+                    <button class="btn btn-generate" id="asteroid-generate-btn">🎲 Generate Asteroid</button>
+                </div>
+
+                <!-- Projectile Generator Controls -->
+                <div class="panel generator-controls" id="projectile-controls" style="display:none;">
+                    <h2>⚙️ Projectile Generator</h2>
+
+                    <div class="control-group">
+                        <label>Type:</label>
+                        <select id="projectile-type">
+                            <option value="laser">Laser Beam</option>
+                            <option value="missile">Missile</option>
+                            <option value="plasma">Plasma Ball</option>
+                            <option value="bullet">Bullet</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Size:</label>
+                        <select id="projectile-size">
+                            <option value="8">8px</option>
+                            <option value="16" selected>16px</option>
+                            <option value="32">32px</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label>
+                            <input type="checkbox" id="projectile-glow" checked>
+                            Add Glow
+                        </label>
+                    </div>
+
+                    <button class="btn btn-generate" id="projectile-generate-btn">🎲 Generate Projectile</button>
+                </div>
+
+                <!-- Effect Generator Controls -->
+                <div class="panel generator-controls" id="effect-controls" style="display:none;">
+                    <h2>⚙️ Effect Generator</h2>
+
+                    <div class="control-group">
+                        <label>Type:</label>
+                        <select id="effect-type">
+                            <option value="explosion">Explosion</option>
+                            <option value="impact">Impact</option>
+                            <option value="spark">Spark</option>
+                            <option value="shield">Shield Hit</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Size:</label>
+                        <select id="effect-size">
+                            <option value="32">32x32</option>
+                            <option value="64" selected>64x64</option>
+                            <option value="128">128x128</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Frames:</label>
+                        <input type="range" id="effect-frames" min="4" max="16" value="8">
+                        <span id="effect-frames-value">8</span>
+                    </div>
+
+                    <button class="btn btn-generate" id="effect-generate-btn">🎲 Generate Effect</button>
+                </div>
+
+                <!-- Background Generator Controls -->
+                <div class="panel generator-controls" id="background-controls" style="display:none;">
+                    <h2>⚙️ Background Generator</h2>
+
+                    <div class="control-group">
+                        <label>Type:</label>
+                        <select id="background-type">
+                            <option value="starfield">Starfield</option>
+                            <option value="nebula">Nebula</option>
+                            <option value="planet">Planet</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Size:</label>
+                        <select id="background-size">
+                            <option value="512">512x512</option>
+                            <option value="1024" selected>1024x1024</option>
+                            <option value="2048">2048x2048</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Density:</label>
+                        <input type="range" id="background-density" min="0.1" max="1.0" step="0.1" value="0.5">
+                        <span id="background-density-value">0.5</span>
+                    </div>
+
+                    <button class="btn btn-generate" id="background-generate-btn">🎲 Generate Background</button>
+                </div>
+
+                <!-- Color Palette -->
+                <div class="panel">
+                    <h2>🎨 Color Palette</h2>
+
+                    <div class="palette-presets" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-bottom: 12px;">
+                        <button class="btn btn-small" data-palette="cyber">Cyber Blue</button>
+                        <button class="btn btn-small" data-palette="military">Military Green</button>
+                        <button class="btn btn-small" data-palette="pirate">Pirate Red</button>
+                        <button class="btn btn-small" data-palette="trader">Trader White</button>
+                        <button class="btn btn-small" data-palette="alien">Alien Purple</button>
+                        <button class="btn btn-small" data-palette="mining">Mining Orange</button>
+                        <button class="btn btn-small" data-palette="police">Police Black</button>
+                        <button class="btn btn-small" data-palette="medical">Medical White</button>
+                        <button class="btn btn-small" data-palette="fire">Fire</button>
+                        <button class="btn btn-small" data-palette="ice">Ice</button>
+                        <button class="btn btn-small" data-palette="toxic">Toxic</button>
+                        <button class="btn btn-small" data-palette="energy">Energy</button>
+                    </div>
+
+                    <div class="color-swatches" id="color-palette">
+                        <!-- Colors will be added here -->
+                    </div>
+
+                    <div style="display: flex; gap: 8px; margin-top: 12px;">
+                        <div id="color-picker-container"></div>
+                        <button class="btn btn-small" id="add-color-btn">+ Add Color</button>
+                        <button class="btn btn-small" id="randomize-palette-btn">🎲 Random</button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Center - Canvas -->
+            <main class="canvas-area">
+                <div class="canvas-toolbar">
+                    <div class="toolbar-group">
+                        <button class="btn btn-icon" id="zoom-out" title="Zoom Out">-</button>
+                        <span id="zoom-level">8x</span>
+                        <button class="btn btn-icon" id="zoom-in" title="Zoom In">+</button>
+                    </div>
+                    <div class="toolbar-group">
+                        <button class="btn btn-icon" id="pan-mode" title="Pan Mode">✋</button>
+                        <button class="btn btn-icon" id="toggle-grid" title="Toggle Grid">⊞</button>
+                        <button class="btn btn-icon" id="center-view" title="Center View">⊙</button>
+                    </div>
+                    <div class="toolbar-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="show-background">
+                            Background
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="show-glow">
+                            Glow Effect
+                        </label>
+                    </div>
+                </div>
+
+                <div class="canvas-wrapper" id="canvas-wrapper">
+                    <canvas id="main-canvas"></canvas>
+                    <canvas id="grid-canvas"></canvas>
+                </div>
+
+                <div class="canvas-info">
+                    <span id="canvas-info-text">Ready - Pan: Click & Drag | Zoom: +/- or Mouse Wheel</span>
+                </div>
+            </main>
+
+            <!-- Right Sidebar - Export & Database -->
+            <aside class="sidebar sidebar-right">
+                <!-- Preview -->
+                <div class="panel">
+                    <h2>👁️ Preview</h2>
+                    <div class="preview-area">
+                        <canvas id="preview-canvas"></canvas>
+                    </div>
+                    <div class="preview-controls">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="preview-animate">
+                            Animate
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Database Integration -->
+                <div class="panel">
+                    <h2>🗂️ Database Integration</h2>
+
+                    <div class="control-group">
+                        <label>Asset Type:</label>
+                        <select id="db-asset-type">
+                            <option value="SHIP">Ship</option>
+                            <option value="ASTEROID">Asteroid</option>
+                            <option value="PROJECTILE">Projectile</option>
+                            <option value="EFFECT">Effect</option>
+                            <option value="ICON">Icon</option>
+                            <option value="UI">UI Element</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Material/Variant:</label>
+                        <input type="text" id="db-variant" placeholder="z.B. iron, player, basic">
+                    </div>
+
+                    <div class="control-group">
+                        <label>Size Category:</label>
+                        <select id="db-size-cat">
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label>State:</label>
+                        <select id="db-state">
+                            <option value="idle">Idle</option>
+                            <option value="thrust">Thrust</option>
+                            <option value="damaged">Damaged</option>
+                            <option value="destroyed">Destroyed</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Auto Filename:</label>
+                        <input type="text" id="db-auto-filename" readonly placeholder="asteroid_iron_small_01">
+                        <small>Basierend auf ASSET_MANAGEMENT_SYSTEM.md</small>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Item ID:</label>
+                        <input type="text" id="db-item-id" readonly placeholder="ORE_T1_001">
+                        <small>Basierend auf ItemDatabase.gd</small>
+                    </div>
+
+                    <button class="btn btn-primary" id="generate-db-names-btn">🔄 Namen Generieren</button>
+                </div>
+
+                <!-- Export -->
+                <div class="panel">
+                    <h2>💾 Export</h2>
+
+                    <div class="control-group">
+                        <label>Filename:</label>
+                        <input type="text" id="export-filename" placeholder="Wird automatisch gesetzt">
+                    </div>
+
+                    <div class="control-group">
+                        <label>Format:</label>
+                        <select id="export-format">
+                            <option value="png">PNG (Transparent)</option>
+                            <option value="spritesheet">Sprite Sheet</option>
+                            <option value="json">JSON Metadata</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-success" id="export-btn">📥 Export</button>
+                    <button class="btn btn-secondary" id="export-with-meta-btn">📦 Export + Metadata</button>
+                </div>
+
+                <!-- Batch Generation -->
+                <div class="panel">
+                    <h2>🔢 Batch Generation</h2>
+
+                    <div class="control-group">
+                        <label>Count:</label>
+                        <input type="number" id="batch-count" min="1" max="100" value="10">
+                    </div>
+
+                    <div class="control-group">
+                        <label>Variation:</label>
+                        <input type="range" id="batch-variation" min="0" max="1" step="0.1" value="0.3">
+                        <span id="batch-variation-value">0.3</span>
+                    </div>
+
+                    <button class="btn btn-primary" id="batch-generate-btn">🎲 Batch Generate</button>
+                    <button class="btn btn-secondary" id="batch-export-btn">📦 Export All</button>
+                </div>
+
+                <!-- Stats -->
+                <div class="panel">
+                    <h2>📊 Stats</h2>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Size:</span>
+                            <span class="stat-value" id="stat-size">32x32</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Colors:</span>
+                            <span class="stat-value" id="stat-colors">6</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Pixels:</span>
+                            <span class="stat-value" id="stat-pixels">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Generated:</span>
+                            <span class="stat-value" id="stat-generated">0</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/palette.js"></script>
+    <script src="js/generators/ships.js"></script>
+    <script src="js/generators/asteroids.js"></script>
+    <script src="js/generators/projectiles.js"></script>
+    <script src="js/generators/effects.js"></script>
+    <script src="js/generators/backgrounds.js"></script>
+    <script src="js/export.js"></script>
+    <script src="js/graphics-core.js"></script>
+</body>
+</html>

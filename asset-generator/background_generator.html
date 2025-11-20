@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Generator - SpaceGameDev</title>
+    <link rel="stylesheet" href="shared/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar-left">
+            <header>
+                <h1>🎨 Graphics Generator</h1>
+                <p class="tagline">Procedural Pixel Art for SpaceGameDev</p>
+                <a href="sfx.html" class="btn-sfx">🔊 SFX Generator →</a>
+            </header>
+
+            <section class="generator-types">
+                <h3>🔧 GENERATOR TYPE</h3>
+                <button class="type-btn" data-type="ship" onclick="location.href='ship_generator.html'">🚀 Ship</button>
+                <button class="type-btn" data-type="asteroid" onclick="location.href='asteroid_generator.html'">🪨 Asteroid</button>
+                <button class="type-btn" data-type="projectile" onclick="location.href='projectile_generator.html'">💥 Projectile</button>
+                <button class="type-btn" data-type="laser" onclick="location.href='laser_generator.html'">⚡ Laser</button>
+                <button class="type-btn" data-type="scanner" onclick="location.href='scanner_generator.html'">📡 Scanner</button>
+                <button class="type-btn" data-type="effect" onclick="location.href='effect_generator.html'">✨ Effect</button>
+                <button class="type-btn active" data-type="background">🌌 Background</button>
+            </section>
+
+            <section class="parameters">
+                <h3>🌌 BACKGROUND GENERATOR</h3>
+
+                <label>Background Type:</label>
+                <select id="bg_type">
+                    <option value="starfield">Starfield</option>
+                    <option value="nebula">Nebula</option>
+                    <option value="galaxy">Galaxy</option>
+                    <option value="deep_space">Deep Space</option>
+                    <option value="asteroid_field">Asteroid Field</option>
+                </select>
+
+                <label>Size:</label>
+                <select id="size">
+                    <option value="256">256x256</option>
+                    <option value="512" selected>512x512</option>
+                    <option value="1024">1024x1024</option>
+                    <option value="2048">2048x2048</option>
+                </select>
+
+                <!-- STARS -->
+                <h4 style="color: #00d4ff; margin-top: 15px; font-size: 12px;">⭐ STARS</h4>
+
+                <label>Star Density:</label>
+                <input type="range" id="star_density" min="0" max="1000" value="200" step="10">
+                <span class="value">200</span>
+
+                <label>Star Size Min:</label>
+                <input type="range" id="star_size_min" min="1" max="5" value="1" step="1">
+                <span class="value">1</span>
+
+                <label>Star Size Max:</label>
+                <input type="range" id="star_size_max" min="1" max="10" value="3" step="1">
+                <span class="value">3</span>
+
+                <label>Star Brightness:</label>
+                <input type="range" id="star_brightness" min="0" max="2" value="1" step="0.01">
+                <span class="value">1.00</span>
+
+                <label>
+                    <input type="checkbox" id="star_twinkling" checked>
+                    Star Twinkling
+                </label>
+
+                <!-- SPARKLES -->
+                <h4 style="color: #00d4ff; margin-top: 15px; font-size: 12px;">✨ SPARKLES</h4>
+
+                <label>Sparkle Count:</label>
+                <input type="range" id="sparkle_count" min="0" max="50" value="10" step="1">
+                <span class="value">10</span>
+
+                <label>Sparkle Size:</label>
+                <input type="range" id="sparkle_size" min="2" max="15" value="5" step="1">
+                <span class="value">5</span>
+
+                <label>Sparkle Intensity:</label>
+                <input type="range" id="sparkle_intensity" min="0" max="2" value="1.2" step="0.01">
+                <span class="value">1.20</span>
+
+                <!-- SHOOTING STARS -->
+                <h4 style="color: #00d4ff; margin-top: 15px; font-size: 12px;">💫 SHOOTING STARS</h4>
+
+                <label>Shooting Star Count:</label>
+                <input type="range" id="shooting_star_count" min="0" max="10" value="3" step="1">
+                <span class="value">3</span>
+
+                <label>Shooting Star Length:</label>
+                <input type="range" id="shooting_star_length" min="10" max="100" value="40" step="1">
+                <span class="value">40</span>
+
+                <label>Shooting Star Speed:</label>
+                <input type="range" id="shooting_star_speed" min="0.1" max="5" value="1" step="0.1">
+                <span class="value">1.0</span>
+
+                <!-- NEBULA -->
+                <h4 style="color: #00d4ff; margin-top: 15px; font-size: 12px;">☁️ NEBULA</h4>
+
+                <label>Nebula Density:</label>
+                <input type="range" id="nebula_density" min="0" max="1" value="0.3" step="0.01">
+                <span class="value">0.30</span>
+
+                <label>Nebula Scale:</label>
+                <input type="range" id="nebula_scale" min="0.01" max="0.5" value="0.1" step="0.01">
+                <span class="value">0.10</span>
+
+                <label>Nebula Layers:</label>
+                <input type="range" id="nebula_layers" min="1" max="5" value="3" step="1">
+                <span class="value">3</span>
+
+                <!-- DUST PARTICLES -->
+                <h4 style="color: #00d4ff; margin-top: 15px; font-size: 12px;">🌫️ DUST PARTICLES</h4>
+
+                <label>Dust Density:</label>
+                <input type="range" id="dust_density" min="0" max="500" value="50" step="10">
+                <span class="value">50</span>
+
+                <label>Dust Size:</label>
+                <input type="range" id="dust_size" min="1" max="3" value="1" step="1">
+                <span class="value">1</span>
+
+                <label>
+                    <input type="checkbox" id="animated" checked>
+                    Animated Background
+                </label>
+
+                <label>
+                    <input type="checkbox" id="tileable">
+                    Tileable (Seamless)
+                </label>
+
+                <button class="btn-generate" id="generate-btn">🎲 Generate Background</button>
+            </section>
+
+            <section class="color-palette">
+                <h3>🎨 COLOR PALETTE</h3>
+                <div class="palette-grid">
+                    <button class="palette-btn active" data-palette="cyber_blue">Cyber Blue</button>
+                    <button class="palette-btn" data-palette="military_green">Military</button>
+                    <button class="palette-btn" data-palette="pirate_red">Pirate Red</button>
+                    <button class="palette-btn" data-palette="trader_white">Trader</button>
+                    <button class="palette-btn" data-palette="alien_purple">Alien</button>
+                    <button class="palette-btn" data-palette="mining_orange">Mining</button>
+                    <button class="palette-btn" data-palette="police_black">Police</button>
+                    <button class="palette-btn" data-palette="medical_white">Medical</button>
+                    <button class="palette-btn" data-palette="fire">Fire</button>
+                    <button class="palette-btn" data-palette="ice">Ice</button>
+                    <button class="palette-btn" data-palette="toxic">Toxic</button>
+                    <button class="palette-btn" data-palette="energy">Energy</button>
+                </div>
+
+                <div class="custom-colors">
+                    <label>Primary: <input type="color" id="color-primary" value="#00F0FF"></label>
+                    <label>Secondary: <input type="color" id="color-secondary" value="#0080FF"></label>
+                    <label>Accent: <input type="color" id="color-accent" value="#00FFAA"></label>
+                    <label>Dark: <input type="color" id="color-dark" value="#001020"></label>
+                </div>
+            </section>
+        </aside>
+
+        <main class="canvas-area">
+            <div class="canvas-controls">
+                <button id="zoom-out">-</button>
+                <span id="zoom-level">1x</span>
+                <button id="zoom-in">+</button>
+                <button id="reset-view">🔥</button>
+                <button id="toggle-grid">📐</button>
+                <button id="center-view">○</button>
+
+                <label><input type="checkbox" id="show-background" checked> Background</label>
+                <label><input type="checkbox" id="show-glow" checked> Glow Effect</label>
+            </div>
+
+            <div class="canvas-wrapper">
+                <canvas id="main-canvas" width="512" height="512"></canvas>
+            </div>
+
+            <div class="canvas-status">
+                Ready - Pan: Click & Drag | Zoom: +/- or Mouse Wheel
+            </div>
+        </main>
+
+        <aside class="sidebar-right">
+            <section class="preview-panel">
+                <h3>👁️ PREVIEW</h3>
+                <div class="preview-wrapper">
+                    <canvas id="preview-canvas" width="128" height="128"></canvas>
+                </div>
+                <label><input type="checkbox" id="animate" checked> Animate</label>
+            </section>
+
+            <section class="database-panel">
+                <h3>📊 DATABASE INTEGRATION</h3>
+
+                <label>Asset Type:</label>
+                <select id="asset-type">
+                    <option value="background" selected>Background</option>
+                    <option value="starfield">Starfield</option>
+                    <option value="nebula">Nebula</option>
+                </select>
+
+                <label>Theme:</label>
+                <input type="text" id="material" placeholder="z.B. deep_space, nebula" value="deep_space">
+
+                <label>Size Class:</label>
+                <select id="size-category">
+                    <option value="tile">Tile (256x256)</option>
+                    <option value="screen" selected>Screen (512x512)</option>
+                    <option value="large">Large (1024x1024)</option>
+                    <option value="huge">Huge (2048x2048)</option>
+                </select>
+
+                <label>Variant:</label>
+                <select id="state">
+                    <option value="01" selected>Variant 01</option>
+                    <option value="02">Variant 02</option>
+                    <option value="03">Variant 03</option>
+                </select>
+
+                <label>Auto Filename:</label>
+                <input type="text" id="auto-filename" readonly value="background_deep_space_screen_01">
+
+                <label>Item ID:</label>
+                <input type="text" id="item-id" value="BG_SPACE_001">
+
+                <button class="btn-export" id="export-btn">📥 Export PNG + JSON</button>
+            </section>
+        </aside>
+    </div>
+
+    <script src="shared/seed-system.js"></script>
+    <script src="shared/color-palettes.js"></script>
+    <script src="shared/canvas-utils.js"></script>
+    <script src="shared/parameter-manager.js"></script>
+    <script src="generators/background_generator.js"></script>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            if (typeof BackgroundGenerator !== 'undefined') {
+                window.backgroundGenerator = new BackgroundGenerator();
+                window.backgroundGenerator.init();
+            }
+        });
+    </script>
+</body>
+</html>

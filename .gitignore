@@ -1,0 +1,44 @@
+# Godot 4.x
+.godot/
+*.import
+*.translation
+
+# Godot auto-generated files
+*.import.md5
+*.import.bak
+
+# Godot build exports
+export_presets.cfg
+*.exe
+*.pck
+*.app
+*.x86_64
+*.x86
+*.wasm
+*.html
+# Exception: Asset generator HTML files are source files, not build artifacts
+!asset-generator/**/*.html
+
+# Godot editor settings
+.mono/
+data_*/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Temp files
+*.tmp
+*.bak
+*.old

@@ -1,0 +1,15 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://chhcmtory837t"
+valid=false
+
+[deps]
+
+source_file="res://00_COMPLETE_DATABASE_OVERVIEW.csv"
+
+[params]
+
+compress=true
+delimiter=0

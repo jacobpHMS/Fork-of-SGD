@@ -1,0 +1,384 @@
+{
+  "version": "1.0",
+  "type": "weapon_kinetic",
+  "description": "Kinetic cannon parameters - Ballistic projectile weapons with realistic physics, muzzle flash, and armor penetration",
+  "parameter_count": 32,
+
+  "categories": {
+    "projectile_properties": {
+      "name": "Projectile Properties",
+      "description": "Shell type, mass, velocity, and ballistic characteristics",
+      "parameters": {
+        "shell_type": {
+          "type": "enum",
+          "values": ["APHE", "HEAT", "APFSDS", "HE", "sabot", "slug"],
+          "default": "APHE",
+          "description": "Type of kinetic projectile (Armor-Piercing High-Explosive, etc.)",
+          "ui_group": "Type"
+        },
+        "projectile_mass": {
+          "type": "float",
+          "min": 0.1,
+          "max": 100.0,
+          "default": 5.0,
+          "variance_min": -0.5,
+          "variance_max": 0.5,
+          "description": "Mass of projectile in kilograms",
+          "ui_group": "Physics"
+        },
+        "muzzle_velocity": {
+          "type": "float",
+          "min": 100.0,
+          "max": 3000.0,
+          "default": 1200.0,
+          "variance_min": -50.0,
+          "variance_max": 50.0,
+          "description": "Initial velocity in meters/second",
+          "ui_group": "Physics"
+        },
+        "spin_rate": {
+          "type": "float",
+          "min": 0.0,
+          "max": 10000.0,
+          "default": 3000.0,
+          "variance_min": -200.0,
+          "variance_max": 200.0,
+          "description": "Projectile spin rate in RPM (for stabilization)",
+          "ui_group": "Physics"
+        },
+        "tracer_enabled": {
+          "type": "bool",
+          "default": true,
+          "description": "Enable visible tracer trail",
+          "ui_group": "Visual"
+        },
+        "tracer_color": {
+          "type": "enum",
+          "values": ["red", "green", "orange", "white", "blue"],
+          "default": "orange",
+          "description": "Color of tracer element",
+          "ui_group": "Visual"
+        },
+        "shell_casing_material": {
+          "type": "enum",
+          "values": ["brass", "steel", "tungsten", "depleted_uranium"],
+          "default": "brass",
+          "description": "Material affects color and penetration",
+          "ui_group": "Type"
+        },
+        "projectile_length": {
+          "type": "float",
+          "min": 0.1,
+          "max": 5.0,
+          "default": 0.8,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Length of projectile in meters",
+          "ui_group": "Dimensions"
+        }
+      }
+    },
+
+    "muzzle_flash": {
+      "name": "Muzzle Flash",
+      "description": "Firing visuals, flash, smoke, and barrel effects",
+      "parameters": {
+        "flash_size": {
+          "type": "float",
+          "min": 0.0,
+          "max": 10.0,
+          "default": 2.0,
+          "variance_min": -0.3,
+          "variance_max": 0.3,
+          "description": "Size of muzzle flash in meters",
+          "ui_group": "Flash"
+        },
+        "flash_brightness": {
+          "type": "float",
+          "min": 0.0,
+          "max": 3.0,
+          "default": 1.5,
+          "variance_min": -0.3,
+          "variance_max": 0.3,
+          "description": "Brightness intensity of flash",
+          "ui_group": "Flash"
+        },
+        "flash_duration": {
+          "type": "float",
+          "min": 0.01,
+          "max": 0.5,
+          "default": 0.1,
+          "variance_min": -0.02,
+          "variance_max": 0.02,
+          "description": "Duration of muzzle flash in seconds",
+          "ui_group": "Flash"
+        },
+        "flash_shape": {
+          "type": "enum",
+          "values": ["sphere", "cone", "cross", "star", "burst"],
+          "default": "cone",
+          "description": "Shape of muzzle flash",
+          "ui_group": "Flash"
+        },
+        "smoke_amount": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.5,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Amount of gunpowder smoke",
+          "ui_group": "Smoke"
+        },
+        "smoke_color": {
+          "type": "enum",
+          "values": ["white", "gray", "black", "brown"],
+          "default": "gray",
+          "description": "Color of propellant smoke",
+          "ui_group": "Smoke"
+        },
+        "smoke_dissipation_time": {
+          "type": "float",
+          "min": 0.5,
+          "max": 10.0,
+          "default": 3.0,
+          "variance_min": -0.5,
+          "variance_max": 0.5,
+          "description": "Time for smoke to dissipate in seconds",
+          "ui_group": "Smoke"
+        },
+        "barrel_glow": {
+          "type": "float",
+          "min": 0.0,
+          "max": 2.0,
+          "default": 0.8,
+          "variance_min": -0.2,
+          "variance_max": 0.2,
+          "description": "Heat glow from barrel after firing",
+          "ui_group": "Barrel"
+        }
+      }
+    },
+
+    "impact_penetration": {
+      "name": "Impact & Penetration",
+      "description": "Armor interaction, penetration, and impact effects",
+      "parameters": {
+        "penetration_depth": {
+          "type": "float",
+          "min": 0.0,
+          "max": 500.0,
+          "default": 100.0,
+          "variance_min": -10.0,
+          "variance_max": 10.0,
+          "description": "Armor penetration depth in millimeters",
+          "ui_group": "Penetration"
+        },
+        "armor_break_threshold": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1000.0,
+          "default": 200.0,
+          "variance_min": -20.0,
+          "variance_max": 20.0,
+          "description": "Armor thickness threshold for complete penetration (mm)",
+          "ui_group": "Penetration"
+        },
+        "ricochet_angle": {
+          "type": "float",
+          "min": 0.0,
+          "max": 90.0,
+          "default": 30.0,
+          "variance_min": -5.0,
+          "variance_max": 5.0,
+          "description": "Minimum angle for ricochet (degrees from normal)",
+          "ui_group": "Penetration"
+        },
+        "impact_spark_count": {
+          "type": "int",
+          "min": 0,
+          "max": 200,
+          "default": 50,
+          "variance_min": -10,
+          "variance_max": 10,
+          "description": "Number of sparks on impact",
+          "ui_group": "Impact"
+        },
+        "impact_spark_color": {
+          "type": "enum",
+          "values": ["yellow", "orange", "white", "red"],
+          "default": "orange",
+          "description": "Color of impact sparks",
+          "ui_group": "Impact"
+        },
+        "impact_dent_depth": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.3,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Depth of dent/crater on surface (meters)",
+          "ui_group": "Impact"
+        },
+        "impact_shrapnel": {
+          "type": "bool",
+          "default": true,
+          "description": "Generate shrapnel on impact",
+          "ui_group": "Impact"
+        },
+        "shrapnel_count": {
+          "type": "int",
+          "min": 0,
+          "max": 100,
+          "default": 30,
+          "variance_min": -5,
+          "variance_max": 5,
+          "description": "Number of shrapnel fragments",
+          "ui_group": "Impact"
+        },
+        "exit_hole_size": {
+          "type": "float",
+          "min": 0.0,
+          "max": 5.0,
+          "default": 0.5,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Size of exit hole on through-penetration (meters)",
+          "ui_group": "Penetration"
+        },
+        "through_penetration_particles": {
+          "type": "bool",
+          "default": true,
+          "description": "Emit particles from exit hole",
+          "ui_group": "Penetration"
+        }
+      }
+    },
+
+    "visual_effects": {
+      "name": "Visual Effects",
+      "description": "Trails, sonic effects, and shell casings",
+      "parameters": {
+        "shell_trail_length": {
+          "type": "float",
+          "min": 0.0,
+          "max": 50.0,
+          "default": 10.0,
+          "variance_min": -2.0,
+          "variance_max": 2.0,
+          "description": "Length of visible trail behind projectile (meters)",
+          "ui_group": "Trail"
+        },
+        "trail_smoke": {
+          "type": "bool",
+          "default": false,
+          "description": "Leave smoke trail during flight",
+          "ui_group": "Trail"
+        },
+        "sonic_boom_visual": {
+          "type": "bool",
+          "default": true,
+          "description": "Show sonic boom effect if velocity > Mach 1",
+          "ui_group": "Sonic"
+        },
+        "air_ripple_effect": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.5,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Air distortion ripple from supersonic projectile",
+          "ui_group": "Sonic"
+        },
+        "shell_casing_eject": {
+          "type": "bool",
+          "default": true,
+          "description": "Eject shell casing after firing",
+          "ui_group": "Casing"
+        },
+        "casing_count": {
+          "type": "int",
+          "min": 1,
+          "max": 10,
+          "default": 1,
+          "variance_min": 0,
+          "variance_max": 0,
+          "description": "Number of casings ejected (for multi-barrel weapons)",
+          "ui_group": "Casing"
+        }
+      }
+    }
+  },
+
+  "presets": {
+    "standard_autocannon": {
+      "name": "Standard Autocannon",
+      "description": "Medium-caliber rapid-fire kinetic weapon",
+      "parameters": {
+        "shell_type": "APHE",
+        "projectile_mass": 2.0,
+        "muzzle_velocity": 1400.0,
+        "penetration_depth": 80.0,
+        "flash_size": 1.5,
+        "tracer_enabled": true
+      }
+    },
+    "heavy_railgun": {
+      "name": "Heavy Railgun",
+      "description": "Electromagnetic accelerator with extreme velocity",
+      "parameters": {
+        "shell_type": "sabot",
+        "projectile_mass": 1.0,
+        "muzzle_velocity": 2800.0,
+        "penetration_depth": 300.0,
+        "tracer_color": "blue",
+        "flash_brightness": 2.5,
+        "sonic_boom_visual": true
+      }
+    },
+    "gauss_cannon": {
+      "name": "Gauss Cannon",
+      "description": "Magnetic accelerator with moderate rate of fire",
+      "parameters": {
+        "shell_type": "slug",
+        "projectile_mass": 5.0,
+        "muzzle_velocity": 1800.0,
+        "penetration_depth": 150.0,
+        "flash_shape": "sphere",
+        "tracer_color": "white"
+      }
+    },
+    "anti_armor_cannon": {
+      "name": "Anti-Armor Cannon",
+      "description": "High-penetration APFSDS rounds",
+      "parameters": {
+        "shell_type": "APFSDS",
+        "projectile_mass": 8.0,
+        "muzzle_velocity": 1600.0,
+        "penetration_depth": 250.0,
+        "shell_casing_material": "tungsten",
+        "impact_spark_count": 100
+      }
+    },
+    "explosive_shell": {
+      "name": "High-Explosive Shell",
+      "description": "Area-effect HE rounds",
+      "parameters": {
+        "shell_type": "HE",
+        "projectile_mass": 10.0,
+        "muzzle_velocity": 800.0,
+        "penetration_depth": 30.0,
+        "impact_shrapnel": true,
+        "shrapnel_count": 80,
+        "smoke_amount": 0.8
+      }
+    }
+  },
+
+  "ui_layout": {
+    "category_order": ["projectile_properties", "muzzle_flash", "impact_penetration", "visual_effects"],
+    "collapsible_default": "collapsed"
+  }
+}

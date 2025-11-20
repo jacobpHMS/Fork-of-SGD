@@ -1,0 +1,451 @@
+{
+  "version": "1.0",
+  "type": "weapon_capital",
+  "description": "Capital ship weapon parameters - Massive-scale weapons with multi-stage effects, screen shake, and debris fields",
+  "parameter_count": 36,
+
+  "categories": {
+    "capital_ship_scaling": {
+      "name": "Capital Ship Scaling",
+      "description": "Weapon class, scale, and firing mechanics",
+      "parameters": {
+        "weapon_scale_multiplier": {
+          "type": "float",
+          "min": 1.0,
+          "max": 50.0,
+          "default": 10.0,
+          "variance_min": -1.0,
+          "variance_max": 1.0,
+          "description": "Overall size/damage multiplier for capital weapons",
+          "ui_group": "Scale"
+        },
+        "weapon_class": {
+          "type": "enum",
+          "values": ["destroyer", "cruiser", "battleship", "dreadnought", "titan"],
+          "default": "battleship",
+          "description": "Ship class determines weapon characteristics",
+          "ui_group": "Class"
+        },
+        "turret_count": {
+          "type": "int",
+          "min": 1,
+          "max": 20,
+          "default": 4,
+          "variance_min": 0,
+          "variance_max": 0,
+          "description": "Number of weapon turrets firing simultaneously",
+          "ui_group": "Configuration"
+        },
+        "barrel_count_per_turret": {
+          "type": "int",
+          "min": 1,
+          "max": 8,
+          "default": 2,
+          "variance_min": 0,
+          "variance_max": 0,
+          "description": "Barrels per turret (multi-barrel broadside)",
+          "ui_group": "Configuration"
+        },
+        "firing_sequence": {
+          "type": "enum",
+          "values": ["simultaneous", "sequential", "ripple", "alternating"],
+          "default": "sequential",
+          "description": "How multiple barrels/turrets fire",
+          "ui_group": "Timing"
+        },
+        "salvo_delay": {
+          "type": "float",
+          "min": 0.0,
+          "max": 2.0,
+          "default": 0.2,
+          "variance_min": -0.05,
+          "variance_max": 0.05,
+          "description": "Delay between shots in sequence (seconds)",
+          "ui_group": "Timing"
+        },
+        "weapon_charge_time": {
+          "type": "float",
+          "min": 0.0,
+          "max": 10.0,
+          "default": 3.0,
+          "variance_min": -0.5,
+          "variance_max": 0.5,
+          "description": "Pre-fire charge/spinup time (seconds)",
+          "ui_group": "Timing"
+        },
+        "cooldown_period": {
+          "type": "float",
+          "min": 0.0,
+          "max": 30.0,
+          "default": 5.0,
+          "variance_min": -1.0,
+          "variance_max": 1.0,
+          "description": "Time before weapon can fire again (seconds)",
+          "ui_group": "Timing"
+        }
+      }
+    },
+
+    "multi_stage_effects": {
+      "name": "Multi-Stage Effects",
+      "description": "Pre-fire, discharge, and post-fire visual sequences",
+      "parameters": {
+        "pre_fire_venting": {
+          "type": "bool",
+          "default": true,
+          "description": "Vent excess heat/energy before firing",
+          "ui_group": "Pre-Fire"
+        },
+        "vent_duration": {
+          "type": "float",
+          "min": 0.0,
+          "max": 3.0,
+          "default": 1.0,
+          "variance_min": -0.2,
+          "variance_max": 0.2,
+          "description": "Duration of venting phase (seconds)",
+          "ui_group": "Pre-Fire"
+        },
+        "vent_particle_count": {
+          "type": "int",
+          "min": 0,
+          "max": 500,
+          "default": 200,
+          "variance_min": -30,
+          "variance_max": 30,
+          "description": "Number of particles during venting",
+          "ui_group": "Pre-Fire"
+        },
+        "main_discharge_duration": {
+          "type": "float",
+          "min": 0.1,
+          "max": 5.0,
+          "default": 1.5,
+          "variance_min": -0.3,
+          "variance_max": 0.3,
+          "description": "Duration of main weapon discharge (seconds)",
+          "ui_group": "Discharge"
+        },
+        "discharge_intensity": {
+          "type": "float",
+          "min": 0.0,
+          "max": 5.0,
+          "default": 3.0,
+          "variance_min": -0.5,
+          "variance_max": 0.5,
+          "description": "Visual intensity of weapon discharge",
+          "ui_group": "Discharge"
+        },
+        "post_fire_dissipation": {
+          "type": "float",
+          "min": 0.0,
+          "max": 10.0,
+          "default": 3.0,
+          "variance_min": -0.5,
+          "variance_max": 0.5,
+          "description": "Time for effects to fade after firing (seconds)",
+          "ui_group": "Post-Fire"
+        },
+        "secondary_explosion": {
+          "type": "bool",
+          "default": true,
+          "description": "Trigger secondary explosions on impact",
+          "ui_group": "Impact"
+        },
+        "multi_hit_stagger": {
+          "type": "float",
+          "min": 0.0,
+          "max": 2.0,
+          "default": 0.1,
+          "variance_min": -0.02,
+          "variance_max": 0.02,
+          "description": "Time between multiple projectile impacts (seconds)",
+          "ui_group": "Impact"
+        },
+        "beam_convergence_point": {
+          "type": "float",
+          "min": 10.0,
+          "max": 1000.0,
+          "default": 500.0,
+          "variance_min": -50.0,
+          "variance_max": 50.0,
+          "description": "Distance where multiple beams converge (meters)",
+          "ui_group": "Discharge"
+        },
+        "energy_redistribution_visual": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.7,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Visual intensity of power routing to weapons",
+          "ui_group": "Pre-Fire"
+        }
+      }
+    },
+
+    "screen_camera_effects": {
+      "name": "Screen & Camera Effects",
+      "description": "Screen shake, flash, chromatic aberration, and time effects",
+      "parameters": {
+        "camera_shake_trauma": {
+          "type": "float",
+          "min": 0.0,
+          "max": 20.0,
+          "default": 8.0,
+          "variance_min": -1.0,
+          "variance_max": 1.0,
+          "description": "Intensity of camera shake (trauma value)",
+          "ui_group": "Camera"
+        },
+        "shake_duration": {
+          "type": "float",
+          "min": 0.0,
+          "max": 5.0,
+          "default": 2.0,
+          "variance_min": -0.3,
+          "variance_max": 0.3,
+          "description": "Duration of camera shake (seconds)",
+          "ui_group": "Camera"
+        },
+        "shake_falloff_distance": {
+          "type": "float",
+          "min": 10.0,
+          "max": 1000.0,
+          "default": 500.0,
+          "variance_min": -50.0,
+          "variance_max": 50.0,
+          "description": "Distance where shake effect diminishes to zero (meters)",
+          "ui_group": "Camera"
+        },
+        "screen_flash_intensity": {
+          "type": "float",
+          "min": 0.0,
+          "max": 2.0,
+          "default": 1.0,
+          "variance_min": -0.2,
+          "variance_max": 0.2,
+          "description": "Brightness of screen flash on firing",
+          "ui_group": "Flash"
+        },
+        "screen_flash_color": {
+          "type": "enum",
+          "values": ["white", "blue", "red", "orange", "cyan"],
+          "default": "white",
+          "description": "Color of screen flash effect",
+          "ui_group": "Flash"
+        },
+        "chromatic_pulse": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.6,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Chromatic aberration pulse intensity",
+          "ui_group": "Distortion"
+        },
+        "chromatic_duration": {
+          "type": "float",
+          "min": 0.0,
+          "max": 2.0,
+          "default": 0.5,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Duration of chromatic effect (seconds)",
+          "ui_group": "Distortion"
+        },
+        "radial_blur_amount": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.4,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Radial motion blur on impact",
+          "ui_group": "Distortion"
+        },
+        "vignette_intensity": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.5,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Screen edge darkening intensity",
+          "ui_group": "Screen"
+        },
+        "time_dilation_factor": {
+          "type": "float",
+          "min": 0.1,
+          "max": 1.0,
+          "default": 0.7,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Slow-motion effect (1.0 = normal, 0.1 = very slow)",
+          "ui_group": "Time"
+        }
+      }
+    },
+
+    "environmental_impact": {
+      "name": "Environmental Impact",
+      "description": "Debris, EMP, radiation, and shockwave effects",
+      "parameters": {
+        "debris_field_size": {
+          "type": "float",
+          "min": 0.0,
+          "max": 500.0,
+          "default": 100.0,
+          "variance_min": -20.0,
+          "variance_max": 20.0,
+          "description": "Radius of debris field on impact (meters)",
+          "ui_group": "Debris"
+        },
+        "debris_count": {
+          "type": "int",
+          "min": 0,
+          "max": 1000,
+          "default": 300,
+          "variance_min": -50,
+          "variance_max": 50,
+          "description": "Number of debris fragments generated",
+          "ui_group": "Debris"
+        },
+        "debris_velocity": {
+          "type": "float",
+          "min": 0.0,
+          "max": 200.0,
+          "default": 50.0,
+          "variance_min": -10.0,
+          "variance_max": 10.0,
+          "description": "Initial velocity of debris (m/s)",
+          "ui_group": "Debris"
+        },
+        "emp_radius": {
+          "type": "float",
+          "min": 0.0,
+          "max": 500.0,
+          "default": 150.0,
+          "variance_min": -20.0,
+          "variance_max": 20.0,
+          "description": "Radius of EMP effect (meters)",
+          "ui_group": "EMP"
+        },
+        "emp_duration": {
+          "type": "float",
+          "min": 0.0,
+          "max": 10.0,
+          "default": 3.0,
+          "variance_min": -0.5,
+          "variance_max": 0.5,
+          "description": "Duration of EMP disruption (seconds)",
+          "ui_group": "EMP"
+        },
+        "radiation_visual": {
+          "type": "bool",
+          "default": true,
+          "description": "Show radiation hazard glow",
+          "ui_group": "Radiation"
+        },
+        "radiation_duration": {
+          "type": "float",
+          "min": 0.0,
+          "max": 60.0,
+          "default": 10.0,
+          "variance_min": -2.0,
+          "variance_max": 2.0,
+          "description": "Duration of radiation visual (seconds)",
+          "ui_group": "Radiation"
+        },
+        "atmospheric_shockwave": {
+          "type": "float",
+          "min": 0.0,
+          "max": 2.0,
+          "default": 1.0,
+          "variance_min": -0.2,
+          "variance_max": 0.2,
+          "description": "Intensity of visible shockwave in atmosphere",
+          "ui_group": "Shockwave"
+        }
+      }
+    }
+  },
+
+  "presets": {
+    "destroyer_turret": {
+      "name": "Destroyer Main Turret",
+      "description": "Standard destroyer-class weapon system",
+      "parameters": {
+        "weapon_scale_multiplier": 5.0,
+        "weapon_class": "destroyer",
+        "turret_count": 2,
+        "barrel_count_per_turret": 2,
+        "camera_shake_trauma": 3.0,
+        "weapon_charge_time": 1.0
+      }
+    },
+    "battleship_broadside": {
+      "name": "Battleship Broadside",
+      "description": "Multi-turret battleship main battery",
+      "parameters": {
+        "weapon_scale_multiplier": 12.0,
+        "weapon_class": "battleship",
+        "turret_count": 6,
+        "barrel_count_per_turret": 3,
+        "firing_sequence": "ripple",
+        "salvo_delay": 0.3,
+        "camera_shake_trauma": 10.0,
+        "debris_count": 400
+      }
+    },
+    "dreadnought_main_cannon": {
+      "name": "Dreadnought Main Cannon",
+      "description": "Single massive spinal mount weapon",
+      "parameters": {
+        "weapon_scale_multiplier": 25.0,
+        "weapon_class": "dreadnought",
+        "turret_count": 1,
+        "barrel_count_per_turret": 1,
+        "weapon_charge_time": 5.0,
+        "main_discharge_duration": 3.0,
+        "camera_shake_trauma": 15.0,
+        "screen_flash_intensity": 1.5,
+        "chromatic_pulse": 0.9,
+        "debris_field_size": 300.0,
+        "emp_radius": 250.0
+      }
+    },
+    "titan_omega_weapon": {
+      "name": "Titan Omega Weapon",
+      "description": "Ultimate capital ship weapon system",
+      "parameters": {
+        "weapon_scale_multiplier": 50.0,
+        "weapon_class": "titan",
+        "turret_count": 1,
+        "barrel_count_per_turret": 8,
+        "firing_sequence": "simultaneous",
+        "weapon_charge_time": 8.0,
+        "pre_fire_venting": true,
+        "vent_duration": 2.0,
+        "vent_particle_count": 500,
+        "main_discharge_duration": 5.0,
+        "discharge_intensity": 5.0,
+        "camera_shake_trauma": 20.0,
+        "screen_flash_intensity": 2.0,
+        "chromatic_pulse": 1.0,
+        "time_dilation_factor": 0.3,
+        "debris_field_size": 500.0,
+        "debris_count": 800,
+        "emp_radius": 400.0,
+        "radiation_visual": true
+      }
+    }
+  },
+
+  "ui_layout": {
+    "category_order": ["capital_ship_scaling", "multi_stage_effects", "screen_camera_effects", "environmental_impact"],
+    "collapsible_default": "collapsed"
+  }
+}

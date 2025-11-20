@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroid Generator - SpaceGameDev</title>
+    <link rel="stylesheet" href="shared/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- ===================================
+             COLUMN 1: LEFT SIDEBAR
+             Navigation + Parameters + Colors
+             =================================== -->
+        <aside class="sidebar-left">
+            <header>
+                <h1>🎨 Graphics Generator</h1>
+                <p class="tagline">Procedural Pixel Art for SpaceGameDev</p>
+                <a href="sfx.html" class="btn-sfx">🔊 SFX Generator →</a>
+            </header>
+
+            <!-- Generator Type Navigation -->
+            <section class="generator-types">
+                <h3>🔧 GENERATOR TYPE</h3>
+                <button class="type-btn" data-type="ship" onclick="location.href='ship_generator.html'">🚀 Ship</button>
+                <button class="type-btn active" data-type="asteroid">🪨 Asteroid</button>
+                <button class="type-btn" data-type="projectile" onclick="location.href='projectile_generator.html'">💥 Projectile</button>
+                <button class="type-btn" data-type="laser" onclick="location.href='laser_generator.html'">⚡ Laser</button>
+                <button class="type-btn" data-type="scanner" onclick="location.href='scanner_generator.html'">📡 Scanner</button>
+                <button class="type-btn" data-type="effect" onclick="location.href='effect_generator.html'">✨ Effect</button>
+                <button class="type-btn" data-type="background" onclick="location.href='background_generator.html'">🌌 Background</button>
+            </section>
+
+            <!-- Asteroid Generator Parameters -->
+            <section class="parameters" id="asteroid-params">
+                <h3>🪨 ASTEROID GENERATOR</h3>
+
+                <label>Size:</label>
+                <select id="size">
+                    <option value="32">32x32</option>
+                    <option value="64" selected>64x64</option>
+                    <option value="128">128x128</option>
+                    <option value="256">256x256</option>
+                </select>
+
+                <label>Complexity:</label>
+                <input type="range" id="complexity" min="0" max="10" value="5" step="1">
+                <span class="value">5</span>
+
+                <label>Roughness:</label>
+                <input type="range" id="roughness" min="0" max="1" value="0.5" step="0.01">
+                <span class="value">0.50</span>
+
+                <label>Elongation X:</label>
+                <input type="range" id="elongation_x" min="0.5" max="2" value="1.0" step="0.01">
+                <span class="value">1.00</span>
+
+                <label>Elongation Y:</label>
+                <input type="range" id="elongation_y" min="0.5" max="2" value="1.0" step="0.01">
+                <span class="value">1.00</span>
+
+                <label>Rotation:</label>
+                <input type="range" id="rotation" min="0" max="360" value="0" step="1">
+                <span class="value">0°</span>
+
+                <label>Crater Count:</label>
+                <input type="range" id="crater_count" min="0" max="10" value="3" step="1">
+                <span class="value">3</span>
+
+                <label>Crater Depth:</label>
+                <input type="range" id="crater_depth" min="0" max="1" value="0.5" step="0.01">
+                <span class="value">0.50</span>
+
+                <label>Edge Sharpness:</label>
+                <input type="range" id="edge_sharpness" min="0" max="1" value="0.7" step="0.01">
+                <span class="value">0.70</span>
+
+                <label>Noise Scale:</label>
+                <input type="range" id="noise_scale" min="0.01" max="0.5" value="0.1" step="0.01">
+                <span class="value">0.10</span>
+
+                <label>Brightness:</label>
+                <input type="range" id="brightness" min="0" max="2" value="1.0" step="0.01">
+                <span class="value">1.00</span>
+
+                <label>Contrast:</label>
+                <input type="range" id="contrast" min="0" max="2" value="1.0" step="0.01">
+                <span class="value">1.00</span>
+
+                <label>
+                    <input type="checkbox" id="add_glow" checked>
+                    Add Glow Effect
+                </label>
+
+                <label>
+                    <input type="checkbox" id="metallic">
+                    Metallic Surface
+                </label>
+
+                <button class="btn-generate" id="generate-btn">🎲 Generate Asteroid</button>
+            </section>
+
+            <!-- Color Palette Selection -->
+            <section class="color-palette">
+                <h3>🎨 COLOR PALETTE</h3>
+                <div class="palette-grid">
+                    <button class="palette-btn active" data-palette="cyber_blue">Cyber Blue</button>
+                    <button class="palette-btn" data-palette="military_green">Military</button>
+                    <button class="palette-btn" data-palette="pirate_red">Pirate Red</button>
+                    <button class="palette-btn" data-palette="trader_white">Trader</button>
+                    <button class="palette-btn" data-palette="alien_purple">Alien</button>
+                    <button class="palette-btn" data-palette="mining_orange">Mining</button>
+                    <button class="palette-btn" data-palette="police_black">Police</button>
+                    <button class="palette-btn" data-palette="medical_white">Medical</button>
+                    <button class="palette-btn" data-palette="fire">Fire</button>
+                    <button class="palette-btn" data-palette="ice">Ice</button>
+                    <button class="palette-btn" data-palette="toxic">Toxic</button>
+                    <button class="palette-btn" data-palette="energy">Energy</button>
+                </div>
+
+                <div class="custom-colors">
+                    <label>Primary: <input type="color" id="color-primary" value="#00F0FF"></label>
+                    <label>Secondary: <input type="color" id="color-secondary" value="#0080FF"></label>
+                    <label>Accent: <input type="color" id="color-accent" value="#00FFAA"></label>
+                    <label>Dark: <input type="color" id="color-dark" value="#001020"></label>
+                </div>
+            </section>
+        </aside>
+
+        <!-- ===================================
+             COLUMN 2: CENTER CANVAS AREA
+             Main Canvas + Controls
+             =================================== -->
+        <main class="canvas-area">
+            <div class="canvas-controls">
+                <button id="zoom-out">-</button>
+                <span id="zoom-level">8x</span>
+                <button id="zoom-in">+</button>
+                <button id="reset-view">🔥</button>
+                <button id="toggle-grid">📐</button>
+                <button id="center-view">○</button>
+
+                <label>
+                    <input type="checkbox" id="show-background" checked>
+                    Background
+                </label>
+                <label>
+                    <input type="checkbox" id="show-glow" checked>
+                    Glow Effect
+                </label>
+            </div>
+
+            <div class="canvas-wrapper">
+                <canvas id="main-canvas" width="512" height="512"></canvas>
+            </div>
+
+            <div class="canvas-status">
+                Ready - Pan: Click & Drag | Zoom: +/- or Mouse Wheel | Grid: 📐
+            </div>
+        </main>
+
+        <!-- ===================================
+             COLUMN 3: RIGHT SIDEBAR
+             Preview + Database Integration
+             =================================== -->
+        <aside class="sidebar-right">
+            <!-- Preview Panel -->
+            <section class="preview-panel">
+                <h3>👁️ PREVIEW</h3>
+                <div class="preview-wrapper">
+                    <canvas id="preview-canvas" width="128" height="128"></canvas>
+                </div>
+                <label>
+                    <input type="checkbox" id="animate">
+                    Animate (Rotation)
+                </label>
+            </section>
+
+            <!-- Database Integration Panel -->
+            <section class="database-panel">
+                <h3>📊 DATABASE INTEGRATION</h3>
+
+                <label>Asset Type:</label>
+                <select id="asset-type">
+                    <option value="asteroid" selected>Asteroid</option>
+                    <option value="ore">Ore Chunk</option>
+                    <option value="debris">Debris</option>
+                    <option value="crystal">Crystal</option>
+                </select>
+
+                <label>Material/Variant:</label>
+                <input type="text" id="material" placeholder="z.B. iron, gold, ice" value="iron">
+
+                <label>Size Category:</label>
+                <select id="size-category">
+                    <option value="tiny">Tiny</option>
+                    <option value="small" selected>Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="huge">Huge</option>
+                </select>
+
+                <label>State/Quality:</label>
+                <select id="state">
+                    <option value="pristine">Pristine</option>
+                    <option value="normal" selected>Normal</option>
+                    <option value="damaged">Damaged</option>
+                    <option value="fractured">Fractured</option>
+                </select>
+
+                <label>Auto Filename:</label>
+                <input type="text" id="auto-filename" readonly value="asteroid_iron_small_normal_01">
+
+                <label>Item ID:</label>
+                <input type="text" id="item-id" value="ORE_T1_001">
+
+                <button class="btn-export" id="export-btn">📥 Export PNG + JSON</button>
+            </section>
+        </aside>
+    </div>
+
+    <!-- JavaScript Dependencies -->
+    <script src="shared/seed-system.js"></script>
+    <script src="shared/color-palettes.js"></script>
+    <script src="shared/canvas-utils.js"></script>
+    <script src="shared/parameter-manager.js"></script>
+    <script src="generators/asteroid_generator.js"></script>
+
+    <script>
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            // Initialize asteroid generator
+            if (typeof AsteroidGenerator !== 'undefined') {
+                window.asteroidGenerator = new AsteroidGenerator();
+                window.asteroidGenerator.init();
+            } else {
+                console.error('AsteroidGenerator class not found!');
+            }
+        });
+    </script>
+</body>
+</html>

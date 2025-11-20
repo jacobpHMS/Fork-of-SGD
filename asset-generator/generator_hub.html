@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Hub - SpaceGameDev</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e1a 0%, #1a1f3a 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .hub-container {
+            max-width: 1400px;
+            width: 100%;
+        }
+
+        .hub-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hub-header h1 {
+            font-size: 56px;
+            background: linear-gradient(135deg, #00d4ff, #9b59b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .hub-header p {
+            font-size: 20px;
+            color: #8a9aaa;
+            margin-bottom: 20px;
+        }
+
+        .hub-nav {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .hub-nav a {
+            padding: 10px 20px;
+            background: rgba(30, 136, 229, 0.2);
+            border: 1px solid #1e88e5;
+            color: #1e88e5;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .hub-nav a:hover {
+            background: #1e88e5;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .generator-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .generator-card {
+            background: rgba(19, 24, 36, 0.8);
+            border: 2px solid #1e2635;
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .generator-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, var(--card-color), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .generator-card:hover::before {
+            opacity: 1;
+        }
+
+        .generator-card:hover {
+            border-color: var(--card-color);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.2);
+        }
+
+        .generator-card.asteroid { --card-color: #8a9aaa; }
+        .generator-card.projectile { --card-color: #e74c3c; }
+        .generator-card.laser { --card-color: #f1c40f; }
+        .generator-card.scanner { --card-color: #3498db; }
+        .generator-card.effect { --card-color: #9b59b6; }
+        .generator-card.background { --card-color: #1abc9c; }
+        .generator-card.ship { --card-color: #00d4ff; }
+
+        .generator-icon {
+            font-size: 72px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .generator-card h3 {
+            font-size: 26px;
+            color: var(--card-color);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .generator-card p {
+            font-size: 14px;
+            color: #8a9aaa;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .generator-card .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .generator-card .feature-tag {
+            padding: 4px 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            font-size: 11px;
+            color: #b0c0d0;
+        }
+
+        .generator-card .status-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 4px 10px;
+            background: #2e7d32;
+            color: white;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .generator-card .status-badge.wip {
+            background: #f57c00;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 30px;
+            color: #6a7a8a;
+            font-size: 13px;
+        }
+
+        footer a {
+            color: #00d4ff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="hub-container">
+        <div class="hub-header">
+            <h1>🎨 Asset Generator Suite</h1>
+            <p>Procedural Pixel Art Generation für SpaceGameDev</p>
+            <div class="hub-nav">
+                <a href="hub.html">📊 Sprite Sheet Hub</a>
+                <a href="sfx.html">🔊 SFX Generator</a>
+                <a href="wiki/index.html">📖 Documentation</a>
+            </div>
+        </div>
+
+        <div class="generator-grid">
+            <!-- Asteroid Generator -->
+            <div class="generator-card asteroid" onclick="location.href='asteroid_generator.html'">
+                <span class="status-badge">✓ READY</span>
+                <span class="generator-icon">🪨</span>
+                <h3>Asteroid Generator</h3>
+                <p>Erzeuge prozedurale Asteroiden mit voller Parameterkontrolle</p>
+                <div class="features">
+                    <span class="feature-tag">12+ Parameter</span>
+                    <span class="feature-tag">Krater-System</span>
+                    <span class="feature-tag">Farb-Paletten</span>
+                    <span class="feature-tag">PNG Export</span>
+                </div>
+            </div>
+
+            <!-- Projectile Generator -->
+            <div class="generator-card projectile" onclick="location.href='projectile_generator.html'">
+                <span class="status-badge">✓ READY</span>
+                <span class="generator-icon">💥</span>
+                <h3>Projectile Generator</h3>
+                <p>Geschosse, Raketen, Plasma und Laser-Bolzen</p>
+                <div class="features">
+                    <span class="feature-tag">5 Projektil-Typen</span>
+                    <span class="feature-tag">Trail-System</span>
+                    <span class="feature-tag">Glow-Effekte</span>
+                    <span class="feature-tag">Animation</span>
+                </div>
+            </div>
+
+            <!-- Laser Generator -->
+            <div class="generator-card laser" onclick="location.href='laser_generator.html'">
+                <span class="status-badge">✓ READY</span>
+                <span class="generator-icon">⚡</span>
+                <h3>Laser Generator</h3>
+                <p>Mining-Laser, Waffen-Beams und Kapitalschiff-Laser</p>
+                <div class="features">
+                    <span class="feature-tag">5 Beam-Typen</span>
+                    <span class="feature-tag">Puls-Animation</span>
+                    <span class="feature-tag">Verzerrung</span>
+                    <span class="feature-tag">Energie-Partikel</span>
+                </div>
+            </div>
+
+            <!-- Scanner Generator -->
+            <div class="generator-card scanner" onclick="location.href='scanner_generator.html'">
+                <span class="status-badge">✓ READY</span>
+                <span class="generator-icon">📡</span>
+                <h3>Scanner Generator</h3>
+                <p>360° Scanner-Sweeps und Reichweiten-Visualisierung</p>
+                <div class="features">
+                    <span class="feature-tag">4 Scanner-Typen</span>
+                    <span class="feature-tag">Rotation</span>
+                    <span class="feature-tag">Radar-Grid</span>
+                    <span class="feature-tag">Target-Blips</span>
+                </div>
+            </div>
+
+            <!-- Effect Generator -->
+            <div class="generator-card effect" onclick="location.href='effect_generator.html'">
+                <span class="status-badge">✓ READY</span>
+                <span class="generator-icon">✨</span>
+                <h3>Effect Generator</h3>
+                <p>Explosionen, Schilde, Impacts und Partikel-Effekte</p>
+                <div class="features">
+                    <span class="feature-tag">5 Effekt-Typen</span>
+                    <span class="feature-tag">Explosionen</span>
+                    <span class="feature-tag">Schild-Hit</span>
+                    <span class="feature-tag">Warp-Effekt</span>
+                </div>
+            </div>
+
+            <!-- Background Generator -->
+            <div class="generator-card background" onclick="location.href='background_generator.html'">
+                <span class="status-badge">✓ READY</span>
+                <span class="generator-icon">🌌</span>
+                <h3>Background Generator</h3>
+                <p>Sternenhimmel, Nebel, Sternschnuppen und Weltraum-Effekte</p>
+                <div class="features">
+                    <span class="feature-tag">25+ Parameter</span>
+                    <span class="feature-tag">Sternschnuppen</span>
+                    <span class="feature-tag">Nebel-Schichten</span>
+                    <span class="feature-tag">Sparkles</span>
+                </div>
+            </div>
+
+            <!-- Ship Generator (Link to existing) -->
+            <div class="generator-card ship" onclick="location.href='hub.html'">
+                <span class="status-badge">✓ READY</span>
+                <span class="generator-icon">🚀</span>
+                <h3>Ship & Weapon Generators</h3>
+                <p>Sprite Sheet basierte Schiffs- und Waffen-Generatoren</p>
+                <div class="features">
+                    <span class="feature-tag">Sprite Sheets</span>
+                    <span class="feature-tag">8 Generator-Typen</span>
+                    <span class="feature-tag">Frame Editor</span>
+                    <span class="feature-tag">Variance System</span>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>
+                🎮 SpaceGameDev Asset Generator Suite v2.0<br>
+                Procedural Generation mit Seed-System für 1:1 Reproduktion<br>
+                <a href="https://github.com/jacobpHMS/SpaceGameDev" target="_blank">GitHub Repository</a> |
+                <a href="wiki/index.html">Documentation</a> |
+                <a href="api/index.html">API Reference</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

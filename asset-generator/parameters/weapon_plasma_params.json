@@ -1,0 +1,492 @@
+{
+  "version": "1.0",
+  "type": "weapon_plasma",
+  "description": "Plasma weapon parameters - Energy-based projectiles with temperature-driven visuals, electric arcs, and charge mechanics",
+  "parameter_count": 42,
+
+  "categories": {
+    "blob_shape": {
+      "name": "Blob Shape",
+      "description": "Core plasma blob geometry and animation",
+      "parameters": {
+        "blob_size": {
+          "type": "float",
+          "min": 0.5,
+          "max": 5.0,
+          "default": 1.5,
+          "variance_min": -0.3,
+          "variance_max": 0.3,
+          "description": "Base size of plasma blob in meters",
+          "ui_group": "Size & Shape"
+        },
+        "blob_irregularity": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.4,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Amount of shape distortion (0=perfect sphere, 1=highly irregular)",
+          "ui_group": "Size & Shape"
+        },
+        "blob_pulsation_speed": {
+          "type": "float",
+          "min": 0.0,
+          "max": 10.0,
+          "default": 2.0,
+          "variance_min": -0.5,
+          "variance_max": 0.5,
+          "description": "Speed of size pulsation in Hz",
+          "ui_group": "Animation"
+        },
+        "blob_pulsation_amplitude": {
+          "type": "float",
+          "min": 0.0,
+          "max": 0.5,
+          "default": 0.15,
+          "variance_min": -0.05,
+          "variance_max": 0.05,
+          "description": "Amount of size variation during pulsation (0-1 scale)",
+          "ui_group": "Animation"
+        },
+        "wobble_frequency": {
+          "type": "float",
+          "min": 0.0,
+          "max": 5.0,
+          "default": 1.5,
+          "variance_min": -0.3,
+          "variance_max": 0.3,
+          "description": "Frequency of blob wobble/jitter in Hz",
+          "ui_group": "Animation"
+        },
+        "wobble_amplitude": {
+          "type": "float",
+          "min": 0.0,
+          "max": 0.3,
+          "default": 0.1,
+          "variance_min": -0.03,
+          "variance_max": 0.03,
+          "description": "Amount of position jitter",
+          "ui_group": "Animation"
+        },
+        "edge_softness": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.6,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Edge blur/softness (0=hard edge, 1=very soft)",
+          "ui_group": "Size & Shape"
+        },
+        "shape_complexity": {
+          "type": "int",
+          "min": 3,
+          "max": 32,
+          "default": 12,
+          "variance_min": -2,
+          "variance_max": 2,
+          "description": "Number of vertices for blob shape deformation",
+          "ui_group": "Size & Shape"
+        }
+      }
+    },
+
+    "energy_distortion": {
+      "name": "Energy Distortion",
+      "description": "Temperature-based color, electric arcs, and heat effects",
+      "parameters": {
+        "core_temperature": {
+          "type": "float",
+          "min": 3000.0,
+          "max": 10000.0,
+          "default": 6500.0,
+          "variance_min": -500.0,
+          "variance_max": 500.0,
+          "description": "Core temperature in Kelvin for blackbody radiation color",
+          "ui_group": "Temperature"
+        },
+        "corona_size": {
+          "type": "float",
+          "min": 1.0,
+          "max": 5.0,
+          "default": 2.0,
+          "variance_min": -0.3,
+          "variance_max": 0.3,
+          "description": "Size multiplier for corona/glow layer",
+          "ui_group": "Corona"
+        },
+        "corona_layers": {
+          "type": "int",
+          "min": 1,
+          "max": 5,
+          "default": 3,
+          "variance_min": 0,
+          "variance_max": 0,
+          "description": "Number of concentric corona layers",
+          "ui_group": "Corona"
+        },
+        "corona_opacity": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.4,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Opacity of corona layers",
+          "ui_group": "Corona"
+        },
+        "electric_arc_count": {
+          "type": "int",
+          "min": 0,
+          "max": 30,
+          "default": 12,
+          "variance_min": -3,
+          "variance_max": 3,
+          "description": "Number of electric arcs emanating from blob",
+          "ui_group": "Electric Arcs"
+        },
+        "arc_brightness": {
+          "type": "float",
+          "min": 0.0,
+          "max": 2.0,
+          "default": 0.8,
+          "variance_min": -0.2,
+          "variance_max": 0.2,
+          "description": "Brightness of electric arcs",
+          "ui_group": "Electric Arcs"
+        },
+        "arc_frequency": {
+          "type": "float",
+          "min": 0.0,
+          "max": 20.0,
+          "default": 5.0,
+          "variance_min": -1.0,
+          "variance_max": 1.0,
+          "description": "How often arcs change/flicker in Hz",
+          "ui_group": "Electric Arcs"
+        },
+        "heat_distortion_amount": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.5,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Amount of heat shimmer/distortion",
+          "ui_group": "Distortion"
+        },
+        "chromatic_aberration": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.3,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "RGB color separation at edges",
+          "ui_group": "Distortion"
+        },
+        "energy_ripples": {
+          "type": "int",
+          "min": 0,
+          "max": 10,
+          "default": 3,
+          "variance_min": -1,
+          "variance_max": 1,
+          "description": "Number of concentric energy ripples",
+          "ui_group": "Distortion"
+        },
+        "ripple_frequency": {
+          "type": "float",
+          "min": 0.0,
+          "max": 10.0,
+          "default": 2.0,
+          "variance_min": -0.5,
+          "variance_max": 0.5,
+          "description": "Ripple animation speed in Hz",
+          "ui_group": "Distortion"
+        },
+        "ripple_amplitude": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.3,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Strength of ripple effect",
+          "ui_group": "Distortion"
+        }
+      }
+    },
+
+    "charge_phase": {
+      "name": "Charge Phase",
+      "description": "Pre-fire charging mechanics and buildup effects",
+      "parameters": {
+        "charge_time": {
+          "type": "float",
+          "min": 0.0,
+          "max": 3.0,
+          "default": 1.0,
+          "variance_min": -0.2,
+          "variance_max": 0.2,
+          "description": "Duration of charge phase in seconds",
+          "ui_group": "Timing"
+        },
+        "charge_glow_buildup": {
+          "type": "float",
+          "min": 0.0,
+          "max": 3.0,
+          "default": 1.5,
+          "variance_min": -0.3,
+          "variance_max": 0.3,
+          "description": "Rate of glow intensity increase during charge",
+          "ui_group": "Visual"
+        },
+        "charge_particles": {
+          "type": "int",
+          "min": 0,
+          "max": 100,
+          "default": 30,
+          "variance_min": -5,
+          "variance_max": 5,
+          "description": "Number of particles during charge phase",
+          "ui_group": "Particles"
+        },
+        "particle_spiral": {
+          "type": "bool",
+          "default": true,
+          "description": "Whether particles spiral inward during charge",
+          "ui_group": "Particles"
+        },
+        "particle_acceleration": {
+          "type": "float",
+          "min": 0.0,
+          "max": 5.0,
+          "default": 2.0,
+          "variance_min": -0.5,
+          "variance_max": 0.5,
+          "description": "Acceleration of particles toward center",
+          "ui_group": "Particles"
+        },
+        "pre_fire_flash": {
+          "type": "bool",
+          "default": true,
+          "description": "Bright flash immediately before firing",
+          "ui_group": "Visual"
+        },
+        "charge_sound_pitch": {
+          "type": "float",
+          "min": 0.5,
+          "max": 2.0,
+          "default": 1.0,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Pitch multiplier for charge sound (audio integration)",
+          "ui_group": "Audio"
+        },
+        "energy_accumulation_visual": {
+          "type": "enum",
+          "values": ["particles", "glow", "rings", "sparks", "plasma_tendrils"],
+          "default": "particles",
+          "description": "Visual style of energy accumulation",
+          "ui_group": "Visual"
+        },
+        "capacitor_glow": {
+          "type": "float",
+          "min": 0.0,
+          "max": 2.0,
+          "default": 0.8,
+          "variance_min": -0.2,
+          "variance_max": 0.2,
+          "description": "Weapon body glow during charge",
+          "ui_group": "Visual"
+        },
+        "charge_indicator_rings": {
+          "type": "int",
+          "min": 0,
+          "max": 5,
+          "default": 2,
+          "variance_min": 0,
+          "variance_max": 0,
+          "description": "Number of expanding charge indicator rings",
+          "ui_group": "Visual"
+        }
+      }
+    },
+
+    "glow_post_processing": {
+      "name": "Glow & Post-Processing",
+      "description": "Screen effects, bloom, and impact visuals",
+      "parameters": {
+        "bloom_intensity": {
+          "type": "float",
+          "min": 0.0,
+          "max": 3.0,
+          "default": 1.2,
+          "variance_min": -0.3,
+          "variance_max": 0.3,
+          "description": "Intensity of bloom/glow post-processing",
+          "ui_group": "Bloom"
+        },
+        "bloom_radius": {
+          "type": "float",
+          "min": 0.0,
+          "max": 100.0,
+          "default": 30.0,
+          "variance_min": -5.0,
+          "variance_max": 5.0,
+          "description": "Radius of bloom effect in pixels",
+          "ui_group": "Bloom"
+        },
+        "glow_color_shift": {
+          "type": "float",
+          "min": -180.0,
+          "max": 180.0,
+          "default": 0.0,
+          "variance_min": -30.0,
+          "variance_max": 30.0,
+          "description": "Hue shift for glow layer (degrees)",
+          "ui_group": "Bloom"
+        },
+        "lens_flare": {
+          "type": "bool",
+          "default": true,
+          "description": "Enable lens flare effect",
+          "ui_group": "Screen Effects"
+        },
+        "screen_distortion": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.2,
+          "variance_min": -0.05,
+          "variance_max": 0.05,
+          "description": "Amount of screen space distortion on impact",
+          "ui_group": "Screen Effects"
+        },
+        "emp_flash": {
+          "type": "bool",
+          "default": true,
+          "description": "EMP-style screen flash on impact",
+          "ui_group": "Impact"
+        },
+        "emp_duration": {
+          "type": "float",
+          "min": 0.0,
+          "max": 2.0,
+          "default": 0.3,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Duration of EMP flash in seconds",
+          "ui_group": "Impact"
+        },
+        "emp_radius": {
+          "type": "float",
+          "min": 0.0,
+          "max": 50.0,
+          "default": 10.0,
+          "variance_min": -2.0,
+          "variance_max": 2.0,
+          "description": "Radius of EMP effect in meters",
+          "ui_group": "Impact"
+        },
+        "camera_shake": {
+          "type": "float",
+          "min": 0.0,
+          "max": 5.0,
+          "default": 1.0,
+          "variance_min": -0.3,
+          "variance_max": 0.3,
+          "description": "Camera shake trauma amount on impact",
+          "ui_group": "Impact"
+        },
+        "light_scatter": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.5,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Amount of light scattering in atmosphere",
+          "ui_group": "Atmospheric"
+        },
+        "godray_intensity": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.3,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Intensity of volumetric light rays",
+          "ui_group": "Atmospheric"
+        },
+        "volumetric_density": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.4,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Density of volumetric fog/dust interaction",
+          "ui_group": "Atmospheric"
+        }
+      }
+    }
+  },
+
+  "presets": {
+    "standard_plasma": {
+      "name": "Standard Plasma Shot",
+      "description": "Balanced plasma projectile for medium damage",
+      "parameters": {
+        "blob_size": 1.5,
+        "core_temperature": 6500.0,
+        "electric_arc_count": 12,
+        "charge_time": 1.0,
+        "bloom_intensity": 1.2
+      }
+    },
+    "high_temp_ball": {
+      "name": "High-Temperature Ball",
+      "description": "Superheated plasma with intense glow",
+      "parameters": {
+        "blob_size": 2.0,
+        "core_temperature": 9500.0,
+        "electric_arc_count": 20,
+        "corona_size": 3.0,
+        "bloom_intensity": 2.5,
+        "emp_flash": true
+      }
+    },
+    "rapid_fire": {
+      "name": "Rapid Fire Bolts",
+      "description": "Fast-charging small plasma bolts",
+      "parameters": {
+        "blob_size": 0.8,
+        "core_temperature": 5000.0,
+        "charge_time": 0.3,
+        "electric_arc_count": 5,
+        "bloom_intensity": 0.8
+      }
+    },
+    "unstable_core": {
+      "name": "Unstable Core",
+      "description": "Highly irregular, pulsating plasma",
+      "parameters": {
+        "blob_size": 1.8,
+        "blob_irregularity": 0.8,
+        "blob_pulsation_speed": 5.0,
+        "blob_pulsation_amplitude": 0.4,
+        "core_temperature": 7500.0,
+        "electric_arc_count": 25,
+        "arc_frequency": 15.0
+      }
+    }
+  },
+
+  "ui_layout": {
+    "category_order": ["blob_shape", "energy_distortion", "charge_phase", "glow_post_processing"],
+    "collapsible_default": "collapsed"
+  }
+}

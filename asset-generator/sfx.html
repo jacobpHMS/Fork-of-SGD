@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SFX Generator - SpaceGameDev</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* SFX-specific styles */
+        .sfx-container {
+            display: grid;
+            grid-template-columns: 350px 1fr 350px;
+            gap: var(--spacing-lg);
+            height: calc(100vh - 80px);
+        }
+
+        .sfx-params-panel {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+            overflow-y: auto;
+        }
+
+        .parameter-slider {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .parameter-slider label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+            font-size: 0.9rem;
+        }
+
+        .parameter-slider input[type="range"] {
+            width: 100%;
+        }
+
+        .mixer-slot {
+            background: var(--bg-dark);
+            padding: var(--spacing-sm);
+            border-radius: 4px;
+            margin-bottom: var(--spacing-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        .mixer-slot.active {
+            border-color: var(--primary-color);
+            background: rgba(52, 152, 219, 0.1);
+        }
+
+        .viz-container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+            padding: var(--spacing-lg);
+            background: var(--bg-panel);
+        }
+
+        canvas {
+            background: var(--bg-dark);
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        .playback-controls {
+            display: flex;
+            gap: var(--spacing-sm);
+            align-items: center;
+            padding: var(--spacing-md);
+            background: var(--bg-dark);
+            border-radius: 4px;
+        }
+
+        .nav-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background: var(--bg-panel);
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 4px;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .nav-link:hover {
+            background: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div>
+                <a href="index.html" class="nav-link">← Zurück zu Graphics Generator</a>
+                <h1>🔊 SFX Generator</h1>
+                <p class="subtitle">Procedural Sound Effects für SpaceGameDev</p>
+            </div>
+        </header>
+
+        <!-- Main Layout -->
+        <div class="sfx-container">
+            <!-- Left Panel - Sound Selection & Generation -->
+            <aside class="sfx-params-panel">
+                <div class="panel">
+                    <h2>🎵 Sound Auswahl</h2>
+
+                    <div class="control-group">
+                        <label>Modus:</label>
+                        <select id="sfx-mode">
+                            <option value="preset">Preset Synthesis</option>
+                            <option value="sample">Sample Verarbeitung</option>
+                            <option value="mixer">Sample Mixer (4+)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Preset Mode -->
+                <div class="panel" id="preset-panel">
+                    <h2>🎼 Preset Sounds</h2>
+
+                    <div class="control-group">
+                        <label>Kategorie:</label>
+                        <select id="sfx-category">
+                            <option value="weapons">🔫 Waffen</option>
+                            <option value="impacts">💥 Einschläge</option>
+                            <option value="ui">🖱️ UI Sounds</option>
+                            <option value="engines">🚀 Triebwerke</option>
+                            <option value="retro">🎮 8-bit Retro</option>
+                            <option value="misc">⚙️ Verschiedenes</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Sound Type:</label>
+                        <select id="sfx-type">
+                            <!-- Dynamically filled based on category -->
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <button class="btn btn-generate" id="generate-sound-btn">🎲 Sound Generieren</button>
+                        <button class="btn btn-secondary" id="randomize-sound-btn">🔄 Zufällig</button>
+                    </div>
+                </div>
+
+                <!-- Interactive Parameters -->
+                <div class="panel" id="params-panel">
+                    <h2>🎛️ Parameter</h2>
+
+                    <div class="parameter-slider">
+                        <label>
+                            <span>Frequenz</span>
+                            <span id="param-frequency-value">440 Hz</span>
+                        </label>
+                        <input type="range" id="param-frequency" min="50" max="2000" value="440">
+                    </div>
+
+                    <div class="parameter-slider">
+                        <label>
+                            <span>Dauer</span>
+                            <span id="param-duration-value">0.5s</span>
+                        </label>
+                        <input type="range" id="param-duration" min="0.1" max="3.0" step="0.1" value="0.5">
+                    </div>
+
+                    <div class="parameter-slider">
+                        <label>
+                            <span>Attack</span>
+                            <span id="param-attack-value">0.01s</span>
+                        </label>
+                        <input type="range" id="param-attack" min="0.001" max="0.5" step="0.001" value="0.01">
+                    </div>
+
+                    <div class="parameter-slider">
+                        <label>
+                            <span>Decay</span>
+                            <span id="param-decay-value">0.1s</span>
+                        </label>
+                        <input type="range" id="param-decay" min="0.01" max="1.0" step="0.01" value="0.1">
+                    </div>
+
+                    <div class="parameter-slider">
+                        <label>
+                            <span>Sustain</span>
+                            <span id="param-sustain-value">0.5</span>
+                        </label>
+                        <input type="range" id="param-sustain" min="0" max="1" step="0.01" value="0.5">
+                    </div>
+
+                    <div class="parameter-slider">
+                        <label>
+                            <span>Release</span>
+                            <span id="param-release-value">0.2s</span>
+                        </label>
+                        <input type="range" id="param-release" min="0.01" max="2.0" step="0.01" value="0.2">
+                    </div>
+
+                    <div class="parameter-slider">
+                        <label>
+                            <span>Pitch Sweep</span>
+                            <span id="param-pitch-sweep-value">0</span>
+                        </label>
+                        <input type="range" id="param-pitch-sweep" min="-1200" max="1200" value="0">
+                    </div>
+
+                    <div class="parameter-slider">
+                        <label>
+                            <span>Distortion</span>
+                            <span id="param-distortion-value">0</span>
+                        </label>
+                        <input type="range" id="param-distortion" min="0" max="100" value="0">
+                    </div>
+
+                    <button class="btn btn-primary" id="apply-params-btn">✓ Parameter Anwenden</button>
+                </div>
+
+                <!-- Sample Processing -->
+                <div class="panel" id="sample-panel" style="display:none;">
+                    <h2>🎧 Sample Upload</h2>
+
+                    <div class="control-group">
+                        <input type="file" id="sfx-sample-upload" accept="audio/*">
+                    </div>
+
+                    <div class="control-group">
+                        <label>Effekt:</label>
+                        <select id="sfx-sample-effect">
+                            <option value="granular">Granular Synthesis</option>
+                            <option value="pitch">Pitch Shift</option>
+                            <option value="reverse">Reverse</option>
+                            <option value="slice">Slice & Shuffle</option>
+                            <option value="filter">Filter Sweep</option>
+                            <option value="distortion">Distortion</option>
+                            <option value="bitcrush">Bitcrush (8-bit)</option>
+                        </select>
+                    </div>
+
+                    <div class="parameter-slider">
+                        <label>
+                            <span>Effect Amount</span>
+                            <span id="effect-amount-value">50%</span>
+                        </label>
+                        <input type="range" id="effect-amount" min="0" max="100" value="50">
+                    </div>
+
+                    <button class="btn btn-generate" id="process-sample-btn">⚙️ Process Sample</button>
+                </div>
+
+                <!-- Mixer -->
+                <div class="panel" id="mixer-panel" style="display:none;">
+                    <h2>🎚️ 4-Track Mixer</h2>
+
+                    <div id="mixer-slots">
+                        <div class="mixer-slot" data-slot="1">
+                            <h4>Slot 1</h4>
+                            <input type="file" accept="audio/*" class="mixer-file-input">
+                            <div class="parameter-slider">
+                                <label>
+                                    <span>Volume</span>
+                                    <span class="mixer-volume-value">100%</span>
+                                </label>
+                                <input type="range" class="mixer-volume" min="0" max="100" value="100">
+                            </div>
+                            <div class="parameter-slider">
+                                <label>
+                                    <span>Pan</span>
+                                    <span class="mixer-pan-value">Center</span>
+                                </label>
+                                <input type="range" class="mixer-pan" min="-100" max="100" value="0">
+                            </div>
+                        </div>
+
+                        <div class="mixer-slot" data-slot="2">
+                            <h4>Slot 2</h4>
+                            <input type="file" accept="audio/*" class="mixer-file-input">
+                            <div class="parameter-slider">
+                                <label>
+                                    <span>Volume</span>
+                                    <span class="mixer-volume-value">100%</span>
+                                </label>
+                                <input type="range" class="mixer-volume" min="0" max="100" value="100">
+                            </div>
+                            <div class="parameter-slider">
+                                <label>
+                                    <span>Pan</span>
+                                    <span class="mixer-pan-value">Center</span>
+                                </label>
+                                <input type="range" class="mixer-pan" min="-100" max="100" value="0">
+                            </div>
+                        </div>
+
+                        <div class="mixer-slot" data-slot="3">
+                            <h4>Slot 3</h4>
+                            <input type="file" accept="audio/*" class="mixer-file-input">
+                            <div class="parameter-slider">
+                                <label>
+                                    <span>Volume</span>
+                                    <span class="mixer-volume-value">100%</span>
+                                </label>
+                                <input type="range" class="mixer-volume" min="0" max="100" value="100">
+                            </div>
+                            <div class="parameter-slider">
+                                <label>
+                                    <span>Pan</span>
+                                    <span class="mixer-pan-value">Center</span>
+                                </label>
+                                <input type="range" class="mixer-pan" min="-100" max="100" value="0">
+                            </div>
+                        </div>
+
+                        <div class="mixer-slot" data-slot="4">
+                            <h4>Slot 4</h4>
+                            <input type="file" accept="audio/*" class="mixer-file-input">
+                            <div class="parameter-slider">
+                                <label>
+                                    <span>Volume</span>
+                                    <span class="mixer-volume-value">100%</span>
+                                </label>
+                                <input type="range" class="mixer-volume" min="0" max="100" value="100">
+                            </div>
+                            <div class="parameter-slider">
+                                <label>
+                                    <span>Pan</span>
+                                    <span class="mixer-pan-value">Center</span>
+                                </label>
+                                <input type="range" class="mixer-pan" min="-100" max="100" value="0">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-generate" id="mix-samples-btn">🎛️ Mix Down</button>
+                </div>
+            </aside>
+
+            <!-- Center - Visualization -->
+            <main class="viz-container">
+                <div class="playback-controls">
+                    <button class="btn btn-primary" id="play-btn" disabled>▶️ Play</button>
+                    <button class="btn btn-secondary" id="stop-btn" disabled>⏹️ Stop</button>
+                    <div class="parameter-slider" style="flex: 1; margin: 0;">
+                        <label>
+                            <span>Volume</span>
+                            <span id="master-volume-value">50%</span>
+                        </label>
+                        <input type="range" id="master-volume" min="0" max="100" value="50">
+                    </div>
+                    <label style="margin-left: 16px;">
+                        <input type="checkbox" id="loop-playback">
+                        Loop
+                    </label>
+                </div>
+
+                <div class="panel">
+                    <h3>📊 Waveform</h3>
+                    <canvas id="waveform-canvas" width="800" height="200"></canvas>
+                </div>
+
+                <div class="panel">
+                    <h3>🌈 Spectrogram</h3>
+                    <canvas id="spectrogram-canvas" width="800" height="200"></canvas>
+                </div>
+
+                <div class="panel">
+                    <h3>ℹ️ Sound Info</h3>
+                    <div id="sound-info">
+                        <p><strong>Name:</strong> <span id="info-name">-</span></p>
+                        <p><strong>Dauer:</strong> <span id="info-duration">-</span></p>
+                        <p><strong>Sample Rate:</strong> <span id="info-samplerate">44.1 kHz</span></p>
+                        <p><strong>Channels:</strong> <span id="info-channels">Mono</span></p>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Right Panel - Export & Presets -->
+            <aside class="sfx-params-panel">
+                <div class="panel">
+                    <h2>💾 Export</h2>
+
+                    <div class="control-group">
+                        <label>Asset Name:</label>
+                        <input type="text" id="asset-name" placeholder="z.B. laser_basic">
+                        <small>Auto-generiert basierend auf Kategorie</small>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Format:</label>
+                        <select id="export-format">
+                            <option value="wav">WAV (44.1kHz, 16-bit)</option>
+                            <option value="ogg">OGG Vorbis</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-primary" id="export-btn" disabled>💾 Export Sound</button>
+                    <button class="btn btn-secondary" id="export-json-btn" disabled>📋 Export JSON</button>
+                </div>
+
+                <div class="panel">
+                    <h2>⚡ Quick Actions</h2>
+
+                    <button class="btn btn-small" id="random-variation-btn">🎲 Zufällige Variation</button>
+                    <button class="btn btn-small" id="subtle-variation-btn">✨ Subtile Variation</button>
+                    <button class="btn btn-small" id="extreme-variation-btn">💥 Extreme Variation</button>
+                </div>
+
+                <div class="panel">
+                    <h2>📚 Preset Library</h2>
+                    <div id="preset-library" style="max-height: 400px; overflow-y: auto;">
+                        <!-- Filled dynamically -->
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <h2>🗂️ Datenbank Integration</h2>
+
+                    <div class="control-group">
+                        <label>Item Category:</label>
+                        <select id="db-category">
+                            <option value="SFX_WEAPON">Weapon SFX</option>
+                            <option value="SFX_ENGINE">Engine SFX</option>
+                            <option value="SFX_UI">UI SFX</option>
+                            <option value="SFX_IMPACT">Impact SFX</option>
+                            <option value="SFX_AMBIENT">Ambient SFX</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Tier:</label>
+                        <select id="db-tier">
+                            <option value="1">T1 - Basic</option>
+                            <option value="2">T2 - Improved</option>
+                            <option value="3">T3 - Advanced</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Auto ID:</label>
+                        <input type="text" id="db-auto-id" readonly placeholder="SFX_WEAPON_T1_001">
+                    </div>
+
+                    <button class="btn btn-primary" id="save-to-db-btn" disabled>💾 In Datenbank Speichern</button>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/audio/synthesis.js"></script>
+    <script src="js/audio/sample-processor.js"></script>
+    <script src="js/audio/audio-export.js"></script>
+    <script src="js/generators/sfx.js"></script>
+    <script src="js/sfx-controller.js"></script>
+</body>
+</html>

@@ -1,0 +1,565 @@
+{
+  "version": "1.0",
+  "type": "weapon_beam",
+  "description": "Beam/laser weapon parameters - Continuous energy beams with distortion, pulse modes, and capital ship scaling",
+  "parameter_count": 47,
+
+  "categories": {
+    "beam_geometry": {
+      "name": "Beam Geometry",
+      "description": "Core beam shape, type, and physical structure",
+      "parameters": {
+        "beam_type": {
+          "type": "enum",
+          "values": ["solid", "pulse", "helix", "multi_strand", "lightning", "cutting_laser"],
+          "default": "solid",
+          "description": "Visual type of beam effect",
+          "ui_group": "Type"
+        },
+        "beam_width": {
+          "type": "float",
+          "min": 0.1,
+          "max": 10.0,
+          "default": 1.0,
+          "variance_min": -0.2,
+          "variance_max": 0.2,
+          "description": "Width of beam in meters (base scale)",
+          "ui_group": "Dimensions"
+        },
+        "beam_length": {
+          "type": "float",
+          "min": 10.0,
+          "max": 500.0,
+          "default": 100.0,
+          "variance_min": -10.0,
+          "variance_max": 10.0,
+          "description": "Maximum beam length in meters",
+          "ui_group": "Dimensions"
+        },
+        "beam_taper_start": {
+          "type": "float",
+          "min": 0.5,
+          "max": 2.0,
+          "default": 1.0,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Width multiplier at beam origin",
+          "ui_group": "Dimensions"
+        },
+        "beam_taper_end": {
+          "type": "float",
+          "min": 0.1,
+          "max": 1.5,
+          "default": 0.8,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Width multiplier at beam end",
+          "ui_group": "Dimensions"
+        },
+        "segment_count": {
+          "type": "int",
+          "min": 1,
+          "max": 50,
+          "default": 10,
+          "variance_min": -2,
+          "variance_max": 2,
+          "description": "Number of beam segments (for pulse/lightning types)",
+          "ui_group": "Structure"
+        },
+        "helix_turns": {
+          "type": "int",
+          "min": 0,
+          "max": 20,
+          "default": 3,
+          "variance_min": -1,
+          "variance_max": 1,
+          "description": "Number of spiral turns (helix type only)",
+          "ui_group": "Structure"
+        },
+        "multi_beam_count": {
+          "type": "int",
+          "min": 1,
+          "max": 8,
+          "default": 1,
+          "variance_min": 0,
+          "variance_max": 0,
+          "description": "Number of parallel beams (multi_strand type)",
+          "ui_group": "Structure"
+        },
+        "beam_curvature": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.0,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Amount of beam arc/curvature",
+          "ui_group": "Deformation"
+        },
+        "beam_sway_frequency": {
+          "type": "float",
+          "min": 0.0,
+          "max": 10.0,
+          "default": 0.5,
+          "variance_min": -0.2,
+          "variance_max": 0.2,
+          "description": "Frequency of beam oscillation in Hz",
+          "ui_group": "Animation"
+        },
+        "beam_sway_amplitude": {
+          "type": "float",
+          "min": 0.0,
+          "max": 5.0,
+          "default": 0.2,
+          "variance_min": -0.05,
+          "variance_max": 0.05,
+          "description": "Amount of beam lateral movement",
+          "ui_group": "Animation"
+        }
+      }
+    },
+
+    "visual_structure": {
+      "name": "Visual Structure",
+      "description": "Color, brightness, layering, and pulse effects",
+      "parameters": {
+        "core_brightness": {
+          "type": "float",
+          "min": 0.0,
+          "max": 5.0,
+          "default": 2.0,
+          "variance_min": -0.5,
+          "variance_max": 0.5,
+          "description": "Brightness of beam core",
+          "ui_group": "Core"
+        },
+        "core_color_temp": {
+          "type": "float",
+          "min": 3000.0,
+          "max": 10000.0,
+          "default": 7000.0,
+          "variance_min": -500.0,
+          "variance_max": 500.0,
+          "description": "Color temperature in Kelvin (blackbody radiation)",
+          "ui_group": "Core"
+        },
+        "edge_sharpness": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.4,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Edge definition (0=soft, 1=sharp)",
+          "ui_group": "Core"
+        },
+        "inner_beam_width_ratio": {
+          "type": "float",
+          "min": 0.1,
+          "max": 1.0,
+          "default": 0.4,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Width ratio of bright core to total beam",
+          "ui_group": "Layers"
+        },
+        "outer_glow_size": {
+          "type": "float",
+          "min": 1.0,
+          "max": 5.0,
+          "default": 2.0,
+          "variance_min": -0.3,
+          "variance_max": 0.3,
+          "description": "Size multiplier for outer glow layer",
+          "ui_group": "Layers"
+        },
+        "layer_count": {
+          "type": "int",
+          "min": 1,
+          "max": 5,
+          "default": 3,
+          "variance_min": 0,
+          "variance_max": 0,
+          "description": "Number of concentric beam layers",
+          "ui_group": "Layers"
+        },
+        "pulse_speed": {
+          "type": "float",
+          "min": 0.0,
+          "max": 20.0,
+          "default": 5.0,
+          "variance_min": -1.0,
+          "variance_max": 1.0,
+          "description": "Speed of energy pulses along beam (m/s)",
+          "ui_group": "Pulse"
+        },
+        "pulse_wavelength": {
+          "type": "float",
+          "min": 1.0,
+          "max": 50.0,
+          "default": 10.0,
+          "variance_min": -2.0,
+          "variance_max": 2.0,
+          "description": "Distance between pulses in meters",
+          "ui_group": "Pulse"
+        },
+        "distortion_noise_scale": {
+          "type": "float",
+          "min": 0.0,
+          "max": 10.0,
+          "default": 2.0,
+          "variance_min": -0.5,
+          "variance_max": 0.5,
+          "description": "Scale of noise-based distortion",
+          "ui_group": "Distortion"
+        },
+        "distortion_noise_speed": {
+          "type": "float",
+          "min": 0.0,
+          "max": 5.0,
+          "default": 1.0,
+          "variance_min": -0.3,
+          "variance_max": 0.3,
+          "description": "Animation speed of noise distortion",
+          "ui_group": "Distortion"
+        },
+        "flicker_amount": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.1,
+          "variance_min": -0.05,
+          "variance_max": 0.05,
+          "description": "Amount of brightness flickering",
+          "ui_group": "Animation"
+        },
+        "flicker_frequency": {
+          "type": "float",
+          "min": 0.0,
+          "max": 30.0,
+          "default": 10.0,
+          "variance_min": -2.0,
+          "variance_max": 2.0,
+          "description": "Flicker rate in Hz",
+          "ui_group": "Animation"
+        },
+        "opacity_falloff_curve": {
+          "type": "enum",
+          "values": ["linear", "exponential", "logarithmic", "smoothstep"],
+          "default": "exponential",
+          "description": "Opacity falloff from core to edge",
+          "ui_group": "Layers"
+        },
+        "beam_segments_visible": {
+          "type": "bool",
+          "default": false,
+          "description": "Show distinct beam segments (pulse mode)",
+          "ui_group": "Pulse"
+        },
+        "segment_gap_size": {
+          "type": "float",
+          "min": 0.0,
+          "max": 5.0,
+          "default": 1.0,
+          "variance_min": -0.2,
+          "variance_max": 0.2,
+          "description": "Size of gaps between segments",
+          "ui_group": "Pulse"
+        }
+      }
+    },
+
+    "distortion_effects": {
+      "name": "Distortion & Effects",
+      "description": "Heat shimmer, refraction, impact visuals",
+      "parameters": {
+        "heat_shimmer_amount": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.5,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Amount of heat distortion effect",
+          "ui_group": "Heat"
+        },
+        "heat_shimmer_frequency": {
+          "type": "float",
+          "min": 0.0,
+          "max": 10.0,
+          "default": 3.0,
+          "variance_min": -0.5,
+          "variance_max": 0.5,
+          "description": "Frequency of heat shimmer waves",
+          "ui_group": "Heat"
+        },
+        "chromatic_aberration": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.2,
+          "variance_min": -0.05,
+          "variance_max": 0.05,
+          "description": "RGB color separation amount",
+          "ui_group": "Optical"
+        },
+        "chromatic_offset": {
+          "type": "float",
+          "min": 0.0,
+          "max": 10.0,
+          "default": 2.0,
+          "variance_min": -0.5,
+          "variance_max": 0.5,
+          "description": "Distance of color separation in pixels",
+          "ui_group": "Optical"
+        },
+        "refraction_amount": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.4,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Screen-space refraction intensity",
+          "ui_group": "Optical"
+        },
+        "laser_pointer_dots": {
+          "type": "bool",
+          "default": true,
+          "description": "Show targeting dots at impact point",
+          "ui_group": "Impact"
+        },
+        "beam_impact_sparks": {
+          "type": "int",
+          "min": 0,
+          "max": 100,
+          "default": 30,
+          "variance_min": -5,
+          "variance_max": 5,
+          "description": "Number of impact sparks/particles",
+          "ui_group": "Impact"
+        },
+        "impact_glow_size": {
+          "type": "float",
+          "min": 0.0,
+          "max": 10.0,
+          "default": 3.0,
+          "variance_min": -0.5,
+          "variance_max": 0.5,
+          "description": "Size of impact point glow",
+          "ui_group": "Impact"
+        },
+        "continuous_damage_particles": {
+          "type": "bool",
+          "default": true,
+          "description": "Emit particles while beam is hitting target",
+          "ui_group": "Impact"
+        },
+        "air_ionization_glow": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.3,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Glow from ionized air around beam",
+          "ui_group": "Atmospheric"
+        },
+        "muzzle_connection_glow": {
+          "type": "float",
+          "min": 0.0,
+          "max": 2.0,
+          "default": 1.0,
+          "variance_min": -0.2,
+          "variance_max": 0.2,
+          "description": "Glow at beam origin point",
+          "ui_group": "Muzzle"
+        },
+        "beam_sound_pitch": {
+          "type": "float",
+          "min": 0.5,
+          "max": 2.0,
+          "default": 1.0,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Pitch multiplier for beam audio",
+          "ui_group": "Audio"
+        }
+      }
+    },
+
+    "capital_ship_scaling": {
+      "name": "Capital Ship Scaling",
+      "description": "Parameters for capital-class beam weapons",
+      "parameters": {
+        "weapon_scale_multiplier": {
+          "type": "float",
+          "min": 1.0,
+          "max": 20.0,
+          "default": 1.0,
+          "variance_min": 0.0,
+          "variance_max": 0.0,
+          "description": "Overall scale multiplier for capital ships",
+          "ui_group": "Scale"
+        },
+        "beam_width_capital": {
+          "type": "float",
+          "min": 1.0,
+          "max": 100.0,
+          "default": 10.0,
+          "variance_min": -2.0,
+          "variance_max": 2.0,
+          "description": "Beam width for capital-class weapons (meters)",
+          "ui_group": "Scale"
+        },
+        "beam_length_capital": {
+          "type": "float",
+          "min": 100.0,
+          "max": 2000.0,
+          "default": 500.0,
+          "variance_min": -50.0,
+          "variance_max": 50.0,
+          "description": "Maximum beam range for capital weapons (meters)",
+          "ui_group": "Scale"
+        },
+        "multi_beam_count_capital": {
+          "type": "int",
+          "min": 1,
+          "max": 12,
+          "default": 4,
+          "variance_min": 0,
+          "variance_max": 0,
+          "description": "Number of beams for capital multi-beam weapons",
+          "ui_group": "Scale"
+        },
+        "capacitor_drain_visual": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.5,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Visual intensity of energy drain effect",
+          "ui_group": "Energy"
+        },
+        "recoil_animation": {
+          "type": "float",
+          "min": 0.0,
+          "max": 5.0,
+          "default": 1.0,
+          "variance_min": -0.3,
+          "variance_max": 0.3,
+          "description": "Weapon recoil/kickback amount",
+          "ui_group": "Animation"
+        },
+        "screen_shake_trauma": {
+          "type": "float",
+          "min": 0.0,
+          "max": 10.0,
+          "default": 3.0,
+          "variance_min": -0.5,
+          "variance_max": 0.5,
+          "description": "Camera shake intensity for capital beams",
+          "ui_group": "Screen Effects"
+        },
+        "audio_bass_boost": {
+          "type": "float",
+          "min": 0.0,
+          "max": 2.0,
+          "default": 1.5,
+          "variance_min": -0.3,
+          "variance_max": 0.3,
+          "description": "Bass frequency boost for capital weapon sound",
+          "ui_group": "Audio"
+        },
+        "chromatic_pulse": {
+          "type": "float",
+          "min": 0.0,
+          "max": 1.0,
+          "default": 0.5,
+          "variance_min": -0.1,
+          "variance_max": 0.1,
+          "description": "Screen-wide chromatic aberration pulse on fire",
+          "ui_group": "Screen Effects"
+        },
+        "destruction_threshold": {
+          "type": "float",
+          "min": 0.0,
+          "max": 100.0,
+          "default": 50.0,
+          "variance_min": -10.0,
+          "variance_max": 10.0,
+          "description": "Damage threshold for destructible environment",
+          "ui_group": "Gameplay"
+        }
+      }
+    }
+  },
+
+  "presets": {
+    "standard_laser": {
+      "name": "Standard Laser Beam",
+      "description": "Balanced continuous beam weapon",
+      "parameters": {
+        "beam_type": "solid",
+        "beam_width": 1.0,
+        "beam_length": 100.0,
+        "core_brightness": 2.0,
+        "core_color_temp": 7000.0
+      }
+    },
+    "pulse_laser": {
+      "name": "Pulse Laser",
+      "description": "Pulsed energy beam with visible segments",
+      "parameters": {
+        "beam_type": "pulse",
+        "beam_segments_visible": true,
+        "pulse_speed": 10.0,
+        "pulse_wavelength": 5.0,
+        "segment_count": 20
+      }
+    },
+    "cutting_laser": {
+      "name": "Precision Cutting Laser",
+      "description": "High-precision thin beam with sharp edges",
+      "parameters": {
+        "beam_type": "cutting_laser",
+        "beam_width": 0.2,
+        "edge_sharpness": 0.9,
+        "core_brightness": 3.0,
+        "continuous_damage_particles": true
+      }
+    },
+    "dreadnought_beam": {
+      "name": "Dreadnought Main Cannon",
+      "description": "Massive capital ship beam weapon",
+      "parameters": {
+        "beam_type": "multi_strand",
+        "weapon_scale_multiplier": 8.0,
+        "beam_width_capital": 50.0,
+        "beam_length_capital": 1000.0,
+        "multi_beam_count_capital": 6,
+        "screen_shake_trauma": 8.0,
+        "chromatic_pulse": 0.8,
+        "audio_bass_boost": 2.0
+      }
+    },
+    "lightning_arc": {
+      "name": "Lightning Arc Beam",
+      "description": "Erratic lightning-style beam",
+      "parameters": {
+        "beam_type": "lightning",
+        "segment_count": 30,
+        "beam_sway_amplitude": 3.0,
+        "flicker_amount": 0.5,
+        "flicker_frequency": 20.0,
+        "distortion_noise_scale": 5.0
+      }
+    }
+  },
+
+  "ui_layout": {
+    "category_order": ["beam_geometry", "visual_structure", "distortion_effects", "capital_ship_scaling"],
+    "collapsible_default": "collapsed"
+  }
+}

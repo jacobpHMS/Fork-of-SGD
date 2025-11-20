@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Reference - SpaceGameDev Asset Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e1a 0%, #1a1f3a 100%);
+            color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #3498db, #9b59b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .api-section {
+            background: rgba(26, 31, 58, 0.8);
+            border: 2px solid rgba(52, 152, 219, 0.2);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid rgba(52, 152, 219, 0.3);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #9b59b6;
+            margin-top: 25px;
+        }
+
+        pre {
+            background: rgba(10, 14, 26, 0.8);
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border-left: 3px solid #3498db;
+        }
+
+        code {
+            color: #2ecc71;
+            font-family: 'Courier New', monospace;
+        }
+
+        .method {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 3px solid #3498db;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .method-name {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #ecf0f1;
+            font-family: 'Courier New', monospace;
+        }
+
+        .param-list {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        .param-list li {
+            color: #95a5a6;
+            margin: 5px 0;
+        }
+
+        .param-name {
+            color: #e74c3c;
+            font-family: 'Courier New', monospace;
+        }
+
+        .param-type {
+            color: #9b59b6;
+            font-style: italic;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚙️ API Reference</h1>
+            <p style="color: #95a5a6; font-size: 1.1rem;">Technical documentation for developers</p>
+            <a href="../hub.html" class="btn">← Back to Hub</a>
+        </header>
+
+        <!-- Seed System API -->
+        <div class="api-section">
+            <h2>SeedSystem</h2>
+            <p>Deterministic seed generation and seeded random number generation.</p>
+
+            <div class="method">
+                <div class="method-name">generateSeed(assetType, itemID, variant, frame)</div>
+                <p>Generate deterministic 32-bit seed from asset identifiers using CRC32.</p>
+                <ul class="param-list">
+                    <li><span class="param-name">assetType</span> <span class="param-type">(string)</span> - Type of asset ('asteroid', 'projectile', etc.)</li>
+                    <li><span class="param-name">itemID</span> <span class="param-type">(string)</span> - Database item ID ('ORE_T1_001', etc.)</li>
+                    <li><span class="param-name">variant</span> <span class="param-type">(string)</span> - Variant name ('iron', 'titanium', etc.)</li>
+                    <li><span class="param-name">frame</span> <span class="param-type">(number)</span> - Frame number (0-7 for animations)</li>
+                    <li><strong>Returns:</strong> <span class="param-type">(number)</span> - 32-bit seed value</li>
+                </ul>
+                <pre><code>const seed = seedSystem.generateSeed('asteroid', 'ORE_T1_001', 'iron', 0);
+// Returns: 2847563891 (always same for these inputs)</code></pre>
+            </div>
+
+            <div class="method">
+                <div class="method-name">createRNG(seed)</div>
+                <p>Create a seeded random number generator instance.</p>
+                <ul class="param-list">
+                    <li><span class="param-name">seed</span> <span class="param-type">(number)</span> - Seed value</li>
+                    <li><strong>Returns:</strong> <span class="param-type">(SeededRandom)</span> - RNG instance</li>
+                </ul>
+                <pre><code>const rng = seedSystem.createRNG(seed);</code></pre>
+            </div>
+
+            <h3>SeededRandom Methods</h3>
+
+            <div class="method">
+                <div class="method-name">next()</div>
+                <p>Generate next random float in range [0, 1).</p>
+                <pre><code>const value = rng.next();  // 0.0 to 0.999...</code></pre>
+            </div>
+
+            <div class="method">
+                <div class="method-name">nextInt(min, max)</div>
+                <p>Generate random integer in range [min, max] (inclusive).</p>
+                <pre><code>const dice = rng.nextInt(1, 6);  // 1, 2, 3, 4, 5, or 6</code></pre>
+            </div>
+
+            <div class="method">
+                <div class="method-name">nextFloat(min, max)</div>
+                <p>Generate random float in range [min, max].</p>
+                <pre><code>const temperature = rng.nextFloat(3000, 10000);</code></pre>
+            </div>
+
+            <div class="method">
+                <div class="method-name">nextBool(probability)</div>
+                <p>Generate random boolean with given probability of true.</p>
+                <pre><code>const critical = rng.nextBool(0.15);  // 15% chance of true</code></pre>
+            </div>
+
+            <div class="method">
+                <div class="method-name">choice(array)</div>
+                <p>Select random element from array.</p>
+                <pre><code>const color = rng.choice(['red', 'blue', 'green']);</code></pre>
+            </div>
+
+            <div class="method">
+                <div class="method-name">nextGaussian(mean, stdDev)</div>
+                <p>Generate normally distributed value using Box-Muller transform.</p>
+                <pre><code>const value = rng.nextGaussian(0, 1);  // Standard normal</code></pre>
+            </div>
+        </div>
+
+        <!-- Parameter Manager API -->
+        <div class="api-section">
+            <h2>ParameterManager</h2>
+            <p>Central management system for all 220+ parameters.</p>
+
+            <div class="method">
+                <div class="method-name">new ParameterManager(parameterDefinitions)</div>
+                <p>Create parameter manager with JSON parameter definitions.</p>
+                <pre><code>const manager = new ParameterManager(asteroidParams);</code></pre>
+            </div>
+
+            <div class="method">
+                <div class="method-name">getValue(key)</div>
+                <p>Get current parameter value.</p>
+                <pre><code>const roughness = manager.getValue('roughness');</code></pre>
+            </div>
+
+            <div class="method">
+                <div class="method-name">setValue(key, value, notify = true)</div>
+                <p>Set parameter value with type validation and clamping.</p>
+                <pre><code>manager.setValue('roughness', 0.7);  // Clamped to [0.0, 1.0]</code></pre>
+            </div>
+
+            <div class="method">
+                <div class="method-name">getRandomizedValue(key, rng)</div>
+                <p>Get parameter value with variance applied using seeded RNG.</p>
+                <pre><code>const value = manager.getRandomizedValue('elongation_x', rng);
+// Returns base ± variance, clamped to bounds</code></pre>
+            </div>
+
+            <div class="method">
+                <div class="method-name">getAllRandomized(rng)</div>
+                <p>Get all parameters with variance applied.</p>
+                <pre><code>const params = manager.getAllRandomized(rng);
+// Returns object with all randomized parameter values</code></pre>
+            </div>
+
+            <div class="method">
+                <div class="method-name">loadPreset(presetName)</div>
+                <p>Load tier preset configuration.</p>
+                <pre><code>manager.loadPreset('T5_Platinum_Crystalline');</code></pre>
+            </div>
+
+            <div class="method">
+                <div class="method-name">exportJSON()</div>
+                <p>Export current configuration to JSON string.</p>
+                <pre><code>const json = manager.exportJSON();
+// Save to file or send to server</code></pre>
+            </div>
+
+            <div class="method">
+                <div class="method-name">importJSON(jsonString)</div>
+                <p>Import configuration from JSON.</p>
+                <pre><code>manager.importJSON(savedConfig);</code></pre>
+            </div>
+
+            <div class="method">
+                <div class="method-name">generateUI(container)</div>
+                <p>Generate HTML controls for all parameters.</p>
+                <pre><code>const container = document.getElementById('params');
+manager.generateUI(container);
+// Creates collapsible categories with sliders, dropdowns, etc.</code></pre>
+            </div>
+        </div>
+
+        <!-- Usage Example -->
+        <div class="api-section">
+            <h2>Complete Usage Example</h2>
+            <pre><code>// 1. Load parameter definitions
+fetch('parameters/asteroid_shape_params.json')
+    .then(r => r.json())
+    .then(defs => {
+        // 2. Create managers
+        const seedSystem = new SeedSystem();
+        const manager = new ParameterManager(defs);
+
+        // 3. Generate deterministic seed
+        const seed = seedSystem.generateSeed('asteroid', 'ORE_T3_042', 'titanium', 0);
+        const rng = seedSystem.createRNG(seed);
+
+        // 4. Load preset
+        manager.loadPreset('T3_Titanium_Elongated');
+
+        // 5. Customize parameters
+        manager.setValue('elongation_x', 1.8);
+        manager.setValue('crater_density', 25);
+
+        // 6. Get randomized values
+        const params = manager.getAllRandomized(rng);
+
+        // 7. Generate asset
+        generateAsteroid(params);
+
+        // 8. Export configuration
+        const config = manager.exportJSON();
+        console.log('Saved config:', config);
+    });</code></pre>
+        </div>
+
+        <!-- Godot Integration -->
+        <div class="api-section">
+            <h2>Godot Integration (GDScript)</h2>
+            <p>Using the parameter system in Godot 4.x:</p>
+            <pre><code># Load JSON parameter definitions
+var params_file = FileAccess.open("res://parameters/asteroid_shape_params.json", FileAccess.READ)
+var params_json = JSON.parse_string(params_file.get_as_text())
+
+# Generate seed
+var seed_value = generate_crc32_seed("asteroid", "ORE_T1_001", "iron", 0)
+
+# Create seeded random
+var rng = RandomNumberGenerator.new()
+rng.seed = seed_value
+
+# Apply parameters to shader
+var material = asteroid_mesh.get_surface_override_material(0)
+material.set_shader_parameter("elongation_x", params["elongation_x"])
+material.set_shader_parameter("roughness", params["roughness"])
+# ... set all 27 parameters</code></pre>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="../wiki/index.html" class="btn">📖 Parameter Wiki</a>
+            <a href="../examples/index.html" class="btn" style="margin-left: 15px;">🎯 Examples</a>
+        </div>
+    </div>
+</body>
+</html>

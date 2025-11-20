@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laser Generator - SpaceGameDev</title>
+    <link rel="stylesheet" href="shared/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar-left">
+            <header>
+                <h1>🎨 Graphics Generator</h1>
+                <p class="tagline">Procedural Pixel Art for SpaceGameDev</p>
+                <a href="sfx.html" class="btn-sfx">🔊 SFX Generator →</a>
+            </header>
+
+            <section class="generator-types">
+                <h3>🔧 GENERATOR TYPE</h3>
+                <button class="type-btn" data-type="ship" onclick="location.href='ship_generator.html'">🚀 Ship</button>
+                <button class="type-btn" data-type="asteroid" onclick="location.href='asteroid_generator.html'">🪨 Asteroid</button>
+                <button class="type-btn" data-type="projectile" onclick="location.href='projectile_generator.html'">💥 Projectile</button>
+                <button class="type-btn active" data-type="laser">⚡ Laser</button>
+                <button class="type-btn" data-type="scanner" onclick="location.href='scanner_generator.html'">📡 Scanner</button>
+                <button class="type-btn" data-type="effect" onclick="location.href='effect_generator.html'">✨ Effect</button>
+                <button class="type-btn" data-type="background" onclick="location.href='background_generator.html'">🌌 Background</button>
+            </section>
+
+            <section class="parameters">
+                <h3>⚡ LASER GENERATOR</h3>
+
+                <label>Laser Type:</label>
+                <select id="laser_type">
+                    <option value="mining">Mining Beam</option>
+                    <option value="weapon">Weapon Beam</option>
+                    <option value="capital">Capital Ship Beam</option>
+                    <option value="pulse">Pulse Laser</option>
+                    <option value="cutting">Cutting Beam</option>
+                </select>
+
+                <label>Size:</label>
+                <select id="size">
+                    <option value="64">64x64</option>
+                    <option value="128" selected>128x128</option>
+                    <option value="256">256x256</option>
+                    <option value="512">512x512</option>
+                </select>
+
+                <label>Beam Length:</label>
+                <input type="range" id="beam_length" min="0.2" max="1" value="0.8" step="0.01">
+                <span class="value">0.80</span>
+
+                <label>Beam Width:</label>
+                <input type="range" id="beam_width" min="1" max="20" value="4" step="1">
+                <span class="value">4</span>
+
+                <label>Core Intensity:</label>
+                <input type="range" id="core_intensity" min="0" max="2" value="1.5" step="0.01">
+                <span class="value">1.50</span>
+
+                <label>Glow Radius:</label>
+                <input type="range" id="glow_radius" min="0" max="3" value="1.5" step="0.01">
+                <span class="value">1.50</span>
+
+                <label>Pulse Speed:</label>
+                <input type="range" id="pulse_speed" min="0" max="10" value="3" step="0.1">
+                <span class="value">3.0</span>
+
+                <label>Distortion Amount:</label>
+                <input type="range" id="distortion" min="0" max="1" value="0.1" step="0.01">
+                <span class="value">0.10</span>
+
+                <label>Energy Particles:</label>
+                <input type="range" id="particle_count" min="0" max="50" value="15" step="1">
+                <span class="value">15</span>
+
+                <label>Beam Angle:</label>
+                <input type="range" id="beam_angle" min="0" max="360" value="0" step="1">
+                <span class="value">0°</span>
+
+                <label>
+                    <input type="checkbox" id="add_core_flash" checked>
+                    Core Flash Effect
+                </label>
+
+                <label>
+                    <input type="checkbox" id="add_electricity">
+                    Electricity Arcs
+                </label>
+
+                <label>
+                    <input type="checkbox" id="animated" checked>
+                    Animated Pulse
+                </label>
+
+                <button class="btn-generate" id="generate-btn">🎲 Generate Laser</button>
+            </section>
+
+            <section class="color-palette">
+                <h3>🎨 COLOR PALETTE</h3>
+                <div class="palette-grid">
+                    <button class="palette-btn" data-palette="cyber_blue">Cyber Blue</button>
+                    <button class="palette-btn" data-palette="military_green">Military</button>
+                    <button class="palette-btn" data-palette="pirate_red">Pirate Red</button>
+                    <button class="palette-btn" data-palette="trader_white">Trader</button>
+                    <button class="palette-btn" data-palette="alien_purple">Alien</button>
+                    <button class="palette-btn" data-palette="mining_orange">Mining</button>
+                    <button class="palette-btn" data-palette="police_black">Police</button>
+                    <button class="palette-btn" data-palette="medical_white">Medical</button>
+                    <button class="palette-btn" data-palette="fire">Fire</button>
+                    <button class="palette-btn" data-palette="ice">Ice</button>
+                    <button class="palette-btn" data-palette="toxic">Toxic</button>
+                    <button class="palette-btn active" data-palette="energy">Energy</button>
+                </div>
+
+                <div class="custom-colors">
+                    <label>Primary: <input type="color" id="color-primary" value="#FFD700"></label>
+                    <label>Secondary: <input type="color" id="color-secondary" value="#FFA500"></label>
+                    <label>Accent: <input type="color" id="color-accent" value="#FFFF00"></label>
+                    <label>Dark: <input type="color" id="color-dark" value="#2A2000"></label>
+                </div>
+            </section>
+        </aside>
+
+        <main class="canvas-area">
+            <div class="canvas-controls">
+                <button id="zoom-out">-</button>
+                <span id="zoom-level">8x</span>
+                <button id="zoom-in">+</button>
+                <button id="reset-view">🔥</button>
+                <button id="toggle-grid">📐</button>
+                <button id="center-view">○</button>
+
+                <label><input type="checkbox" id="show-background" checked> Background</label>
+                <label><input type="checkbox" id="show-glow" checked> Glow Effect</label>
+            </div>
+
+            <div class="canvas-wrapper">
+                <canvas id="main-canvas" width="512" height="512"></canvas>
+            </div>
+
+            <div class="canvas-status">
+                Ready - Pan: Click & Drag | Zoom: +/- or Mouse Wheel
+            </div>
+        </main>
+
+        <aside class="sidebar-right">
+            <section class="preview-panel">
+                <h3>👁️ PREVIEW</h3>
+                <div class="preview-wrapper">
+                    <canvas id="preview-canvas" width="128" height="128"></canvas>
+                </div>
+                <label><input type="checkbox" id="animate" checked> Animate</label>
+            </section>
+
+            <section class="database-panel">
+                <h3>📊 DATABASE INTEGRATION</h3>
+
+                <label>Asset Type:</label>
+                <select id="asset-type">
+                    <option value="laser" selected>Laser Beam</option>
+                    <option value="mining_beam">Mining Beam</option>
+                    <option value="weapon_beam">Weapon Beam</option>
+                </select>
+
+                <label>Beam Type:</label>
+                <input type="text" id="material" placeholder="z.B. mining, weapon" value="energy">
+
+                <label>Power Class:</label>
+                <select id="size-category">
+                    <option value="light">Light</option>
+                    <option value="medium">Medium</option>
+                    <option value="heavy" selected>Heavy</option>
+                    <option value="capital">Capital</option>
+                </select>
+
+                <label>State:</label>
+                <select id="state">
+                    <option value="idle">Idle</option>
+                    <option value="firing" selected>Firing</option>
+                    <option value="charging">Charging</option>
+                </select>
+
+                <label>Auto Filename:</label>
+                <input type="text" id="auto-filename" readonly value="laser_energy_heavy_firing_01">
+
+                <label>Item ID:</label>
+                <input type="text" id="item-id" value="LASER_ENERGY_001">
+
+                <button class="btn-export" id="export-btn">📥 Export PNG + JSON</button>
+            </section>
+        </aside>
+    </div>
+
+    <script src="shared/seed-system.js"></script>
+    <script src="shared/color-palettes.js"></script>
+    <script src="shared/canvas-utils.js"></script>
+    <script src="shared/parameter-manager.js"></script>
+    <script src="generators/laser_generator.js"></script>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            if (typeof LaserGenerator !== 'undefined') {
+                window.laserGenerator = new LaserGenerator();
+                window.laserGenerator.init();
+            }
+        });
+    </script>
+</body>
+</html>

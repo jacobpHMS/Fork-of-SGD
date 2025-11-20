@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanner Generator - SpaceGameDev</title>
+    <link rel="stylesheet" href="shared/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar-left">
+            <header>
+                <h1>🎨 Graphics Generator</h1>
+                <p class="tagline">Procedural Pixel Art for SpaceGameDev</p>
+                <a href="sfx.html" class="btn-sfx">🔊 SFX Generator →</a>
+            </header>
+
+            <section class="generator-types">
+                <h3>🔧 GENERATOR TYPE</h3>
+                <button class="type-btn" data-type="ship" onclick="location.href='ship_generator.html'">🚀 Ship</button>
+                <button class="type-btn" data-type="asteroid" onclick="location.href='asteroid_generator.html'">🪨 Asteroid</button>
+                <button class="type-btn" data-type="projectile" onclick="location.href='projectile_generator.html'">💥 Projectile</button>
+                <button class="type-btn" data-type="laser" onclick="location.href='laser_generator.html'">⚡ Laser</button>
+                <button class="type-btn active" data-type="scanner">📡 Scanner</button>
+                <button class="type-btn" data-type="effect" onclick="location.href='effect_generator.html'">✨ Effect</button>
+                <button class="type-btn" data-type="background" onclick="location.href='background_generator.html'">🌌 Background</button>
+            </section>
+
+            <section class="parameters">
+                <h3>📡 SCANNER GENERATOR</h3>
+
+                <label>Scanner Type:</label>
+                <select id="scanner_type">
+                    <option value="sweep">360° Sweep</option>
+                    <option value="ping">Ping Wave</option>
+                    <option value="radar">Radar Blip</option>
+                    <option value="sonar">Sonar Pulse</option>
+                </select>
+
+                <label>Size:</label>
+                <select id="size">
+                    <option value="64">64x64</option>
+                    <option value="128" selected>128x128</option>
+                    <option value="256">256x256</option>
+                </select>
+
+                <label>Scan Radius:</label>
+                <input type="range" id="scan_radius" min="0.2" max="1" value="0.8" step="0.01">
+                <span class="value">0.80</span>
+
+                <label>Arc Width:</label>
+                <input type="range" id="arc_width" min="5" max="120" value="45" step="1">
+                <span class="value">45°</span>
+
+                <label>Rotation Speed:</label>
+                <input type="range" id="rotation_speed" min="0.1" max="5" value="1" step="0.1">
+                <span class="value">1.0</span>
+
+                <label>Line Thickness:</label>
+                <input type="range" id="line_thickness" min="1" max="10" value="2" step="1">
+                <span class="value">2</span>
+
+                <label>Glow Intensity:</label>
+                <input type="range" id="glow_intensity" min="0" max="2" value="1" step="0.01">
+                <span class="value">1.00</span>
+
+                <label>Fade Length:</label>
+                <input type="range" id="fade_length" min="0" max="1" value="0.5" step="0.01">
+                <span class="value">0.50</span>
+
+                <label>Ring Count:</label>
+                <input type="range" id="ring_count" min="0" max="5" value="3" step="1">
+                <span class="value">3</span>
+
+                <label>
+                    <input type="checkbox" id="show_grid" checked>
+                    Show Radar Grid
+                </label>
+
+                <label>
+                    <input type="checkbox" id="show_blips">
+                    Show Target Blips
+                </label>
+
+                <label>
+                    <input type="checkbox" id="animated" checked>
+                    Animated Rotation
+                </label>
+
+                <button class="btn-generate" id="generate-btn">🎲 Generate Scanner</button>
+            </section>
+
+            <section class="color-palette">
+                <h3>🎨 COLOR PALETTE</h3>
+                <div class="palette-grid">
+                    <button class="palette-btn active" data-palette="cyber_blue">Cyber Blue</button>
+                    <button class="palette-btn" data-palette="military_green">Military</button>
+                    <button class="palette-btn" data-palette="pirate_red">Pirate Red</button>
+                    <button class="palette-btn" data-palette="trader_white">Trader</button>
+                    <button class="palette-btn" data-palette="alien_purple">Alien</button>
+                    <button class="palette-btn" data-palette="mining_orange">Mining</button>
+                    <button class="palette-btn" data-palette="police_black">Police</button>
+                    <button class="palette-btn" data-palette="medical_white">Medical</button>
+                    <button class="palette-btn" data-palette="fire">Fire</button>
+                    <button class="palette-btn" data-palette="ice">Ice</button>
+                    <button class="palette-btn" data-palette="toxic">Toxic</button>
+                    <button class="palette-btn" data-palette="energy">Energy</button>
+                </div>
+
+                <div class="custom-colors">
+                    <label>Primary: <input type="color" id="color-primary" value="#00F0FF"></label>
+                    <label>Secondary: <input type="color" id="color-secondary" value="#0080FF"></label>
+                    <label>Accent: <input type="color" id="color-accent" value="#00FFAA"></label>
+                    <label>Dark: <input type="color" id="color-dark" value="#001020"></label>
+                </div>
+            </section>
+        </aside>
+
+        <main class="canvas-area">
+            <div class="canvas-controls">
+                <button id="zoom-out">-</button>
+                <span id="zoom-level">8x</span>
+                <button id="zoom-in">+</button>
+                <button id="reset-view">🔥</button>
+                <button id="toggle-grid">📐</button>
+                <button id="center-view">○</button>
+
+                <label><input type="checkbox" id="show-background" checked> Background</label>
+                <label><input type="checkbox" id="show-glow" checked> Glow Effect</label>
+            </div>
+
+            <div class="canvas-wrapper">
+                <canvas id="main-canvas" width="512" height="512"></canvas>
+            </div>
+
+            <div class="canvas-status">
+                Ready - Pan: Click & Drag | Zoom: +/- or Mouse Wheel
+            </div>
+        </main>
+
+        <aside class="sidebar-right">
+            <section class="preview-panel">
+                <h3>👁️ PREVIEW</h3>
+                <div class="preview-wrapper">
+                    <canvas id="preview-canvas" width="128" height="128"></canvas>
+                </div>
+                <label><input type="checkbox" id="animate" checked> Animate</label>
+            </section>
+
+            <section class="database-panel">
+                <h3>📊 DATABASE INTEGRATION</h3>
+
+                <label>Asset Type:</label>
+                <select id="asset-type">
+                    <option value="scanner" selected>Scanner</option>
+                    <option value="radar">Radar</option>
+                    <option value="sonar">Sonar</option>
+                </select>
+
+                <label>Scanner Type:</label>
+                <input type="text" id="material" placeholder="z.B. sweep, ping" value="sweep">
+
+                <label>Range Class:</label>
+                <select id="size-category">
+                    <option value="short">Short Range</option>
+                    <option value="medium" selected>Medium Range</option>
+                    <option value="long">Long Range</option>
+                </select>
+
+                <label>State:</label>
+                <select id="state">
+                    <option value="idle">Idle</option>
+                    <option value="scanning" selected>Scanning</option>
+                    <option value="alert">Alert</option>
+                </select>
+
+                <label>Auto Filename:</label>
+                <input type="text" id="auto-filename" readonly value="scanner_sweep_medium_scanning_01">
+
+                <label>Item ID:</label>
+                <input type="text" id="item-id" value="SCANNER_001">
+
+                <button class="btn-export" id="export-btn">📥 Export PNG + JSON</button>
+            </section>
+        </aside>
+    </div>
+
+    <script src="shared/seed-system.js"></script>
+    <script src="shared/color-palettes.js"></script>
+    <script src="shared/canvas-utils.js"></script>
+    <script src="shared/parameter-manager.js"></script>
+    <script src="generators/scanner_generator.js"></script>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            if (typeof ScannerGenerator !== 'undefined') {
+                window.scannerGenerator = new ScannerGenerator();
+                window.scannerGenerator.init();
+            }
+        });
+    </script>
+</body>
+</html>

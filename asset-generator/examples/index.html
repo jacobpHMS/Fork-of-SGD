@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples & Tutorials - SpaceGameDev Asset Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e1a 0%, #1a1f3a 100%);
+            color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #3498db, #9b59b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+
+        .example-card {
+            background: rgba(26, 31, 58, 0.8);
+            border: 2px solid rgba(52, 152, 219, 0.2);
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s;
+        }
+
+        .example-card:hover {
+            border-color: #3498db;
+            transform: translateY(-5px);
+        }
+
+        .example-title {
+            font-size: 1.3rem;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        .example-description {
+            color: #95a5a6;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .example-config {
+            background: rgba(10, 14, 26, 0.8);
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid #3498db;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            overflow-x: auto;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #3498db;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 10px;
+            background: rgba(52, 152, 219, 0.2);
+            color: #3498db;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Examples & Tutorials</h1>
+            <p style="color: #95a5a6; font-size: 1.1rem;">Learn by example - Pre-configured asset templates</p>
+            <a href="../hub.html" class="btn">← Back to Hub</a>
+        </header>
+
+        <div class="grid">
+            <!-- Example 1: T1 Iron Asteroid -->
+            <div class="example-card">
+                <div class="example-title">🪨 T1 Iron Asteroid - Beginner</div>
+                <p class="example-description">
+                    Basic irregular asteroid with moderate cratering. Perfect starting point for T1 ore fields.
+                </p>
+                <div class="example-config">
+{
+  "shape_type": "irregular",
+  "elongation_x": 0.9,
+  "asymmetry": 0.4,
+  "roughness": 0.6,
+  "crater_density": 20,
+  "ore_vein_count": 3,
+  "purity_glow": 0.0
+}
+                </div>
+                <span class="tag">Tier 1</span>
+                <span class="tag">Asteroid</span>
+                <a href="../generators/asteroid.html?preset=T1_Iron" class="btn">Try It →</a>
+            </div>
+
+            <!-- Example 2: T5 Platinum Crystal -->
+            <div class="example-card">
+                <div class="example-title">💎 T5 Platinum Crystalline - Advanced</div>
+                <p class="example-description">
+                    High-purity crystalline asteroid with intense glow and faceted structure. Rare and valuable.
+                </p>
+                <div class="example-config">
+{
+  "shape_type": "crystalline",
+  "facet_count": 16,
+  "ore_vein_count": 25,
+  "purity_glow": 1.8,
+  "metallic": 0.9,
+  "saturation": 1.5
+}
+                </div>
+                <span class="tag">Tier 5</span>
+                <span class="tag">High Glow</span>
+                <a href="../generators/asteroid.html?preset=T5_Platinum_Crystalline" class="btn">Try It →</a>
+            </div>
+
+            <!-- Example 3: Flak Scatter Pattern -->
+            <div class="example-card">
+                <div class="example-title">💥 Spiral Flak Pattern - Combat</div>
+                <p class="example-description">
+                    Multi-projectile flak weapon with spiral launch pattern. Great for area denial.
+                </p>
+                <div class="example-config">
+{
+  "projectile_count": 8,
+  "launch_pattern": "spiral",
+  "scatter_angle": 25,
+  "trail_turbulence": 0.4,
+  "impact_shockwave": true
+}
+                </div>
+                <span class="tag">Weapon</span>
+                <span class="tag">Area Effect</span>
+                <a href="../generators/weapon-flak.html" class="btn">Try It →</a>
+            </div>
+
+            <!-- Example 4: Plasma Charge Shot -->
+            <div class="example-card">
+                <div class="example-title">⚡ High-Temp Plasma Ball</div>
+                <p class="example-description">
+                    Superheated plasma projectile with electric arcs and charge buildup phase.
+                </p>
+                <div class="example-config">
+{
+  "core_temperature": 8500,
+  "electric_arc_count": 15,
+  "charge_time": 1.2,
+  "corona_size": 3.0,
+  "emp_flash": true
+}
+                </div>
+                <span class="tag">Weapon</span>
+                <span class="tag">Energy</span>
+                <a href="../generators/weapon-plasma.html" class="btn">Try It →</a>
+            </div>
+
+            <!-- Example 5: Capital Ship Beam -->
+            <div class="example-card">
+                <div class="example-title">🔵 Dreadnought Main Cannon</div>
+                <p class="example-description">
+                    Massive capital ship beam with screen shake, chromatic pulse, and multi-stage effects.
+                </p>
+                <div class="example-config">
+{
+  "weapon_scale_multiplier": 8.0,
+  "beam_width_capital": 80,
+  "multi_beam_count": 4,
+  "camera_shake_trauma": 8.0,
+  "chromatic_pulse": 0.8
+}
+                </div>
+                <span class="tag">Capital Ship</span>
+                <span class="tag">Extreme</span>
+                <a href="../generators/weapon-capital.html" class="btn">Try It →</a>
+            </div>
+
+            <!-- Example 6: Seed Reproduction -->
+            <div class="example-card">
+                <div class="example-title">🔑 Deterministic Generation</div>
+                <p class="example-description">
+                    Example of using seeds for reproducible asset generation. Same seed = same output.
+                </p>
+                <div class="example-config">
+const seed = seedSystem.generateSeed(
+  'asteroid', 'ORE_T3_042', 'titanium', 0
+);
+// Result: 3891047623
+
+const rng = seedSystem.createRNG(seed);
+const params = manager.getAllRandomized(rng);
+// Always produces identical asteroid
+                </div>
+                <span class="tag">Tutorial</span>
+                <span class="tag">Seed System</span>
+                <a href="../wiki/index.html#seed-system" class="btn">Learn More →</a>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px; padding: 40px; background: rgba(26, 31, 58, 0.6); border-radius: 12px;">
+            <h2 style="color: #3498db; margin-bottom: 20px;">📚 More Resources</h2>
+            <p style="color: #95a5a6; margin-bottom: 25px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Explore the full parameter wiki for detailed documentation, or browse the API reference for technical integration.
+            </p>
+            <a href="../wiki/index.html" class="btn" style="margin-right: 15px;">📖 Full Wiki</a>
+            <a href="../api/index.html" class="btn">⚙️ API Docs</a>
+        </div>
+    </div>
+</body>
+</html>

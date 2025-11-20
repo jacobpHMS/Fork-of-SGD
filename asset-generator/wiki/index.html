@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parameter Wiki - SpaceGameDev Asset Generator</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e1a 0%, #1a1f3a 100%);
+            color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .wiki-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
+        }
+
+        .sidebar {
+            background: rgba(26, 31, 58, 0.8);
+            border: 2px solid rgba(52, 152, 219, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+
+        .sidebar h2 {
+            font-size: 1.3rem;
+            color: #3498db;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(52, 152, 219, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .nav-section {
+            margin-bottom: 25px;
+        }
+
+        .nav-section h3 {
+            font-size: 1rem;
+            color: #95a5a6;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 8px 12px;
+            color: #ecf0f1;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.2s;
+            margin-bottom: 5px;
+        }
+
+        .nav-link:hover {
+            background: rgba(52, 152, 219, 0.2);
+            color: #3498db;
+            padding-left: 16px;
+        }
+
+        .nav-link.active {
+            background: rgba(52, 152, 219, 0.3);
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .content {
+            background: rgba(26, 31, 58, 0.8);
+            border: 2px solid rgba(52, 152, 219, 0.2);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        .breadcrumb {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #3498db, #9b59b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+        }
+
+        .lead {
+            font-size: 1.2rem;
+            color: #95a5a6;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .param-category {
+            margin-bottom: 40px;
+            border: 1px solid rgba(52, 152, 219, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .category-header {
+            background: rgba(52, 152, 219, 0.1);
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .category-header:hover {
+            background: rgba(52, 152, 219, 0.2);
+        }
+
+        .category-title {
+            font-size: 1.4rem;
+            color: #3498db;
+        }
+
+        .param-count {
+            background: rgba(52, 152, 219, 0.3);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+        }
+
+        .param-list {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .param-list.expanded {
+            max-height: 5000px;
+        }
+
+        .param-item {
+            padding: 20px;
+            border-bottom: 1px solid rgba(127, 140, 141, 0.1);
+        }
+
+        .param-item:last-child {
+            border-bottom: none;
+        }
+
+        .param-name {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #ecf0f1;
+            margin-bottom: 8px;
+        }
+
+        .param-type {
+            display: inline-block;
+            background: rgba(155, 89, 182, 0.2);
+            color: #9b59b6;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-right: 8px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .param-range {
+            display: inline-block;
+            background: rgba(46, 204, 113, 0.2);
+            color: #2ecc71;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        .param-description {
+            color: #95a5a6;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+
+        .param-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(127, 140, 141, 0.1);
+        }
+
+        .param-detail {
+            font-size: 0.9rem;
+        }
+
+        .param-detail-label {
+            color: #7f8c8d;
+            font-weight: bold;
+        }
+
+        .param-detail-value {
+            color: #ecf0f1;
+            font-family: 'Courier New', monospace;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 12px;
+            background: rgba(10, 14, 26, 0.5);
+            border: 2px solid rgba(52, 152, 219, 0.3);
+            border-radius: 8px;
+            color: #ecf0f1;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: rgba(52, 152, 219, 0.1);
+            border: 1px solid rgba(52, 152, 219, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .stat-label {
+            color: #95a5a6;
+            margin-top: 5px;
+        }
+
+        code {
+            background: rgba(10, 14, 26, 0.5);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #e74c3c;
+        }
+
+        pre {
+            background: rgba(10, 14, 26, 0.8);
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border-left: 3px solid #3498db;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+            color: #2ecc71;
+        }
+
+        .toggle-icon {
+            transition: transform 0.3s;
+        }
+
+        .toggle-icon.expanded {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="wiki-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <h2>📖 Parameter Wiki</h2>
+
+            <input type="text" class="search-box" id="search" placeholder="🔍 Search parameters...">
+
+            <div class="nav-section">
+                <h3>Getting Started</h3>
+                <a href="#overview" class="nav-link active">Overview</a>
+                <a href="#quick-start" class="nav-link">Quick Start</a>
+                <a href="#seed-system" class="nav-link">Seed System</a>
+                <a href="#variance" class="nav-link">Variance Ranges</a>
+            </div>
+
+            <div class="nav-section">
+                <h3>Visual Assets</h3>
+                <a href="#asteroids" class="nav-link">Asteroids (27)</a>
+                <a href="#flak" class="nav-link">Flak Weapons (36)</a>
+                <a href="#plasma" class="nav-link">Plasma Weapons (42)</a>
+                <a href="#beam" class="nav-link">Beam Weapons (47)</a>
+                <a href="#kinetic" class="nav-link">Kinetic Cannons (32)</a>
+                <a href="#capital" class="nav-link">Capital Ships (36)</a>
+            </div>
+
+            <div class="nav-section">
+                <h3>Technical</h3>
+                <a href="#api" class="nav-link">API Reference</a>
+                <a href="#presets" class="nav-link">Tier Presets</a>
+                <a href="#performance" class="nav-link">Performance</a>
+            </div>
+
+            <div class="nav-section">
+                <h3>Quick Links</h3>
+                <a href="../hub.html" class="nav-link">← Back to Hub</a>
+                <a href="../examples/index.html" class="nav-link">Examples</a>
+                <a href="https://github.com/jacobpHMS/SpaceGameDev" class="nav-link" target="_blank">GitHub →</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <div class="breadcrumb">
+                <a href="../hub.html">Hub</a> / <a href="index.html">Wiki</a> / Overview
+            </div>
+
+            <h1 id="overview">📖 Parameter Wiki</h1>
+            <p class="lead">
+                Comprehensive documentation for all 220+ procedural generation parameters.
+                Each parameter is fully specified with type, range, default value, variance, and usage examples.
+            </p>
+
+            <!-- Statistics -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">220+</div>
+                    <div class="stat-label">Total Parameters</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">6</div>
+                    <div class="stat-label">Asset Categories</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Reproducible</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">50+</div>
+                    <div class="stat-label">Presets</div>
+                </div>
+            </div>
+
+            <!-- Quick Start -->
+            <h2 id="quick-start" style="margin-top: 50px; color: #3498db;">🚀 Quick Start</h2>
+            <p>Using the parameter system in 3 steps:</p>
+
+            <pre><code>// 1. Generate deterministic seed
+const seedSystem = new SeedSystem();
+const seed = seedSystem.generateSeed('asteroid', 'ORE_T1_001', 'iron', 0);
+
+// 2. Load parameters and apply variance
+const manager = new ParameterManager(asteroidParams);
+const rng = seedSystem.createRNG(seed);
+const params = manager.getAllRandomized(rng);
+
+// 3. Generate asset
+generateAsteroid(params);</code></pre>
+
+            <!-- Seed System -->
+            <h2 id="seed-system" style="margin-top: 50px; color: #3498db;">🔑 Seed System</h2>
+            <p>
+                The seed system ensures <strong>100% reproducibility</strong>. Same seed always produces the same output.
+            </p>
+
+            <div class="param-item">
+                <div class="param-name">CRC32-based Seed Generation</div>
+                <p class="param-description">
+                    Seeds are generated by hashing asset identifiers using CRC32. This produces a 32-bit deterministic seed.
+                </p>
+                <pre><code>// Generate seed from identifiers
+const seed = seedSystem.generateSeed(
+    'asteroid',      // Asset type
+    'ORE_T1_001',   // Item ID
+    'iron',         // Variant
+    0               // Frame number (0-7 for animations)
+);
+// Result: 2847563891 (always the same for these inputs)</code></pre>
+            </div>
+
+            <div class="param-item">
+                <div class="param-name">Seeded Random Number Generator (LCG)</div>
+                <p class="param-description">
+                    Linear Congruential Generator with parameters from Numerical Recipes. Generates uniform, gaussian, and other distributions.
+                </p>
+                <pre><code>const rng = seedSystem.createRNG(seed);
+
+// Generate different types of random values
+const float = rng.nextFloat(0, 1);        // [0, 1)
+const int = rng.nextInt(1, 10);          // [1, 10]
+const bool = rng.nextBool(0.7);          // 70% true
+const choice = rng.choice(['a', 'b']);    // random element
+const gaussian = rng.nextGaussian(0, 1);  // normal distribution</code></pre>
+            </div>
+
+            <!-- Variance System -->
+            <h2 id="variance" style="margin-top: 50px; color: #3498db;">📊 Variance System</h2>
+            <p>
+                Each parameter has <code>variance_min</code> and <code>variance_max</code> values that define natural variation bounds.
+            </p>
+
+            <div class="param-item">
+                <div class="param-name">Example: Asteroid Elongation</div>
+                <pre><code>{
+  "elongation_x": {
+    "type": "float",
+    "min": 0.5,
+    "max": 2.0,
+    "default": 1.0,
+    "variance_min": -0.2,  // Can go down to 0.8
+    "variance_max": 0.2    // Can go up to 1.2
+  }
+}</code></pre>
+                <p class="param-description">
+                    When using <code>manager.getRandomizedValue('elongation_x', rng)</code>, the system will:
+                </p>
+                <ol style="color: #95a5a6; line-height: 1.8;">
+                    <li>Take the base value: <code>1.0</code></li>
+                    <li>Generate random variance: <code>rng.nextFloat(-0.2, 0.2)</code></li>
+                    <li>Add variance to base: <code>1.0 + variance</code></li>
+                    <li>Clamp to parameter bounds: <code>min(max(result, 0.5), 2.0)</code></li>
+                </ol>
+            </div>
+
+            <!-- Asteroid Parameters -->
+            <h2 id="asteroids" style="margin-top: 50px; color: #3498db;">🪨 Asteroid Parameters (27 Total)</h2>
+            <p>Procedural asteroid shapes with full control over geometry, surface, and materials.</p>
+
+            <!-- Base Shape Category -->
+            <div class="param-category">
+                <div class="category-header" onclick="toggleCategory('asteroid-base')">
+                    <span class="category-title">Base Shape</span>
+                    <div>
+                        <span class="param-count">8 Parameters</span>
+                        <span class="toggle-icon" id="toggle-asteroid-base">▼</span>
+                    </div>
+                </div>
+                <div class="param-list" id="list-asteroid-base">
+                    <div class="param-item">
+                        <div class="param-name">shape_type</div>
+                        <span class="param-type">enum</span>
+                        <span class="param-range">7 values</span>
+                        <p class="param-description">
+                            Base geometric primitive for asteroid generation. Determines the fundamental shape before deformations.
+                        </p>
+                        <div class="param-details">
+                            <div class="param-detail">
+                                <span class="param-detail-label">Values:</span>
+                                <span class="param-detail-value">sphere, ellipsoid, oblong, irregular, fragmented, crystalline, potato</span>
+                            </div>
+                            <div class="param-detail">
+                                <span class="param-detail-label">Default:</span>
+                                <span class="param-detail-value">irregular</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="param-item">
+                        <div class="param-name">elongation_x</div>
+                        <span class="param-type">float</span>
+                        <span class="param-range">0.5 - 2.0</span>
+                        <p class="param-description">
+                            Stretching along X-axis. Values < 1.0 compress, > 1.0 elongate.
+                        </p>
+                        <div class="param-details">
+                            <div class="param-detail">
+                                <span class="param-detail-label">Default:</span>
+                                <span class="param-detail-value">1.0</span>
+                            </div>
+                            <div class="param-detail">
+                                <span class="param-detail-label">Variance:</span>
+                                <span class="param-detail-value">-0.2 to +0.2</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="param-item">
+                        <div class="param-name">elongation_y</div>
+                        <span class="param-type">float</span>
+                        <span class="param-range">0.5 - 2.0</span>
+                        <p class="param-description">Stretching along Y-axis. Creates tall or flat asteroids.</p>
+                        <div class="param-details">
+                            <div class="param-detail">
+                                <span class="param-detail-label">Default:</span>
+                                <span class="param-detail-value">1.0</span>
+                            </div>
+                            <div class="param-detail">
+                                <span class="param-detail-label">Variance:</span>
+                                <span class="param-detail-value">-0.2 to +0.2</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="param-item">
+                        <div class="param-name">asymmetry</div>
+                        <span class="param-type">float</span>
+                        <span class="param-range">0.0 - 1.0</span>
+                        <p class="param-description">
+                            Overall shape irregularity. 0 = perfectly symmetric, 1 = maximum asymmetry.
+                        </p>
+                        <div class="param-details">
+                            <div class="param-detail">
+                                <span class="param-detail-label">Default:</span>
+                                <span class="param-detail-value">0.3</span>
+                            </div>
+                            <div class="param-detail">
+                                <span class="param-detail-label">Variance:</span>
+                                <span class="param-detail-value">-0.1 to +0.3</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="param-item">
+                        <div class="param-name">roundness</div>
+                        <span class="param-type">float</span>
+                        <span class="param-range">0.0 - 1.0</span>
+                        <p class="param-description">
+                            Edge sharpness control. 0 = sharp angular edges, 1 = smooth rounded edges.
+                        </p>
+                        <div class="param-details">
+                            <div class="param-detail">
+                                <span class="param-detail-label">Default:</span>
+                                <span class="param-detail-value">0.5</span>
+                            </div>
+                            <div class="param-detail">
+                                <span class="param-detail-label">Visual Effect:</span>
+                                <span class="param-detail-value">Controls SDF smoothing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="param-item">
+                        <div class="param-name">facet_count</div>
+                        <span class="param-type">int</span>
+                        <span class="param-range">0 - 32</span>
+                        <p class="param-description">
+                            Polygonalization for crystalline appearance. 0 = smooth surface, higher values = more facets.
+                        </p>
+                        <div class="param-details">
+                            <div class="param-detail">
+                                <span class="param-detail-label">Default:</span>
+                                <span class="param-detail-value">0</span>
+                            </div>
+                            <div class="param-detail">
+                                <span class="param-detail-label">Use Case:</span>
+                                <span class="param-detail-value">High-purity crystal asteroids</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="param-item">
+                        <div class="param-name">twist_angle</div>
+                        <span class="param-type">float</span>
+                        <span class="param-range">-180 to +180</span>
+                        <p class="param-description">
+                            Rotation/torsion along Y-axis in degrees. Creates twisted, tornado-like shapes.
+                        </p>
+                        <div class="param-details">
+                            <div class="param-detail">
+                                <span class="param-detail-label">Default:</span>
+                                <span class="param-detail-value">0</span>
+                            </div>
+                            <div class="param-detail">
+                                <span class="param-detail-label">Variance:</span>
+                                <span class="param-detail-value">-30 to +30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continue with more categories... -->
+            <p style="margin-top: 40px; padding: 20px; background: rgba(52, 152, 219, 0.1); border-left: 3px solid #3498db; border-radius: 4px;">
+                <strong>📘 Full Parameter Documentation:</strong> For complete specifications of all 220+ parameters,
+                see <a href="../../docs/VISUAL_GENERATION_PARAMETERS.md" style="color: #3498db;">VISUAL_GENERATION_PARAMETERS.md</a>
+            </p>
+
+            <p style="margin-top: 20px; color: #7f8c8d; font-size: 0.9rem;">
+                This wiki provides an interactive browser for exploring parameters.
+                All parameter definitions are loaded from JSON files in <code>/parameters/</code> directory.
+            </p>
+        </main>
+    </div>
+
+    <script>
+        // Category toggle functionality
+        function toggleCategory(id) {
+            const list = document.getElementById('list-' + id);
+            const icon = document.getElementById('toggle-' + id);
+
+            if (list.classList.contains('expanded')) {
+                list.classList.remove('expanded');
+                icon.textContent = '▼';
+                icon.classList.remove('expanded');
+            } else {
+                list.classList.add('expanded');
+                icon.textContent = '▲';
+                icon.classList.add('expanded');
+            }
+        }
+
+        // Search functionality
+        document.getElementById('search').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            const items = document.querySelectorAll('.param-item');
+
+            items.forEach(item => {
+                const name = item.querySelector('.param-name').textContent.toLowerCase();
+                const desc = item.querySelector('.param-description').textContent.toLowerCase();
+
+                if (name.includes(query) || desc.includes(query)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
+        // Auto-expand first category
+        document.addEventListener('DOMContentLoaded', () => {
+            toggleCategory('asteroid-base');
+        });
+    </script>
+</body>
+</html>
