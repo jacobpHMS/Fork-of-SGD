@@ -1,0 +1,36 @@
+DATABASE	ID	NAME	TIER	CATEGORY	SIZE	SUBCATEGORY	MASS_KG	VOLUME_M3	BASE_PRICE	PRODUCTION_TIME_SEC	INPUT_1	INPUT_1_QTY	INPUT_2	INPUT_2_QTY	INPUT_3	INPUT_3_QTY	SPECIAL_NOTES	INFO_TEXT
+SHIP	SHIP_121	Venture Mining Frigate	2	Industrial	S	Mining	6500	650	80000	4560	MAT_T2_008	1500	MAT_T2_010	1000	COMP_020	30	Fast, versatile small combat ship	Fast, versatile small combat ship
+SHIP	SHIP_122	Prospect Expedition	3	Industrial	S	Expedition	7500	750	120000	5280	MAT_T3_016	1850	MAT_T3_018	1300	COMP_045	40	Spaceship hull	Spaceship hull
+SHIP	SHIP_123	Procurer Mining Barge	3	Industrial	M	Barge	18000	1800	280000	7680	MAT_T3_016	4200	MAT_T3_020	3000	COMP_050	70	Asteroid mining specialist ship	Asteroid mining specialist ship
+SHIP	SHIP_124	Retriever Mining Barge	3	Industrial	M	Barge	19000	1900	300000	7920	MAT_T3_021	4500	MAT_T3_022	3200	COMP_051	75	Asteroid mining specialist ship	Asteroid mining specialist ship
+SHIP	SHIP_125	Covetor Mining Barge	3	Industrial	M	Barge	17500	1750	270000	7560	MAT_T3_018	4000	MAT_T3_019	2900	COMP_052	68	Asteroid mining specialist ship	Asteroid mining specialist ship
+SHIP	SHIP_126	Skiff Exhumer	4	Industrial	M	Exhumer	22000	2200	450000	8640	MAT_T4_023	5800	MAT_T4_025	4200	COMP_085	95	Spaceship hull	Spaceship hull
+SHIP	SHIP_127	Mackinaw Exhumer	4	Industrial	M	Exhumer	23000	2300	480000	8880	MAT_T4_024	6100	MAT_T4_026	4400	COMP_086	100	Spaceship hull	Spaceship hull
+SHIP	SHIP_128	Hulk Exhumer	4	Industrial	L	Exhumer	24000	2400	510000	9120	MAT_T4_025	6400	MAT_T4_027	4600	COMP_087	105	Spaceship hull	Spaceship hull
+SHIP	SHIP_129	Orca Industrial Command	4	Industrial	XL	Command	65000	6500	1800000	16560	MAT_T4_023	22000	MAT_T4_025	16000	COMP_090	380	Industrial operations support ship	Industrial operations support ship
+SHIP	SHIP_130	Rorqual Capital Industrial	5	Industrial	XL	Capital	85000	8500	3500000	20400	MAT_T5_028	38000	MAT_T5_031	27000	COMP_098	600	Industrial operations support ship	Industrial operations support ship
+SHIP	SHIP_131	Badger Hauler	2	Industrial	M	Transport	15000	1500	160000	6240	MAT_T2_008	3000	MAT_T2_010	2100	COMP_025	48	Large cargo transport vessel	Large cargo transport vessel
+SHIP	SHIP_132	Tayra Hauler	2	Industrial	M	Transport	16000	1600	180000	6480	MAT_T2_009	3200	MAT_T2_013	2300	COMP_026	52	Large cargo transport vessel	Large cargo transport vessel
+SHIP	SHIP_133	Bestower Hauler	2	Industrial	M	Transport	15500	1550	170000	6360	MAT_T2_010	3100	MAT_T2_014	2200	COMP_027	50	Large cargo transport vessel	Large cargo transport vessel
+SHIP	SHIP_134	Iteron V Hauler	3	Industrial	M	Transport	19500	1950	250000	7320	MAT_T3_016	4400	MAT_T3_018	3200	COMP_055	68	Large cargo transport vessel	Large cargo transport vessel
+SHIP	SHIP_135	Mammoth Hauler	3	Industrial	M	Transport	20000	2000	265000	7560	MAT_T3_021	4600	MAT_T3_022	3350	COMP_056	72	Large cargo transport vessel	Large cargo transport vessel
+SHIP	SHIP_136	Nereus Specialist	3	Industrial	M	Specialist	18500	1850	235000	7080	MAT_T3_018	4100	MAT_T3_019	3000	COMP_057	65	Spaceship hull	Spaceship hull
+SHIP	SHIP_137	Kryos Ore Hauler	3	Industrial	M	Ore	19000	1900	245000	7200	MAT_T3_016	4300	MAT_T3_021	3100	COMP_058	67	Large cargo transport vessel	Large cargo transport vessel
+SHIP	SHIP_138	Miasmos Gas Hauler	3	Industrial	M	Gas	18800	1880	240000	7140	MAT_T3_020	4200	MAT_T3_022	3050	COMP_059	66	Large cargo transport vessel	Large cargo transport vessel
+SHIP	SHIP_139	Epithal Planetary	3	Industrial	M	Planetary	18200	1820	230000	6960	MAT_T3_016	4000	MAT_T3_018	2950	COMP_060	64	Spaceship hull	Spaceship hull
+SHIP	SHIP_140	Hoarder Quick	2	Industrial	M	Fast	14500	1450	150000	6000	MAT_T2_008	2900	MAT_T2_010	2050	COMP_028	46	Spaceship hull	Spaceship hull
+SHIP	SHIP_141	Bustard Deep Space	4	Industrial	L	DST	32000	3200	620000	10320	MAT_T4_023	7800	MAT_T4_025	5700	COMP_090	125	Spaceship hull	Spaceship hull
+SHIP	SHIP_142	Mastodon Deep Space	4	Industrial	L	DST	33000	3300	650000	10560	MAT_T4_024	8100	MAT_T4_026	5900	COMP_091	130	Spaceship hull	Spaceship hull
+SHIP	SHIP_143	Crane Blockade Runner	4	Industrial	M	Blockade	25000	2500	480000	9000	MAT_T4_025	6200	MAT_T4_027	4500	COMP_092	102	Spaceship hull	Spaceship hull
+SHIP	SHIP_144	Viator Blockade Runner	4	Industrial	M	Blockade	24500	2450	470000	8880	MAT_T4_023	6000	MAT_T4_025	4400	COMP_085	100	Spaceship hull	Spaceship hull
+SHIP	SHIP_145	Charon Freighter	5	Industrial	XL	Freighter	120000	12000	6000000	25200	MAT_T5_028	65000	MAT_T5_031	46000	COMP_098	1100	Large cargo transport vessel	Large cargo transport vessel
+SHIP	SHIP_146	Obelisk Freighter	5	Industrial	XL	Freighter	125000	12500	6500000	26400	MAT_T5_029	68000	MAT_T5_032	48000	COMP_099	1150	Large cargo transport vessel	Large cargo transport vessel
+SHIP	SHIP_147	Fenrir Freighter	5	Industrial	XL	Freighter	122000	12200	6200000	25800	MAT_T5_030	66000	MAT_T5_033	47000	COMP_100	1120	Large cargo transport vessel	Large cargo transport vessel
+SHIP	SHIP_148	Prowler Covert Ops	3	Special	S	Covert	7200	720	115000	5160	MAT_T3_016	1800	MAT_T3_018	1280	COMP_061	38	Spaceship hull	Spaceship hull
+SHIP	SHIP_149	Raptor Interceptor	3	Special	S	Interceptor	7000	700	110000	5040	MAT_T3_020	1750	MAT_T3_022	1250	COMP_062	37	Spaceship hull	Spaceship hull
+SHIP	SHIP_150	Hound Bomber	3	Special	S	Bomber	7400	740	120000	5280	MAT_T3_016	1850	MAT_T3_021	1300	COMP_063	39	Spaceship hull	Spaceship hull
+SHIP	SHIP_151	Ibis Rookie	1	Civilian	S	Rookie	4500	450	5000	1800	MAT_T1_001	500	MAT_T1_002	300	COMP_001	10	Spaceship hull	Spaceship hull
+SHIP	SHIP_152	Velator Rookie	1	Civilian	S	Rookie	4600	460	5200	1860	MAT_T1_001	520	MAT_T1_002	310	COMP_002	10	Spaceship hull	Spaceship hull
+SHIP	SHIP_153	Reaper Rookie	1	Civilian	S	Rookie	4550	455	5100	1830	MAT_T1_001	510	MAT_T1_002	305	COMP_003	10	Spaceship hull	Spaceship hull
+SHIP	SHIP_154	Impairor Rookie	1	Civilian	S	Rookie	4650	465	5300	1890	MAT_T1_001	530	MAT_T1_002	315	COMP_004	10	Spaceship hull	Spaceship hull
+SHIP	SHIP_155	Shuttle Capsule	1	Civilian	S	Shuttle	1000	100	1000	600	MAT_T1_001	100	MAT_T1_002	50	COMP_001	2	Spaceship hull	Spaceship hull

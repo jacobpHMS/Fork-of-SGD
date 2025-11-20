@@ -1,0 +1,23 @@
+{
+  "ui_market": "Market",
+  "ui_market_buy": "Buy",
+  "ui_market_sell": "Sell",
+  "ui_market_place_order": "Place Order",
+  "ui_market_price": "Price",
+  "ui_market_amount": "Amount",
+  "ui_market_total": "Total",
+  "ui_market_stock": "Stock",
+  "ui_market_trend": "Trend",
+  "ui_close": "Close",
+  "trend_crashing": "CRASHING",
+  "trend_declining": "DECLINING",
+  "trend_stable": "STABLE",
+  "trend_rising": "RISING",
+  "trend_surging": "SURGING",
+  "timeframe_5min": "5 Minutes",
+  "timeframe_30min": "30 Minutes",
+  "timeframe_1h": "1 Hour",
+  "timeframe_2h": "2 Hours",
+  "timeframe_24h": "24 Hours",
+  "timeframe_1week": "1 Week"
+}

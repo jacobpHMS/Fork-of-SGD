@@ -1,0 +1,51 @@
+DATABASE	ID	NAME	TIER	CATEGORY	SIZE	SUBCATEGORY	MASS_KG	VOLUME_M3	BASE_PRICE	PRODUCTION_TIME_SEC	INPUT_1	INPUT_1_QTY	INPUT_2	INPUT_2_QTY	INPUT_3	INPUT_3_QTY	SPECIAL_NOTES	INFO_TEXT
+MODULE	MOD_101	Basic Cargo Bay	1	Cargo	S	Storage	150	1.5	4000	600	MAT_T1_001	60	MAT_T1_003	40	COMP_005	5	Expands cargo storage space	Expands cargo storage space
+MODULE	MOD_102	Standard Cargo Bay	1	Cargo	S	Storage	180	1.8	5000	720	MAT_T1_001	75	MAT_T2_008	45	COMP_006	6	Expands cargo storage space	Expands cargo storage space
+MODULE	MOD_103	Small Ore Hold	1	Cargo	S	Specialized	200	2.0	5500	780	MAT_T1_002	80	MAT_T2_009	50	COMP_007	6	Expands cargo storage space	Expands cargo storage space
+MODULE	MOD_104	Light Cargo Optimizer	1	Cargo	S	Enhancement	140	1.4	4500	660	MAT_T1_003	55	MAT_T2_013	35	COMP_008	5	Optimizes cargo space efficiency	Optimizes cargo space efficiency
+MODULE	MOD_105	Basic Cargo Scanner	1	Cargo	S	Detection	120	1.2	3800	540	MAT_T2_010	50	MAT_T2_013	30	COMP_009	4	Expands cargo storage space	Expands cargo storage space
+MODULE	MOD_106	Improved Cargo Bay	2	Cargo	M	Storage	650	6.5	18000	1200	MAT_T2_008	170	MAT_T2_010	120	COMP_015	15	Expands cargo storage space	Expands cargo storage space
+MODULE	MOD_107	Enhanced Cargo Bay	2	Cargo	M	Storage	750	7.5	22000	1440	MAT_T2_009	200	MAT_T2_010	140	COMP_016	18	Expands cargo storage space	Expands cargo storage space
+MODULE	MOD_108	Medium Ore Hold	2	Cargo	M	Specialized	820	8.2	24000	1560	MAT_T2_010	220	MAT_T2_014	150	COMP_017	19	Expands cargo storage space	Expands cargo storage space
+MODULE	MOD_109	Medium Gas Hold	2	Cargo	M	Specialized	780	7.8	23000	1500	MAT_T2_009	210	MAT_T2_013	145	COMP_018	18	Expands cargo storage space	Expands cargo storage space
+MODULE	MOD_110	Improved Cargo Optimizer	2	Cargo	M	Enhancement	680	6.8	20000	1320	MAT_T2_008	180	MAT_T2_011	125	COMP_019	16	Optimizes cargo space efficiency	Optimizes cargo space efficiency
+MODULE	MOD_111	Elite Cargo Bay	3	Cargo	L	Storage	1500	15.0	85000	2640	MAT_T3_016	380	MAT_T3_018	270	COMP_035	38	Expands cargo storage space	Expands cargo storage space
+MODULE	MOD_112	Combat Cargo Bay	3	Cargo	M	Storage	1350	13.5	78000	2400	MAT_T3_016	350	MAT_T3_020	250	COMP_036	35	Expands cargo storage space	Expands cargo storage space
+MODULE	MOD_113	Tactical Cargo System	3	Cargo	L	System	1650	16.5	95000	2880	MAT_T3_021	420	MAT_T3_022	300	COMP_037	42	Expands cargo storage space	Expands cargo storage space
+MODULE	MOD_114	Large Ore Hold	3	Cargo	L	Specialized	1700	17.0	98000	2760	MAT_T3_018	440	MAT_T3_019	310	COMP_038	40	Expands cargo storage space	Expands cargo storage space
+MODULE	MOD_115	Large Gas Hold	3	Cargo	L	Specialized	1600	16.0	92000	2700	MAT_T3_016	410	MAT_T3_021	290	COMP_039	39	Expands cargo storage space	Expands cargo storage space
+MODULE	MOD_116	Elite Cargo Optimizer	3	Cargo	M	Enhancement	1400	14.0	82000	2520	MAT_T3_020	370	MAT_T3_022	265	COMP_040	36	Optimizes cargo space efficiency	Optimizes cargo space efficiency
+MODULE	MOD_117	Compression Module	3	Cargo	L	Compression	1750	17.5	105000	3000	MAT_T3_016	460	MAT_T3_018	330	COMP_041	44	Expands cargo storage space	Expands cargo storage space
+MODULE	MOD_118	Quantum Cargo Bay	4	Cargo	XL	Storage	5200	52.0	330000	5400	MAT_T4_023	1050	MAT_T4_025	750	COMP_070	105	Expands cargo storage space	Expands cargo storage space
+MODULE	MOD_119	Capital Cargo Bay	4	Cargo	L	Storage	4600	46.0	295000	4800	MAT_T4_023	920	MAT_T4_026	680	COMP_071	98	Expands cargo storage space	Expands cargo storage space
+MODULE	MOD_120	Siege Cargo System	4	Cargo	XL	System	5600	56.0	360000	5700	MAT_T4_024	1150	MAT_T4_027	820	COMP_072	110	Expands cargo storage space	Expands cargo storage space
+MODULE	MOD_121	Capital Ore Hold	4	Cargo	XL	Specialized	5800	58.0	375000	6000	MAT_T4_025	1200	MAT_T4_026	860	COMP_073	115	Expands cargo storage space	Expands cargo storage space
+MODULE	MOD_122	Quantum Cargo Optimizer	4	Cargo	L	Enhancement	4800	48.0	310000	5100	MAT_T4_026	980	MAT_T4_027	710	COMP_074	102	Optimizes cargo space efficiency	Optimizes cargo space efficiency
+MODULE	MOD_123	Titan Cargo Bay	5	Cargo	Station	Storage	20000	200.0	2000000	10800	MAT_T5_028	3600	MAT_T5_031	2400	COMP_098	300	Expands cargo storage space	Expands cargo storage space
+MODULE	MOD_124	Mega Cargo System	5	Cargo	XL	System	18000	180.0	1800000	9600	MAT_T5_029	3200	MAT_T5_032	2100	COMP_099	280	Expands cargo storage space	Expands cargo storage space
+MODULE	MOD_125	Ultimate Ore Hold	5	Cargo	Station	Specialized	22000	220.0	2400000	11400	MAT_T5_030	4000	MAT_T5_033	2700	COMP_100	320	Expands cargo storage space	Expands cargo storage space
+MODULE	MOD_126	Basic Scanner	1	Sensors	S	Detection	110	1.1	3500	540	MAT_T1_002	45	MAT_T2_013	28	COMP_010	4	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_127	Standard Sensor Array	1	Sensors	S	Detection	130	1.3	4200	660	MAT_T1_003	55	MAT_T2_013	35	COMP_011	5	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_128	Small Radar	1	Sensors	S	Tracking	100	1.0	3200	480	MAT_T2_008	40	MAT_T2_009	25	COMP_012	4	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_129	Light Analyser	1	Sensors	S	Analysis	120	1.2	3800	600	MAT_T2_010	48	MAT_T2_013	30	COMP_013	4	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_130	Basic Signal Booster	1	Sensors	S	Amplifier	90	0.9	3000	480	MAT_T1_002	38	MAT_T2_008	23	COMP_014	3	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_131	Improved Scanner	2	Sensors	M	Detection	480	4.8	16000	1200	MAT_T2_008	130	MAT_T2_010	90	COMP_020	14	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_132	Enhanced Sensor Array	2	Sensors	M	Detection	550	5.5	19000	1380	MAT_T2_009	150	MAT_T2_010	105	COMP_021	16	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_133	Medium Radar	2	Sensors	M	Tracking	450	4.5	15000	1140	MAT_T2_010	125	MAT_T2_013	85	COMP_022	13	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_134	Medium Analyser	2	Sensors	M	Analysis	500	5.0	17000	1260	MAT_T2_008	135	MAT_T2_014	95	COMP_023	15	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_135	Improved Signal Booster	2	Sensors	M	Amplifier	420	4.2	14000	1080	MAT_T2_009	115	MAT_T2_011	80	COMP_024	12	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_136	Elite Scanner	3	Sensors	L	Detection	1100	11.0	72000	2400	MAT_T3_016	290	MAT_T3_018	210	COMP_045	34	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_137	Combat Sensor Array	3	Sensors	M	Detection	980	9.8	68000	2280	MAT_T3_016	270	MAT_T3_020	195	COMP_046	32	Tracks hostile targets in combat	Tracks hostile targets in combat
+MODULE	MOD_138	Tactical Scanner	3	Sensors	L	Detection	1200	12.0	78000	2640	MAT_T3_021	320	MAT_T3_022	230	COMP_047	36	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_139	Heavy Radar	3	Sensors	M	Tracking	1050	10.5	70000	2340	MAT_T3_018	280	MAT_T3_019	205	COMP_048	33	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_140	Large Analyser	3	Sensors	L	Analysis	1150	11.5	75000	2520	MAT_T3_016	300	MAT_T3_021	220	COMP_049	35	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_141	Elite Signal Booster	3	Sensors	M	Amplifier	1000	10.0	68000	2280	MAT_T3_020	275	MAT_T3_022	200	COMP_050	32	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_142	Quantum Scanner Array	3	Sensors	L	Quantum	1250	12.5	82000	2760	MAT_T3_016	330	MAT_T3_018	240	COMP_051	38	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_143	Quantum Scanner	4	Sensors	XL	Detection	4000	40.0	280000	4800	MAT_T4_023	820	MAT_T4_025	600	COMP_080	95	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_144	Capital Sensor Array	4	Sensors	L	Detection	3600	36.0	255000	4500	MAT_T4_023	750	MAT_T4_026	550	COMP_081	90	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_145	Siege Scanner	4	Sensors	XL	Detection	4200	42.0	295000	5100	MAT_T4_024	880	MAT_T4_027	640	COMP_082	100	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_146	Capital Radar	4	Sensors	L	Tracking	3800	38.0	265000	4800	MAT_T4_025	790	MAT_T4_026	580	COMP_083	92	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_147	Quantum Signal Booster	4	Sensors	L	Amplifier	3500	35.0	245000	4500	MAT_T4_026	730	MAT_T4_027	540	COMP_084	88	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_148	Titan Scanner	5	Sensors	Station	Detection	16000	160.0	1800000	9600	MAT_T5_028	2900	MAT_T5_031	2000	COMP_098	280	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_149	Mega Sensor Array	5	Sensors	XL	Detection	14000	140.0	1600000	8400	MAT_T5_029	2600	MAT_T5_032	1800	COMP_099	260	Provides sensor detection capability	Provides sensor detection capability
+MODULE	MOD_150	Ultimate Signal Booster	5	Sensors	Station	Amplifier	18000	180.0	2000000	10800	MAT_T5_030	3300	MAT_T5_033	2200	COMP_100	300	Provides sensor detection capability	Provides sensor detection capability

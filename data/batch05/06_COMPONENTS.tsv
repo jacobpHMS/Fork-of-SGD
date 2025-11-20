@@ -1,0 +1,101 @@
+DATABASE	ID	NAME	TIER	CATEGORY	SIZE	SUBCATEGORY	MASS_KG	VOLUME_M3	BASE_PRICE	PRODUCTION_TIME_SEC	INPUT_1	INPUT_1_QTY	INPUT_2	INPUT_2_QTY	INPUT_3	INPUT_3_QTY	SPECIAL_NOTES	INFO_TEXT
+COMPONENT	COMP_001	Flux Capacitor Unit	1	Electronics	S	Power Storage	5	0.5	500	300	MAT_001	10	MAT_002	8	-	-	Electronic warfare capabilities	Electronic warfare capabilities
+COMPONENT	COMP_002	Circuit Matrix Board	1	Electronics	S	Processing	3	0.3	450	240	MAT_002	12	MAT_003	6	-	-	Electronic warfare capabilities	Electronic warfare capabilities
+COMPONENT	COMP_003	Nano-Lattice Frame	1	Structure	S	Framework	8	0.8	400	180	MAT_001	15	MAT_003	5	-	-	Structural framework component	Structural framework component
+COMPONENT	COMP_004	Plasma Conduit Array	2	Energy	S	Transfer	4	0.4	800	360	MAT_003	10	MAT_004	8	MAT_012	3	Energy transfer component	Energy transfer component
+COMPONENT	COMP_005	Quantum Relay Node	2	Electronics	S	Communication	2	0.2	1200	420	MAT_004	8	MAT_005	6	MAT_018	4	Electronic warfare capabilities	Electronic warfare capabilities
+COMPONENT	COMP_006	Servo-Actuator Assembly	2	Mechanical	S	Movement	6	0.6	700	300	MAT_003	12	MAT_009	8	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_007	Photonic Processor Core	3	Electronics	M	Computing	4	0.4	2500	600	MAT_005	15	MAT_020	10	COMP_002	2	Electronic warfare capabilities	Electronic warfare capabilities
+COMPONENT	COMP_008	Reinforced Bulkhead	2	Structure	M	Armor	20	2.0	900	420	MAT_009	25	MAT_019	15	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_009	Sensor Array Module	2	Scanner	S	Detection	3	0.3	1500	480	MAT_004	10	MAT_020	8	COMP_005	1	Manufacturing component	Manufacturing component
+COMPONENT	COMP_010	Fusion Regulator Unit	3	Energy	M	Control	7	0.7	3000	720	MAT_012	12	MAT_013	10	COMP_004	3	Manufacturing component	Manufacturing component
+COMPONENT	COMP_011	Graphene Heatsink	2	Cooling	S	Thermal	4	0.4	850	360	MAT_018	20	MAT_011	10	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_012	Crystalline Focusing Lens	3	Optics	S	Precision	1	0.1	1800	540	MAT_012	15	MAT_020	12	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_013	Hyper-Threading Core	3	Electronics	M	Processing	5	0.5	4000	900	MAT_005	20	COMP_007	2	COMP_002	3	Electronic warfare capabilities	Electronic warfare capabilities
+COMPONENT	COMP_014	Magnetic Confinement Ring	3	Energy	M	Containment	15	1.5	2800	660	MAT_013	18	MAT_006	12	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_015	Adaptive Armor Plate	3	Structure	M	Defense	25	2.5	3500	840	MAT_019	30	MAT_029	20	COMP_008	2	Manufacturing component	Manufacturing component
+COMPONENT	COMP_016	Temporal Stabilizer	4	Advanced	S	Exotic	3	0.3	6000	1200	MAT_006	15	MAT_015	10	COMP_010	2	Manufacturing component	Manufacturing component
+COMPONENT	COMP_017	Neural Interface Module	3	Electronics	S	Bio-Tech	2	0.2	5000	960	MAT_025	20	COMP_005	3	-	-	Electronic warfare capabilities	Electronic warfare capabilities
+COMPONENT	COMP_018	Drone Control Matrix	3	Electronics	M	AI System	8	0.8	4500	1080	MAT_005	25	COMP_013	2	COMP_005	4	Electronic warfare capabilities	Electronic warfare capabilities
+COMPONENT	COMP_019	Warp Core Stabilizer	4	Energy	L	FTL Tech	30	3.0	15000	1800	MAT_006	40	MAT_007	30	COMP_014	3	Manufacturing component	Manufacturing component
+COMPONENT	COMP_020	Quantum Entanglement Array	4	Communication	M	FTL Com	6	0.6	12000	1500	MAT_030	15	COMP_005	5	MAT_008	8	Manufacturing component	Manufacturing component
+COMPONENT	COMP_021	Nanite Repair Swarm	4	Utility	S	Self-Repair	1	0.1	8000	1200	MAT_031	10	COMP_017	2	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_022	Compression Field Generator	3	Utility	M	Space-Folding	12	1.2	7000	1320	MAT_015	20	COMP_010	3	MAT_006	15	Manufacturing component	Manufacturing component
+COMPONENT	COMP_023	Plasma Injection Manifold	3	Weapon	M	Delivery	10	1.0	3200	840	MAT_016	25	COMP_004	4	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_024	Shield Harmonic Resonator	4	Defense	M	Shielding	14	1.4	9000	1440	MAT_013	30	COMP_014	3	MAT_006	20	Manufacturing component	Manufacturing component
+COMPONENT	COMP_025	Dark Matter Containment Pod	5	Exotic	M	Storage	20	2.0	25000	2400	MAT_032	30	MAT_027	25	COMP_014	5	Manufacturing component	Manufacturing component
+COMPONENT	COMP_026	Ion Thruster Assembly	2	Propulsion	M	Engine	18	1.8	2200	600	MAT_003	35	COMP_006	4	MAT_007	5	Manufacturing component	Manufacturing component
+COMPONENT	COMP_027	Cloaking Field Emitter	4	Stealth	L	Concealment	25	2.5	18000	2100	MAT_015	35	COMP_024	4	MAT_008	15	Manufacturing component	Manufacturing component
+COMPONENT	COMP_028	Radiation Shielding Panel	3	Defense	M	Protection	22	2.2	2800	720	MAT_011	40	MAT_019	25	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_029	Tractor Beam Projector	3	Utility	M	Salvage	16	1.6	5500	1080	MAT_005	30	COMP_009	3	COMP_004	5	Manufacturing component	Manufacturing component
+COMPONENT	COMP_030	Graviton Pulse Generator	4	Exotic	L	Gravity Control	35	3.5	22000	2400	MAT_007	50	MAT_015	35	COMP_019	4	Manufacturing component	Manufacturing component
+COMPONENT	COMP_031	Antimatter Injector	5	Energy	M	AM Fuel System	12	1.2	30000	2700	MAT_027	20	COMP_010	6	MAT_008	25	Manufacturing component	Manufacturing component
+COMPONENT	COMP_032	Void Crystal Resonator	5	Exotic	S	Dimensional	4	0.4	35000	3000	MAT_033	15	COMP_020	3	MAT_008	20	Manufacturing component	Manufacturing component
+COMPONENT	COMP_033	Bio-Neural Gel Pack	3	Electronics	S	Computing	2	0.2	6500	1140	MAT_025	25	COMP_017	2	-	-	Electronic warfare capabilities	Electronic warfare capabilities
+COMPONENT	COMP_034	Hardened Blast Shutter	2	Structure	M	Protection	28	2.8	1800	540	MAT_019	45	MAT_009	20	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_035	Energy Siphon Module	4	Utility	M	Power Drain	11	1.1	10000	1620	MAT_006	25	COMP_004	6	MAT_013	15	Manufacturing component	Manufacturing component
+COMPONENT	COMP_036	Subspace Transceiver	4	Communication	M	Long-Range	7	0.7	13000	1680	MAT_030	20	COMP_020	4	MAT_007	18	Manufacturing component	Manufacturing component
+COMPONENT	COMP_037	Particle Accelerator Ring	4	Weapon	L	Beam Weapon	40	4.0	16000	2040	MAT_006	60	COMP_023	5	MAT_013	30	Manufacturing component	Manufacturing component
+COMPONENT	COMP_038	Smart Munition Processor	3	Weapon	S	Guidance	5	0.5	4200	960	MAT_005	18	COMP_013	2	COMP_009	3	Electronic computing component	Electronic computing component
+COMPONENT	COMP_039	Reactor Core Assembly	4	Energy	XL	Power Plant	100	10.0	35000	3600	MAT_007	80	COMP_010	10	MAT_022	40	Manufacturing component	Manufacturing component
+COMPONENT	COMP_040	Singularity Containment Sphere	5	Exotic	L	Black Hole Tech	50	5.0	80000	4800	MAT_033	40	COMP_030	8	MAT_027	50	Manufacturing component	Manufacturing component
+COMPONENT	COMP_041	Electro-Magnetic Coil	1	Energy	S	Magnetic Field	6	0.6	350	240	MAT_001	12	MAT_002	8	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_042	Liquid Cooling Loop	2	Cooling	M	Thermal	15	1.5	1200	480	MAT_003	20	COMP_011	2	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_043	Kinetic Barrier Projector	3	Defense	M	Shield	18	1.8	7500	1380	MAT_005	35	COMP_024	3	MAT_013	20	Manufacturing component	Manufacturing component
+COMPONENT	COMP_044	Mass Driver Accelerator	3	Weapon	L	Projectile	45	4.5	8000	1560	MAT_004	50	COMP_037	2	MAT_009	35	Manufacturing component	Manufacturing component
+COMPONENT	COMP_045	Holographic Projector	2	Utility	S	Display	3	0.3	2800	660	MAT_020	15	COMP_002	2	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_046	Cargo Bay Expander	2	Structure	L	Storage	50	5.0	3500	840	MAT_001	80	MAT_003	40	COMP_003	5	Manufacturing component	Manufacturing component
+COMPONENT	COMP_047	Jump Drive Capacitor	4	Energy	XL	FTL Storage	80	8.0	28000	3000	MAT_007	70	COMP_019	6	MAT_006	50	Energy storage component	Energy storage component
+COMPONENT	COMP_048	Asteroid Mining Drill	2	Mining	M	Excavation	25	2.5	4000	900	MAT_009	40	COMP_006	4	MAT_003	25	Deep penetration ore extraction	Deep penetration ore extraction
+COMPONENT	COMP_049	Salvage Claw Mechanism	2	Utility	M	Salvage	20	2.0	3200	780	MAT_003	35	COMP_006	3	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_050	Emergency Escape Pod	2	Safety	M	Life Support	30	3.0	5000	1020	MAT_003	50	COMP_001	5	MAT_024	15	Manufacturing component	Manufacturing component
+COMPONENT	COMP_051	Stealth Coating Layer	3	Stealth	M	Concealment	8	0.8	9000	1440	MAT_014	30	MAT_011	20	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_052	Auto-Targeting System	3	Weapon	S	AI Aim	4	0.4	5500	1080	COMP_018	2	COMP_009	3	MAT_005	12	Manufacturing component	Manufacturing component
+COMPONENT	COMP_053	Power Distribution Node	2	Energy	M	Routing	12	1.2	2400	600	MAT_013	18	COMP_004	4	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_054	Thermal Lance Emitter	3	Weapon	M	Heat Weapon	22	2.2	6800	1320	MAT_011	35	COMP_023	3	MAT_016	20	Manufacturing component	Manufacturing component
+COMPONENT	COMP_055	Mineral Scanner Array	2	Mining	S	Detection	5	0.5	3800	840	MAT_020	20	COMP_009	2	-	-	Enhances mining operations	Enhances mining operations
+COMPONENT	COMP_056	Trade Computer Core	2	Utility	S	Economics	3	0.3	4500	960	COMP_002	3	MAT_005	15	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_057	Warp Nacelle Housing	4	Structure	XL	FTL Frame	120	12.0	32000	3300	MAT_006	100	COMP_003	15	MAT_019	60	Manufacturing component	Manufacturing component
+COMPONENT	COMP_058	Life Support Recycler	2	Life Support	M	Atmosphere	18	1.8	3600	840	MAT_024	40	COMP_001	3	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_059	Torpedo Tube Assembly	3	Weapon	L	Launcher	35	3.5	12000	1800	MAT_004	55	COMP_023	5	COMP_044	2	Manufacturing component	Manufacturing component
+COMPONENT	COMP_060	Shield Recharger Unit	3	Defense	M	Regeneration	16	1.6	8500	1440	MAT_013	30	COMP_053	4	MAT_006	20	Manufacturing component	Manufacturing component
+COMPONENT	COMP_061	Cargo Scanner Module	2	Utility	S	Inspection	4	0.4	2900	660	COMP_009	2	MAT_004	12	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_062	Missile Guidance Chip	2	Weapon	S	Navigation	1	0.1	1800	540	COMP_005	2	MAT_018	8	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_063	Engine Coolant Pump	2	Propulsion	M	Cooling	14	1.4	2200	600	MAT_003	25	COMP_042	2	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_064	Point Defense Turret	3	Defense	M	Anti-Missile	24	2.4	9500	1560	MAT_004	40	COMP_052	3	COMP_044	2	Manufacturing component	Manufacturing component
+COMPONENT	COMP_065	Cargo Compressor Field	3	Utility	M	Compression	13	1.3	7800	1380	MAT_015	25	COMP_022	2	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_066	ECM Jammer Array	3	Electronic Warfare	M	Jamming	10	1.0	11000	1620	MAT_005	30	COMP_036	3	COMP_005	5	Disrupts enemy targeting systems	Disrupts enemy targeting systems
+COMPONENT	COMP_067	Refinery Processing Unit	3	Industrial	L	Production	60	6.0	14000	1980	MAT_004	70	COMP_010	6	MAT_009	40	Manufacturing component	Manufacturing component
+COMPONENT	COMP_068	Factory Assembly Line	3	Industrial	XL	Manufacturing	100	10.0	20000	2640	MAT_003	120	COMP_006	15	MAT_001	80	Manufacturing component	Manufacturing component
+COMPONENT	COMP_069	Hangar Bay Module	3	Structure	XL	Storage	150	15.0	25000	3000	MAT_001	150	COMP_046	8	MAT_003	100	Manufacturing component	Manufacturing component
+COMPONENT	COMP_070	Command Bridge Core	3	Electronics	L	Control	40	4.0	18000	2280	MAT_005	50	COMP_013	8	COMP_045	5	Electronic warfare capabilities	Electronic warfare capabilities
+COMPONENT	COMP_071	Medical Bay Unit	2	Life Support	L	Healthcare	45	4.5	12000	1800	MAT_024	60	MAT_025	40	COMP_058	4	Manufacturing component	Manufacturing component
+COMPONENT	COMP_072	Science Lab Module	3	Research	L	Analysis	50	5.0	22000	2520	MAT_005	65	COMP_007	10	COMP_045	6	Manufacturing component	Manufacturing component
+COMPONENT	COMP_073	Crew Quarters Section	2	Life Support	L	Habitation	55	5.5	8000	1440	MAT_001	90	MAT_024	50	COMP_058	3	Manufacturing component	Manufacturing component
+COMPONENT	COMP_074	Fuel Storage Tank	2	Structure	L	Containment	70	7.0	6000	1200	MAT_009	80	MAT_003	50	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_075	Ammunition Magazine	2	Weapon	L	Storage	50	5.0	7500	1380	MAT_019	70	COMP_034	4	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_076	Drone Launch Bay	3	Utility	L	Launch System	65	6.5	16000	2100	MAT_004	75	COMP_018	8	COMP_069	2	Manufacturing component	Manufacturing component
+COMPONENT	COMP_077	Capital Shield Emitter	4	Defense	XL	Shielding	90	9.0	45000	3900	MAT_006	100	COMP_024	12	MAT_007	70	Manufacturing component	Manufacturing component
+COMPONENT	COMP_078	Siege Module	4	Weapon	XL	Structure Attack	110	11.0	50000	4200	MAT_007	120	COMP_037	10	COMP_044	8	Manufacturing component	Manufacturing component
+COMPONENT	COMP_079	Mining Platform Core	3	Industrial	XL	Extraction	95	9.5	28000	3180	MAT_004	110	COMP_048	12	COMP_067	6	Manufacturing component	Manufacturing component
+COMPONENT	COMP_080	Trade Hub Terminal	3	Economics	L	Commerce	60	6.0	19000	2400	MAT_003	85	COMP_056	10	COMP_070	3	Manufacturing component	Manufacturing component
+COMPONENT	COMP_081	Shipyard Assembly Rig	4	Industrial	XL	Construction	200	20.0	80000	5400	MAT_006	180	COMP_068	20	COMP_003	30	Manufacturing component	Manufacturing component
+COMPONENT	COMP_082	Starbase Core Module	5	Structure	Station	Central Hub	500	50.0	150000	7200	MAT_007	300	COMP_070	30	MAT_006	200	Manufacturing component	Manufacturing component
+COMPONENT	COMP_083	Cyno Beacon Array	4	Communication	M	FTL Navigation	15	1.5	23000	2700	MAT_030	35	COMP_036	6	MAT_008	25	Manufacturing component	Manufacturing component
+COMPONENT	COMP_084	Clone Bay System	4	Life Support	L	Consciousness	75	7.5	55000	4500	MAT_025	90	COMP_033	15	COMP_017	10	Manufacturing component	Manufacturing component
+COMPONENT	COMP_085	Black Hole Generator	5	Exotic	XL	Gravity Weapon	150	15.0	200000	8400	MAT_033	100	COMP_040	8	MAT_008	80	Manufacturing component	Manufacturing component
+COMPONENT	COMP_086	Titan Armor Plate	5	Structure	XL	Titan Defense	300	30.0	120000	6600	MAT_007	250	MAT_029	150	COMP_015	25	Manufacturing component	Manufacturing component
+COMPONENT	COMP_087	Doomsday Device Core	5	Weapon	XL	Superweapon	180	18.0	250000	9000	MAT_008	150	COMP_085	5	COMP_037	20	Manufacturing component	Manufacturing component
+COMPONENT	COMP_088	Phase Shift Module	5	Exotic	L	Dimensional	80	8.0	90000	5700	MAT_033	60	COMP_032	12	MAT_015	50	Manufacturing component	Manufacturing component
+COMPONENT	COMP_089	AI Core Processor	4	Electronics	M	True AI	10	1.0	70000	4800	MAT_008	40	COMP_033	10	COMP_013	15	Electronic warfare capabilities	Electronic warfare capabilities
+COMPONENT	COMP_090	Resource Converter Matrix	4	Industrial	L	Alchemy	70	7.0	65000	5100	MAT_007	80	COMP_067	15	MAT_015	45	Manufacturing component	Manufacturing component
+COMPONENT	COMP_091	Terraform Engine	5	Exotic	XL	Planet Mod	250	25.0	180000	7800	MAT_007	200	COMP_030	25	MAT_006	150	Manufacturing component	Manufacturing component
+COMPONENT	COMP_092	Dyson Collector Panel	5	Energy	XL	Stellar Harvest	120	12.0	95000	6000	MAT_007	150	COMP_039	18	MAT_020	80	Manufacturing component	Manufacturing component
+COMPONENT	COMP_093	Megastructure Frame	5	Structure	Station	Mega Frame	1000	100.0	300000	10800	MAT_006	500	COMP_003	80	MAT_001	400	Structural framework component	Structural framework component
+COMPONENT	COMP_094	Wormhole Stabilizer	5	Exotic	XL	Space-Time	200	20.0	220000	9600	MAT_033	120	COMP_032	20	COMP_019	30	Manufacturing component	Manufacturing component
+COMPONENT	COMP_095	Matter-Energy Converter	5	Energy	L	Conversion	85	8.5	110000	6300	MAT_008	70	COMP_031	12	MAT_027	55	Manufacturing component	Manufacturing component
+COMPONENT	COMP_096	Quantum Computer Core	5	Electronics	M	Computing	12	1.2	100000	5400	MAT_030	50	COMP_089	5	MAT_015	60	Electronic warfare capabilities	Electronic warfare capabilities
+COMPONENT	COMP_097	Universal Translator AI	3	Communication	S	Language	3	0.3	15000	1980	MAT_005	25	COMP_033	4	-	-	Manufacturing component	Manufacturing component
+COMPONENT	COMP_098	Weather Control Array	4	Exotic	L	Atmosphere	95	9.5	85000	5700	MAT_006	110	COMP_030	15	COMP_091	2	Manufacturing component	Manufacturing component
+COMPONENT	COMP_099	Time Dilation Field	5	Exotic	XL	Temporal	160	16.0	280000	10200	MAT_033	140	COMP_016	30	MAT_008	100	Manufacturing component	Manufacturing component
+COMPONENT	COMP_100	Reality Anchor	5	Exotic	L	Dimensional	90	9.0	150000	7500	MAT_033	80	COMP_088	15	COMP_032	25	Manufacturing component	Manufacturing component

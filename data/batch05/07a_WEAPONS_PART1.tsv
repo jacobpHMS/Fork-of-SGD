@@ -1,0 +1,101 @@
+DATABASE	ID	NAME	TIER	CATEGORY	SIZE	SUBCATEGORY	MASS_KG	VOLUME_M3	BASE_PRICE	PRODUCTION_TIME_SEC	INPUT_1	INPUT_1_QTY	INPUT_2	INPUT_2_QTY	INPUT_3	INPUT_3_QTY	SPECIAL_NOTES	INFO_TEXT
+WEAPON	WEP_001	Light Autocannon	1	Projectile	S	Rapid Fire	200	2.0	3000	480	MAT_001	20	MAT_003	15	COMP_001	2	Rapid-fire kinetic projectile weapon	Rapid-fire kinetic projectile weapon
+WEAPON	WEP_002	Medium Autocannon	2	Projectile	M	Rapid Fire	500	5.0	8000	720	MAT_003	40	MAT_004	30	COMP_004	3	Rapid-fire kinetic projectile weapon	Rapid-fire kinetic projectile weapon
+WEAPON	WEP_003	Heavy Autocannon	3	Projectile	L	Rapid Fire	1200	12.0	20000	1200	MAT_005	70	MAT_006	50	COMP_023	5	Rapid-fire kinetic projectile weapon	Rapid-fire kinetic projectile weapon
+WEAPON	WEP_004	Gatling Cannon	2	Projectile	M	Ultra-Rapid	600	6.0	12000	900	MAT_003	50	MAT_009	35	COMP_006	4	Ship weapon system	Ship weapon system
+WEAPON	WEP_005	Burst Cannon	2	Projectile	S	Burst Mode	350	3.5	6500	660	MAT_003	30	MAT_004	25	COMP_023	2	Ship weapon system	Ship weapon system
+WEAPON	WEP_006	Light Railgun	2	Projectile	M	Precision	800	8.0	15000	1080	MAT_004	60	MAT_013	40	COMP_044	3	Long-range kinetic projectile weapon	Long-range kinetic projectile weapon
+WEAPON	WEP_007	Medium Railgun	3	Projectile	L	Precision	1800	18.0	35000	1800	MAT_006	100	MAT_013	70	COMP_044	6	Long-range kinetic projectile weapon	Long-range kinetic projectile weapon
+WEAPON	WEP_008	Heavy Railgun	4	Projectile	XL	Precision	4000	40.0	80000	3000	MAT_007	180	MAT_013	120	COMP_044	12	Long-range kinetic projectile weapon	Long-range kinetic projectile weapon
+WEAPON	WEP_009	Coilgun Battery	3	Projectile	L	Magnetic	2000	20.0	40000	1980	MAT_005	110	COMP_041	8	COMP_044	5	Ship weapon system	Ship weapon system
+WEAPON	WEP_010	Mass Driver Turret	3	Projectile	L	Heavy Kinetic	2500	25.0	45000	2160	MAT_006	130	COMP_044	10	MAT_009	80	Ship weapon system	Ship weapon system
+WEAPON	WEP_011	Flak Cannon	2	Projectile	M	Anti-Fighter	700	7.0	11000	840	MAT_004	55	MAT_009	40	COMP_052	3	Ship weapon system	Ship weapon system
+WEAPON	WEP_012	Scatter Gun	1	Projectile	S	Shotgun	280	2.8	4500	540	MAT_002	25	MAT_003	20	COMP_001	2	Ship weapon system	Ship weapon system
+WEAPON	WEP_013	Sniper Cannon	3	Projectile	M	Long Range	1500	15.0	32000	1680	MAT_005	90	COMP_044	7	COMP_012	4	Ship weapon system	Ship weapon system
+WEAPON	WEP_014	Artillery Cannon	4	Projectile	XL	Siege	4500	45.0	90000	3300	MAT_007	200	COMP_044	15	COMP_078	4	Long-range kinetic projectile weapon	Long-range kinetic projectile weapon
+WEAPON	WEP_015	Assault Cannon	2	Projectile	M	Balanced	650	6.5	10000	780	MAT_003	45	MAT_004	35	COMP_023	3	Ship weapon system	Ship weapon system
+WEAPON	WEP_016	Tactical Railgun	3	Projectile	M	Tactical	1400	14.0	28000	1500	MAT_005	80	COMP_044	6	COMP_052	4	Long-range kinetic projectile weapon	Long-range kinetic projectile weapon
+WEAPON	WEP_017	Siege Autocannon	4	Projectile	XL	Siege Mode	3800	38.0	75000	2940	MAT_006	170	COMP_078	8	COMP_023	10	Rapid-fire kinetic projectile weapon	Rapid-fire kinetic projectile weapon
+WEAPON	WEP_018	Rotary Cannon	3	Projectile	L	Rotary	2200	22.0	42000	2040	MAT_005	115	COMP_006	12	COMP_023	7	Ship weapon system	Ship weapon system
+WEAPON	WEP_019	Proximity Cannon	3	Projectile	M	Smart Ammo	1600	16.0	33000	1740	MAT_005	85	COMP_038	5	COMP_023	4	Ship weapon system	Ship weapon system
+WEAPON	WEP_020	Gauss Rifle	2	Projectile	S	Sniper	450	4.5	9000	720	MAT_004	40	COMP_041	3	COMP_012	2	Ship weapon system	Ship weapon system
+WEAPON	WEP_021	Light Missile Launcher	1	Missile	S	Standard	250	2.5	4000	540	MAT_002	25	MAT_003	20	COMP_062	2	Guided explosive projectile weapon	Guided explosive projectile weapon
+WEAPON	WEP_022	Medium Missile Launcher	2	Missile	M	Standard	600	6.0	10000	840	MAT_003	50	MAT_004	40	COMP_062	4	Guided explosive projectile weapon	Guided explosive projectile weapon
+WEAPON	WEP_023	Heavy Missile Launcher	3	Missile	L	Standard	1400	14.0	25000	1440	MAT_005	80	MAT_006	60	COMP_059	3	Guided explosive projectile weapon	Guided explosive projectile weapon
+WEAPON	WEP_024	Torpedo Launcher	3	Missile	L	Torpedo	1800	18.0	35000	1800	MAT_005	100	MAT_006	80	COMP_059	5	Guided explosive projectile weapon	Guided explosive projectile weapon
+WEAPON	WEP_025	Cruise Missile Battery	4	Missile	XL	Long Range	3500	35.0	70000	2700	MAT_006	150	MAT_007	100	COMP_059	8	Guided explosive projectile weapon	Guided explosive projectile weapon
+WEAPON	WEP_026	Swarm Launcher	2	Missile	M	Multi-Launch	700	7.0	13000	960	MAT_003	55	COMP_038	6	COMP_062	3	Ship weapon system	Ship weapon system
+WEAPON	WEP_027	Rocket Pod	1	Missile	S	Unguided	300	3.0	5000	600	MAT_002	30	MAT_016	20	COMP_001	2	Ship weapon system	Ship weapon system
+WEAPON	WEP_028	Smart Missile System	3	Missile	M	AI Guided	1600	16.0	32000	1680	MAT_005	85	COMP_038	8	COMP_052	5	Guided explosive projectile weapon	Guided explosive projectile weapon
+WEAPON	WEP_029	Stealth Torpedo	4	Missile	L	Stealth	2200	22.0	50000	2400	MAT_006	110	COMP_051	6	COMP_059	6	Guided explosive projectile weapon	Guided explosive projectile weapon
+WEAPON	WEP_030	Micro Missile Array	2	Missile	S	Point Defense	400	4.0	8500	720	MAT_003	40	COMP_062	5	COMP_064	2	Guided explosive projectile weapon	Guided explosive projectile weapon
+WEAPON	WEP_031	Cluster Launcher	3	Missile	L	Cluster Bomb	1900	19.0	38000	1920	MAT_005	95	COMP_038	7	COMP_059	4	Ship weapon system	Ship weapon system
+WEAPON	WEP_032	EMP Missile System	3	Missile	M	Electronic	1500	15.0	30000	1620	MAT_005	75	COMP_066	5	COMP_062	4	Guided explosive projectile weapon	Guided explosive projectile weapon
+WEAPON	WEP_033	Plasma Warhead Launcher	4	Missile	L	Plasma	2400	24.0	55000	2580	MAT_016	90	MAT_006	100	COMP_059	7	Ship weapon system	Ship weapon system
+WEAPON	WEP_034	Nuclear Torpedo	5	Missile	XL	Nuclear	5000	50.0	150000	4200	MAT_008	120	MAT_017	80	COMP_059	15	Guided explosive projectile weapon	Guided explosive projectile weapon
+WEAPON	WEP_035	Homing Rocket Cluster	2	Missile	M	Homing	750	7.5	14000	1020	MAT_003	60	COMP_038	6	COMP_062	3	Ship weapon system	Ship weapon system
+WEAPON	WEP_036	Long Range Missile	3	Missile	L	Extended	2000	20.0	42000	2040	MAT_005	105	COMP_062	10	COMP_038	5	Guided explosive projectile weapon	Guided explosive projectile weapon
+WEAPON	WEP_037	Siege Torpedo Bay	4	Missile	XL	Structure	4200	42.0	85000	3180	MAT_007	190	COMP_078	10	COMP_059	12	Guided explosive projectile weapon	Guided explosive projectile weapon
+WEAPON	WEP_038	Interceptor Launcher	2	Missile	S	Fast	500	5.0	9500	780	MAT_003	45	COMP_062	4	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_039	Guided Bomb Rack	3	Missile	M	Gravity Bomb	1300	13.0	27000	1500	MAT_005	70	COMP_038	5	COMP_030	2	Ship weapon system	Ship weapon system
+WEAPON	WEP_040	Antimatter Torpedo	5	Missile	XL	AM Warhead	5500	55.0	200000	5100	MAT_027	100	MAT_008	120	COMP_031	8	Guided explosive projectile weapon	Guided explosive projectile weapon
+WEAPON	WEP_041	Pulse Laser	1	Energy	S	Pulse	150	1.5	3500	480	MAT_002	20	MAT_020	15	COMP_012	2	Energy weapon with focused beam damage	Energy weapon with focused beam damage
+WEAPON	WEP_042	Beam Laser	2	Energy	M	Continuous	400	4.0	9000	720	MAT_004	45	MAT_020	35	COMP_012	4	Energy weapon with focused beam damage	Energy weapon with focused beam damage
+WEAPON	WEP_043	Heavy Laser Turret	3	Energy	L	High Power	1000	10.0	22000	1320	MAT_005	80	MAT_020	60	COMP_012	8	Energy weapon with focused beam damage	Energy weapon with focused beam damage
+WEAPON	WEP_044	Pulse Laser Battery	2	Energy	M	Rapid Pulse	500	5.0	11000	840	MAT_003	50	MAT_020	40	COMP_012	5	Energy weapon with focused beam damage	Energy weapon with focused beam damage
+WEAPON	WEP_045	Mining Laser	1	Energy	S	Utility	200	2.0	2500	360	MAT_002	15	MAT_020	12	COMP_012	1	Energy weapon with focused beam damage	Energy weapon with focused beam damage
+WEAPON	WEP_046	Tactical Laser	2	Energy	M	Precision	600	6.0	12000	900	MAT_004	55	MAT_020	45	COMP_012	5	Energy weapon with focused beam damage	Energy weapon with focused beam damage
+WEAPON	WEP_047	Scatter Laser	2	Energy	S	Spread	350	3.5	7500	660	MAT_003	35	MAT_020	30	COMP_012	3	Energy weapon with focused beam damage	Energy weapon with focused beam damage
+WEAPON	WEP_048	Focus Laser Cannon	3	Energy	L	Focused	1300	13.0	28000	1500	MAT_005	85	MAT_020	70	COMP_012	10	Energy weapon with focused beam damage	Energy weapon with focused beam damage
+WEAPON	WEP_049	Particle Beam Projector	3	Energy	L	Particle	1500	15.0	32000	1680	MAT_006	90	COMP_037	5	COMP_012	8	Energy weapon with focused beam damage	Energy weapon with focused beam damage
+WEAPON	WEP_050	Plasma Cannon	3	Energy	M	Plasma	1200	12.0	26000	1440	MAT_016	70	MAT_005	60	COMP_023	6	Ship weapon system	Ship weapon system
+WEAPON	WEP_051	Heavy Plasma Turret	4	Energy	L	Heavy Plasma	2500	25.0	55000	2400	MAT_016	120	MAT_006	100	COMP_023	12	Ship weapon system	Ship weapon system
+WEAPON	WEP_052	Ion Cannon	3	Energy	M	Ion Beam	1100	11.0	24000	1380	MAT_013	75	COMP_037	4	COMP_066	3	Ship weapon system	Ship weapon system
+WEAPON	WEP_053	Disintegrator Ray	4	Energy	L	Exotic	2800	28.0	65000	2700	MAT_007	130	COMP_037	10	MAT_015	60	Ship weapon system	Ship weapon system
+WEAPON	WEP_054	Thermal Lance	2	Energy	S	Heat	550	5.5	10500	780	MAT_011	50	COMP_054	3	COMP_012	2	Ship weapon system	Ship weapon system
+WEAPON	WEP_055	Cutting Beam	2	Energy	M	Precision	700	7.0	13500	960	MAT_020	60	COMP_012	6	-	-	Energy weapon with focused beam damage	Energy weapon with focused beam damage
+WEAPON	WEP_056	Photonic Disruptor	4	Energy	L	Disruption	2200	22.0	50000	2280	MAT_020	110	COMP_037	8	COMP_066	6	Ship weapon system	Ship weapon system
+WEAPON	WEP_057	Gamma Ray Emitter	4	Energy	L	Radiation	2600	26.0	58000	2520	MAT_007	125	COMP_037	9	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_058	Maser Cannon	3	Energy	M	Microwave	1400	14.0	30000	1620	MAT_005	80	COMP_012	7	COMP_037	4	Ship weapon system	Ship weapon system
+WEAPON	WEP_059	X-Ray Laser	4	Energy	L	Penetration	2400	24.0	52000	2340	MAT_006	115	COMP_037	8	COMP_012	10	Energy weapon with focused beam damage	Energy weapon with focused beam damage
+WEAPON	WEP_060	Antimatter Beam	5	Energy	XL	AM Annihilation	5000	50.0	180000	4800	MAT_027	140	COMP_031	12	COMP_037	20	Energy weapon with focused beam damage	Energy weapon with focused beam damage
+WEAPON	WEP_061	Light Blaster	1	Hybrid	S	Plasma-Kinetic	220	2.2	4200	540	MAT_002	25	MAT_016	18	COMP_023	2	Short-range rapid-fire energy weapon	Short-range rapid-fire energy weapon
+WEAPON	WEP_062	Medium Blaster	2	Hybrid	M	Plasma-Kinetic	550	5.5	10500	840	MAT_003	50	MAT_016	40	COMP_023	4	Short-range rapid-fire energy weapon	Short-range rapid-fire energy weapon
+WEAPON	WEP_063	Heavy Blaster	3	Hybrid	L	Plasma-Kinetic	1300	13.0	26000	1500	MAT_005	85	MAT_016	70	COMP_023	8	Short-range rapid-fire energy weapon	Short-range rapid-fire energy weapon
+WEAPON	WEP_064	Ion Blaster	2	Hybrid	M	Ion-Plasma	650	6.5	12000	900	MAT_013	55	MAT_016	45	COMP_023	4	Short-range rapid-fire energy weapon	Short-range rapid-fire energy weapon
+WEAPON	WEP_065	Neutron Blaster	3	Hybrid	L	Neutron-Plasma	1500	15.0	32000	1680	MAT_006	95	MAT_016	80	COMP_023	9	Short-range rapid-fire energy weapon	Short-range rapid-fire energy weapon
+WEAPON	WEP_066	Electron Blaster	2	Hybrid	S	Electron	480	4.8	9000	720	MAT_013	45	MAT_020	35	COMP_023	3	Short-range rapid-fire energy weapon	Short-range rapid-fire energy weapon
+WEAPON	WEP_067	Photon Blaster	3	Hybrid	M	Photon-Plasma	1200	12.0	25000	1440	MAT_020	75	MAT_016	65	COMP_023	7	Short-range rapid-fire energy weapon	Short-range rapid-fire energy weapon
+WEAPON	WEP_068	Railblaster	3	Hybrid	L	Rail-Plasma	1800	18.0	38000	1920	MAT_005	100	MAT_016	85	COMP_044	6	Ship weapon system	Ship weapon system
+WEAPON	WEP_069	Vortex Cannon	4	Hybrid	L	Gravity-Plasma	2400	24.0	52000	2340	MAT_015	110	MAT_016	95	COMP_030	5	Ship weapon system	Ship weapon system
+WEAPON	WEP_070	Fusion Blaster	4	Hybrid	L	Fusion	2200	22.0	48000	2220	MAT_017	100	MAT_016	90	COMP_010	8	Short-range rapid-fire energy weapon	Short-range rapid-fire energy weapon
+WEAPON	WEP_071	Antimatter Blaster	5	Hybrid	XL	AM-Hybrid	4800	48.0	160000	4500	MAT_027	130	MAT_016	110	COMP_031	10	Short-range rapid-fire energy weapon	Short-range rapid-fire energy weapon
+WEAPON	WEP_072	Quantum Blaster	5	Hybrid	L	Quantum	3000	30.0	85000	3300	MAT_015	120	MAT_030	80	COMP_023	15	Short-range rapid-fire energy weapon	Short-range rapid-fire energy weapon
+WEAPON	WEP_073	Singularity Cannon	5	Hybrid	XL	Black Hole	5200	52.0	200000	5100	MAT_033	150	COMP_040	8	COMP_085	5	Ship weapon system	Ship weapon system
+WEAPON	WEP_074	Phase Blaster	4	Hybrid	M	Dimensional	1900	19.0	42000	2040	MAT_033	90	MAT_016	75	COMP_088	4	Short-range rapid-fire energy weapon	Short-range rapid-fire energy weapon
+WEAPON	WEP_075	Chrono Blaster	5	Hybrid	L	Temporal	3200	32.0	95000	3600	MAT_033	125	COMP_099	6	COMP_023	12	Short-range rapid-fire energy weapon	Short-range rapid-fire energy weapon
+WEAPON	WEP_076	Flux Cannon	3	Hybrid	M	Energy-Kinetic	1400	14.0	29000	1560	MAT_005	80	COMP_001	10	COMP_023	6	Ship weapon system	Ship weapon system
+WEAPON	WEP_077	Void Blaster	5	Hybrid	L	Void Energy	2900	29.0	88000	3420	MAT_033	115	COMP_032	8	COMP_023	10	Short-range rapid-fire energy weapon	Short-range rapid-fire energy weapon
+WEAPON	WEP_078	Converter Blaster	4	Hybrid	L	Matter-Energy	2300	23.0	50000	2280	MAT_008	105	COMP_095	5	COMP_023	8	Short-range rapid-fire energy weapon	Short-range rapid-fire energy weapon
+WEAPON	WEP_079	Nanite Blaster	4	Hybrid	M	Nano-Swarm	1700	17.0	38000	1920	MAT_031	85	COMP_021	6	COMP_023	7	Short-range rapid-fire energy weapon	Short-range rapid-fire energy weapon
+WEAPON	WEP_080	Reality Disruptor	5	Hybrid	XL	Reality Bend	5500	55.0	220000	5400	MAT_033	160	COMP_100	10	COMP_088	8	Ship weapon system	Ship weapon system
+WEAPON	WEP_081	Gravity Well Generator	4	Exotic	L	Gravity	2000	20.0	45000	2160	MAT_015	95	COMP_030	8	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_082	Tractor Beam	2	Exotic	M	Utility	800	8.0	15000	1080	MAT_005	60	COMP_029	5	-	-	Energy weapon with focused beam damage	Energy weapon with focused beam damage
+WEAPON	WEP_083	Repulsor Beam	2	Exotic	M	Push	750	7.5	14000	1020	MAT_005	55	COMP_030	4	-	-	Energy weapon with focused beam damage	Energy weapon with focused beam damage
+WEAPON	WEP_084	Stasis Field	4	Exotic	L	Freeze	2300	23.0	52000	2340	MAT_015	105	COMP_016	10	COMP_099	4	Ship weapon system	Ship weapon system
+WEAPON	WEP_085	Singularity Projector	5	Exotic	XL	Black Hole	4500	45.0	150000	4500	MAT_033	140	COMP_085	10	COMP_040	6	Ship weapon system	Ship weapon system
+WEAPON	WEP_086	Temporal Displacer	5	Exotic	L	Time	3500	35.0	120000	4200	MAT_033	130	COMP_099	12	COMP_016	8	Ship weapon system	Ship weapon system
+WEAPON	WEP_087	Dimensional Rift Cannon	5	Exotic	XL	Dimension	5000	50.0	180000	4800	MAT_033	150	COMP_088	15	COMP_032	10	Ship weapon system	Ship weapon system
+WEAPON	WEP_088	Void Projector	5	Exotic	L	Void	3200	32.0	100000	3900	MAT_033	120	COMP_032	10	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_089	Reality Anchor Beam	4	Exotic	M	Stabilize	1800	18.0	40000	2040	MAT_033	85	COMP_100	6	-	-	Energy weapon with focused beam damage	Energy weapon with focused beam damage
+WEAPON	WEP_090	Chrono Bomb Launcher	5	Exotic	L	Time Bomb	3800	38.0	130000	4350	MAT_033	135	COMP_099	10	COMP_059	8	Ship weapon system	Ship weapon system
+WEAPON	WEP_091	Phase Disruptor	4	Exotic	L	Phase	2400	24.0	55000	2520	MAT_033	100	COMP_088	8	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_092	Warp Scrambler	3	Exotic	M	Warp Jam	1500	15.0	32000	1680	MAT_015	75	COMP_019	6	COMP_066	4	Ship weapon system	Ship weapon system
+WEAPON	WEP_093	Quantum Entangler	4	Exotic	M	Entanglement	1900	19.0	43000	2100	MAT_030	90	COMP_020	8	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_094	Entropy Cannon	5	Exotic	L	Decay	3400	34.0	110000	4050	MAT_033	125	COMP_032	9	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_095	Probability Disruptor	5	Exotic	L	Chaos	3100	31.0	95000	3750	MAT_033	115	COMP_096	7	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_096	Dark Matter Projector	5	Exotic	XL	Dark Matter	4800	48.0	170000	4650	MAT_032	145	COMP_025	12	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_097	Wormhole Generator	5	Exotic	L	Portal	3600	36.0	125000	4290	MAT_033	130	COMP_094	8	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_098	Subspace Disruptor	4	Exotic	M	Subspace	2000	20.0	46000	2220	MAT_030	95	COMP_036	7	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_099	Graviton Pulse	4	Exotic	L	Pulse	2500	25.0	58000	2580	MAT_015	110	COMP_030	10	-	-	Short-range rapid-fire energy weapon	Short-range rapid-fire energy weapon
+WEAPON	WEP_100	Matter Disassembler	5	Exotic	XL	Disintegrate	5300	53.0	190000	5010	MAT_033	155	COMP_053	20	COMP_095	8	Ship weapon system	Ship weapon system

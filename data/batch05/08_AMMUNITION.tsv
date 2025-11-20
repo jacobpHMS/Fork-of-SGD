@@ -1,0 +1,51 @@
+DATABASE	ID	NAME	TIER	CATEGORY	SIZE	SUBCATEGORY	MASS_KG	VOLUME_M3	BASE_PRICE	PRODUCTION_TIME_SEC	INPUT_1	INPUT_1_QTY	INPUT_2	INPUT_2_QTY	INPUT_3	INPUT_3_QTY	SPECIAL_NOTES	INFO_TEXT
+AMMO	AMMO_001	Standard Autocannon Round	1	Projectile	S	Kinetic	0.5	0.005	5	10	MAT_001	2	-	-	-	-	Projectile module	Projectile module
+AMMO	AMMO_002	Depleted Uranium Round	2	Projectile	S	Armor-Piercing	0.8	0.005	15	20	MAT_003	3	MAT_009	1	-	-	Projectile module	Projectile module
+AMMO	AMMO_003	Explosive Round	2	Projectile	S	Explosive	0.6	0.006	12	15	MAT_001	2	MAT_016	1	-	-	Projectile module	Projectile module
+AMMO	AMMO_004	Incendiary Round	2	Projectile	S	Heat	0.7	0.005	10	12	MAT_001	2	MAT_011	1	-	-	Projectile module	Projectile module
+AMMO	AMMO_005	EMP Round	3	Projectile	S	Electronic	0.5	0.005	20	25	MAT_003	2	MAT_013	2	-	-	Projectile module	Projectile module
+AMMO	AMMO_006	Railgun Slug	2	Projectile	M	High-Velocity	1.5	0.01	25	30	MAT_004	5	MAT_013	3	-	-	Projectile module	Projectile module
+AMMO	AMMO_007	Sabot Round	3	Projectile	M	Penetrator	2.0	0.012	40	45	MAT_005	6	MAT_009	4	-	-	Projectile module	Projectile module
+AMMO	AMMO_008	Cluster Round	3	Projectile	M	Multi-Warhead	1.8	0.015	35	40	MAT_004	5	MAT_016	3	-	-	Projectile module	Projectile module
+AMMO	AMMO_009	Plasma Round	3	Projectile	M	Plasma	1.2	0.01	50	60	MAT_016	8	MAT_005	4	-	-	Projectile module	Projectile module
+AMMO	AMMO_010	Antimatter Slug	5	Projectile	L	AM	0.3	0.003	200	240	MAT_027	20	MAT_008	10	-	-	Projectile module	Projectile module
+AMMO	AMMO_011	Standard Missile	1	Missile	S	Basic	5	0.05	50	60	MAT_002	5	MAT_016	3	COMP_062	1	Missile module	Missile module
+AMMO	AMMO_012	Heavy Missile	2	Missile	M	Heavy	12	0.12	120	120	MAT_003	10	MAT_016	8	COMP_062	2	Missile module	Missile module
+AMMO	AMMO_013	Cruise Missile	3	Missile	L	Long-Range	25	0.25	300	240	MAT_005	20	MAT_016	15	COMP_062	3	Missile module	Missile module
+AMMO	AMMO_014	Torpedo	3	Missile	L	Torpedo	30	0.30	400	300	MAT_005	25	MAT_016	20	COMP_062	4	Missile module	Missile module
+AMMO	AMMO_015	Smart Missile	3	Missile	M	AI-Guided	15	0.15	250	180	MAT_005	12	MAT_016	10	COMP_038	2	Missile module	Missile module
+AMMO	AMMO_016	Cluster Missile	3	Missile	M	Multi-Warhead	18	0.18	280	200	MAT_004	15	MAT_016	12	COMP_062	2	Missile module	Missile module
+AMMO	AMMO_017	EMP Missile	3	Missile	M	Electronic	14	0.14	220	160	MAT_005	10	MAT_013	8	COMP_062	2	Missile module	Missile module
+AMMO	AMMO_018	Nuclear Missile	5	Missile	XL	Nuclear	50	0.50	2000	1200	MAT_008	40	MAT_017	30	COMP_062	8	Missile module	Missile module
+AMMO	AMMO_019	Plasma Missile	4	Missile	L	Plasma	28	0.28	500	360	MAT_016	30	MAT_006	20	COMP_062	5	Missile module	Missile module
+AMMO	AMMO_020	Antimatter Torpedo	5	Missile	XL	AM	35	0.35	3000	1800	MAT_027	50	MAT_008	40	COMP_031	4	Missile module	Missile module
+AMMO	AMMO_021	Standard Laser Cell	1	Energy	S	Basic	0.1	0.001	8	-	MAT_020	1	-	-	-	-	Energy module	Energy module
+AMMO	AMMO_022	High-Capacity Laser Cell	2	Energy	M	Extended	0.2	0.002	20	-	MAT_020	3	MAT_012	1	-	-	Energy module	Energy module
+AMMO	AMMO_023	Overcharge Laser Cell	3	Energy	M	High-Power	0.3	0.003	40	-	MAT_020	5	MAT_013	3	-	-	Energy module	Energy module
+AMMO	AMMO_024	Pulse Laser Crystal	2	Energy	S	Pulse	0.15	0.0015	15	-	MAT_020	2	MAT_012	1	-	-	Energy module	Energy module
+AMMO	AMMO_025	Beam Laser Crystal	2	Energy	M	Beam	0.25	0.0025	30	-	MAT_020	4	MAT_012	2	-	-	Energy module	Energy module
+AMMO	AMMO_026	Particle Accelerator Charge	3	Energy	L	Particle	0.5	0.005	80	-	MAT_006	8	MAT_013	5	-	-	Energy module	Energy module
+AMMO	AMMO_027	Plasma Charge	3	Energy	M	Plasma	0.4	0.004	60	-	MAT_016	10	MAT_005	4	-	-	Energy module	Energy module
+AMMO	AMMO_028	Ion Charge	3	Energy	M	Ion	0.35	0.0035	50	-	MAT_013	6	MAT_005	3	-	-	Energy module	Energy module
+AMMO	AMMO_029	Fusion Cell	4	Energy	L	Fusion	0.6	0.006	150	-	MAT_017	15	MAT_006	8	-	-	Energy module	Energy module
+AMMO	AMMO_030	Antimatter Cell	5	Energy	XL	AM	0.2	0.002	400	-	MAT_027	30	MAT_008	20	-	-	Energy module	Energy module
+AMMO	AMMO_031	Light Blaster Charge	1	Hybrid	S	Basic	0.3	0.003	12	15	MAT_016	2	MAT_002	1	-	-	Hybrid module	Hybrid module
+AMMO	AMMO_032	Medium Blaster Charge	2	Hybrid	M	Standard	0.6	0.006	30	30	MAT_016	5	MAT_003	3	-	-	Hybrid module	Hybrid module
+AMMO	AMMO_033	Heavy Blaster Charge	3	Hybrid	L	Heavy	1.2	0.012	80	60	MAT_016	12	MAT_005	8	-	-	Hybrid module	Hybrid module
+AMMO	AMMO_034	Ion Blaster Charge	3	Hybrid	M	Ion	0.8	0.008	60	45	MAT_016	8	MAT_013	5	-	-	Hybrid module	Hybrid module
+AMMO	AMMO_035	Neutron Blaster Charge	4	Hybrid	L	Neutron	1.5	0.015	120	90	MAT_016	15	MAT_006	10	-	-	Hybrid module	Hybrid module
+AMMO	AMMO_036	Antimatter Blaster Charge	5	Hybrid	XL	AM	0.8	0.008	300	180	MAT_027	25	MAT_016	20	-	-	Hybrid module	Hybrid module
+AMMO	AMMO_037	Quantum Blaster Charge	5	Hybrid	L	Quantum	1.0	0.01	250	150	MAT_015	20	MAT_030	15	-	-	Hybrid module	Hybrid module
+AMMO	AMMO_038	Phase Charge	4	Hybrid	M	Phase	0.9	0.009	100	75	MAT_033	12	MAT_016	8	-	-	Hybrid module	Hybrid module
+AMMO	AMMO_039	Void Charge	5	Hybrid	L	Void	1.1	0.011	280	170	MAT_033	22	MAT_016	18	-	-	Hybrid module	Hybrid module
+AMMO	AMMO_040	Singularity Charge	5	Hybrid	XL	Black Hole	0.5	0.005	350	210	MAT_033	28	COMP_085	2	-	-	Hybrid module	Hybrid module
+AMMO	AMMO_041	Mining Charge	1	Mining	S	Explosive	2.0	0.02	20	-	MAT_001	3	MAT_016	2	-	-	Enhances mining operations	Enhances mining operations
+AMMO	AMMO_042	Shaped Charge	2	Mining	M	Precision	3.5	0.035	50	-	MAT_003	6	MAT_016	4	-	-	Enhances mining operations	Enhances mining operations
+AMMO	AMMO_043	Thermal Charge	2	Mining	S	Heat	2.5	0.025	40	-	MAT_011	5	MAT_016	3	-	-	Enhances mining operations	Enhances mining operations
+AMMO	AMMO_044	Sonic Resonator Charge	3	Mining	M	Sonic	4.0	0.04	80	-	MAT_004	8	MAT_005	5	-	-	Enhances mining operations	Enhances mining operations
+AMMO	AMMO_045	Nanite Mining Charge	4	Mining	M	Nanite	3.0	0.03	150	-	MAT_031	10	MAT_005	6	-	-	Enhances mining operations	Enhances mining operations
+AMMO	AMMO_046	Tracker Round	2	Utility	S	Tracking	0.4	0.004	15	20	MAT_003	2	COMP_005	1	-	-	Utility module	Utility module
+AMMO	AMMO_047	Smoke Round	1	Utility	S	Concealment	0.5	0.005	10	12	MAT_001	2	GAS_003	1	-	-	Utility module	Utility module
+AMMO	AMMO_048	Flare Round	1	Utility	S	Illumination	0.3	0.003	8	10	MAT_001	1	MAT_020	1	-	-	Utility module	Utility module
+AMMO	AMMO_049	Decoy Round	2	Utility	S	Distraction	0.6	0.006	25	30	MAT_003	3	COMP_066	1	-	-	Utility module	Utility module
+AMMO	AMMO_050	Data Probe	2	Utility	S	Information	0.2	0.002	50	60	MAT_004	4	COMP_009	2	-	-	Utility module	Utility module

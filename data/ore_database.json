@@ -1,0 +1,3111 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-11-13",
+  "ore_count": 192,
+  "ore_types": [
+    {
+      "ore_id": "ORE_T1_001",
+      "ore_name": "Ferralite",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T1_001": 61,
+        "MAT_T1_002": 11,
+        "MAT_T2_009": 4
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 24
+      }
+    },
+    {
+      "ore_id": "ORE_T1_001",
+      "ore_name": "Ferralite",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T1_001": 63,
+        "MAT_T1_002": 13,
+        "MAT_T2_009": 6
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 18
+      }
+    },
+    {
+      "ore_id": "ORE_T1_001",
+      "ore_name": "Ferralite",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T1_001": 65,
+        "MAT_T1_002": 15,
+        "MAT_T2_009": 8
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 12
+      }
+    },
+    {
+      "ore_id": "ORE_T1_001",
+      "ore_name": "Ferralite",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T1_001": 66,
+        "MAT_T1_002": 16,
+        "MAT_T2_009": 9
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 9
+      }
+    },
+    {
+      "ore_id": "ORE_T1_001",
+      "ore_name": "Ferralite",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T1_001": 67,
+        "MAT_T1_002": 17,
+        "MAT_T2_009": 10
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 6
+      }
+    },
+    {
+      "ore_id": "ORE_T1_001",
+      "ore_name": "Ferralite",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T1_001": 69,
+        "MAT_T1_002": 19,
+        "MAT_T2_009": 12
+      },
+      "gases": {},
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T1_002",
+      "ore_name": "Metalite",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T1_001": 66,
+        "MAT_T2_007": 8,
+        "MAT_T2_014": 1
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_001": 25
+      }
+    },
+    {
+      "ore_id": "ORE_T1_002",
+      "ore_name": "Metalite",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T1_001": 68,
+        "MAT_T2_007": 10,
+        "MAT_T2_014": 3
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 19
+      }
+    },
+    {
+      "ore_id": "ORE_T1_002",
+      "ore_name": "Metalite",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T1_001": 70,
+        "MAT_T2_007": 12,
+        "MAT_T2_014": 5
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_001": 13
+      }
+    },
+    {
+      "ore_id": "ORE_T1_002",
+      "ore_name": "Metalite",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T1_001": 71,
+        "MAT_T2_007": 13,
+        "MAT_T2_014": 6
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 10
+      }
+    },
+    {
+      "ore_id": "ORE_T1_002",
+      "ore_name": "Metalite",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T1_001": 72,
+        "MAT_T2_007": 14,
+        "MAT_T2_014": 7
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 7
+      }
+    },
+    {
+      "ore_id": "ORE_T1_002",
+      "ore_name": "Metalite",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T1_001": 74,
+        "MAT_T2_007": 16,
+        "MAT_T2_014": 9
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 1
+      }
+    },
+    {
+      "ore_id": "ORE_T1_003",
+      "ore_name": "Cupreon",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T1_001": 16,
+        "MAT_T1_002": 56,
+        "MAT_T1_003": 4
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_003": 24
+      }
+    },
+    {
+      "ore_id": "ORE_T1_003",
+      "ore_name": "Cupreon",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T1_001": 18,
+        "MAT_T1_002": 58,
+        "MAT_T1_003": 6
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_003": 18
+      }
+    },
+    {
+      "ore_id": "ORE_T1_003",
+      "ore_name": "Cupreon",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T1_001": 20,
+        "MAT_T1_002": 60,
+        "MAT_T1_003": 8
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_003": 12
+      }
+    },
+    {
+      "ore_id": "ORE_T1_003",
+      "ore_name": "Cupreon",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T1_001": 21,
+        "MAT_T1_002": 61,
+        "MAT_T1_003": 9
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_003": 9
+      }
+    },
+    {
+      "ore_id": "ORE_T1_003",
+      "ore_name": "Cupreon",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T1_001": 22,
+        "MAT_T1_002": 62,
+        "MAT_T1_003": 10
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_003": 6
+      }
+    },
+    {
+      "ore_id": "ORE_T1_003",
+      "ore_name": "Cupreon",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T1_001": 24,
+        "MAT_T1_002": 64,
+        "MAT_T1_003": 12
+      },
+      "gases": {},
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T1_004",
+      "ore_name": "Cuprex",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T1_002": 64,
+        "MAT_T1_003": 11,
+        "MAT_T2_013": 1
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 24
+      }
+    },
+    {
+      "ore_id": "ORE_T1_004",
+      "ore_name": "Cuprex",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T1_002": 66,
+        "MAT_T1_003": 13,
+        "MAT_T2_013": 3
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_003": 18
+      }
+    },
+    {
+      "ore_id": "ORE_T1_004",
+      "ore_name": "Cuprex",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T1_002": 68,
+        "MAT_T1_003": 15,
+        "MAT_T2_013": 5
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_003": 12
+      }
+    },
+    {
+      "ore_id": "ORE_T1_004",
+      "ore_name": "Cuprex",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T1_002": 69,
+        "MAT_T1_003": 16,
+        "MAT_T2_013": 6
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_003": 9
+      }
+    },
+    {
+      "ore_id": "ORE_T1_004",
+      "ore_name": "Cuprex",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T1_002": 70,
+        "MAT_T1_003": 17,
+        "MAT_T2_013": 7
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_003": 6
+      }
+    },
+    {
+      "ore_id": "ORE_T1_004",
+      "ore_name": "Cuprex",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T1_002": 72,
+        "MAT_T1_003": 19,
+        "MAT_T2_013": 9
+      },
+      "gases": {},
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T1_005",
+      "ore_name": "Palestone",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T1_001": 14,
+        "MAT_T1_004": 8,
+        "MAT_T1_005": 51
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 27
+      }
+    },
+    {
+      "ore_id": "ORE_T1_005",
+      "ore_name": "Palestone",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T1_001": 16,
+        "MAT_T1_004": 10,
+        "MAT_T1_005": 53
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 21
+      }
+    },
+    {
+      "ore_id": "ORE_T1_005",
+      "ore_name": "Palestone",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T1_001": 18,
+        "MAT_T1_004": 12,
+        "MAT_T1_005": 55
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 15
+      }
+    },
+    {
+      "ore_id": "ORE_T1_005",
+      "ore_name": "Palestone",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T1_001": 19,
+        "MAT_T1_004": 13,
+        "MAT_T1_005": 56
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 12
+      }
+    },
+    {
+      "ore_id": "ORE_T1_005",
+      "ore_name": "Palestone",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T1_001": 20,
+        "MAT_T1_004": 14,
+        "MAT_T1_005": 57
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 9
+      }
+    },
+    {
+      "ore_id": "ORE_T1_005",
+      "ore_name": "Palestone",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T1_001": 22,
+        "MAT_T1_004": 16,
+        "MAT_T1_005": 59
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 3
+      }
+    },
+    {
+      "ore_id": "ORE_T1_006",
+      "ore_name": "Titanex",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T1_001": 18,
+        "MAT_T2_008": 6,
+        "MAT_T2_010": 46
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_001": 30
+      }
+    },
+    {
+      "ore_id": "ORE_T1_006",
+      "ore_name": "Titanex",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T1_001": 20,
+        "MAT_T2_008": 8,
+        "MAT_T2_010": 48
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 24
+      }
+    },
+    {
+      "ore_id": "ORE_T1_006",
+      "ore_name": "Titanex",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T1_001": 22,
+        "MAT_T2_008": 10,
+        "MAT_T2_010": 50
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_001": 18
+      }
+    },
+    {
+      "ore_id": "ORE_T1_006",
+      "ore_name": "Titanex",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T1_001": 23,
+        "MAT_T2_008": 11,
+        "MAT_T2_010": 51
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 15
+      }
+    },
+    {
+      "ore_id": "ORE_T1_006",
+      "ore_name": "Titanex",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T1_001": 24,
+        "MAT_T2_008": 12,
+        "MAT_T2_010": 52
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 12
+      }
+    },
+    {
+      "ore_id": "ORE_T1_006",
+      "ore_name": "Titanex",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T1_001": 26,
+        "MAT_T2_008": 14,
+        "MAT_T2_010": 54
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 6
+      }
+    },
+    {
+      "ore_id": "ORE_T1_007",
+      "ore_name": "Densore",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T1_001": 54,
+        "MAT_T2_006": 4,
+        "MAT_T2_010": 16
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_005": 26
+      }
+    },
+    {
+      "ore_id": "ORE_T1_007",
+      "ore_name": "Densore",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T1_001": 56,
+        "MAT_T2_006": 6,
+        "MAT_T2_010": 18
+      },
+      "gases": {},
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T1_007",
+      "ore_name": "Densore",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T1_001": 58,
+        "MAT_T2_006": 8,
+        "MAT_T2_010": 20
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_005": 14
+      }
+    },
+    {
+      "ore_id": "ORE_T1_007",
+      "ore_name": "Densore",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T1_001": 59,
+        "MAT_T2_006": 9,
+        "MAT_T2_010": 21
+      },
+      "gases": {},
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T1_007",
+      "ore_name": "Densore",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T1_001": 60,
+        "MAT_T2_006": 10,
+        "MAT_T2_010": 22
+      },
+      "gases": {},
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T1_007",
+      "ore_name": "Densore",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T1_001": 62,
+        "MAT_T2_006": 12,
+        "MAT_T2_010": 24
+      },
+      "gases": {},
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T1_008",
+      "ore_name": "Mirrorvein",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T1_002": 21,
+        "MAT_T2_008": 41,
+        "MAT_T2_009": 8
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 30
+      }
+    },
+    {
+      "ore_id": "ORE_T1_008",
+      "ore_name": "Mirrorvein",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T1_002": 23,
+        "MAT_T2_008": 43,
+        "MAT_T2_009": 10
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 24
+      }
+    },
+    {
+      "ore_id": "ORE_T1_008",
+      "ore_name": "Mirrorvein",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T1_002": 25,
+        "MAT_T2_008": 45,
+        "MAT_T2_009": 12
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 18
+      }
+    },
+    {
+      "ore_id": "ORE_T1_008",
+      "ore_name": "Mirrorvein",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T1_002": 26,
+        "MAT_T2_008": 46,
+        "MAT_T2_009": 13
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 15
+      }
+    },
+    {
+      "ore_id": "ORE_T1_008",
+      "ore_name": "Mirrorvein",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T1_002": 27,
+        "MAT_T2_008": 47,
+        "MAT_T2_009": 14
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 12
+      }
+    },
+    {
+      "ore_id": "ORE_T1_008",
+      "ore_name": "Mirrorvein",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T1_002": 29,
+        "MAT_T2_008": 49,
+        "MAT_T2_009": 16
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 6
+      }
+    },
+    {
+      "ore_id": "ORE_T1_009",
+      "ore_name": "Azurex",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T1_002": 68,
+        "MAT_T2_012": 6,
+        "MAT_T2_013": 1
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 25
+      }
+    },
+    {
+      "ore_id": "ORE_T1_009",
+      "ore_name": "Azurex",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T1_002": 70,
+        "MAT_T2_012": 8,
+        "MAT_T2_013": 3
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 19
+      }
+    },
+    {
+      "ore_id": "ORE_T1_009",
+      "ore_name": "Azurex",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T1_002": 72,
+        "MAT_T2_012": 10,
+        "MAT_T2_013": 5
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 13
+      }
+    },
+    {
+      "ore_id": "ORE_T1_009",
+      "ore_name": "Azurex",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T1_002": 73,
+        "MAT_T2_012": 11,
+        "MAT_T2_013": 6
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 10
+      }
+    },
+    {
+      "ore_id": "ORE_T1_009",
+      "ore_name": "Azurex",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T1_002": 74,
+        "MAT_T2_012": 12,
+        "MAT_T2_013": 7
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 7
+      }
+    },
+    {
+      "ore_id": "ORE_T1_009",
+      "ore_name": "Azurex",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T1_002": 76,
+        "MAT_T2_012": 14,
+        "MAT_T2_013": 9
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 1
+      }
+    },
+    {
+      "ore_id": "ORE_T1_010",
+      "ore_name": "Sunvein",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T1_002": 46,
+        "MAT_T1_003": 6,
+        "MAT_T1_004": 24
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 24
+      }
+    },
+    {
+      "ore_id": "ORE_T1_010",
+      "ore_name": "Sunvein",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T1_002": 48,
+        "MAT_T1_003": 8,
+        "MAT_T1_004": 26
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 18
+      }
+    },
+    {
+      "ore_id": "ORE_T1_010",
+      "ore_name": "Sunvein",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T1_002": 50,
+        "MAT_T1_003": 10,
+        "MAT_T1_004": 28
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 12
+      }
+    },
+    {
+      "ore_id": "ORE_T1_010",
+      "ore_name": "Sunvein",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T1_002": 51,
+        "MAT_T1_003": 11,
+        "MAT_T1_004": 29
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 9
+      }
+    },
+    {
+      "ore_id": "ORE_T1_010",
+      "ore_name": "Sunvein",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T1_002": 52,
+        "MAT_T1_003": 12,
+        "MAT_T1_004": 30
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 6
+      }
+    },
+    {
+      "ore_id": "ORE_T1_010",
+      "ore_name": "Sunvein",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T1_002": 54,
+        "MAT_T1_003": 14,
+        "MAT_T1_004": 32
+      },
+      "gases": {},
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T2_011",
+      "ore_name": "Chromore",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T2_008": 54,
+        "MAT_T2_009": 14,
+        "MAT_T2_014": 6
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 26
+      }
+    },
+    {
+      "ore_id": "ORE_T2_011",
+      "ore_name": "Chromore",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T2_008": 56,
+        "MAT_T2_009": 16,
+        "MAT_T2_014": 8
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 20
+      }
+    },
+    {
+      "ore_id": "ORE_T2_011",
+      "ore_name": "Chromore",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T2_008": 58,
+        "MAT_T2_009": 18,
+        "MAT_T2_014": 10
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 14
+      }
+    },
+    {
+      "ore_id": "ORE_T2_011",
+      "ore_name": "Chromore",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T2_008": 59,
+        "MAT_T2_009": 19,
+        "MAT_T2_014": 11
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 11
+      }
+    },
+    {
+      "ore_id": "ORE_T2_011",
+      "ore_name": "Chromore",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T2_008": 60,
+        "MAT_T2_009": 20,
+        "MAT_T2_014": 12
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 8
+      }
+    },
+    {
+      "ore_id": "ORE_T2_011",
+      "ore_name": "Chromore",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T2_008": 62,
+        "MAT_T2_009": 22,
+        "MAT_T2_014": 14
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 2
+      }
+    },
+    {
+      "ore_id": "ORE_T2_012",
+      "ore_name": "Noblore",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T1_004": 18,
+        "MAT_T2_006": 41,
+        "MAT_T2_015": 11
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_005": 30
+      }
+    },
+    {
+      "ore_id": "ORE_T2_012",
+      "ore_name": "Noblore",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T1_004": 20,
+        "MAT_T2_006": 43,
+        "MAT_T2_015": 13
+      },
+      "gases": {},
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T2_012",
+      "ore_name": "Noblore",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T1_004": 22,
+        "MAT_T2_006": 45,
+        "MAT_T2_015": 15
+      },
+      "gases": {},
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T2_012",
+      "ore_name": "Noblore",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T1_004": 23,
+        "MAT_T2_006": 46,
+        "MAT_T2_015": 16
+      },
+      "gases": {},
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T2_012",
+      "ore_name": "Noblore",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T1_004": 24,
+        "MAT_T2_006": 47,
+        "MAT_T2_015": 17
+      },
+      "gases": {},
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T2_012",
+      "ore_name": "Noblore",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T1_004": 26,
+        "MAT_T2_006": 49,
+        "MAT_T2_015": 19
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_005": 6
+      }
+    },
+    {
+      "ore_id": "ORE_T2_013",
+      "ore_name": "Abyssite",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T2_007": 48,
+        "MAT_T2_010": 16,
+        "MAT_T2_011": 8
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 28
+      }
+    },
+    {
+      "ore_id": "ORE_T2_013",
+      "ore_name": "Abyssite",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T2_007": 50,
+        "MAT_T2_010": 18,
+        "MAT_T2_011": 10
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 22
+      }
+    },
+    {
+      "ore_id": "ORE_T2_013",
+      "ore_name": "Abyssite",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T2_007": 52,
+        "MAT_T2_010": 20,
+        "MAT_T2_011": 12
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 16
+      }
+    },
+    {
+      "ore_id": "ORE_T2_013",
+      "ore_name": "Abyssite",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T2_007": 53,
+        "MAT_T2_010": 21,
+        "MAT_T2_011": 13
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 13
+      }
+    },
+    {
+      "ore_id": "ORE_T2_013",
+      "ore_name": "Abyssite",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T2_007": 54,
+        "MAT_T2_010": 22,
+        "MAT_T2_011": 14
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 10
+      }
+    },
+    {
+      "ore_id": "ORE_T2_013",
+      "ore_name": "Abyssite",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T2_007": 56,
+        "MAT_T2_010": 24,
+        "MAT_T2_011": 16
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_002": 4
+      }
+    },
+    {
+      "ore_id": "ORE_T2_014",
+      "ore_name": "Radiantweave",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T2_013": 44,
+        "MAT_T2_014": 21,
+        "MAT_T2_015": 6
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_003": 29
+      }
+    },
+    {
+      "ore_id": "ORE_T2_014",
+      "ore_name": "Radiantweave",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T2_013": 46,
+        "MAT_T2_014": 23,
+        "MAT_T2_015": 8
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_003": 23
+      }
+    },
+    {
+      "ore_id": "ORE_T2_014",
+      "ore_name": "Radiantweave",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T2_013": 48,
+        "MAT_T2_014": 25,
+        "MAT_T2_015": 10
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_003": 17
+      }
+    },
+    {
+      "ore_id": "ORE_T2_014",
+      "ore_name": "Radiantweave",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T2_013": 49,
+        "MAT_T2_014": 26,
+        "MAT_T2_015": 11
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_003": 14
+      }
+    },
+    {
+      "ore_id": "ORE_T2_014",
+      "ore_name": "Radiantweave",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T2_013": 50,
+        "MAT_T2_014": 27,
+        "MAT_T2_015": 12
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_003": 11
+      }
+    },
+    {
+      "ore_id": "ORE_T2_014",
+      "ore_name": "Radiantweave",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T2_013": 52,
+        "MAT_T2_014": 29,
+        "MAT_T2_015": 14
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_003": 5
+      }
+    },
+    {
+      "ore_id": "ORE_T2_015",
+      "ore_name": "Fluxore",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T2_011": 46,
+        "MAT_T2_012": 18,
+        "MAT_T2_013": 8
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_003": 28
+      }
+    },
+    {
+      "ore_id": "ORE_T2_015",
+      "ore_name": "Fluxore",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T2_011": 48,
+        "MAT_T2_012": 20,
+        "MAT_T2_013": 10
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_003": 22
+      }
+    },
+    {
+      "ore_id": "ORE_T2_015",
+      "ore_name": "Fluxore",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T2_011": 50,
+        "MAT_T2_012": 22,
+        "MAT_T2_013": 12
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_003": 16
+      }
+    },
+    {
+      "ore_id": "ORE_T2_015",
+      "ore_name": "Fluxore",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T2_011": 51,
+        "MAT_T2_012": 23,
+        "MAT_T2_013": 13
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_003": 13
+      }
+    },
+    {
+      "ore_id": "ORE_T2_015",
+      "ore_name": "Fluxore",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T2_011": 52,
+        "MAT_T2_012": 24,
+        "MAT_T2_013": 14
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_003": 10
+      }
+    },
+    {
+      "ore_id": "ORE_T2_015",
+      "ore_name": "Fluxore",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T2_011": 54,
+        "MAT_T2_012": 26,
+        "MAT_T2_013": 16
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_003": 4
+      }
+    },
+    {
+      "ore_id": "ORE_T3_016",
+      "ore_name": "Radex",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T2_011": 16,
+        "MAT_T3_016": 8,
+        "MAT_T4_023": 31
+      },
+      "gases": {
+        "GAS_T1_001": 4,
+        "GAS_T1_002": 1
+      },
+      "waste": {
+        "WASTE_004": 32
+      }
+    },
+    {
+      "ore_id": "ORE_T3_016",
+      "ore_name": "Radex",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T2_011": 18,
+        "MAT_T3_016": 10,
+        "MAT_T4_023": 33
+      },
+      "gases": {
+        "GAS_T1_001": 6,
+        "GAS_T1_002": 3
+      },
+      "waste": {
+        "WASTE_004": 26
+      }
+    },
+    {
+      "ore_id": "ORE_T3_016",
+      "ore_name": "Radex",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T2_011": 20,
+        "MAT_T3_016": 12,
+        "MAT_T4_023": 35
+      },
+      "gases": {
+        "GAS_T1_001": 8,
+        "GAS_T1_002": 5
+      },
+      "waste": {
+        "WASTE_004": 20
+      }
+    },
+    {
+      "ore_id": "ORE_T3_016",
+      "ore_name": "Radex",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T2_011": 21,
+        "MAT_T3_016": 13,
+        "MAT_T4_023": 36
+      },
+      "gases": {
+        "GAS_T1_001": 9,
+        "GAS_T1_002": 6
+      },
+      "waste": {
+        "WASTE_004": 17
+      }
+    },
+    {
+      "ore_id": "ORE_T3_016",
+      "ore_name": "Radex",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T2_011": 22,
+        "MAT_T3_016": 14,
+        "MAT_T4_023": 37
+      },
+      "gases": {
+        "GAS_T1_001": 10,
+        "GAS_T1_002": 7
+      },
+      "waste": {
+        "WASTE_004": 14
+      }
+    },
+    {
+      "ore_id": "ORE_T3_016",
+      "ore_name": "Radex",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T2_011": 24,
+        "MAT_T3_016": 16,
+        "MAT_T4_023": 39
+      },
+      "gases": {
+        "GAS_T1_001": 12,
+        "GAS_T1_002": 9
+      },
+      "waste": {
+        "WASTE_004": 8
+      }
+    },
+    {
+      "ore_id": "ORE_T3_017",
+      "ore_name": "Fusionore",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T2_010": 11,
+        "MAT_T3_016": 14,
+        "MAT_T4_024": 34
+      },
+      "gases": {
+        "GAS_T1_002": 6,
+        "GAS_T1_003": 2
+      },
+      "waste": {
+        "WASTE_001": 25
+      }
+    },
+    {
+      "ore_id": "ORE_T3_017",
+      "ore_name": "Fusionore",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T2_010": 13,
+        "MAT_T3_016": 16,
+        "MAT_T4_024": 36
+      },
+      "gases": {
+        "GAS_T1_002": 8,
+        "GAS_T1_003": 4
+      },
+      "waste": {
+        "WASTE_001": 19
+      }
+    },
+    {
+      "ore_id": "ORE_T3_017",
+      "ore_name": "Fusionore",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T2_010": 15,
+        "MAT_T3_016": 18,
+        "MAT_T4_024": 38
+      },
+      "gases": {
+        "GAS_T1_002": 10,
+        "GAS_T1_003": 6
+      },
+      "waste": {
+        "WASTE_001": 13
+      }
+    },
+    {
+      "ore_id": "ORE_T3_017",
+      "ore_name": "Fusionore",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T2_010": 16,
+        "MAT_T3_016": 19,
+        "MAT_T4_024": 39
+      },
+      "gases": {
+        "GAS_T1_002": 11,
+        "GAS_T1_003": 7
+      },
+      "waste": {
+        "WASTE_001": 10
+      }
+    },
+    {
+      "ore_id": "ORE_T3_017",
+      "ore_name": "Fusionore",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T2_010": 17,
+        "MAT_T3_016": 20,
+        "MAT_T4_024": 40
+      },
+      "gases": {
+        "GAS_T1_002": 12,
+        "GAS_T1_003": 8
+      },
+      "waste": {
+        "WASTE_001": 7
+      }
+    },
+    {
+      "ore_id": "ORE_T3_017",
+      "ore_name": "Fusionore",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T2_010": 19,
+        "MAT_T3_016": 22,
+        "MAT_T4_024": 42
+      },
+      "gases": {
+        "GAS_T1_002": 14,
+        "GAS_T1_003": 10
+      },
+      "waste": {
+        "WASTE_001": 1
+      }
+    },
+    {
+      "ore_id": "ORE_T3_018",
+      "ore_name": "Attractore",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T2_012": 18,
+        "MAT_T3_018": 6,
+        "MAT_T3_021": 38
+      },
+      "gases": {
+        "GAS_T1_001": 1,
+        "GAS_T1_003": 4
+      },
+      "waste": {
+        "WASTE_002": 25
+      }
+    },
+    {
+      "ore_id": "ORE_T3_018",
+      "ore_name": "Attractore",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T2_012": 20,
+        "MAT_T3_018": 8,
+        "MAT_T3_021": 40
+      },
+      "gases": {
+        "GAS_T1_001": 3,
+        "GAS_T1_003": 6
+      },
+      "waste": {
+        "WASTE_002": 19
+      }
+    },
+    {
+      "ore_id": "ORE_T3_018",
+      "ore_name": "Attractore",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T2_012": 22,
+        "MAT_T3_018": 10,
+        "MAT_T3_021": 42
+      },
+      "gases": {
+        "GAS_T1_001": 5,
+        "GAS_T1_003": 8
+      },
+      "waste": {
+        "WASTE_002": 13
+      }
+    },
+    {
+      "ore_id": "ORE_T3_018",
+      "ore_name": "Attractore",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T2_012": 23,
+        "MAT_T3_018": 11,
+        "MAT_T3_021": 43
+      },
+      "gases": {
+        "GAS_T1_001": 6,
+        "GAS_T1_003": 9
+      },
+      "waste": {
+        "WASTE_002": 10
+      }
+    },
+    {
+      "ore_id": "ORE_T3_018",
+      "ore_name": "Attractore",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T2_012": 24,
+        "MAT_T3_018": 12,
+        "MAT_T3_021": 44
+      },
+      "gases": {
+        "GAS_T1_001": 7,
+        "GAS_T1_003": 10
+      },
+      "waste": {
+        "WASTE_002": 7
+      }
+    },
+    {
+      "ore_id": "ORE_T3_018",
+      "ore_name": "Attractore",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T2_012": 26,
+        "MAT_T3_018": 14,
+        "MAT_T3_021": 46
+      },
+      "gases": {
+        "GAS_T1_001": 9,
+        "GAS_T1_003": 12
+      },
+      "waste": {
+        "WASTE_002": 1
+      }
+    },
+    {
+      "ore_id": "ORE_T3_019",
+      "ore_name": "Novaore",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T2_013": 11,
+        "MAT_T3_021": 36,
+        "MAT_T3_022": 18
+      },
+      "gases": {
+        "GAS_T1_001": 6,
+        "GAS_T1_002": 3
+      },
+      "waste": {
+        "WASTE_004": 22
+      }
+    },
+    {
+      "ore_id": "ORE_T3_019",
+      "ore_name": "Novaore",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T2_013": 13,
+        "MAT_T3_021": 38,
+        "MAT_T3_022": 20
+      },
+      "gases": {
+        "GAS_T1_001": 8,
+        "GAS_T1_002": 5
+      },
+      "waste": {
+        "WASTE_004": 16
+      }
+    },
+    {
+      "ore_id": "ORE_T3_019",
+      "ore_name": "Novaore",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T2_013": 15,
+        "MAT_T3_021": 40,
+        "MAT_T3_022": 22
+      },
+      "gases": {
+        "GAS_T1_001": 10,
+        "GAS_T1_002": 7
+      },
+      "waste": {
+        "WASTE_004": 10
+      }
+    },
+    {
+      "ore_id": "ORE_T3_019",
+      "ore_name": "Novaore",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T2_013": 16,
+        "MAT_T3_021": 41,
+        "MAT_T3_022": 23
+      },
+      "gases": {
+        "GAS_T1_001": 11,
+        "GAS_T1_002": 8
+      },
+      "waste": {
+        "WASTE_004": 7
+      }
+    },
+    {
+      "ore_id": "ORE_T3_019",
+      "ore_name": "Novaore",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T2_013": 17,
+        "MAT_T3_021": 42,
+        "MAT_T3_022": 24
+      },
+      "gases": {
+        "GAS_T1_001": 12,
+        "GAS_T1_002": 9
+      },
+      "waste": {
+        "WASTE_004": 4
+      }
+    },
+    {
+      "ore_id": "ORE_T3_019",
+      "ore_name": "Novaore",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T2_013": 19,
+        "MAT_T3_021": 44,
+        "MAT_T3_022": 26
+      },
+      "gases": {
+        "GAS_T1_001": 14,
+        "GAS_T1_002": 11
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T3_020",
+      "ore_name": "Auralith",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T3_018": 26,
+        "MAT_T3_019": 21,
+        "MAT_T3_020": 8
+      },
+      "gases": {
+        "GAS_T1_002": 4
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T3_020",
+      "ore_name": "Auralith",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T3_018": 28,
+        "MAT_T3_019": 23,
+        "MAT_T3_020": 10
+      },
+      "gases": {
+        "GAS_T1_002": 6
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T3_020",
+      "ore_name": "Auralith",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T3_018": 30,
+        "MAT_T3_019": 25,
+        "MAT_T3_020": 12
+      },
+      "gases": {
+        "GAS_T1_002": 8
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T3_020",
+      "ore_name": "Auralith",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T3_018": 31,
+        "MAT_T3_019": 26,
+        "MAT_T3_020": 13
+      },
+      "gases": {
+        "GAS_T1_002": 9
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T3_020",
+      "ore_name": "Auralith",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T3_018": 32,
+        "MAT_T3_019": 27,
+        "MAT_T3_020": 14
+      },
+      "gases": {
+        "GAS_T1_002": 10
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T3_020",
+      "ore_name": "Auralith",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T3_018": 34,
+        "MAT_T3_019": 29,
+        "MAT_T3_020": 16
+      },
+      "gases": {
+        "GAS_T1_002": 12
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T4_021",
+      "ore_name": "Lumispar",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T2_013": 11,
+        "MAT_T3_022": 16,
+        "MAT_T4_025": 31
+      },
+      "gases": {
+        "GAS_T1_001": 6,
+        "GAS_T2_004": 4,
+        "GAS_T2_005": 4
+      },
+      "waste": {
+        "WASTE_004": 24
+      }
+    },
+    {
+      "ore_id": "ORE_T4_021",
+      "ore_name": "Lumispar",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T2_013": 13,
+        "MAT_T3_022": 18,
+        "MAT_T4_025": 33
+      },
+      "gases": {
+        "GAS_T1_001": 8,
+        "GAS_T2_004": 6,
+        "GAS_T2_005": 6
+      },
+      "waste": {
+        "WASTE_004": 18
+      }
+    },
+    {
+      "ore_id": "ORE_T4_021",
+      "ore_name": "Lumispar",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T2_013": 15,
+        "MAT_T3_022": 20,
+        "MAT_T4_025": 35
+      },
+      "gases": {
+        "GAS_T1_001": 10,
+        "GAS_T2_004": 8,
+        "GAS_T2_005": 8
+      },
+      "waste": {
+        "WASTE_004": 12
+      }
+    },
+    {
+      "ore_id": "ORE_T4_021",
+      "ore_name": "Lumispar",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T2_013": 16,
+        "MAT_T3_022": 21,
+        "MAT_T4_025": 36
+      },
+      "gases": {
+        "GAS_T1_001": 11,
+        "GAS_T2_004": 9,
+        "GAS_T2_005": 9
+      },
+      "waste": {
+        "WASTE_004": 9
+      }
+    },
+    {
+      "ore_id": "ORE_T4_021",
+      "ore_name": "Lumispar",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T2_013": 17,
+        "MAT_T3_022": 22,
+        "MAT_T4_025": 37
+      },
+      "gases": {
+        "GAS_T1_001": 12,
+        "GAS_T2_004": 10,
+        "GAS_T2_005": 10
+      },
+      "waste": {
+        "WASTE_004": 6
+      }
+    },
+    {
+      "ore_id": "ORE_T4_021",
+      "ore_name": "Lumispar",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T2_013": 19,
+        "MAT_T3_022": 24,
+        "MAT_T4_025": 39
+      },
+      "gases": {
+        "GAS_T1_001": 14,
+        "GAS_T2_004": 12,
+        "GAS_T2_005": 12
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T4_022",
+      "ore_name": "Nexalith",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T3_020": 11,
+        "MAT_T4_026": 28,
+        "MAT_T4_027": 14
+      },
+      "gases": {
+        "GAS_T2_005": 8,
+        "GAS_T2_006": 6
+      },
+      "waste": {
+        "WASTE_003": 25
+      }
+    },
+    {
+      "ore_id": "ORE_T4_022",
+      "ore_name": "Nexalith",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T3_020": 13,
+        "MAT_T4_026": 30,
+        "MAT_T4_027": 16
+      },
+      "gases": {
+        "GAS_T2_005": 10,
+        "GAS_T2_006": 8
+      },
+      "waste": {
+        "WASTE_003": 19
+      }
+    },
+    {
+      "ore_id": "ORE_T4_022",
+      "ore_name": "Nexalith",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T3_020": 15,
+        "MAT_T4_026": 32,
+        "MAT_T4_027": 18
+      },
+      "gases": {
+        "GAS_T2_005": 12,
+        "GAS_T2_006": 10
+      },
+      "waste": {
+        "WASTE_003": 13
+      }
+    },
+    {
+      "ore_id": "ORE_T4_022",
+      "ore_name": "Nexalith",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T3_020": 16,
+        "MAT_T4_026": 33,
+        "MAT_T4_027": 19
+      },
+      "gases": {
+        "GAS_T2_005": 13,
+        "GAS_T2_006": 11
+      },
+      "waste": {
+        "WASTE_003": 10
+      }
+    },
+    {
+      "ore_id": "ORE_T4_022",
+      "ore_name": "Nexalith",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T3_020": 17,
+        "MAT_T4_026": 34,
+        "MAT_T4_027": 20
+      },
+      "gases": {
+        "GAS_T2_005": 14,
+        "GAS_T2_006": 12
+      },
+      "waste": {
+        "WASTE_003": 7
+      }
+    },
+    {
+      "ore_id": "ORE_T4_022",
+      "ore_name": "Nexalith",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T3_020": 19,
+        "MAT_T4_026": 36,
+        "MAT_T4_027": 22
+      },
+      "gases": {
+        "GAS_T2_005": 16,
+        "GAS_T2_006": 14
+      },
+      "waste": {
+        "WASTE_003": 1
+      }
+    },
+    {
+      "ore_id": "ORE_T4_023",
+      "ore_name": "Cupralith",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T3_018": 34,
+        "MAT_T3_019": 21,
+        "MAT_T3_020": 8
+      },
+      "gases": {
+        "GAS_T2_005": 4,
+        "GAS_T2_006": 6
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T4_023",
+      "ore_name": "Cupralith",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T3_018": 36,
+        "MAT_T3_019": 23,
+        "MAT_T3_020": 10
+      },
+      "gases": {
+        "GAS_T2_005": 6,
+        "GAS_T2_006": 8
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T4_023",
+      "ore_name": "Cupralith",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T3_018": 38,
+        "MAT_T3_019": 25,
+        "MAT_T3_020": 12
+      },
+      "gases": {
+        "GAS_T2_005": 8,
+        "GAS_T2_006": 10
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T4_023",
+      "ore_name": "Cupralith",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T3_018": 39,
+        "MAT_T3_019": 26,
+        "MAT_T3_020": 13
+      },
+      "gases": {
+        "GAS_T2_005": 9,
+        "GAS_T2_006": 11
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T4_023",
+      "ore_name": "Cupralith",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T3_018": 40,
+        "MAT_T3_019": 27,
+        "MAT_T3_020": 14
+      },
+      "gases": {
+        "GAS_T2_005": 10,
+        "GAS_T2_006": 12
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T4_023",
+      "ore_name": "Cupralith",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T3_018": 42,
+        "MAT_T3_019": 29,
+        "MAT_T3_020": 16
+      },
+      "gases": {
+        "GAS_T2_005": 12,
+        "GAS_T2_006": 14
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T4_024",
+      "ore_name": "Alumara",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T1_005": 41,
+        "MAT_T4_026": 18,
+        "MAT_T5_028": 4
+      },
+      "gases": {
+        "GAS_T2_005": 4,
+        "GAS_T2_006": 1
+      },
+      "waste": {
+        "WASTE_004": 24
+      }
+    },
+    {
+      "ore_id": "ORE_T4_024",
+      "ore_name": "Alumara",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T1_005": 43,
+        "MAT_T4_026": 20,
+        "MAT_T5_028": 6
+      },
+      "gases": {
+        "GAS_T2_005": 6,
+        "GAS_T2_006": 3
+      },
+      "waste": {
+        "WASTE_004": 18
+      }
+    },
+    {
+      "ore_id": "ORE_T4_024",
+      "ore_name": "Alumara",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T1_005": 45,
+        "MAT_T4_026": 22,
+        "MAT_T5_028": 8
+      },
+      "gases": {
+        "GAS_T2_005": 8,
+        "GAS_T2_006": 5
+      },
+      "waste": {
+        "WASTE_004": 12
+      }
+    },
+    {
+      "ore_id": "ORE_T4_024",
+      "ore_name": "Alumara",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T1_005": 46,
+        "MAT_T4_026": 23,
+        "MAT_T5_028": 9
+      },
+      "gases": {
+        "GAS_T2_005": 9,
+        "GAS_T2_006": 6
+      },
+      "waste": {
+        "WASTE_004": 9
+      }
+    },
+    {
+      "ore_id": "ORE_T4_024",
+      "ore_name": "Alumara",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T1_005": 47,
+        "MAT_T4_026": 24,
+        "MAT_T5_028": 10
+      },
+      "gases": {
+        "GAS_T2_005": 10,
+        "GAS_T2_006": 7
+      },
+      "waste": {
+        "WASTE_004": 6
+      }
+    },
+    {
+      "ore_id": "ORE_T4_024",
+      "ore_name": "Alumara",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T1_005": 49,
+        "MAT_T4_026": 26,
+        "MAT_T5_028": 12
+      },
+      "gases": {
+        "GAS_T2_005": 12,
+        "GAS_T2_006": 9
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T4_025",
+      "ore_name": "Serendyn",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T3_021": 14,
+        "MAT_T4_027": 16,
+        "MAT_T5_028": 24
+      },
+      "gases": {
+        "GAS_T2_006": 8,
+        "GAS_T3_007": 4
+      },
+      "waste": {
+        "WASTE_005": 26
+      }
+    },
+    {
+      "ore_id": "ORE_T4_025",
+      "ore_name": "Serendyn",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T3_021": 16,
+        "MAT_T4_027": 18,
+        "MAT_T5_028": 26
+      },
+      "gases": {
+        "GAS_T2_006": 10,
+        "GAS_T3_007": 6
+      },
+      "waste": {
+        "WASTE_005": 20
+      }
+    },
+    {
+      "ore_id": "ORE_T4_025",
+      "ore_name": "Serendyn",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T3_021": 18,
+        "MAT_T4_027": 20,
+        "MAT_T5_028": 28
+      },
+      "gases": {
+        "GAS_T2_006": 12,
+        "GAS_T3_007": 8
+      },
+      "waste": {
+        "WASTE_005": 14
+      }
+    },
+    {
+      "ore_id": "ORE_T4_025",
+      "ore_name": "Serendyn",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T3_021": 19,
+        "MAT_T4_027": 21,
+        "MAT_T5_028": 29
+      },
+      "gases": {
+        "GAS_T2_006": 13,
+        "GAS_T3_007": 9
+      },
+      "waste": {
+        "WASTE_005": 11
+      }
+    },
+    {
+      "ore_id": "ORE_T4_025",
+      "ore_name": "Serendyn",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T3_021": 20,
+        "MAT_T4_027": 22,
+        "MAT_T5_028": 30
+      },
+      "gases": {
+        "GAS_T2_006": 14,
+        "GAS_T3_007": 10
+      },
+      "waste": {
+        "WASTE_005": 8
+      }
+    },
+    {
+      "ore_id": "ORE_T4_025",
+      "ore_name": "Serendyn",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T3_021": 22,
+        "MAT_T4_027": 24,
+        "MAT_T5_028": 32
+      },
+      "gases": {
+        "GAS_T2_006": 16,
+        "GAS_T3_007": 12
+      },
+      "waste": {
+        "WASTE_005": 2
+      }
+    },
+    {
+      "ore_id": "ORE_T5_026",
+      "ore_name": "Rhodochros",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T4_025": 14,
+        "MAT_T5_028": 26,
+        "MAT_T5_029": 11
+      },
+      "gases": {
+        "GAS_T3_008": 6,
+        "GAS_T3_009": 4
+      },
+      "waste": {
+        "WASTE_002": 31
+      }
+    },
+    {
+      "ore_id": "ORE_T5_026",
+      "ore_name": "Rhodochros",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T4_025": 16,
+        "MAT_T5_028": 28,
+        "MAT_T5_029": 13
+      },
+      "gases": {
+        "GAS_T3_008": 8,
+        "GAS_T3_009": 6
+      },
+      "waste": {
+        "WASTE_002": 25
+      }
+    },
+    {
+      "ore_id": "ORE_T5_026",
+      "ore_name": "Rhodochros",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T4_025": 18,
+        "MAT_T5_028": 30,
+        "MAT_T5_029": 15
+      },
+      "gases": {
+        "GAS_T3_008": 10,
+        "GAS_T3_009": 8
+      },
+      "waste": {
+        "WASTE_002": 19
+      }
+    },
+    {
+      "ore_id": "ORE_T5_026",
+      "ore_name": "Rhodochros",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T4_025": 19,
+        "MAT_T5_028": 31,
+        "MAT_T5_029": 16
+      },
+      "gases": {
+        "GAS_T3_008": 11,
+        "GAS_T3_009": 9
+      },
+      "waste": {
+        "WASTE_002": 16
+      }
+    },
+    {
+      "ore_id": "ORE_T5_026",
+      "ore_name": "Rhodochros",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T4_025": 20,
+        "MAT_T5_028": 32,
+        "MAT_T5_029": 17
+      },
+      "gases": {
+        "GAS_T3_008": 12,
+        "GAS_T3_009": 10
+      },
+      "waste": {
+        "WASTE_002": 13
+      }
+    },
+    {
+      "ore_id": "ORE_T5_026",
+      "ore_name": "Rhodochros",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T4_025": 22,
+        "MAT_T5_028": 34,
+        "MAT_T5_029": 19
+      },
+      "gases": {
+        "GAS_T3_008": 14,
+        "GAS_T3_009": 12
+      },
+      "waste": {
+        "WASTE_002": 7
+      }
+    },
+    {
+      "ore_id": "ORE_T5_027",
+      "ore_name": "Chromdravit",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T4_026": 11,
+        "MAT_T5_028": 24,
+        "MAT_T5_029": 16,
+        "MAT_T5_030": 24
+      },
+      "gases": {
+        "GAS_T3_009": 8,
+        "GAS_T4_010": 4
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T5_027",
+      "ore_name": "Chromdravit",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T4_026": 13,
+        "MAT_T5_028": 26,
+        "MAT_T5_029": 18,
+        "MAT_T5_030": 26
+      },
+      "gases": {
+        "GAS_T3_009": 10,
+        "GAS_T4_010": 6
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T5_027",
+      "ore_name": "Chromdravit",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T4_026": 15,
+        "MAT_T5_028": 28,
+        "MAT_T5_029": 20,
+        "MAT_T5_030": 28
+      },
+      "gases": {
+        "GAS_T3_009": 12,
+        "GAS_T4_010": 8
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T5_027",
+      "ore_name": "Chromdravit",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T4_026": 16,
+        "MAT_T5_028": 29,
+        "MAT_T5_029": 21,
+        "MAT_T5_030": 29
+      },
+      "gases": {
+        "GAS_T3_009": 13,
+        "GAS_T4_010": 9
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T5_027",
+      "ore_name": "Chromdravit",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T4_026": 17,
+        "MAT_T5_028": 30,
+        "MAT_T5_029": 22,
+        "MAT_T5_030": 30
+      },
+      "gases": {
+        "GAS_T3_009": 14,
+        "GAS_T4_010": 10
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T5_027",
+      "ore_name": "Chromdravit",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T4_026": 19,
+        "MAT_T5_028": 32,
+        "MAT_T5_029": 24,
+        "MAT_T5_030": 32
+      },
+      "gases": {
+        "GAS_T3_009": 16,
+        "GAS_T4_010": 12
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T5_028",
+      "ore_name": "Cobaltore",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T2_012": 31,
+        "MAT_T4_027": 8,
+        "MAT_T5_029": 18
+      },
+      "gases": {
+        "GAS_T3_009": 2,
+        "GAS_T4_010": 6
+      },
+      "waste": {
+        "WASTE_003": 27
+      }
+    },
+    {
+      "ore_id": "ORE_T5_028",
+      "ore_name": "Cobaltore",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T2_012": 33,
+        "MAT_T4_027": 10,
+        "MAT_T5_029": 20
+      },
+      "gases": {
+        "GAS_T3_009": 4,
+        "GAS_T4_010": 8
+      },
+      "waste": {
+        "WASTE_003": 21
+      }
+    },
+    {
+      "ore_id": "ORE_T5_028",
+      "ore_name": "Cobaltore",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T2_012": 35,
+        "MAT_T4_027": 12,
+        "MAT_T5_029": 22
+      },
+      "gases": {
+        "GAS_T3_009": 6,
+        "GAS_T4_010": 10
+      },
+      "waste": {
+        "WASTE_003": 15
+      }
+    },
+    {
+      "ore_id": "ORE_T5_028",
+      "ore_name": "Cobaltore",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T2_012": 36,
+        "MAT_T4_027": 13,
+        "MAT_T5_029": 23
+      },
+      "gases": {
+        "GAS_T3_009": 7,
+        "GAS_T4_010": 11
+      },
+      "waste": {
+        "WASTE_003": 12
+      }
+    },
+    {
+      "ore_id": "ORE_T5_028",
+      "ore_name": "Cobaltore",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T2_012": 37,
+        "MAT_T4_027": 14,
+        "MAT_T5_029": 24
+      },
+      "gases": {
+        "GAS_T3_009": 8,
+        "GAS_T4_010": 12
+      },
+      "waste": {
+        "WASTE_003": 9
+      }
+    },
+    {
+      "ore_id": "ORE_T5_028",
+      "ore_name": "Cobaltore",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T2_012": 39,
+        "MAT_T4_027": 16,
+        "MAT_T5_029": 26
+      },
+      "gases": {
+        "GAS_T3_009": 10,
+        "GAS_T4_010": 14
+      },
+      "waste": {
+        "WASTE_003": 3
+      }
+    },
+    {
+      "ore_id": "ORE_T5_029",
+      "ore_name": "Hematine",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T1_001": 36,
+        "MAT_T5_028": 11,
+        "MAT_T5_030": 14
+      },
+      "gases": {
+        "GAS_T3_008": 6,
+        "GAS_T3_009": 3
+      },
+      "waste": {
+        "WASTE_002": 22
+      }
+    },
+    {
+      "ore_id": "ORE_T5_029",
+      "ore_name": "Hematine",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T1_001": 38,
+        "MAT_T5_028": 13,
+        "MAT_T5_030": 16
+      },
+      "gases": {
+        "GAS_T3_008": 8,
+        "GAS_T3_009": 5
+      },
+      "waste": {
+        "WASTE_002": 16
+      }
+    },
+    {
+      "ore_id": "ORE_T5_029",
+      "ore_name": "Hematine",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T1_001": 40,
+        "MAT_T5_028": 15,
+        "MAT_T5_030": 18
+      },
+      "gases": {
+        "GAS_T3_008": 10,
+        "GAS_T3_009": 7
+      },
+      "waste": {
+        "WASTE_002": 10
+      }
+    },
+    {
+      "ore_id": "ORE_T5_029",
+      "ore_name": "Hematine",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T1_001": 41,
+        "MAT_T5_028": 16,
+        "MAT_T5_030": 19
+      },
+      "gases": {
+        "GAS_T3_008": 11,
+        "GAS_T3_009": 8
+      },
+      "waste": {
+        "WASTE_002": 7
+      }
+    },
+    {
+      "ore_id": "ORE_T5_029",
+      "ore_name": "Hematine",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T1_001": 42,
+        "MAT_T5_028": 17,
+        "MAT_T5_030": 20
+      },
+      "gases": {
+        "GAS_T3_008": 12,
+        "GAS_T3_009": 9
+      },
+      "waste": {
+        "WASTE_002": 4
+      }
+    },
+    {
+      "ore_id": "ORE_T5_029",
+      "ore_name": "Hematine",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T1_001": 44,
+        "MAT_T5_028": 19,
+        "MAT_T5_030": 22
+      },
+      "gases": {
+        "GAS_T3_008": 14,
+        "GAS_T3_009": 11
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T5_030",
+      "ore_name": "Borax",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T1_005": 21,
+        "MAT_T5_028": 28,
+        "MAT_T5_029": 8
+      },
+      "gases": {
+        "GAS_T3_009": 4,
+        "GAS_T4_010": 8
+      },
+      "waste": {
+        "WASTE_004": 23
+      }
+    },
+    {
+      "ore_id": "ORE_T5_030",
+      "ore_name": "Borax",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T1_005": 23,
+        "MAT_T5_028": 30,
+        "MAT_T5_029": 10
+      },
+      "gases": {
+        "GAS_T3_009": 6,
+        "GAS_T4_010": 10
+      },
+      "waste": {
+        "WASTE_004": 17
+      }
+    },
+    {
+      "ore_id": "ORE_T5_030",
+      "ore_name": "Borax",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T1_005": 25,
+        "MAT_T5_028": 32,
+        "MAT_T5_029": 12
+      },
+      "gases": {
+        "GAS_T3_009": 8,
+        "GAS_T4_010": 12
+      },
+      "waste": {
+        "WASTE_004": 11
+      }
+    },
+    {
+      "ore_id": "ORE_T5_030",
+      "ore_name": "Borax",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T1_005": 26,
+        "MAT_T5_028": 33,
+        "MAT_T5_029": 13
+      },
+      "gases": {
+        "GAS_T3_009": 9,
+        "GAS_T4_010": 13
+      },
+      "waste": {
+        "WASTE_004": 8
+      }
+    },
+    {
+      "ore_id": "ORE_T5_030",
+      "ore_name": "Borax",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T1_005": 27,
+        "MAT_T5_028": 34,
+        "MAT_T5_029": 14
+      },
+      "gases": {
+        "GAS_T3_009": 10,
+        "GAS_T4_010": 14
+      },
+      "waste": {
+        "WASTE_004": 5
+      }
+    },
+    {
+      "ore_id": "ORE_T5_030",
+      "ore_name": "Borax",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T1_005": 29,
+        "MAT_T5_028": 36,
+        "MAT_T5_029": 16
+      },
+      "gases": {
+        "GAS_T3_009": 12,
+        "GAS_T4_010": 16
+      },
+      "waste": {}
+    },
+    {
+      "ore_id": "ORE_T6_031",
+      "ore_name": "Cassiteride",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T4_025": 8,
+        "MAT_T5_029": 14,
+        "MAT_T5_031": 16,
+        "MAT_T5_032": 11
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_001": 4,
+        "WASTE_005": 39
+      }
+    },
+    {
+      "ore_id": "ORE_T6_031",
+      "ore_name": "Cassiteride",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T4_025": 10,
+        "MAT_T5_029": 16,
+        "MAT_T5_031": 18,
+        "MAT_T5_032": 13
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_001": 6,
+        "WASTE_005": 33
+      }
+    },
+    {
+      "ore_id": "ORE_T6_031",
+      "ore_name": "Cassiteride",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T4_025": 12,
+        "MAT_T5_029": 18,
+        "MAT_T5_031": 20,
+        "MAT_T5_032": 15
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_001": 8,
+        "WASTE_005": 27
+      }
+    },
+    {
+      "ore_id": "ORE_T6_031",
+      "ore_name": "Cassiteride",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T4_025": 13,
+        "MAT_T5_029": 19,
+        "MAT_T5_031": 21,
+        "MAT_T5_032": 16
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_001": 9,
+        "WASTE_005": 24
+      }
+    },
+    {
+      "ore_id": "ORE_T6_031",
+      "ore_name": "Cassiteride",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T4_025": 14,
+        "MAT_T5_029": 20,
+        "MAT_T5_031": 22,
+        "MAT_T5_032": 17
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_001": 10,
+        "WASTE_005": 21
+      }
+    },
+    {
+      "ore_id": "ORE_T6_031",
+      "ore_name": "Cassiteride",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T4_025": 16,
+        "MAT_T5_029": 22,
+        "MAT_T5_031": 24,
+        "MAT_T5_032": 19
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_001": 12,
+        "WASTE_005": 15
+      }
+    },
+    {
+      "ore_id": "ORE_T6_032",
+      "ore_name": "Vanadinite",
+      "quality_code": "-A",
+      "quality_tier": "Q0",
+      "materials": {
+        "MAT_T5_030": 16,
+        "MAT_T5_031": 11,
+        "MAT_T5_032": 8,
+        "MAT_T5_033": 14
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_001": 6
+      }
+    },
+    {
+      "ore_id": "ORE_T6_032",
+      "ore_name": "Vanadinite",
+      "quality_code": "-N",
+      "quality_tier": "Q1",
+      "materials": {
+        "MAT_T5_030": 18,
+        "MAT_T5_031": 13,
+        "MAT_T5_032": 10,
+        "MAT_T5_033": 16
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_001": 8
+      }
+    },
+    {
+      "ore_id": "ORE_T6_032",
+      "ore_name": "Vanadinite",
+      "quality_code": "",
+      "quality_tier": "Q2",
+      "materials": {
+        "MAT_T5_030": 20,
+        "MAT_T5_031": 15,
+        "MAT_T5_032": 12,
+        "MAT_T5_033": 18
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_001": 10
+      }
+    },
+    {
+      "ore_id": "ORE_T6_032",
+      "ore_name": "Vanadinite",
+      "quality_code": "-AR",
+      "quality_tier": "Q3",
+      "materials": {
+        "MAT_T5_030": 21,
+        "MAT_T5_031": 16,
+        "MAT_T5_032": 13,
+        "MAT_T5_033": 19
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_001": 11
+      }
+    },
+    {
+      "ore_id": "ORE_T6_032",
+      "ore_name": "Vanadinite",
+      "quality_code": "-R",
+      "quality_tier": "Q4",
+      "materials": {
+        "MAT_T5_030": 22,
+        "MAT_T5_031": 17,
+        "MAT_T5_032": 14,
+        "MAT_T5_033": 20
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_001": 12
+      }
+    },
+    {
+      "ore_id": "ORE_T6_032",
+      "ore_name": "Vanadinite",
+      "quality_code": "-EX",
+      "quality_tier": "Q5",
+      "materials": {
+        "MAT_T5_030": 24,
+        "MAT_T5_031": 19,
+        "MAT_T5_032": 16,
+        "MAT_T5_033": 22
+      },
+      "gases": {},
+      "waste": {
+        "WASTE_001": 14
+      }
+    }
+  ]
+}

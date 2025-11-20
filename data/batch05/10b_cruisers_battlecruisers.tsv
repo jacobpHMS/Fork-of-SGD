@@ -1,0 +1,36 @@
+DATABASE	ID	NAME	TIER	CATEGORY	SIZE	SUBCATEGORY	MASS_KG	VOLUME_M3	BASE_PRICE	PRODUCTION_TIME_SEC	INPUT_1	INPUT_1_QTY	INPUT_2	INPUT_2_QTY	INPUT_3	INPUT_3_QTY	SPECIAL_NOTES	INFO_TEXT
+SHIP	SHIP_041	Voyager Explorer	2	Cruiser	M	Explorer	18000	1800	200000	6600	MAT_T2_008	3500	MAT_T2_010	2400	COMP_025	55	Spaceship hull	Spaceship hull
+SHIP	SHIP_042	Pathfinder Scout	2	Cruiser	M	Scout	18500	1850	215000	6840	MAT_T2_009	3650	MAT_T2_010	2500	COMP_026	58	Spaceship hull	Spaceship hull
+SHIP	SHIP_043	Pioneer Mining	2	Cruiser	M	Mining	19000	1900	230000	7080	MAT_T2_010	3800	MAT_T2_014	2600	COMP_027	60	Asteroid mining specialist ship	Asteroid mining specialist ship
+SHIP	SHIP_044	Crusader Combat	2	Cruiser	M	Combat	19500	1950	245000	7320	MAT_T2_008	3950	MAT_T2_010	2700	COMP_028	63	Spaceship hull	Spaceship hull
+SHIP	SHIP_045	Templar Assault	3	Cruiser	L	Assault	22000	2200	320000	7920	MAT_T3_016	4800	MAT_T3_018	3400	COMP_045	75	Spaceship hull	Spaceship hull
+SHIP	SHIP_046	Centurion Heavy	3	Cruiser	L	Heavy	23000	2300	350000	8160	MAT_T3_016	5000	MAT_T3_020	3600	COMP_046	80	Spaceship hull	Spaceship hull
+SHIP	SHIP_047	Gladiator Combat	3	Cruiser	M	Combat	21000	2100	305000	7680	MAT_T3_021	4600	MAT_T3_022	3300	COMP_047	72	Spaceship hull	Spaceship hull
+SHIP	SHIP_048	Praetorian Defense	3	Cruiser	L	Defense	22500	2250	335000	8040	MAT_T3_018	4900	MAT_T3_019	3500	COMP_048	77	Spaceship hull	Spaceship hull
+SHIP	SHIP_049	Recon Stealth	3	Cruiser	M	Stealth	20500	2050	295000	7560	MAT_T3_016	4500	MAT_T3_021	3200	COMP_049	70	Spaceship hull	Spaceship hull
+SHIP	SHIP_050	Force Recon	3	Cruiser	M	Recon	21500	2150	315000	7800	MAT_T3_020	4700	MAT_T3_022	3350	COMP_050	74	Spaceship hull	Spaceship hull
+SHIP	SHIP_051	Harbinger Missile	3	Cruiser	L	Missile	23500	2350	365000	8280	MAT_T3_016	5100	MAT_T3_018	3700	COMP_051	82	Spaceship hull	Spaceship hull
+SHIP	SHIP_052	Oracle Artillery	3	Cruiser	L	Artillery	24000	2400	380000	8400	MAT_T3_021	5250	MAT_T3_022	3800	COMP_052	85	Spaceship hull	Spaceship hull
+SHIP	SHIP_053	Guardian Logistics	2	Cruiser	M	Logistics	19200	1920	240000	7200	MAT_T2_009	3850	MAT_T2_015	2650	COMP_029	62	Spaceship hull	Spaceship hull
+SHIP	SHIP_054	Basilisk Remote Repair	3	Cruiser	M	Repair	20800	2080	300000	7620	MAT_T3_018	4550	MAT_T3_019	3250	COMP_053	71	Spaceship hull	Spaceship hull
+SHIP	SHIP_055	Oneiros Logistics	3	Cruiser	M	Logistics	21200	2120	310000	7740	MAT_T3_016	4650	MAT_T3_021	3300	COMP_054	73	Spaceship hull	Spaceship hull
+SHIP	SHIP_056	Scythe Fleet	2	Cruiser	M	Fleet	18800	1880	225000	6960	MAT_T2_010	3750	MAT_T2_013	2580	COMP_030	59	Spaceship hull	Spaceship hull
+SHIP	SHIP_057	Armageddon Heavy	4	Cruiser	L	Heavy	25000	2500	480000	9000	MAT_T4_023	6000	MAT_T4_025	4300	COMP_080	100	Spaceship hull	Spaceship hull
+SHIP	SHIP_058	Apocalypse Combat	4	Cruiser	L	Combat	24500	2450	465000	8880	MAT_T4_023	5850	MAT_T4_026	4200	COMP_081	98	Spaceship hull	Spaceship hull
+SHIP	SHIP_059	Abaddon Assault	4	Cruiser	L	Assault	25500	2550	495000	9120	MAT_T4_024	6150	MAT_T4_027	4400	COMP_082	103	Spaceship hull	Spaceship hull
+SHIP	SHIP_060	Nightmare Faction	4	Cruiser	L	Faction	26000	2600	520000	9240	MAT_T4_025	6300	MAT_T4_026	4500	COMP_083	105	Spaceship hull	Spaceship hull
+SHIP	SHIP_061	Sentinel Battlecruiser	4	Battlecruiser	L	Combat	35000	3500	650000	10800	MAT_T4_023	8500	MAT_T4_025	6200	COMP_085	135	Heavy firepower fast attack ship	Heavy firepower fast attack ship
+SHIP	SHIP_062	Drake Combat	4	Battlecruiser	L	Missile	36000	3600	680000	11040	MAT_T4_023	8800	MAT_T4_026	6400	COMP_086	140	Spaceship hull	Spaceship hull
+SHIP	SHIP_063	Ferox Artillery	4	Battlecruiser	L	Artillery	35500	3550	665000	10920	MAT_T4_024	8650	MAT_T4_027	6300	COMP_087	138	Spaceship hull	Spaceship hull
+SHIP	SHIP_064	Hurricane Projectile	4	Battlecruiser	L	Projectile	36500	3650	695000	11160	MAT_T4_025	8950	MAT_T4_026	6500	COMP_088	142	Spaceship hull	Spaceship hull
+SHIP	SHIP_065	Prophecy Attack	4	Battlecruiser	L	Attack	37000	3700	710000	11280	MAT_T4_026	9100	MAT_T4_027	6600	COMP_089	145	Spaceship hull	Spaceship hull
+SHIP	SHIP_066	Harbinger Assault	4	Battlecruiser	L	Assault	37500	3750	725000	11400	MAT_T4_023	9250	MAT_T4_027	6700	COMP_090	148	Spaceship hull	Spaceship hull
+SHIP	SHIP_067	Myrmidon Heavy	4	Battlecruiser	L	Heavy	38000	3800	740000	11520	MAT_T4_024	9400	MAT_T4_025	6800	COMP_091	150	Spaceship hull	Spaceship hull
+SHIP	SHIP_068	Brutix Blaster	4	Battlecruiser	L	Blaster	38500	3850	755000	11640	MAT_T4_026	9550	MAT_T4_027	6900	COMP_092	153	Spaceship hull	Spaceship hull
+SHIP	SHIP_069	Cyclone Missile	5	Battlecruiser	L	Missile	40000	4000	850000	12600	MAT_T5_028	10500	MAT_T5_031	7600	COMP_098	170	Spaceship hull	Spaceship hull
+SHIP	SHIP_070	Talos Artillery	5	Battlecruiser	L	Artillery	39500	3950	835000	12480	MAT_T5_029	10350	MAT_T5_032	7500	COMP_099	168	Spaceship hull	Spaceship hull
+SHIP	SHIP_071	Naga Railgun	5	Battlecruiser	L	Railgun	40500	4050	865000	12720	MAT_T5_030	10650	MAT_T5_033	7700	COMP_100	173	Spaceship hull	Spaceship hull
+SHIP	SHIP_072	Oracle Laser	5	Battlecruiser	L	Laser	41000	4100	880000	12840	MAT_T5_031	10800	MAT_T5_028	7800	COMP_098	175	Spaceship hull	Spaceship hull
+SHIP	SHIP_073	Command Battlecruiser	5	Battlecruiser	L	Command	42000	4200	920000	13080	MAT_T5_028	11100	MAT_T5_031	8000	COMP_099	180	Heavy firepower fast attack ship	Heavy firepower fast attack ship
+SHIP	SHIP_074	Siege Battlecruiser	5	Battlecruiser	L	Siege	43000	4300	965000	13320	MAT_T5_029	11400	MAT_T5_032	8200	COMP_100	185	Heavy firepower fast attack ship	Heavy firepower fast attack ship
+SHIP	SHIP_075	Elite Battlecruiser	5	Battlecruiser	L	Elite	44000	4400	1000000	13560	MAT_T5_030	11700	MAT_T5_033	8400	COMP_098	190	Heavy firepower fast attack ship	Heavy firepower fast attack ship

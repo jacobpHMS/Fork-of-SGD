@@ -1,0 +1,7 @@
+{
+  "DEPRECATED": true,
+  "reason": "This file is no longer used. All items are now in scripts/ItemDatabase.gd",
+  "date": "2025-11-19",
+  "replacement": "scripts/ItemDatabase.gd",
+  "see_also": "docs/ITEM_MANAGEMENT_GUIDELINES.md"
+}

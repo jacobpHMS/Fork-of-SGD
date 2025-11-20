@@ -1,0 +1,19 @@
+DATABASE	ID	NAME	TIER	CATEGORY	SIZE	SUBCATEGORY	MASS_KG	VOLUME_M3	BASE_PRICE	PRODUCTION_TIME_SEC	INPUT_1	INPUT_1_QTY	INPUT_2	INPUT_2_QTY	INPUT_3	INPUT_3_QTY	SPECIAL_NOTES	INFO_TEXT
+SHIP	SHIP_103	Phoenix Dreadnought	5	Dreadnought	XL	Siege	90000	9000	4000000	21600	MAT_T5_028	40000	MAT_T5_031	28000	COMP_098	650	Massive capital ship with siege weapons	Massive capital ship with siege weapons
+SHIP	SHIP_104	Moros Dreadnought	5	Dreadnought	XL	Siege	91000	9100	4100000	21840	MAT_T5_029	41000	MAT_T5_032	29000	COMP_099	670	Massive capital ship with siege weapons	Massive capital ship with siege weapons
+SHIP	SHIP_105	Revelation Dreadnought	5	Dreadnought	XL	Siege	92000	9200	4200000	22080	MAT_T5_030	42000	MAT_T5_033	30000	COMP_100	690	Massive capital ship with siege weapons	Massive capital ship with siege weapons
+SHIP	SHIP_106	Naglfar Dreadnought	5	Dreadnought	XL	Siege	93000	9300	4300000	22320	MAT_T5_031	43000	MAT_T5_028	31000	COMP_098	710	Massive capital ship with siege weapons	Massive capital ship with siege weapons
+SHIP	SHIP_107	Zirnitra Dreadnought	5	Dreadnought	XL	Pirate	95000	9500	4600000	22800	MAT_T5_028	45000	MAT_T5_032	32500	COMP_099	750	Massive capital ship with siege weapons	Massive capital ship with siege weapons
+SHIP	SHIP_108	Chemosh Dreadnought	5	Dreadnought	XL	Pirate	94000	9400	4500000	22560	MAT_T5_029	44000	MAT_T5_033	32000	COMP_100	730	Massive capital ship with siege weapons	Massive capital ship with siege weapons
+SHIP	SHIP_109	Vehement Dreadnought	5	Dreadnought	XL	Faction	96000	9600	4800000	23040	MAT_T5_030	46000	MAT_T5_031	33000	COMP_098	780	Massive capital ship with siege weapons	Massive capital ship with siege weapons
+SHIP	SHIP_110	Caiman Dreadnought	5	Dreadnought	XL	Pirate	97000	9700	4900000	23280	MAT_T5_031	47000	MAT_T5_028	33500	COMP_099	800	Massive capital ship with siege weapons	Massive capital ship with siege weapons
+SHIP	SHIP_111	Molok Dreadnought	5	Dreadnought	XL	Pirate	98000	9800	5000000	23520	MAT_T5_028	48000	MAT_T5_032	34000	COMP_100	820	Massive capital ship with siege weapons	Massive capital ship with siege weapons
+SHIP	SHIP_112	Komodo Dreadnought	5	Dreadnought	XL	Faction	99000	9900	5100000	23760	MAT_T5_029	49000	MAT_T5_033	34500	COMP_098	840	Massive capital ship with siege weapons	Massive capital ship with siege weapons
+SHIP	SHIP_113	Avatar Titan	5	Titan	XL	Titan	150000	15000	10000000	30000	MAT_T5_028	90000	MAT_T5_031	65000	COMP_098	1500	Flagship supercarrier command ship	Flagship supercarrier command ship
+SHIP	SHIP_114	Erebus Titan	5	Titan	XL	Titan	152000	15200	10500000	30600	MAT_T5_029	92000	MAT_T5_032	67000	COMP_099	1550	Flagship supercarrier command ship	Flagship supercarrier command ship
+SHIP	SHIP_115	Leviathan Titan	5	Titan	XL	Titan	154000	15400	11000000	31200	MAT_T5_030	94000	MAT_T5_033	69000	COMP_100	1600	Flagship supercarrier command ship	Flagship supercarrier command ship
+SHIP	SHIP_116	Ragnarok Titan	5	Titan	XL	Titan	156000	15600	11500000	31800	MAT_T5_031	96000	MAT_T5_028	71000	COMP_098	1650	Flagship supercarrier command ship	Flagship supercarrier command ship
+SHIP	SHIP_117	Vendetta Titan	5	Titan	XL	Faction	160000	16000	12500000	33000	MAT_T5_028	100000	MAT_T5_032	75000	COMP_099	1750	Flagship supercarrier command ship	Flagship supercarrier command ship
+SHIP	SHIP_118	Vanquisher Titan	5	Titan	XL	Faction	162000	16200	13000000	33600	MAT_T5_029	102000	MAT_T5_033	77000	COMP_100	1800	Flagship supercarrier command ship	Flagship supercarrier command ship
+SHIP	SHIP_119	Molok Titan	5	Titan	XL	Faction	164000	16400	13500000	34200	MAT_T5_030	104000	MAT_T5_031	79000	COMP_098	1850	Flagship supercarrier command ship	Flagship supercarrier command ship
+SHIP	SHIP_120	Komodo Titan	5	Titan	XL	Faction	165000	16500	14000000	34800	MAT_T5_031	105000	MAT_T5_028	80000	COMP_099	1900	Flagship supercarrier command ship	Flagship supercarrier command ship

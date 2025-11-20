@@ -1,0 +1,51 @@
+DATABASE	ID	NAME	TIER	CATEGORY	SIZE	SUBCATEGORY	MASS_KG	VOLUME_M3	BASE_PRICE	PRODUCTION_TIME_SEC	INPUT_1	INPUT_1_QTY	INPUT_2	INPUT_2_QTY	INPUT_3	INPUT_3_QTY	SPECIAL_NOTES	INFO_TEXT
+MODULE	MOD_251	Basic Repair Module	2	Utility	M	Repair	480	4.8	26000	1500	MAT_T2_008	185	MAT_T2_013	130	COMP_030	15	Utility module	Utility module
+MODULE	MOD_252	Standard Tractor Beam	2	Utility	S	Tractor	320	3.2	18000	1200	MAT_T2_009	125	MAT_T2_013	90	COMP_031	12	Utility module	Utility module
+MODULE	MOD_253	Small Salvager	2	Utility	M	Salvage	420	4.2	24000	1380	MAT_T2_010	160	MAT_T2_014	115	COMP_032	14	Utility module	Utility module
+MODULE	MOD_254	Light Probe Launcher	2	Utility	S	Probe	280	2.8	15000	1080	MAT_T2_008	110	MAT_T2_009	75	COMP_033	11	Utility module	Utility module
+MODULE	MOD_255	Basic Remote Repairer	2	Utility	M	Remote	450	4.5	25000	1440	MAT_T2_010	170	MAT_T2_013	120	COMP_034	14	Utility module	Utility module
+MODULE	MOD_256	Improved Repair Module	3	Utility	L	Repair	1250	12.5	88000	2700	MAT_T3_016	410	MAT_T3_018	305	COMP_055	40	Utility module	Utility module
+MODULE	MOD_257	Enhanced Tractor Beam	3	Utility	M	Tractor	950	9.5	72000	2520	MAT_T3_016	310	MAT_T3_020	230	COMP_056	35	Utility module	Utility module
+MODULE	MOD_258	Medium Salvager	3	Utility	L	Salvage	1350	13.5	95000	2820	MAT_T3_021	440	MAT_T3_022	325	COMP_057	42	Utility module	Utility module
+MODULE	MOD_259	Heavy Probe Launcher	3	Utility	M	Probe	1050	10.5	78000	2580	MAT_T3_018	345	MAT_T3_019	255	COMP_058	37	Utility module	Utility module
+MODULE	MOD_260	Elite Remote Repairer	3	Utility	L	Remote	1400	14.0	98000	2880	MAT_T3_016	460	MAT_T3_021	340	COMP_059	43	Utility module	Utility module
+MODULE	MOD_261	Energy Neutralizer	3	Utility	M	Neutralizer	1100	11.0	82000	2640	MAT_T3_020	360	MAT_T3_022	270	COMP_060	38	Utility module	Utility module
+MODULE	MOD_262	Energy Vampire	3	Utility	M	Vampire	1200	12.0	88000	2760	MAT_T3_016	390	MAT_T3_018	290	COMP_061	40	Utility module	Utility module
+MODULE	MOD_263	Quantum Repair Module	4	Utility	XL	Repair	4800	48.0	340000	5550	MAT_T4_023	1000	MAT_T4_025	740	COMP_090	105	Utility module	Utility module
+MODULE	MOD_264	Capital Tractor Beam	4	Utility	L	Tractor	3800	38.0	280000	4950	MAT_T4_023	790	MAT_T4_026	590	COMP_091	95	Utility module	Utility module
+MODULE	MOD_265	Siege Salvager	4	Utility	XL	Salvage	5200	52.0	365000	5850	MAT_T4_024	1080	MAT_T4_027	800	COMP_092	112	Utility module	Utility module
+MODULE	MOD_266	Capital Remote Repairer	4	Utility	L	Remote	5000	50.0	355000	5700	MAT_T4_025	1040	MAT_T4_026	770	COMP_093	108	Utility module	Utility module
+MODULE	MOD_267	Quantum Neutralizer	4	Utility	L	Neutralizer	4500	45.0	330000	5400	MAT_T4_026	940	MAT_T4_027	700	COMP_094	102	Utility module	Utility module
+MODULE	MOD_268	Titan Repair Module	5	Utility	Station	Repair	20000	200.0	2200000	10800	MAT_T5_028	3600	MAT_T5_031	2600	COMP_098	310	Utility module	Utility module
+MODULE	MOD_269	Mega Tractor Beam	5	Utility	XL	Tractor	18000	180.0	2000000	10200	MAT_T5_029	3200	MAT_T5_032	2300	COMP_099	290	Utility module	Utility module
+MODULE	MOD_270	Ultimate Salvager	5	Utility	Station	Salvage	22000	220.0	2400000	11400	MAT_T5_030	4000	MAT_T5_033	2800	COMP_100	330	Utility module	Utility module
+MODULE	MOD_271	Mega Remote Repairer	5	Utility	Station	Remote	21000	210.0	2300000	11100	MAT_T5_031	3800	MAT_T5_028	2700	COMP_098	320	Utility module	Utility module
+MODULE	MOD_272	Corporate Hangar Array	3	Station	L	Hangar	2200	22.0	150000	3600	MAT_T3_016	720	MAT_T3_018	530	COMP_062	62	Station module	Station module
+MODULE	MOD_273	Manufacturing Array	3	Station	L	Production	2400	24.0	165000	3840	MAT_T3_021	790	MAT_T3_022	580	COMP_063	68	Station module	Station module
+MODULE	MOD_274	Research Laboratory	3	Station	L	Research	2100	21.0	145000	3480	MAT_T3_018	690	MAT_T3_019	510	COMP_064	60	Station module	Station module
+MODULE	MOD_275	Refinery Complex	3	Station	L	Refinery	2500	25.0	170000	3960	MAT_T3_016	820	MAT_T3_021	600	COMP_065	70	Station module	Station module
+MODULE	MOD_276	Market Hub	4	Station	XL	Market	7500	75.0	520000	7200	MAT_T4_023	1550	MAT_T4_025	1150	COMP_095	145	Station module	Station module
+MODULE	MOD_277	Defense Battery	4	Station	XL	Defense	8200	82.0	570000	7800	MAT_T4_024	1700	MAT_T4_027	1260	COMP_096	158	Station module	Station module
+MODULE	MOD_278	Docking Bay	4	Station	XL	Docking	7800	78.0	540000	7500	MAT_T4_025	1610	MAT_T4_026	1200	COMP_097	150	Station module	Station module
+MODULE	MOD_279	Cloning Facility	4	Station	L	Clone	6800	68.0	475000	6900	MAT_T4_023	1410	MAT_T4_027	1050	COMP_098	138	Station module	Station module
+MODULE	MOD_280	Mega Manufacturing Complex	5	Station	Station	Production	32000	320.0	3500000	14400	MAT_T5_028	5800	MAT_T5_031	4000	COMP_098	420	Station module	Station module
+MODULE	MOD_281	Titan Research Facility	5	Station	Station	Research	30000	300.0	3300000	13800	MAT_T5_029	5400	MAT_T5_032	3800	COMP_099	400	Station module	Station module
+MODULE	MOD_282	Ultimate Refinery	5	Station	Station	Refinery	34000	340.0	3700000	15000	MAT_T5_030	6200	MAT_T5_033	4300	COMP_100	440	Station module	Station module
+MODULE	MOD_283	Mega Market Hub	5	Station	Station	Market	28000	280.0	3100000	13200	MAT_T5_031	5000	MAT_T5_028	3600	COMP_098	380	Station module	Station module
+MODULE	MOD_284	Fortress Defense Grid	5	Station	Station	Defense	36000	360.0	4000000	15600	MAT_T5_032	6600	MAT_T5_029	4600	COMP_099	460	Station module	Station module
+MODULE	MOD_285	Capital Shipyard	5	Station	Station	Shipyard	38000	380.0	4200000	16200	MAT_T5_033	7000	MAT_T5_030	4900	COMP_100	480	Station module	Station module
+MODULE	MOD_286	Banking Vault	4	Station	L	Banking	6500	65.0	455000	6600	MAT_T4_026	1350	MAT_T4_027	1000	COMP_099	135	Station module	Station module
+MODULE	MOD_287	Station Jump Gate	5	Station	Station	Gate	40000	400.0	4500000	16800	MAT_T5_031	7400	MAT_T5_033	5200	COMP_100	500	Station module	Station module
+MODULE	MOD_288	Cynosural Field Gen	3	Utility	M	Cyno	1150	11.5	85000	2760	MAT_T3_016	380	MAT_T3_018	280	COMP_066	39	Utility module	Utility module
+MODULE	MOD_289	Jump Drive	4	Utility	XL	Jump	5500	55.0	385000	5850	MAT_T4_024	1140	MAT_T4_027	850	COMP_100	115	Utility module	Utility module
+MODULE	MOD_290	Stasis Webifier	2	Utility	S	Web	340	3.4	19000	1260	MAT_T2_010	130	MAT_T2_013	95	COMP_035	12	Utility module	Utility module
+MODULE	MOD_291	Warp Scrambler	3	Utility	M	Scrambler	1000	10.0	75000	2520	MAT_T3_016	330	MAT_T3_020	245	COMP_067	36	Utility module	Utility module
+MODULE	MOD_292	Siege Module	4	Utility	XL	Siege	6000	60.0	420000	6300	MAT_T4_023	1240	MAT_T4_025	920	COMP_100	122	Utility module	Utility module
+MODULE	MOD_293	Triage Module	4	Utility	L	Triage	5500	55.0	390000	6000	MAT_T4_026	1140	MAT_T4_027	850	COMP_099	118	Utility module	Utility module
+MODULE	MOD_294	Burst Projector	3	Utility	M	Projector	1100	11.0	82000	2640	MAT_T3_018	360	MAT_T3_019	270	COMP_068	38	Utility module	Utility module
+MODULE	MOD_295	Bomb Launcher	3	Utility	M	Bomb	1200	12.0	88000	2760	MAT_T3_021	390	MAT_T3_022	290	COMP_069	40	Utility module	Utility module
+MODULE	MOD_296	Micro Jump Drive	3	Utility	M	MJD	1050	10.5	78000	2580	MAT_T3_016	345	MAT_T3_020	255	COMP_070	37	Utility module	Utility module
+MODULE	MOD_297	Command Processor	4	Utility	L	Processor	4700	47.0	340000	5550	MAT_T4_025	980	MAT_T4_026	730	COMP_100	105	Utility module	Utility module
+MODULE	MOD_298	Entosis Link	3	Utility	M	Entosis	980	9.8	72000	2460	MAT_T3_020	320	MAT_T3_022	240	COMP_071	35	Utility module	Utility module
+MODULE	MOD_299	Drone Link Augmentor	2	Utility	S	Drone Link	380	3.8	21000	1320	MAT_T2_010	145	MAT_T2_013	105	COMP_036	13	Utility module	Utility module
+MODULE	MOD_300	Ultimate Utility Core	5	Utility	Station	Core	35000	350.0	3800000	15300	MAT_T5_030	6400	MAT_T5_033	4500	COMP_100	450	Utility module	Utility module

@@ -1,0 +1,51 @@
+DATABASE	ID	NAME	TIER	CATEGORY	SIZE	SUBCATEGORY	MASS_KG	VOLUME_M3	BASE_PRICE	PRODUCTION_TIME_SEC	INPUT_1	INPUT_1_QTY	INPUT_2	INPUT_2_QTY	INPUT_3	INPUT_3_QTY	SPECIAL_NOTES	INFO_TEXT
+MODULE	MOD_001	Basic Shield Generator	1	Shield	S	Defense	120	1.2	5000	600	MAT_T1_001	50	MAT_T1_002	30	COMP_001	5	Generates protective energy shield around ship	Generates protective energy shield around ship
+MODULE	MOD_002	Standard Shield Generator	1	Shield	S	Defense	150	1.5	6500	720	MAT_T1_001	60	MAT_T2_008	25	COMP_001	6	Generates protective energy shield around ship	Generates protective energy shield around ship
+MODULE	MOD_003	Small Shield Booster	1	Shield	S	Amplifier	80	0.8	4000	480	MAT_T1_002	40	MAT_T2_013	20	COMP_002	4	Increases shield regeneration rate	Increases shield regeneration rate
+MODULE	MOD_004	Light Shield Extender	1	Shield	S	Capacity	100	1.0	5500	600	MAT_T1_001	55	MAT_T1_003	25	COMP_003	5	Extends maximum shield capacity	Extends maximum shield capacity
+MODULE	MOD_005	Basic Hardener	1	Shield	S	Resistance	90	0.9	4500	540	MAT_T2_008	35	MAT_T2_009	20	COMP_001	4	Reduces damage taken by shields	Reduces damage taken by shields
+MODULE	MOD_006	Improved Shield Generator	2	Shield	M	Defense	450	4.5	18000	1200	MAT_T2_008	120	MAT_T2_010	80	COMP_005	15	Generates protective energy shield around ship	Generates protective energy shield around ship
+MODULE	MOD_007	Enhanced Shield Generator	2	Shield	M	Defense	520	5.2	22000	1440	MAT_T2_008	140	MAT_T2_010	90	COMP_006	18	Generates protective energy shield around ship	Generates protective energy shield around ship
+MODULE	MOD_008	Medium Shield Booster	2	Shield	M	Amplifier	380	3.8	16000	1080	MAT_T2_009	100	MAT_T2_013	60	COMP_007	12	Increases shield regeneration rate	Increases shield regeneration rate
+MODULE	MOD_009	Medium Shield Extender	2	Shield	M	Capacity	420	4.2	19000	1200	MAT_T2_010	110	MAT_T2_013	70	COMP_008	14	Extends maximum shield capacity	Extends maximum shield capacity
+MODULE	MOD_010	Advanced Hardener	2	Shield	M	Resistance	400	4.0	17000	1140	MAT_T2_008	95	MAT_T2_011	65	COMP_009	13	Reduces damage taken by shields	Reduces damage taken by shields
+MODULE	MOD_011	Elite Shield Generator	3	Shield	M	Defense	850	8.5	75000	2400	MAT_T3_016	200	MAT_T3_018	120	COMP_015	30	Generates protective energy shield around ship	Generates protective energy shield around ship
+MODULE	MOD_012	Combat Shield Generator	3	Shield	M	Defense	920	9.2	85000	2640	MAT_T3_016	220	MAT_T3_020	140	COMP_016	35	Generates protective energy shield around ship	Generates protective energy shield around ship
+MODULE	MOD_013	Tactical Shield Generator	3	Shield	L	Defense	1100	11.0	95000	2880	MAT_T3_016	250	MAT_T3_021	150	COMP_017	38	Generates protective energy shield around ship	Generates protective energy shield around ship
+MODULE	MOD_014	Heavy Shield Booster	3	Shield	M	Amplifier	780	7.8	68000	2280	MAT_T3_016	180	MAT_T3_019	110	COMP_018	28	Increases shield regeneration rate	Increases shield regeneration rate
+MODULE	MOD_015	Large Shield Extender	3	Shield	L	Capacity	950	9.5	80000	2520	MAT_T3_018	200	MAT_T3_021	130	COMP_019	32	Extends maximum shield capacity	Extends maximum shield capacity
+MODULE	MOD_016	Elite Hardener	3	Shield	M	Resistance	820	8.2	72000	2400	MAT_T3_020	190	MAT_T3_022	125	COMP_020	30	Reduces damage taken by shields	Reduces damage taken by shields
+MODULE	MOD_017	Adaptive Shield System	3	Shield	L	Smart	1050	10.5	90000	2760	MAT_T3_016	230	MAT_T3_018	145	COMP_021	36	Provides shield defense capabilities	Provides shield defense capabilities
+MODULE	MOD_018	Quantum Shield Generator	4	Shield	L	Defense	3200	32.0	280000	4800	MAT_T4_023	600	MAT_T4_025	400	COMP_045	80	Generates protective energy shield around ship	Generates protective energy shield around ship
+MODULE	MOD_019	Capital Shield Generator	4	Shield	L	Defense	3600	36.0	320000	5400	MAT_T4_023	680	MAT_T4_026	450	COMP_046	90	Generates protective energy shield around ship	Generates protective energy shield around ship
+MODULE	MOD_020	Siege Shield Booster	4	Shield	L	Amplifier	2800	28.0	250000	4500	MAT_T4_024	550	MAT_T4_025	380	COMP_047	75	Increases shield regeneration rate	Increases shield regeneration rate
+MODULE	MOD_021	Capital Shield Extender	4	Shield	XL	Capacity	3400	34.0	300000	5100	MAT_T4_025	650	MAT_T4_027	420	COMP_048	85	Extends maximum shield capacity	Extends maximum shield capacity
+MODULE	MOD_022	Quantum Hardener	4	Shield	L	Resistance	3000	30.0	265000	4800	MAT_T4_026	580	MAT_T4_027	400	COMP_049	78	Reduces damage taken by shields	Reduces damage taken by shields
+MODULE	MOD_023	Titan Shield Generator	5	Shield	XL	Defense	12000	120.0	1800000	9600	MAT_T5_028	2000	MAT_T5_031	1200	COMP_090	200	Generates protective energy shield around ship	Generates protective energy shield around ship
+MODULE	MOD_024	Mega Shield Booster	5	Shield	XL	Amplifier	10000	100.0	1500000	8400	MAT_T5_029	1800	MAT_T5_032	1000	COMP_091	180	Increases shield regeneration rate	Increases shield regeneration rate
+MODULE	MOD_025	Ultimate Shield Extender	5	Shield	Station	Capacity	15000	150.0	2200000	10800	MAT_T5_030	2400	MAT_T5_033	1400	COMP_092	220	Extends maximum shield capacity	Extends maximum shield capacity
+MODULE	MOD_026	Basic Armor Plate	1	Armor	S	Plating	180	1.8	4500	600	MAT_T1_001	70	MAT_T2_008	40	COMP_001	5	Adds armor plating to hull	Adds armor plating to hull
+MODULE	MOD_027	Standard Armor Plate	1	Armor	S	Plating	220	2.2	6000	720	MAT_T1_001	85	MAT_T2_008	50	COMP_002	6	Adds armor plating to hull	Adds armor plating to hull
+MODULE	MOD_028	Small Armor Hardener	1	Armor	S	Resistance	140	1.4	4000	540	MAT_T2_009	50	MAT_T2_010	30	COMP_003	4	Increases ship armor protection	Increases ship armor protection
+MODULE	MOD_029	Light Armor Repair	1	Armor	S	Repair	160	1.6	5000	600	MAT_T1_002	60	MAT_T2_013	35	COMP_004	5	Enables armor self-repair systems	Enables armor self-repair systems
+MODULE	MOD_030	Reactive Plating	1	Armor	S	Reactive	150	1.5	5500	660	MAT_T2_008	65	MAT_T2_014	38	COMP_005	5	Increases ship armor protection	Increases ship armor protection
+MODULE	MOD_031	Improved Armor Plate	2	Armor	M	Plating	680	6.8	20000	1200	MAT_T2_008	180	MAT_T2_010	120	COMP_010	15	Adds armor plating to hull	Adds armor plating to hull
+MODULE	MOD_032	Enhanced Armor Plate	2	Armor	M	Plating	780	7.8	24000	1440	MAT_T2_008	200	MAT_T2_010	140	COMP_011	18	Adds armor plating to hull	Adds armor plating to hull
+MODULE	MOD_033	Medium Armor Hardener	2	Armor	M	Resistance	580	5.8	18000	1080	MAT_T2_009	150	MAT_T2_011	100	COMP_012	12	Increases ship armor protection	Increases ship armor protection
+MODULE	MOD_034	Medium Armor Repair	2	Armor	M	Repair	620	6.2	19000	1200	MAT_T2_010	160	MAT_T2_013	110	COMP_013	14	Enables armor self-repair systems	Enables armor self-repair systems
+MODULE	MOD_035	Composite Armor	2	Armor	M	Composite	720	7.2	22000	1320	MAT_T2_014	170	MAT_T2_015	115	COMP_014	16	Increases ship armor protection	Increases ship armor protection
+MODULE	MOD_036	Elite Armor Plate	3	Armor	L	Plating	1300	13.0	80000	2400	MAT_T3_016	350	MAT_T3_018	220	COMP_025	35	Adds armor plating to hull	Adds armor plating to hull
+MODULE	MOD_037	Combat Armor Plate	3	Armor	M	Plating	1150	11.5	72000	2280	MAT_T3_016	320	MAT_T3_020	200	COMP_026	32	Adds armor plating to hull	Adds armor plating to hull
+MODULE	MOD_038	Tactical Armor System	3	Armor	L	System	1450	14.5	90000	2640	MAT_T3_021	380	MAT_T3_022	240	COMP_027	38	Increases ship armor protection	Increases ship armor protection
+MODULE	MOD_039	Heavy Armor Hardener	3	Armor	M	Resistance	1100	11.0	68000	2280	MAT_T3_018	300	MAT_T3_019	190	COMP_028	30	Increases ship armor protection	Increases ship armor protection
+MODULE	MOD_040	Large Armor Repair	3	Armor	L	Repair	1250	12.5	75000	2520	MAT_T3_016	340	MAT_T3_020	210	COMP_029	34	Enables armor self-repair systems	Enables armor self-repair systems
+MODULE	MOD_041	Nanofiber Armor	3	Armor	M	Nanotech	1200	12.0	78000	2400	MAT_T3_021	330	MAT_T2_014	205	COMP_030	33	Increases ship armor protection	Increases ship armor protection
+MODULE	MOD_042	Crystalline Armor	3	Armor	L	Exotic	1350	13.5	85000	2760	MAT_T3_018	360	MAT_T3_022	225	COMP_031	36	Increases ship armor protection	Increases ship armor protection
+MODULE	MOD_043	Quantum Armor Plate	4	Armor	XL	Plating	4800	48.0	320000	4800	MAT_T4_023	900	MAT_T4_025	600	COMP_055	90	Adds armor plating to hull	Adds armor plating to hull
+MODULE	MOD_044	Capital Armor Plate	4	Armor	L	Plating	4200	42.0	280000	4500	MAT_T4_023	800	MAT_T4_026	550	COMP_056	85	Adds armor plating to hull	Adds armor plating to hull
+MODULE	MOD_045	Siege Armor System	4	Armor	XL	System	5200	52.0	350000	5400	MAT_T4_024	1000	MAT_T4_027	650	COMP_057	95	Increases ship armor protection	Increases ship armor protection
+MODULE	MOD_046	Capital Armor Hardener	4	Armor	L	Resistance	4000	40.0	265000	4500	MAT_T4_025	850	MAT_T4_026	580	COMP_058	82	Increases ship armor protection	Increases ship armor protection
+MODULE	MOD_047	Capital Armor Repair	4	Armor	L	Repair	4400	44.0	300000	5100	MAT_T4_023	920	MAT_T4_027	620	COMP_059	88	Enables armor self-repair systems	Enables armor self-repair systems
+MODULE	MOD_048	Titan Armor Plate	5	Armor	Station	Plating	18000	180.0	2000000	9600	MAT_T5_028	3000	MAT_T5_031	1800	COMP_095	220	Adds armor plating to hull	Adds armor plating to hull
+MODULE	MOD_049	Mega Armor System	5	Armor	XL	System	16000	160.0	1800000	8400	MAT_T5_029	2800	MAT_T5_032	1600	COMP_096	200	Increases ship armor protection	Increases ship armor protection
+MODULE	MOD_050	Ultimate Armor Repair	5	Armor	Station	Repair	20000	200.0	2400000	10800	MAT_T5_030	3500	MAT_T5_033	2000	COMP_097	250	Enables armor self-repair systems	Enables armor self-repair systems

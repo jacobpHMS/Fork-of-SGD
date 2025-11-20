@@ -1,0 +1,51 @@
+DATABASE	ID	NAME	TIER	CATEGORY	SIZE	SUBCATEGORY	MASS_KG	VOLUME_M3	BASE_PRICE	PRODUCTION_TIME_SEC	INPUT_1	INPUT_1_QTY	INPUT_2	INPUT_2_QTY	INPUT_3	INPUT_3_QTY	SPECIAL_NOTES	INFO_TEXT
+MODULE	MOD_051	Basic Thruster	1	Engines	S	Propulsion	200	2.0	6000	720	MAT_T1_001	80	MAT_T1_002	50	COMP_010	6	Provides primary ship propulsion	Provides primary ship propulsion
+MODULE	MOD_052	Standard Engine	1	Engines	S	Propulsion	250	2.5	7500	840	MAT_T1_001	100	MAT_T2_009	60	COMP_011	7	Provides primary ship propulsion	Provides primary ship propulsion
+MODULE	MOD_053	Light Afterburner	1	Engines	S	Speed Boost	180	1.8	5500	660	MAT_T1_002	70	MAT_T2_013	45	COMP_012	6	Provides short burst of extreme speed	Provides short burst of extreme speed
+MODULE	MOD_054	Small Microwarpdrive	1	Engines	S	Warp	220	2.2	8000	900	MAT_T2_010	90	MAT_T2_013	55	COMP_013	7	Sustained high-speed propulsion	Sustained high-speed propulsion
+MODULE	MOD_055	Basic Gyrostabilizer	1	Engines	S	Agility	160	1.6	5000	600	MAT_T1_003	65	MAT_T2_008	40	COMP_014	5	Provides primary ship propulsion	Provides primary ship propulsion
+MODULE	MOD_056	Improved Thruster	2	Engines	M	Propulsion	750	7.5	25000	1440	MAT_T2_008	200	MAT_T2_010	140	COMP_020	18	Provides primary ship propulsion	Provides primary ship propulsion
+MODULE	MOD_057	Enhanced Engine	2	Engines	M	Propulsion	850	8.5	28000	1560	MAT_T2_009	220	MAT_T2_010	160	COMP_021	20	Provides primary ship propulsion	Provides primary ship propulsion
+MODULE	MOD_058	Medium Afterburner	2	Engines	M	Speed Boost	680	6.8	22000	1320	MAT_T2_010	180	MAT_T2_013	120	COMP_022	16	Provides short burst of extreme speed	Provides short burst of extreme speed
+MODULE	MOD_059	Medium Microwarpdrive	2	Engines	M	Warp	820	8.2	30000	1680	MAT_T2_010	230	MAT_T2_014	150	COMP_023	19	Sustained high-speed propulsion	Sustained high-speed propulsion
+MODULE	MOD_060	Improved Gyrostabilizer	2	Engines	M	Agility	720	7.2	24000	1380	MAT_T2_008	190	MAT_T2_011	130	COMP_024	17	Provides primary ship propulsion	Provides primary ship propulsion
+MODULE	MOD_061	Elite Thruster	3	Engines	L	Propulsion	1600	16.0	95000	2640	MAT_T3_016	400	MAT_T3_018	280	COMP_040	40	Provides primary ship propulsion	Provides primary ship propulsion
+MODULE	MOD_062	Combat Engine	3	Engines	M	Propulsion	1400	14.0	85000	2400	MAT_T3_016	360	MAT_T3_020	260	COMP_041	38	Provides primary ship propulsion	Provides primary ship propulsion
+MODULE	MOD_063	Tactical Thruster	3	Engines	L	Propulsion	1750	17.5	105000	2880	MAT_T3_021	450	MAT_T3_022	300	COMP_042	42	Provides primary ship propulsion	Provides primary ship propulsion
+MODULE	MOD_064	Heavy Afterburner	3	Engines	M	Speed Boost	1350	13.5	82000	2520	MAT_T3_018	340	MAT_T3_019	240	COMP_043	36	Provides short burst of extreme speed	Provides short burst of extreme speed
+MODULE	MOD_065	Large Microwarpdrive	3	Engines	L	Warp	1650	16.5	98000	2760	MAT_T3_016	420	MAT_T3_021	290	COMP_044	40	Sustained high-speed propulsion	Sustained high-speed propulsion
+MODULE	MOD_066	Elite Gyrostabilizer	3	Engines	M	Agility	1300	13.0	80000	2400	MAT_T3_020	350	MAT_T3_022	250	COMP_045	35	Provides primary ship propulsion	Provides primary ship propulsion
+MODULE	MOD_067	Ion Drive System	3	Engines	L	Ion	1800	18.0	110000	3000	MAT_T3_016	480	MAT_T3_018	320	COMP_046	44	Provides primary ship propulsion	Provides primary ship propulsion
+MODULE	MOD_068	Quantum Thruster	4	Engines	XL	Propulsion	5500	55.0	350000	5400	MAT_T4_023	1100	MAT_T4_025	750	COMP_065	100	Provides primary ship propulsion	Provides primary ship propulsion
+MODULE	MOD_069	Capital Engine	4	Engines	L	Propulsion	4800	48.0	310000	4800	MAT_T4_023	980	MAT_T4_026	680	COMP_066	95	Provides primary ship propulsion	Provides primary ship propulsion
+MODULE	MOD_070	Siege Afterburner	4	Engines	L	Speed Boost	4500	45.0	285000	4650	MAT_T4_024	920	MAT_T4_025	640	COMP_067	88	Provides short burst of extreme speed	Provides short burst of extreme speed
+MODULE	MOD_071	Capital Microwarpdrive	4	Engines	XL	Warp	5800	58.0	380000	5700	MAT_T4_025	1200	MAT_T4_027	800	COMP_068	105	Sustained high-speed propulsion	Sustained high-speed propulsion
+MODULE	MOD_072	Quantum Gyrostabilizer	4	Engines	L	Agility	4700	47.0	295000	4800	MAT_T4_026	960	MAT_T4_027	670	COMP_069	92	Provides primary ship propulsion	Provides primary ship propulsion
+MODULE	MOD_073	Titan Thruster	5	Engines	Station	Propulsion	22000	220.0	2200000	10800	MAT_T5_028	3800	MAT_T5_031	2400	COMP_098	280	Provides primary ship propulsion	Provides primary ship propulsion
+MODULE	MOD_074	Mega Drive System	5	Engines	XL	Propulsion	19000	190.0	1900000	9600	MAT_T5_029	3400	MAT_T5_032	2100	COMP_099	250	Provides primary ship propulsion	Provides primary ship propulsion
+MODULE	MOD_075	Ultimate Warp Drive	5	Engines	Station	Warp	25000	250.0	2600000	11400	MAT_T5_030	4200	MAT_T5_033	2800	COMP_100	300	Provides primary ship propulsion	Provides primary ship propulsion
+MODULE	MOD_076	Basic Reactor	1	Power	S	Generation	280	2.8	7000	840	MAT_T1_001	110	MAT_T1_004	70	COMP_015	8	Generates ship electrical power	Generates ship electrical power
+MODULE	MOD_077	Standard Power Core	1	Power	S	Generation	320	3.2	8500	960	MAT_T1_001	130	MAT_T2_009	80	COMP_016	9	Manages ship power systems	Manages ship power systems
+MODULE	MOD_078	Small Capacitor	1	Power	S	Storage	240	2.4	6500	780	MAT_T1_002	95	MAT_T2_013	60	COMP_017	7	Stores energy for power demands	Stores energy for power demands
+MODULE	MOD_079	Light Power Relay	1	Power	S	Distribution	200	2.0	5500	660	MAT_T1_003	80	MAT_T2_008	50	COMP_018	6	Distributes power to ship systems	Distributes power to ship systems
+MODULE	MOD_080	Basic Energy Regulator	1	Power	S	Control	220	2.2	6000	720	MAT_T2_010	90	MAT_T2_013	55	COMP_019	7	Manages ship power systems	Manages ship power systems
+MODULE	MOD_081	Improved Reactor	2	Power	M	Generation	950	9.5	30000	1680	MAT_T2_008	240	MAT_T2_010	180	COMP_030	22	Generates ship electrical power	Generates ship electrical power
+MODULE	MOD_082	Enhanced Power Core	2	Power	M	Generation	1100	11.0	35000	1860	MAT_T2_009	280	MAT_T2_010	200	COMP_031	25	Manages ship power systems	Manages ship power systems
+MODULE	MOD_083	Medium Capacitor	2	Power	M	Storage	880	8.8	28000	1560	MAT_T2_010	230	MAT_T2_013	160	COMP_032	20	Stores energy for power demands	Stores energy for power demands
+MODULE	MOD_084	Medium Power Relay	2	Power	M	Distribution	820	8.2	26000	1440	MAT_T2_008	210	MAT_T2_011	150	COMP_033	19	Distributes power to ship systems	Distributes power to ship systems
+MODULE	MOD_085	Improved Energy Regulator	2	Power	M	Control	900	9.0	29000	1620	MAT_T2_010	235	MAT_T2_014	165	COMP_034	21	Manages ship power systems	Manages ship power systems
+MODULE	MOD_086	Elite Reactor	3	Power	L	Generation	2000	20.0	120000	2880	MAT_T3_016	520	MAT_T3_018	380	COMP_050	50	Generates ship electrical power	Generates ship electrical power
+MODULE	MOD_087	Combat Power Core	3	Power	M	Generation	1750	17.5	105000	2640	MAT_T3_016	480	MAT_T3_020	350	COMP_051	48	Manages ship power systems	Manages ship power systems
+MODULE	MOD_088	Tactical Reactor	3	Power	L	Generation	2200	22.0	135000	3120	MAT_T3_021	580	MAT_T3_022	420	COMP_052	55	Generates ship electrical power	Generates ship electrical power
+MODULE	MOD_089	Large Capacitor	3	Power	L	Storage	1900	19.0	115000	2760	MAT_T3_018	500	MAT_T3_019	370	COMP_053	47	Stores energy for power demands	Stores energy for power demands
+MODULE	MOD_090	Heavy Power Relay	3	Power	M	Distribution	1800	18.0	110000	2640	MAT_T3_016	490	MAT_T3_021	360	COMP_054	46	Distributes power to ship systems	Distributes power to ship systems
+MODULE	MOD_091	Elite Energy Regulator	3	Power	M	Control	1850	18.5	112000	2700	MAT_T3_020	510	MAT_T3_022	375	COMP_055	48	Manages ship power systems	Manages ship power systems
+MODULE	MOD_092	Fusion Reactor	3	Power	L	Fusion	2150	21.5	130000	3000	MAT_T3_016	560	MAT_T3_018	410	COMP_056	52	Generates ship electrical power	Generates ship electrical power
+MODULE	MOD_093	Quantum Reactor	4	Power	XL	Generation	7000	70.0	420000	6000	MAT_T4_023	1400	MAT_T4_025	1000	COMP_075	120	Generates ship electrical power	Generates ship electrical power
+MODULE	MOD_094	Capital Power Core	4	Power	L	Generation	6200	62.0	380000	5400	MAT_T4_023	1250	MAT_T4_026	900	COMP_076	115	Manages ship power systems	Manages ship power systems
+MODULE	MOD_095	Siege Reactor	4	Power	XL	Generation	7500	75.0	450000	6600	MAT_T4_024	1550	MAT_T4_027	1100	COMP_077	125	Generates ship electrical power	Generates ship electrical power
+MODULE	MOD_096	Capital Capacitor	4	Power	L	Storage	6500	65.0	395000	5700	MAT_T4_025	1300	MAT_T4_026	950	COMP_078	118	Stores energy for power demands	Stores energy for power demands
+MODULE	MOD_097	Quantum Power Relay	4	Power	L	Distribution	6000	60.0	365000	5400	MAT_T4_026	1200	MAT_T4_027	880	COMP_079	112	Distributes power to ship systems	Distributes power to ship systems
+MODULE	MOD_098	Titan Reactor	5	Power	Station	Generation	28000	280.0	2800000	12000	MAT_T5_028	5000	MAT_T5_031	3200	COMP_098	350	Generates ship electrical power	Generates ship electrical power
+MODULE	MOD_099	Mega Power Core	5	Power	XL	Generation	24000	240.0	2400000	10800	MAT_T5_029	4500	MAT_T5_032	2900	COMP_099	320	Manages ship power systems	Manages ship power systems
+MODULE	MOD_100	Ultimate Capacitor	5	Power	Station	Storage	30000	300.0	3200000	13200	MAT_T5_030	5500	MAT_T5_033	3600	COMP_100	380	Stores energy for power demands	Stores energy for power demands

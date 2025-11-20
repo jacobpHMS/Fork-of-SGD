@@ -1,0 +1,126 @@
+DATABASE	ID	NAME	TIER	CATEGORY	SIZE	SUBCATEGORY	MASS_KG	VOLUME_M3	BASE_PRICE	PRODUCTION_TIME_SEC	INPUT_1	INPUT_1_QTY	INPUT_2	INPUT_2_QTY	INPUT_3	INPUT_3_QTY	SPECIAL_NOTES	INFO_TEXT
+
+# ========================================
+# SECTION 1: ORES (32 entries)
+# ========================================
+ORE_T1_001	Ferralite	1	12.0	25	5	100	MAT_T1_001	65	MAT_T1_002	15	MAT_T2_009	8	WASTE_002	12	None	None	25 module	0.85	1.0	1.8	3.0	5.0	25 module
+ORE_T1_002	Metalite	1	11.0	24	5	95	MAT_T1_001	70	MAT_T2_007	12	MAT_T2_014	5	WASTE_001	13	None	None	24 module	0.85	1.0	1.8	3.0	5.0	24 module
+ORE_T1_003	Cupreon	1	10.0	26	5	120	MAT_T1_002	60	MAT_T1_001	20	MAT_T1_003	8	WASTE_002	12	None	None	26 module	0.85	1.0	1.8	3.0	5.0	26 module
+ORE_T1_004	Cuprex	1	9.0	25	5	115	MAT_T1_002	68	MAT_T1_003	15	MAT_T2_013	5	WASTE_003	12	None	None	25 module	0.85	1.0	1.8	3.0	5.0	25 module
+ORE_T1_005	Palestone	1	8.0	22	6	140	MAT_T1_005	55	MAT_T1_001	18	MAT_T1_004	12	WASTE_003	15	None	None	22 module	0.85	1.0	1.8	3.0	5.0	22 module
+ORE_T1_006	Titanex	1	7.0	23	6	180	MAT_T2_010	50	MAT_T1_001	22	MAT_T2_008	10	WASTE_001	18	None	None	23 module	0.85	1.0	1.8	3.0	5.0	23 module
+ORE_T1_007	Densore	1	6.0	28	6	160	MAT_T1_001	58	MAT_T2_010	20	MAT_T2_006	8	WASTE_005	14	None	None	28 module	0.85	1.0	1.8	3.0	5.0	28 module
+ORE_T1_008	Mirrorvein	1	5.0	24	7	200	MAT_T2_008	45	MAT_T1_002	25	MAT_T2_009	12	WASTE_002	18	None	None	24 module	0.85	1.0	1.8	3.0	5.0	24 module
+ORE_T1_009	Azurex	1	4.0	26	7	220	MAT_T1_002	72	MAT_T2_012	10	MAT_T2_013	5	WASTE_003	13	None	None	26 module	0.85	1.0	1.8	3.0	5.0	26 module
+ORE_T1_010	Sunvein	1	3.0	25	7	250	MAT_T1_002	50	MAT_T1_004	28	MAT_T1_003	10	WASTE_002	12	None	None	25 module	0.85	1.0	1.8	3.0	5.0	25 module
+ORE_T2_011	Chromore	2	5.0	27	10	400	MAT_T2_008	58	MAT_T2_009	18	MAT_T2_014	10	WASTE_001	14	None	None	27 module	0.85	1.0	1.8	3.0	5.0	27 module
+ORE_T2_012	Noblore	2	4.0	30	10	500	MAT_T2_006	45	MAT_T1_004	22	MAT_T2_015	15	WASTE_005	18	None	None	30 module	0.85	1.0	1.8	3.0	5.0	30 module
+ORE_T2_013	Abyssite	2	3.0	29	11	550	MAT_T2_007	52	MAT_T2_010	20	MAT_T2_011	12	WASTE_001	16	None	None	29 module	0.85	1.0	1.8	3.0	5.0	29 module
+ORE_T2_014	Radiantweave	2	3.0	24	11	600	MAT_T2_013	48	MAT_T2_014	25	MAT_T2_015	10	WASTE_003	17	None	None	24 module	0.85	1.0	1.8	3.0	5.0	24 module
+ORE_T2_015	Fluxore	2	2.0	28	12	700	MAT_T2_011	50	MAT_T2_012	20	MAT_T2_007	15	WASTE_001	15	None	None	28 module	0.85	1.0	1.8	3.0	5.0	28 module
+ORE_T3_016	Radex	3	2.0	26	15	1500	MAT_T3_016	55	MAT_T3_017	18	MAT_T2_013	10	WASTE_004	17	GAS_T1_001	GAS_T1_002	26 module	0.85	1.0	1.8	3.0	5.0	26 module
+ORE_T3_017	Fusionore	3	1.5	27	16	1800	MAT_T3_017	52	MAT_T3_018	20	MAT_T2_014	12	WASTE_001	16	GAS_T1_002	GAS_T2_001	27 module	0.85	1.0	1.8	3.0	5.0	27 module
+ORE_T3_018	Attractore	3	1.0	29	17	2000	MAT_T3_019	48	MAT_T2_009	22	MAT_T3_020	12	WASTE_002	18	GAS_T2_001	GAS_T1_001	29 module	0.85	1.0	1.8	3.0	5.0	29 module
+ORE_T3_019	Novaore	3	1.0	25	18	2200	MAT_T3_020	50	MAT_T3_021	18	MAT_T3_022	15	WASTE_003	17	GAS_T1_001	GAS_T1_002	25 module	0.85	1.0	1.8	3.0	5.0	25 module
+ORE_T3_020	Auralith	3	0.5	24	20	3000	MAT_T3_022	55	MAT_T2_015	20	MAT_T3_018	10	WASTE_004	15	GAS_T1_002	None	24 module	0.85	1.0	1.8	3.0	5.0	24 module
+ORE_T4_021	Lumispar	4	0.5	23	25	5000	MAT_T4_023	50	MAT_T4_024	18	MAT_T3_020	15	WASTE_003	17	GAS_T2_002	GAS_T2_003	23 module	0.85	1.0	1.8	3.0	5.0	23 module
+ORE_T4_022	Nexalith	4	0.4	24	27	6000	MAT_T4_024	48	MAT_T4_025	20	MAT_T3_021	12	WASTE_002	20	GAS_T2_003	GAS_T3_001	24 module	0.85	1.0	1.8	3.0	5.0	24 module
+ORE_T4_023	Cupralith	4	0.3	25	30	7500	MAT_T4_025	52	MAT_T4_026	18	MAT_T3_022	10	WASTE_004	20	GAS_T3_001	GAS_T2_002	25 module	0.85	1.0	1.8	3.0	5.0	25 module
+ORE_T4_024	Alumara	4	0.3	22	32	8000	MAT_T4_026	50	MAT_T4_027	20	MAT_T3_019	12	WASTE_001	18	GAS_T2_002	GAS_T2_003	22 module	0.85	1.0	1.8	3.0	5.0	22 module
+ORE_T4_025	Serendyn	4	0.2	21	35	10000	MAT_T4_027	55	MAT_T3_018	18	MAT_T4_023	10	WASTE_005	17	GAS_T2_003	GAS_T3_001	21 module	0.85	1.0	1.8	3.0	5.0	21 module
+ORE_T5_026	Rhodochros	5	0.08	20	40	20000	MAT_T5_028	48	MAT_T5_029	20	MAT_T4_025	15	WASTE_003	17	GAS_T3_002	GAS_T3_003	20 module	0.85	1.0	1.8	3.0	5.0	20 module
+ORE_T5_027	Chromdravit	5	0.06	19	45	25000	MAT_T5_029	50	MAT_T5_030	18	MAT_T4_026	12	WASTE_004	20	GAS_T3_003	GAS_T4_001	19 module	0.85	1.0	1.8	3.0	5.0	19 module
+ORE_T5_028	Cobaltore	5	0.05	21	50	30000	MAT_T5_030	52	MAT_T4_027	20	MAT_T5_028	10	WASTE_002	18	GAS_T4_001	GAS_T3_002	21 module	0.85	1.0	1.8	3.0	5.0	21 module
+ORE_T5_029	Hematine	5	0.04	22	55	35000	MAT_T5_028	50	MAT_T4_024	18	MAT_T5_029	15	WASTE_001	17	GAS_T3_002	GAS_T3_003	22 module	0.85	1.0	1.8	3.0	5.0	22 module
+ORE_T5_030	Borax	5	0.03	20	60	40000	MAT_T5_029	55	MAT_T4_023	18	MAT_T5_030	10	WASTE_005	17	GAS_T4_001	GAS_T3_002	20 module	0.85	1.0	1.8	3.0	5.0	20 module
+ORE_T6_031	Cassiteride	6	0.03	18	90	100000	MAT_T6_031	50	MAT_T6_032	20	MAT_T5_028	15	WASTE_003	15	GAS_T4_001	None	18 module	0.85	1.0	1.8	3.0	5.0	18 module
+ORE_T6_032	Vanadinite	6	0.01	17	120	150000	MAT_T6_032	55	MAT_T6_033	18	MAT_T5_030	12	WASTE_004	15	GAS_T4_001	None	17 module	0.85	1.0	1.8	3.0	5.0	17 module
+
+# ========================================
+# SECTION 2: REFINED MATERIALS (33 entries)
+# ========================================
+MAT_T1_001	Ironyx	1	Base-Metal	2.5	150	Structures	Frames	Hull Plates; Structural Beams									2.5 module	2.5 module
+MAT_T1_002	Redwire	1	Base-Metal	2.3	180	Electronics	Wiring	Circuit Boards; Power Cables									2.3 module	2.3 module
+MAT_T1_003	Stannel	1	Base-Metal	2.4	160	Alloys	Soldering	Connector Pins; Solder Wire									2.4 module	2.4 module
+MAT_T1_004	Galvan	1	Base-Metal	2.6	140	Coating	Corrosion-Protection	Galvanized Plates									2.6 module	2.6 module
+MAT_T1_005	Skylar	1	Light-Metal	2.0	200	Light-Structures	Fuel-Tanks	Light Frames; Tank Shells									2.0 module	2.0 module
+MAT_T2_006	Plumbex	2	Heavy-Metal	3.2	300	Shielding	Ballast	Radiation Shielding									3.2 module	3.2 module
+MAT_T2_007	Mangyx	2	Alloy-Metal	2.7	350	High-Strength	Tools	High-Strength Bolts									2.7 module	2.7 module
+MAT_T2_008	Chromex	2	Alloy-Metal	2.5	400	Armor	Heat-Resistance	Armor Plates T1									2.5 module	2.5 module
+MAT_T2_009	Nickron	2	Alloy-Metal	2.6	380	Alloys	Corrosion-Resistant	Specialized Alloys									2.6 module	2.6 module
+MAT_T2_010	Titanyx	2	Strong-Metal	2.4	500	Aerospace	Light-Armor	Light Armor Plates									2.4 module	2.4 module
+MAT_T2_011	Vanox	2	Specialty-Metal	2.8	450	High-Temp	Catalysts	Heat Exchangers									2.8 module	2.8 module
+MAT_T2_012	Kobaltyx	2	Magnetic-Metal	2.7	420	Magnets	Batteries	Magnetic Coils									2.7 module	2.7 module
+MAT_T2_013	Silicron	2	Semi-Metal	2.2	600	Electronics	Solar-Cells	Microchips T1									2.2 module	2.2 module
+MAT_T2_014	Carbonex	2	Composite	1.8	550	Composites	Fibers	Carbon Fiber Sheets									1.8 module	1.8 module
+MAT_T2_015	Polymyx	2	Polymer	1.5	500	Plastics	Insulation	Insulation Panels									1.5 module	1.5 module
+MAT_T3_016	Fissium-U	3	Radioactive	3.5	2000	Reactor-Fuel	Power-Gen	Reactor Fuel Rods									Manages ship power systems	Manages ship power systems
+MAT_T3_017	Thorex	3	Radioactive	3.4	2200	Advanced-Reactors	Shielding	Advanced Fuel Cells									Manages ship power systems	Manages ship power systems
+MAT_T3_018	Tungstyx	3	Refractory	3.8	2500	High-Temp	Armor	Heavy Armor Plates									3.8 module	3.8 module
+MAT_T3_019	Magnyx	3	Magnetic	2.9	2800	Propulsion	Shields	Shield Generators T2									Provides primary ship propulsion	Provides primary ship propulsion
+MAT_T3_020	Aurex	3	Precious	2.0	5000	Electronics	Conductors	Premium Circuits									2.0 module	2.0 module
+MAT_T3_021	Selenyx	3	Rare-Earth	2.6	3000	Optics	Sensors	Sensor Arrays T2									2.6 module	2.6 module
+MAT_T3_022	Germyx	3	Semi-Metal	2.3	3500	Advanced-Electronics	Detectors	Advanced Processors									2.3 module	2.3 module
+MAT_T4_023	Yttrex	4	Rare-Earth	2.7	8000	Lasers	Optics	Laser Components T3									2.7 module	2.7 module
+MAT_T4_024	Niobyx	4	Superconductor	2.5	10000	Magnets	Superconductors	Superconducting Coils									2.5 module	2.5 module
+MAT_T4_025	Platikar	4	Precious	2.1	15000	Catalysts	Electronics	Elite Catalyst Units									2.1 module	2.1 module
+MAT_T4_026	Beryllex	4	Light-Alloy	1.9	12000	Aerospace	Optics	Advanced Optics									1.9 module	1.9 module
+MAT_T4_027	Fissium-Pu	4	Fissile	3.6	20000	Weapons	Advanced-Power	Weapon Power Cells									3.6 module	3.6 module
+MAT_T5_028	Borcrys	5	Crystal	1.7	40000	High-Tech	Energy-Storage	Energy Crystals									1.7 module	1.7 module
+MAT_T5_029	Neurogel	5	Bio-Tech	1.2	50000	AI-Systems	Neural-Interface	AI Core Components									1.2 module	1.2 module
+MAT_T5_030	Voidshatter	5	Exotic	1.5	60000	Warp-Drive	Shields	Warp Core Fragments									1.5 module	1.5 module
+MAT_T6_031	Phasium	6	Phase-Material	1.3	150000	Phase-Tech	Stealth	Phase Shift Units									1.3 module	1.3 module
+MAT_T6_032	Chronyx	6	Temporal	1.4	200000	Time-Tech	Advanced-Sensors	Temporal Sensors									1.4 module	1.4 module
+MAT_T6_033	Singulyx	6	Exotic-Matter	1.1	300000	Capital-Weapons	Mega-Structures	Singularity Containment									1.1 module	1.1 module
+
+# ========================================
+# SECTION 3: GASES (10 entries)
+# ========================================
+GAS_T1_001	Hydrogen	1	1100	50	Basic-Fuel	Fusion-Reactors	3	5-15									Manages ship power systems	Manages ship power systems
+GAS_T1_002	Oxygen	1	700	60	Life-Support	Oxidizer	3	5-12									60 module	60 module
+GAS_T1_003	Nitrogen	1	800	45	Process-Gas	Coolant	3	3-10									45 module	45 module
+GAS_T2_001	Argon	2	600	150	Welding	Isolation	3	2-8									150 module	150 module
+GAS_T2_002	Helium	2	900	200	Coolant	Lift-Gas	4	3-10									200 module	200 module
+GAS_T2_003	Methane	2	650	180	Fuel	Chemistry	4	2-7									180 module	180 module
+GAS_T3_001	Neon	3	550	1000	Electronics	Lasers	4	1-5									1000 module	1000 module
+GAS_T3_002	Xenon	3	500	2000	Ion-Drives	Electronics	5	1-4									2000 module	2000 module
+GAS_T3_003	Plasma-Gas	3	400	3000	Weapons	Energy-Systems	5	0.5-3									3000 module	3000 module
+GAS_T4_001	Deuterium	4	800	50000	Premium-Fuel	Fusion	6	0.5-2									50000 module	50000 module
+
+# ========================================
+# SECTION 4: WASTE PRODUCTS (5 entries)
+# ========================================
+WASTE_001	Gestein	40	5	Filter-Coarse	Ballast	Fill-Material	No	None									Filter-Coarse module	Filter-Coarse module
+WASTE_002	Kiesel	35	8	Filter-Medium	Drainage	Concrete-Base	No	None									Filter-Medium module	Filter-Medium module
+WASTE_003	Sand	30	12	Filter-Fine	Glass-Production	Abrasive	Yes	MAT_T2_013:0.05									Filter-Fine module	Filter-Fine module
+WASTE_004	Lehm	25	15	Ceramics	Sealing	Insulation	Yes	MAT_T2_015:0.08									Ceramics module	Ceramics module
+WASTE_005	Granit	50	20	Construction	Heavy-Ballast	T1-Armor	Yes	MAT_T1_001:0.10									Construction module	Construction module
+
+# ========================================
+# SECTION 5: MINING MODULES (25 entries)
+# ========================================
+SCAN_T1_001	Ore-Scanner Mk1	Scanner	1	Base_Visibility	0.20	Quality_Shift	0.00	Scan_Range_km	10	Scan_Time_s	5.0	0	500	5	1000	HIGH-POWER	Base_Visibility module	25	5000	MAT_T1_001:50;MAT_T1_002:30;MAT_T1_003:20	30	Base_Visibility module
+SCAN_T2_001	Ore-Scanner Mk2	Scanner	2	Base_Visibility	0.40	Quality_Shift	0.05	Scan_Range_km	15	Scan_Time_s	4.0	2	800	8	1500	HIGH-POWER	Base_Visibility module	35	25000	MAT_T1_001:100;MAT_T2_008:50;MAT_T2_013:30	60	Base_Visibility module
+SCAN_T3_001	Advanced Scanner	Scanner	3	Base_Visibility	0.60	Quality_Shift	0.15	Scan_Range_km	25	Scan_Time_s	3.0	3	1200	12	2000	HIGH-POWER	Base_Visibility module	100	100000	MAT_T2_013:80;MAT_T3_018:40;MAT_T3_020:20	120	Base_Visibility module
+SCAN_T4_001	Precision Scanner	Scanner	4	Base_Visibility	0.80	Quality_Shift	0.30	Scan_Range_km	40	Scan_Time_s	2.0	4	1800	18	3000	HIGH-POWER	Base_Visibility module	200	500000	MAT_T3_020:100;MAT_T4_025:60;MAT_T4_026:40	300	Base_Visibility module
+SCAN_T5_001	Quantum Scanner	Scanner	5	Base_Visibility	0.90	Quality_Shift	0.50	Scan_Range_km	60	Scan_Time_s	1.5	4	2500	25	4000	HIGH-POWER	Base_Visibility module	400	2500000	MAT_T5_028:100;MAT_T5_029:80;MAT_T5_030:50	600	Base_Visibility module
+MINE_T1_001	Mining Laser I	Miner	1	Mining_Speed	1.0	Optimal_Range_km	2	Falloff_Range_km	5	Cycle_Time_s	10.0	0	800	8	1200	HIGH-POWER	Enhances mining operations	50	10000	MAT_T1_001:80;MAT_T1_002:50;MAT_T2_013:20	45	Enhances mining operations
+MINE_T2_001	Mining Laser II	Miner	2	Mining_Speed	2.0	Optimal_Range_km	3	Falloff_Range_km	8	Cycle_Time_s	8.0	2	1200	12	2000	HIGH-POWER	Enhances mining operations	100	50000	MAT_T2_010:100;MAT_T2_013:60;MAT_T3_020:30	90	Enhances mining operations
+MINE_T3_001	Strip Miner	Miner	3	Mining_Speed	4.0	Optimal_Range_km	5	Falloff_Range_km	12	Cycle_Time_s	6.0	3	1800	18	3000	HIGH-POWER	Enhances mining operations	240	200000	MAT_T3_018:120;MAT_T3_022:80;MAT_T4_025:40	180	Enhances mining operations
+MINE_T4_001	Modulated Strip Miner	Miner	4	Mining_Speed	8.0	Optimal_Range_km	7	Falloff_Range_km	15	Cycle_Time_s	5.0	4	2500	25	4500	HIGH-POWER	Enhances mining operations	500	1000000	MAT_T4_025:150;MAT_T4_026:100;MAT_T5_028:50	360	Enhances mining operations
+MINE_T5_001	ORE Extraction Beam	Miner	5	Mining_Speed	15.0	Optimal_Range_km	10	Falloff_Range_km	20	Cycle_Time_s	4.0	4	3500	35	6000	HIGH-POWER	Enhances mining operations	1000	5000000	MAT_T5_028:200;MAT_T5_029:150;MAT_T5_030:100	720	Enhances mining operations
+STAB_T1_001	Basic Stabilizer	Stabilizer	1	Drift_Reduction	0.30	Auto_Lock_Success	0.50	Preferred_Quality	Q2+	Lock_Time_Reduction	0.10	0	400	4	800	MID-POWER	Drift_Reduction module	30	50000	MAT_T1_001:60;MAT_T2_012:30;MAT_T2_013:20	60	Drift_Reduction module
+STAB_T2_001	Enhanced Stabilizer	Stabilizer	2	Drift_Reduction	0.45	Auto_Lock_Success	0.70	Preferred_Quality	Q2+	Lock_Time_Reduction	0.20	2	600	6	1500	MID-POWER	Drift_Reduction module	60	250000	MAT_T2_010:80;MAT_T2_013:50;MAT_T3_020:25	120	Drift_Reduction module
+STAB_T3_001	Advanced Stabilizer	Stabilizer	3	Drift_Reduction	0.60	Auto_Lock_Success	0.80	Preferred_Quality	Q3+	Lock_Time_Reduction	0.30	3	900	9	2000	MID-POWER	Drift_Reduction module	150	800000	MAT_T3_020:100;MAT_T3_022:60;MAT_T4_025:30	240	Drift_Reduction module
+STAB_T4_001	Precision Stabilizer	Stabilizer	4	Drift_Reduction	0.80	Auto_Lock_Success	0.90	Preferred_Quality	Q3+	Lock_Time_Reduction	0.40	4	1300	13	3000	MID-POWER	Drift_Reduction module	300	3000000	MAT_T4_026:120;MAT_T4_027:80;MAT_T5_028:40	360	Drift_Reduction module
+STAB_T5_001	Quantum Stabilizer	Stabilizer	5	Drift_Reduction	1.00	Auto_Lock_Success	0.95	Preferred_Quality	Q4+	Lock_Time_Reduction	0.50	4	1800	18	4000	MID-POWER	Drift_Reduction module	600	10000000	MAT_T5_028:150;MAT_T5_029:100;MAT_T5_030:80	600	Drift_Reduction module
+MOPS_T1_001	Basic Mining Operator	Operator	1	Quality_Shift_Bonus	0.05	Waste_Reduction	0.05	Mining_Speed_Bonus	0.10	Ore_Yield_Bonus	0.02	0	600	6	1200	MID-POWER	Quality_Shift_Bonus module	40	100000	MAT_T1_001:80;MAT_T2_012:40;MAT_T2_013:30	120	Quality_Shift_Bonus module
+MOPS_T2_001	Enhanced Mining Operator	Operator	2	Quality_Shift_Bonus	0.10	Waste_Reduction	0.10	Mining_Speed_Bonus	0.15	Ore_Yield_Bonus	0.05	2	1000	10	1800	MID-POWER	Quality_Shift_Bonus module	80	500000	MAT_T2_010:120;MAT_T2_013:60;MAT_T3_020:30	180	Quality_Shift_Bonus module
+MOPS_T3_001	Advanced Mining Operator	Operator	3	Quality_Shift_Bonus	0.15	Waste_Reduction	0.15	Mining_Speed_Bonus	0.20	Ore_Yield_Bonus	0.08	3	1500	15	2500	MID-POWER	Quality_Shift_Bonus module	160	2000000	MAT_T3_018:150;MAT_T3_022:80;MAT_T4_026:40	300	Quality_Shift_Bonus module
+MOPS_T4_001	Precision Mining Operator	Operator	4	Quality_Shift_Bonus	0.25	Waste_Reduction	0.20	Mining_Speed_Bonus	0.25	Ore_Yield_Bonus	0.12	4	2200	22	3500	MID-POWER	Quality_Shift_Bonus module	300	8000000	MAT_T4_025:180;MAT_T4_027:120;MAT_T5_029:60	480	Quality_Shift_Bonus module
+MOPS_T5_001	Quantum Mining Operator	Operator	5	Quality_Shift_Bonus	0.30	Waste_Reduction	0.25	Mining_Speed_Bonus	0.30	Ore_Yield_Bonus	0.15	4	3000	30	5000	MID-POWER	Quality_Shift_Bonus module	600	30000000	MAT_T5_028:200;MAT_T5_029:150;MAT_T5_030:100	720	Quality_Shift_Bonus module
+SOCK_T1_001	Basic Enhancement Socket	Socket	1	Visibility_Bonus	0.005	Quality_Shift_Bonus	0.001	N/A	0	N/A	0	0	50	0.5	500	SOCKET	Visibility_Bonus module	5	2000	MAT_T1_002:10;MAT_T1_003:5	15	Visibility_Bonus module
+SOCK_T2_001	Enhanced Socket	Socket	2	Visibility_Bonus	0.010	Quality_Shift_Bonus	0.0025	N/A	0	N/A	0	0	80	0.8	800	SOCKET	Visibility_Bonus module	10	10000	MAT_T2_008:15;MAT_T2_009:10	30	Visibility_Bonus module
+SOCK_T3_001	Advanced Socket	Socket	3	Visibility_Bonus	0.015	Quality_Shift_Bonus	0.005	N/A	0	N/A	0	0	120	1.2	1200	SOCKET	Visibility_Bonus module	20	40000	MAT_T2_013:20;MAT_T3_018:10	60	Visibility_Bonus module
+SOCK_T4_001	Precision Socket	Socket	4	Visibility_Bonus	0.020	Quality_Shift_Bonus	0.010	N/A	0	N/A	0	0	180	1.8	1800	SOCKET	Visibility_Bonus module	40	200000	MAT_T3_020:30;MAT_T4_025:20	120	Visibility_Bonus module
+SOCK_T5_001	Quantum Socket	Socket	5	Visibility_Bonus	0.025	Quality_Shift_Bonus	0.020	N/A	0	N/A	0	0	250	2.5	2500	SOCKET	Visibility_Bonus module	80	1000000	MAT_T5_028:40;MAT_T5_029:30	300	Visibility_Bonus module

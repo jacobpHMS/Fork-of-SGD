@@ -1,0 +1,41 @@
+DATABASE	ID	NAME	TIER	CATEGORY	SIZE	SUBCATEGORY	MASS_KG	VOLUME_M3	BASE_PRICE	PRODUCTION_TIME_SEC	INPUT_1	INPUT_1_QTY	INPUT_2	INPUT_2_QTY	INPUT_3	INPUT_3_QTY	SPECIAL_NOTES	INFO_TEXT
+SHIP	SHIP_001	Sparrow Scout	1	Frigate	S	Scout	5000	500	50000	3600	MAT_T1_001	1000	MAT_T1_002	600	COMP_005	20	Spaceship hull	Fast, versatile small combat ship
+SHIP	SHIP_002	Falcon Interceptor	1	Frigate	S	Interceptor	5200	520	55000	3840	MAT_T1_001	1100	MAT_T2_008	650	COMP_006	22	Spaceship hull	Fast, versatile small combat ship
+SHIP	SHIP_003	Hawk Combat	1	Frigate	S	Combat	5500	550	60000	4080	MAT_T1_001	1200	MAT_T2_009	700	COMP_007	24	Spaceship hull	Fast, versatile small combat ship
+SHIP	SHIP_004	Eagle Assault	2	Frigate	S	Assault	6000	600	75000	4320	MAT_T2_008	1400	MAT_T2_010	850	COMP_015	28	Spaceship hull	Fast, versatile small combat ship
+SHIP	SHIP_005	Raven Stealth	2	Frigate	S	Stealth	5800	580	72000	4200	MAT_T2_008	1350	MAT_T2_013	800	COMP_016	26	Spaceship hull	Fast, versatile small combat ship
+SHIP	SHIP_006	Condor Electronic	2	Frigate	S	Electronic	5600	560	68000	4080	MAT_T2_009	1300	MAT_T2_013	780	COMP_017	25	Spaceship hull	Fast, versatile small combat ship
+SHIP	SHIP_007	Viper Logistics	2	Frigate	S	Logistics	5900	590	73000	4260	MAT_T2_010	1380	MAT_T2_014	820	COMP_018	27	Spaceship hull	Fast, versatile small combat ship
+SHIP	SHIP_008	Merlin Tackle	1	Frigate	S	Tackle	5300	530	57000	3960	MAT_T1_001	1150	MAT_T2_009	680	COMP_008	23	Spaceship hull	Fast, versatile small combat ship
+SHIP	SHIP_009	Kestrel Missile	2	Frigate	S	Missile	6100	610	77000	4380	MAT_T2_008	1420	MAT_T2_015	860	COMP_019	29	Spaceship hull	Fast, versatile small combat ship
+SHIP	SHIP_010	Phoenix Mining	1	Frigate	S	Mining	5400	540	58000	4020	MAT_T1_001	1180	MAT_T2_010	700	COMP_009	23	Asteroid mining specialist ship	Fast, versatile small combat ship
+SHIP	SHIP_011	Osprey Hauler	1	Frigate	S	Transport	5700	570	62000	4140	MAT_T1_001	1250	MAT_T2_008	740	COMP_010	24	Large cargo transport vessel	Fast, versatile small combat ship
+SHIP	SHIP_012	Swift Runner	3	Frigate	S	Speed	6500	650	95000	4800	MAT_T3_016	1600	MAT_T3_018	1000	COMP_035	35	Spaceship hull	Fast, versatile small combat ship
+SHIP	SHIP_013	Razor Interceptor	3	Frigate	S	Interceptor	6400	640	92000	4680	MAT_T3_016	1580	MAT_T3_020	980	COMP_036	34	Spaceship hull	Fast, versatile small combat ship
+SHIP	SHIP_014	Talon Assault	3	Frigate	S	Assault	6800	680	102000	5040	MAT_T3_021	1700	MAT_T3_022	1050	COMP_037	37	Spaceship hull	Fast, versatile small combat ship
+SHIP	SHIP_015	Ghost Stealth	4	Frigate	S	Stealth	7200	720	135000	5640	MAT_T4_023	1900	MAT_T4_025	1200	COMP_065	45	Spaceship hull	Fast, versatile small combat ship
+SHIP	SHIP_016	Phantom Scout	4	Frigate	S	Scout	7000	700	128000	5520	MAT_T4_023	1850	MAT_T4_026	1150	COMP_066	43	Spaceship hull	Fast, versatile small combat ship
+SHIP	SHIP_017	Wraith Electronic	4	Frigate	S	Electronic	7100	710	132000	5580	MAT_T4_024	1880	MAT_T4_027	1180	COMP_067	44	Spaceship hull	Fast, versatile small combat ship
+SHIP	SHIP_018	Spectre Logistics	3	Frigate	S	Logistics	6600	660	98000	4920	MAT_T3_018	1650	MAT_T3_019	1020	COMP_038	36	Spaceship hull	Fast, versatile small combat ship
+SHIP	SHIP_019	Banshee Command	4	Frigate	S	Command	7300	730	138000	5700	MAT_T4_025	1920	MAT_T4_026	1210	COMP_068	46	Spaceship hull	Fast, versatile small combat ship
+SHIP	SHIP_020	Nova Interceptor	5	Frigate	S	Interceptor	8000	800	225000	6600	MAT_T5_028	2400	MAT_T5_031	1600	COMP_098	60	Spaceship hull	Fast, versatile small combat ship
+SHIP	SHIP_021	Sentinel Guardian	1	Destroyer	M	Defense	12000	1200	150000	5400	MAT_T1_001	2200	MAT_T2_008	1400	COMP_011	35	Spaceship hull	Spaceship hull
+SHIP	SHIP_022	Guardian Defender	1	Destroyer	M	Defense	12500	1250	160000	5640	MAT_T1_001	2350	MAT_T2_009	1500	COMP_012	38	Spaceship hull	Spaceship hull
+SHIP	SHIP_023	Warden Patrol	2	Destroyer	M	Patrol	13000	1300	180000	5880	MAT_T2_008	2600	MAT_T2_010	1700	COMP_020	42	Spaceship hull	Spaceship hull
+SHIP	SHIP_024	Lancer Strike	2	Destroyer	M	Strike	13500	1350	195000	6120	MAT_T2_009	2750	MAT_T2_010	1800	COMP_021	45	Spaceship hull	Spaceship hull
+SHIP	SHIP_025	Claymore Heavy	2	Destroyer	M	Heavy	14000	1400	210000	6360	MAT_T2_010	2900	MAT_T2_014	1900	COMP_022	48	Spaceship hull	Spaceship hull
+SHIP	SHIP_026	Rapier Interdictor	2	Destroyer	M	Interdictor	13200	1320	185000	6000	MAT_T2_008	2650	MAT_T2_013	1750	COMP_023	43	Spaceship hull	Spaceship hull
+SHIP	SHIP_027	Scimitar Logistics	2	Destroyer	M	Logistics	13400	1340	190000	6060	MAT_T2_009	2700	MAT_T2_015	1780	COMP_024	44	Spaceship hull	Spaceship hull
+SHIP	SHIP_028	Broadsword Command	3	Destroyer	M	Command	14500	1450	230000	6600	MAT_T3_016	3100	MAT_T3_018	2100	COMP_040	52	Spaceship hull	Spaceship hull
+SHIP	SHIP_029	Halberd Assault	3	Destroyer	M	Assault	15000	1500	245000	6840	MAT_T3_016	3250	MAT_T3_020	2200	COMP_041	55	Spaceship hull	Spaceship hull
+SHIP	SHIP_030	Javelin Missile	3	Destroyer	M	Missile	14800	1480	240000	6720	MAT_T3_021	3200	MAT_T3_022	2150	COMP_042	54	Spaceship hull	Spaceship hull
+SHIP	SHIP_031	Corsair Pirate	3	Destroyer	M	Pirate	14200	1420	220000	6480	MAT_T3_018	3000	MAT_T3_019	2000	COMP_043	50	Spaceship hull	Spaceship hull
+SHIP	SHIP_032	Phantom Stealth	3	Destroyer	M	Stealth	14600	1460	235000	6600	MAT_T3_016	3150	MAT_T3_021	2120	COMP_044	53	Spaceship hull	Spaceship hull
+SHIP	SHIP_033	Paladin Defense	4	Destroyer	M	Defense	15500	1550	285000	7200	MAT_T4_023	3600	MAT_T4_025	2500	COMP_070	65	Spaceship hull	Spaceship hull
+SHIP	SHIP_034	Champion Combat	4	Destroyer	M	Combat	16000	1600	300000	7440	MAT_T4_023	3750	MAT_T4_026	2600	COMP_071	68	Spaceship hull	Spaceship hull
+SHIP	SHIP_035	Crusader Strike	4	Destroyer	M	Strike	15800	1580	295000	7320	MAT_T4_024	3700	MAT_T4_027	2550	COMP_072	67	Spaceship hull	Spaceship hull
+SHIP	SHIP_036	Templar Assault	4	Destroyer	M	Assault	16200	1620	310000	7560	MAT_T4_025	3800	MAT_T4_026	2650	COMP_073	70	Spaceship hull	Spaceship hull
+SHIP	SHIP_037	Executioner Electronic	4	Destroyer	M	Electronic	15600	1560	290000	7260	MAT_T4_026	3650	MAT_T4_027	2520	COMP_074	66	Spaceship hull	Spaceship hull
+SHIP	SHIP_038	Reaper Interdictor	4	Destroyer	M	Interdictor	15900	1590	298000	7380	MAT_T4_023	3720	MAT_T4_027	2580	COMP_075	68	Spaceship hull	Spaceship hull
+SHIP	SHIP_039	Angel Logistics	3	Destroyer	M	Logistics	14400	1440	225000	6540	MAT_T3_020	3050	MAT_T3_022	2050	COMP_045	51	Spaceship hull	Spaceship hull
+SHIP	SHIP_040	Titan Destroyer	5	Destroyer	M	Ultimate	18000	1800	420000	8400	MAT_T5_028	4500	MAT_T5_031	3200	COMP_098	90	Anti-frigate combat specialist	Anti-frigate combat specialist

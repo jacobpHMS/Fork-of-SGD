@@ -1,0 +1,101 @@
+DATABASE	ID	NAME	TIER	CATEGORY	SIZE	SUBCATEGORY	MASS_KG	VOLUME_M3	BASE_PRICE	PRODUCTION_TIME_SEC	INPUT_1	INPUT_1_QTY	INPUT_2	INPUT_2_QTY	INPUT_3	INPUT_3_QTY	SPECIAL_NOTES	INFO_TEXT
+WEAPON	WEP_101	Asteroid Drill	1	Mining	S	Drilling	180	1.8	2000	360	MAT_001	15	COMP_048	1	-	-	Deep penetration ore extraction	Deep penetration ore extraction
+WEAPON	WEP_102	Deep Core Drill	2	Mining	M	Deep Mining	450	4.5	6000	720	MAT_003	35	COMP_048	3	-	-	Deep penetration ore extraction	Deep penetration ore extraction
+WEAPON	WEP_103	Plasma Cutter	2	Mining	S	Cutting	500	5.0	7500	780	MAT_016	40	COMP_054	2	-	-	Enhances mining operations	Enhances mining operations
+WEAPON	WEP_104	Sonic Resonator	2	Mining	M	Sonic	600	6.0	9000	840	MAT_004	45	COMP_010	3	-	-	Enhances mining operations	Enhances mining operations
+WEAPON	WEP_105	Thermal Fracture Beam	3	Mining	M	Heat	1000	10.0	15000	1200	MAT_011	60	COMP_054	5	-	-	Enhances mining operations	Enhances mining operations
+WEAPON	WEP_106	Magnetic Extractor	3	Mining	M	Magnetic	1100	11.0	17000	1320	MAT_013	65	COMP_041	6	-	-	Enhances mining operations	Enhances mining operations
+WEAPON	WEP_107	Ice Melter	2	Mining	S	Ice	400	4.0	5500	660	MAT_011	30	COMP_054	2	-	-	Enhances mining operations	Enhances mining operations
+WEAPON	WEP_108	Gas Ionizer	2	Mining	M	Gas	700	7.0	10000	900	MAT_013	50	COMP_041	4	-	-	Enhances mining operations	Enhances mining operations
+WEAPON	WEP_109	Quantum Excavator	4	Mining	L	Quantum	2000	20.0	40000	2040	MAT_015	95	COMP_030	8	-	-	Enhances mining operations	Enhances mining operations
+WEAPON	WEP_110	Void Extractor	5	Mining	L	Void	3000	30.0	80000	3300	MAT_033	120	COMP_032	10	-	-	Enhances mining operations	Enhances mining operations
+WEAPON	WEP_111	Nanite Disassembler	4	Mining	M	Nanite	1800	18.0	35000	1920	MAT_031	85	COMP_021	8	-	-	Enhances mining operations	Enhances mining operations
+WEAPON	WEP_112	Refinery Beam	3	Mining	M	Processing	1300	13.0	22000	1500	MAT_005	70	COMP_067	4	-	-	Enhances mining operations	Enhances mining operations
+WEAPON	WEP_113	Compression Drill	3	Mining	M	Compression	1200	12.0	20000	1380	MAT_015	65	COMP_022	5	-	-	Deep penetration ore extraction	Deep penetration ore extraction
+WEAPON	WEP_114	Smart Mining Array	4	Mining	L	AI Mining	2200	22.0	45000	2220	MAT_006	100	COMP_052	10	COMP_048	8	Enhances mining operations	Enhances mining operations
+WEAPON	WEP_115	Stellar Harvester	5	Mining	XL	Star Mining	4000	40.0	100000	3900	MAT_007	150	COMP_092	6	-	-	Enhances mining operations	Enhances mining operations
+WEAPON	WEP_116	Asteroid Shredder	3	Mining	L	Shredding	1600	16.0	28000	1680	MAT_004	80	COMP_048	7	-	-	Enhances mining operations	Enhances mining operations
+WEAPON	WEP_117	Gravity Scoop	4	Mining	L	Gravity	2100	21.0	42000	2160	MAT_015	95	COMP_030	9	-	-	Enhances mining operations	Enhances mining operations
+WEAPON	WEP_118	Rift Miner	5	Mining	L	Dimensional	3200	32.0	75000	3180	MAT_033	125	COMP_088	8	-	-	Enhances mining operations	Enhances mining operations
+WEAPON	WEP_119	Planet Drill	5	Mining	XL	Planetary	5000	50.0	120000	4500	MAT_007	180	COMP_048	20	COMP_091	5	Deep penetration ore extraction	Deep penetration ore extraction
+WEAPON	WEP_120	Core Tap	5	Mining	XL	Core	4500	45.0	110000	4200	MAT_007	170	COMP_048	18	-	-	Enhances mining operations	Enhances mining operations
+WEAPON	WEP_121	ECM Jammer	2	Support	S	Jamming	300	3.0	8000	720	MAT_004	35	COMP_066	4	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_122	Sensor Dampener	2	Support	S	Dampening	350	3.5	9000	780	MAT_004	40	COMP_066	5	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_123	Target Painter	2	Support	S	Marking	280	2.8	7000	660	MAT_003	30	COMP_009	3	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_124	Tracking Disruptor	2	Support	S	Disruption	320	3.2	8500	720	MAT_004	35	COMP_066	4	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_125	Energy Vampire	3	Support	M	Power Drain	800	8.0	16000	1200	MAT_005	60	COMP_035	6	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_126	Shield Disruptor	3	Support	M	Shield Break	900	9.0	18000	1320	MAT_005	65	COMP_066	7	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_127	Stasis Web	2	Support	S	Slow	400	4.0	10000	840	MAT_004	45	COMP_030	3	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_128	Warp Scrambler	3	Support	M	Warp Jam	1000	10.0	20000	1440	MAT_015	70	COMP_019	5	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_129	Weapons Disruptor	3	Support	M	Weapon Jam	950	9.5	19000	1380	MAT_005	68	COMP_066	7	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_130	Remote Sensor Booster	2	Support	S	Boost Ally	450	4.5	11000	900	MAT_004	50	COMP_009	4	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_131	Remote Armor Repairer	3	Support	M	Repair	1100	11.0	22000	1500	MAT_005	75	COMP_021	6	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_132	Remote Shield Booster	3	Support	M	Shield Ally	1200	12.0	24000	1560	MAT_013	80	COMP_060	5	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_133	Remote Capacitor Transfer	3	Support	M	Energy Transfer	1000	10.0	20000	1440	MAT_013	70	COMP_053	6	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_134	Electronic Counter	4	Support	L	Counter ECM	1800	18.0	35000	1920	MAT_006	90	COMP_066	10	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_135	Cloaking Device	4	Support	L	Stealth	2000	20.0	50000	2400	MAT_015	100	COMP_027	8	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_136	Jump Field Generator	4	Support	L	Jump Bridge	2200	22.0	45000	2220	MAT_030	95	COMP_083	7	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_137	Cyno Generator	3	Support	M	Beacon	1300	13.0	25000	1620	MAT_030	75	COMP_083	5	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_138	Scan Probe Launcher	2	Support	S	Scanning	500	5.0	12000	960	MAT_004	55	COMP_009	5	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_139	Interdiction Sphere	4	Support	L	Bubble	2500	25.0	55000	2580	MAT_015	110	COMP_030	12	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_140	Command Burst	3	Support	M	Fleet Boost	1400	14.0	28000	1680	MAT_005	80	COMP_070	6	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_141	Light Combat Drone	1	Drone	S	Fighter	100	1.0	3000	480	MAT_002	20	COMP_018	2	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_142	Medium Combat Drone	2	Drone	M	Fighter	250	2.5	7000	720	MAT_003	40	COMP_018	4	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_143	Heavy Combat Drone	3	Drone	L	Fighter	600	6.0	15000	1200	MAT_005	70	COMP_018	8	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_144	Interceptor Drone	2	Drone	S	Fast	200	2.0	6000	660	MAT_003	35	COMP_018	3	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_145	Bomber Drone	3	Drone	M	Bomber	500	5.0	12000	1080	MAT_004	60	COMP_018	6	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_146	Mining Drone	1	Drone	S	Mining	120	1.2	2500	420	MAT_001	15	COMP_048	1	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_147	Harvester Drone	2	Drone	M	Mining	300	3.0	6000	720	MAT_003	35	COMP_048	3	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_148	Salvage Drone	2	Drone	S	Salvage	150	1.5	4000	540	MAT_002	25	COMP_049	2	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_149	Repair Drone	2	Drone	S	Repair	180	1.8	5000	660	MAT_003	30	COMP_021	3	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_150	Shield Drone	2	Drone	S	Shield	200	2.0	5500	720	MAT_013	35	COMP_060	2	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_151	ECM Drone	2	Drone	S	Jamming	160	1.6	6500	780	MAT_004	30	COMP_066	3	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_152	Sentry Drone	3	Drone	M	Stationary	400	4.0	9000	960	MAT_004	50	COMP_018	5	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_153	Kamikaze Drone	2	Drone	S	Suicide	140	1.4	3500	480	MAT_002	20	MAT_016	15	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_154	Recon Drone	2	Drone	S	Scouting	100	1.0	4500	600	MAT_003	25	COMP_009	3	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_155	Swarm Drone	3	Drone	S	Micro	80	0.8	2000	360	MAT_002	15	COMP_018	1	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_156	Hunter-Killer Drone	4	Drone	L	Elite	1000	10.0	25000	1680	MAT_006	90	COMP_018	12	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_157	Command Drone	3	Drone	M	Support	700	7.0	16000	1320	MAT_005	65	COMP_018	8	COMP_070	2	Ship weapon system	Ship weapon system
+WEAPON	WEP_158	Nanite Swarm	4	Drone	M	Repair Swarm	800	8.0	20000	1560	MAT_031	70	COMP_021	10	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_159	Assault Drone	3	Drone	M	Heavy Fighter	650	6.5	14000	1200	MAT_004	75	COMP_018	7	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_160	Stealth Drone	4	Drone	S	Stealth	500	5.0	18000	1440	MAT_015	60	COMP_051	5	COMP_018	4	Ship weapon system	Ship weapon system
+WEAPON	WEP_161	Doomsday Device	5	Special	XL	Superweapon	10000	100.0	500000	10800	MAT_008	300	COMP_087	10	COMP_085	15	Ship weapon system	Ship weapon system
+WEAPON	WEP_162	Planet Cracker	5	Special	XL	Planetary	8000	80.0	400000	9600	MAT_007	250	COMP_091	12	COMP_085	10	Ship weapon system	Ship weapon system
+WEAPON	WEP_163	Star Killer	5	Special	XL	Stellar	12000	120.0	800000	14400	MAT_008	400	COMP_092	20	COMP_087	20	Ship weapon system	Ship weapon system
+WEAPON	WEP_164	System Bomb	5	Special	XL	Strategic	9000	90.0	600000	12000	MAT_033	350	COMP_087	15	COMP_085	12	Ship weapon system	Ship weapon system
+WEAPON	WEP_165	Reality Bomb	5	Special	XL	Dimensional	15000	150.0	1000000	18000	MAT_033	500	COMP_100	30	COMP_088	25	Ship weapon system	Ship weapon system
+WEAPON	WEP_166	Time Bomb	5	Special	L	Temporal	5000	50.0	350000	8400	MAT_033	200	COMP_099	15	COMP_016	10	Ship weapon system	Ship weapon system
+WEAPON	WEP_167	Wormhole Weapon	5	Special	XL	Portal	7000	70.0	450000	10200	MAT_033	280	COMP_094	18	COMP_088	15	Ship weapon system	Ship weapon system
+WEAPON	WEP_168	Entropy Accelerator	5	Special	L	Decay	4500	45.0	300000	7800	MAT_033	180	COMP_032	12	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_169	Quantum Eraser	5	Special	L	Existence	5500	55.0	380000	9000	MAT_033	220	COMP_096	16	COMP_030	12	Ship weapon system	Ship weapon system
+WEAPON	WEP_170	Void Cannon	5	Special	XL	Void	6000	60.0	420000	9600	MAT_033	240	COMP_032	20	COMP_088	14	Ship weapon system	Ship weapon system
+WEAPON	WEP_171	Dark Matter Bomb	5	Special	L	Dark Matter	4800	48.0	320000	8100	MAT_032	190	COMP_025	14	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_172	Singularity Missile	5	Special	L	Black Hole	5200	52.0	360000	8700	MAT_033	210	COMP_085	12	COMP_040	8	Guided explosive projectile weapon	Guided explosive projectile weapon
+WEAPON	WEP_173	Dimensional Shear	5	Special	L	Dimension Cut	4900	49.0	340000	8400	MAT_033	195	COMP_088	15	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_174	Chrono Disintegrator	5	Special	L	Time Destroy	5100	51.0	350000	8550	MAT_033	205	COMP_099	14	COMP_016	12	Ship weapon system	Ship weapon system
+WEAPON	WEP_175	Antimatter Cascade	5	Special	XL	AM Chain	7500	75.0	480000	10800	MAT_027	260	COMP_031	18	COMP_095	16	Ship weapon system	Ship weapon system
+WEAPON	WEP_176	Probability Engine	5	Special	L	Chaos	4600	46.0	310000	7950	MAT_033	185	COMP_096	13	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_177	Matter Converter	5	Special	L	Transmutation	5300	53.0	370000	8850	MAT_008	215	COMP_095	16	COMP_090	8	Ship weapon system	Ship weapon system
+WEAPON	WEP_178	Subspace Rupture	5	Special	L	Subspace	4700	47.0	330000	8250	MAT_030	192	COMP_036	14	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_179	Psionic Disruptor	5	Special	L	Mental	5400	54.0	390000	9150	MAT_025	225	COMP_033	18	COMP_017	14	Ship weapon system	Ship weapon system
+WEAPON	WEP_180	Nanite Plague	5	Special	M	Nano-Weapon	3500	35.0	250000	7200	MAT_031	160	COMP_021	20	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_181	Survey Scanner	1	Utility	S	Scanning	50	0.5	1500	300	MAT_001	10	COMP_009	1	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_182	Cargo Scanner	2	Utility	S	Inspection	80	0.8	3000	480	MAT_003	20	COMP_061	2	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_183	Gas Analyzer	2	Utility	S	Analysis	100	1.0	4000	540	MAT_004	25	COMP_009	2	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_184	Ore Identifier	2	Utility	S	Mining	90	0.9	3500	510	MAT_003	22	COMP_055	2	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_185	Deep Space Probe	3	Utility	S	Exploration	150	1.5	8000	840	MAT_005	40	COMP_009	4	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_186	Salvage Scanner	2	Utility	S	Salvage	70	0.7	2800	450	MAT_002	18	COMP_061	2	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_187	Life Form Detector	3	Utility	M	Bio-Scan	200	2.0	10000	1020	MAT_025	50	COMP_009	5	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_188	Anomaly Detector	4	Utility	M	Exotic Scan	400	4.0	20000	1680	MAT_015	70	COMP_009	8	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_189	Stellar Cartographer	3	Utility	M	Mapping	300	3.0	15000	1260	MAT_005	60	COMP_009	6	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_190	Quantum Analyzer	4	Utility	M	Quantum	500	5.0	25000	1920	MAT_030	80	COMP_020	6	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_191	Universal Translator	2	Utility	S	Translation	60	0.6	5000	600	MAT_005	30	COMP_097	1	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_192	Navigation Computer	2	Utility	M	Navigation	250	2.5	8000	720	MAT_004	45	COMP_005	4	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_193	Trade Analyzer	2	Utility	S	Economics	120	1.2	6000	660	MAT_004	35	COMP_056	3	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_194	Research Lab	3	Utility	L	Research	800	8.0	35000	2100	MAT_005	100	COMP_072	4	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_195	Medical Scanner	2	Utility	S	Medical	140	1.4	7000	720	MAT_024	40	COMP_009	3	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_196	Environmental Analyzer	3	Utility	M	Environment	350	3.5	12000	1140	MAT_024	65	COMP_009	5	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_197	Terraforming Module	5	Utility	XL	Terraform	5000	50.0	200000	6000	MAT_007	200	COMP_091	10	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_198	Weather Controller	4	Utility	L	Weather	2000	20.0	60000	3000	MAT_006	110	COMP_098	8	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_199	Gravity Stabilizer	3	Utility	M	Stability	600	6.0	18000	1380	MAT_015	75	COMP_030	6	-	-	Ship weapon system	Ship weapon system
+WEAPON	WEP_200	Universal Constructor	5	Utility	L	Fabrication	3000	30.0	150000	5400	MAT_008	150	COMP_068	15	COMP_090	8	Ship weapon system	Ship weapon system

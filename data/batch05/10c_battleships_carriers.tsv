@@ -1,0 +1,28 @@
+DATABASE	ID	NAME	TIER	CATEGORY	SIZE	SUBCATEGORY	MASS_KG	VOLUME_M3	BASE_PRICE	PRODUCTION_TIME_SEC	INPUT_1	INPUT_1_QTY	INPUT_2	INPUT_2_QTY	INPUT_3	INPUT_3_QTY	SPECIAL_NOTES	INFO_TEXT
+SHIP	SHIP_076	Dominix Battleship	5	Battleship	L	Combat	55000	5500	1200000	14400	MAT_T5_028	15000	MAT_T5_031	10500	COMP_098	250	Heavily armored large combat ship	Heavily armored large combat ship
+SHIP	SHIP_077	Megathron Heavy	5	Battleship	L	Heavy	56000	5600	1250000	14640	MAT_T5_028	15500	MAT_T5_032	11000	COMP_099	260	Spaceship hull	Spaceship hull
+SHIP	SHIP_078	Hyperion Assault	5	Battleship	L	Assault	57000	5700	1300000	14880	MAT_T5_029	16000	MAT_T5_033	11500	COMP_100	270	Spaceship hull	Spaceship hull
+SHIP	SHIP_079	Apocalypse Laser	5	Battleship	XL	Laser	60000	6000	1400000	15360	MAT_T5_030	17000	MAT_T5_031	12000	COMP_098	290	Spaceship hull	Spaceship hull
+SHIP	SHIP_080	Armageddon Energy	5	Battleship	XL	Energy	61000	6100	1450000	15600	MAT_T5_031	17500	MAT_T5_028	12500	COMP_099	300	Spaceship hull	Spaceship hull
+SHIP	SHIP_081	Abaddon Artillery	5	Battleship	XL	Artillery	62000	6200	1500000	15840	MAT_T5_028	18000	MAT_T5_032	13000	COMP_100	310	Spaceship hull	Spaceship hull
+SHIP	SHIP_082	Tempest Projectile	5	Battleship	L	Projectile	58000	5800	1350000	15120	MAT_T5_029	16500	MAT_T5_033	11750	COMP_098	280	Spaceship hull	Spaceship hull
+SHIP	SHIP_083	Maelstrom Artillery	5	Battleship	XL	Artillery	63000	6300	1550000	16080	MAT_T5_030	18500	MAT_T5_031	13500	COMP_099	320	Spaceship hull	Spaceship hull
+SHIP	SHIP_084	Typhoon Missile	5	Battleship	XL	Missile	64000	6400	1600000	16320	MAT_T5_031	19000	MAT_T5_028	14000	COMP_100	330	Spaceship hull	Spaceship hull
+SHIP	SHIP_085	Raven Cruise Missile	5	Battleship	XL	Cruise	65000	6500	1650000	16560	MAT_T5_028	19500	MAT_T5_032	14500	COMP_098	340	Spaceship hull	Spaceship hull
+SHIP	SHIP_086	Scorpion ECM	5	Battleship	XL	ECM	66000	6600	1700000	16800	MAT_T5_029	20000	MAT_T5_033	15000	COMP_099	350	Spaceship hull	Spaceship hull
+SHIP	SHIP_087	Rokh Railgun	5	Battleship	XL	Railgun	64500	6450	1625000	16440	MAT_T5_030	19250	MAT_T5_031	14250	COMP_100	335	Spaceship hull	Spaceship hull
+SHIP	SHIP_088	Hyperion Blaster	5	Battleship	L	Blaster	59000	5900	1375000	15240	MAT_T5_031	16750	MAT_T5_028	12250	COMP_098	285	Spaceship hull	Spaceship hull
+SHIP	SHIP_089	Kronos Marauder	5	Battleship	XL	Marauder	68000	6800	1900000	17400	MAT_T5_028	22000	MAT_T5_032	16000	COMP_100	380	Spaceship hull	Spaceship hull
+SHIP	SHIP_090	Paladin Marauder	5	Battleship	XL	Marauder	67500	6750	1875000	17280	MAT_T5_029	21750	MAT_T5_033	15750	COMP_098	375	Spaceship hull	Spaceship hull
+SHIP	SHIP_091	Vargur Marauder	5	Battleship	XL	Marauder	68500	6850	1925000	17520	MAT_T5_030	22250	MAT_T5_031	16250	COMP_099	385	Spaceship hull	Spaceship hull
+SHIP	SHIP_092	Golem Marauder	5	Battleship	XL	Marauder	69000	6900	1950000	17640	MAT_T5_031	22500	MAT_T5_028	16500	COMP_100	390	Spaceship hull	Spaceship hull
+SHIP	SHIP_093	Nightmare Faction	5	Battleship	XL	Faction	70000	7000	2100000	18000	MAT_T5_028	23500	MAT_T5_032	17000	COMP_098	410	Spaceship hull	Spaceship hull
+SHIP	SHIP_094	Vindicator Faction	5	Battleship	XL	Faction	70500	7050	2150000	18120	MAT_T5_029	24000	MAT_T5_033	17500	COMP_099	420	Spaceship hull	Spaceship hull
+SHIP	SHIP_095	Machariel Faction	5	Battleship	XL	Faction	71000	7100	2200000	18240	MAT_T5_030	24500	MAT_T5_031	18000	COMP_100	430	Spaceship hull	Spaceship hull
+SHIP	SHIP_096	Thanatos Carrier	4	Carrier	XL	Carrier	70000	7000	2000000	18000	MAT_T4_023	25000	MAT_T4_025	18000	COMP_090	400	Fighter/bomber deployment platform	Fighter/bomber deployment platform
+SHIP	SHIP_097	Archon Carrier	4	Carrier	XL	Carrier	72000	7200	2100000	18360	MAT_T4_024	26000	MAT_T4_026	19000	COMP_091	420	Fighter/bomber deployment platform	Fighter/bomber deployment platform
+SHIP	SHIP_098	Chimera Carrier	4	Carrier	XL	Carrier	71000	7100	2050000	18180	MAT_T4_025	25500	MAT_T4_027	18500	COMP_092	410	Fighter/bomber deployment platform	Fighter/bomber deployment platform
+SHIP	SHIP_099	Nidhoggur Carrier	5	Carrier	XL	Carrier	74000	7400	2300000	18720	MAT_T5_028	28000	MAT_T5_031	20000	COMP_098	450	Fighter/bomber deployment platform	Fighter/bomber deployment platform
+SHIP	SHIP_100	Aeon Supercarrier	5	Carrier	XL	Super	78000	7800	2800000	19800	MAT_T5_029	32000	MAT_T5_032	23000	COMP_099	520	Spaceship hull	Spaceship hull
+SHIP	SHIP_101	Hel Supercarrier	5	Carrier	XL	Super	79000	7900	2900000	19980	MAT_T5_030	33000	MAT_T5_033	24000	COMP_100	540	Spaceship hull	Spaceship hull
+SHIP	SHIP_102	Nyx Supercarrier	5	Carrier	XL	Super	80000	8000	3000000	20160	MAT_T5_031	34000	MAT_T5_028	25000	COMP_098	560	Spaceship hull	Spaceship hull

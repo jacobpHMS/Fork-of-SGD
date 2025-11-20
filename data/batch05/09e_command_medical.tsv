@@ -1,0 +1,51 @@
+DATABASE	ID	NAME	TIER	CATEGORY	SIZE	SUBCATEGORY	MASS_KG	VOLUME_M3	BASE_PRICE	PRODUCTION_TIME_SEC	INPUT_1	INPUT_1_QTY	INPUT_2	INPUT_2_QTY	INPUT_3	INPUT_3_QTY	SPECIAL_NOTES	INFO_TEXT
+MODULE	MOD_201	Basic Command Center	2	Command	M	Control	550	5.5	32000	1680	MAT_T2_008	210	MAT_T2_013	145	COMP_030	18	Fleet command and coordination	Fleet command and coordination
+MODULE	MOD_202	Standard Fleet Link	2	Command	M	Network	500	5.0	28000	1560	MAT_T2_009	190	MAT_T2_013	135	COMP_031	16	Boosts nearby friendly ships	Boosts nearby friendly ships
+MODULE	MOD_203	Small Command Burst	2	Command	S	Buff	380	3.8	22000	1320	MAT_T2_010	150	MAT_T2_014	105	COMP_032	14	Provides temporary fleet bonuses	Provides temporary fleet bonuses
+MODULE	MOD_204	Light Wing Commander	2	Command	M	Wing	520	5.2	30000	1620	MAT_T2_008	200	MAT_T2_011	140	COMP_033	17	Fleet command and coordination	Fleet command and coordination
+MODULE	MOD_205	Basic Tactical Link	2	Command	M	Tactical	480	4.8	26000	1500	MAT_T2_010	185	MAT_T2_013	130	COMP_034	15	Boosts nearby friendly ships	Boosts nearby friendly ships
+MODULE	MOD_206	Improved Command Center	3	Command	L	Control	1350	13.5	95000	2760	MAT_T3_016	440	MAT_T3_018	320	COMP_055	42	Fleet command and coordination	Fleet command and coordination
+MODULE	MOD_207	Enhanced Fleet Link	3	Command	M	Network	1200	12.0	88000	2640	MAT_T3_016	400	MAT_T3_020	295	COMP_056	39	Boosts nearby friendly ships	Boosts nearby friendly ships
+MODULE	MOD_208	Medium Command Burst	3	Command	M	Buff	1100	11.0	82000	2520	MAT_T3_021	360	MAT_T3_022	270	COMP_057	37	Provides temporary fleet bonuses	Provides temporary fleet bonuses
+MODULE	MOD_209	Heavy Wing Commander	3	Command	L	Wing	1400	14.0	98000	2820	MAT_T3_018	460	MAT_T3_019	340	COMP_058	43	Fleet command and coordination	Fleet command and coordination
+MODULE	MOD_210	Elite Tactical Link	3	Command	M	Tactical	1250	12.5	90000	2700	MAT_T3_016	420	MAT_T3_021	310	COMP_059	40	Boosts nearby friendly ships	Boosts nearby friendly ships
+MODULE	MOD_211	Fleet Command Module	3	Command	L	Fleet	1500	15.0	105000	3000	MAT_T3_016	490	MAT_T3_018	360	COMP_060	45	Fleet command and coordination	Fleet command and coordination
+MODULE	MOD_212	Squadron Leader Module	3	Command	M	Squadron	1300	13.0	92000	2760	MAT_T3_020	430	MAT_T3_022	320	COMP_061	41	Fleet command and coordination	Fleet command and coordination
+MODULE	MOD_213	Quantum Command Center	4	Command	XL	Control	5000	50.0	360000	5700	MAT_T4_023	1040	MAT_T4_025	770	COMP_090	108	Fleet command and coordination	Fleet command and coordination
+MODULE	MOD_214	Capital Fleet Link	4	Command	L	Network	4500	45.0	330000	5400	MAT_T4_023	940	MAT_T4_026	700	COMP_091	102	Boosts nearby friendly ships	Boosts nearby friendly ships
+MODULE	MOD_215	Siege Command Burst	4	Command	L	Buff	4200	42.0	310000	5100	MAT_T4_024	870	MAT_T4_027	650	COMP_092	98	Provides temporary fleet bonuses	Provides temporary fleet bonuses
+MODULE	MOD_216	Capital Wing Commander	4	Command	XL	Wing	5200	52.0	370000	5850	MAT_T4_025	1080	MAT_T4_026	800	COMP_093	112	Fleet command and coordination	Fleet command and coordination
+MODULE	MOD_217	Quantum Tactical Link	4	Command	L	Tactical	4800	48.0	345000	5550	MAT_T4_026	1000	MAT_T4_027	740	COMP_094	105	Boosts nearby friendly ships	Boosts nearby friendly ships
+MODULE	MOD_218	Titan Command Center	5	Command	Station	Control	20000	200.0	2100000	10800	MAT_T5_028	3600	MAT_T5_031	2500	COMP_098	310	Fleet command and coordination	Fleet command and coordination
+MODULE	MOD_219	Mega Fleet Link	5	Command	XL	Network	18000	180.0	1900000	10200	MAT_T5_029	3200	MAT_T5_032	2300	COMP_099	290	Boosts nearby friendly ships	Boosts nearby friendly ships
+MODULE	MOD_220	Ultimate Command Burst	5	Command	Station	Buff	22000	220.0	2400000	11400	MAT_T5_030	4000	MAT_T5_033	2800	COMP_100	330	Provides temporary fleet bonuses	Provides temporary fleet bonuses
+MODULE	MOD_221	Strategic Command Suite	5	Command	Station	Strategic	24000	240.0	2600000	12000	MAT_T5_031	4300	MAT_T5_028	3100	COMP_098	350	Fleet command and coordination	Fleet command and coordination
+MODULE	MOD_222	Armada Controller	5	Command	XL	Armada	21000	210.0	2300000	11400	MAT_T5_032	3800	MAT_T5_029	2700	COMP_099	320	Fleet command and coordination	Fleet command and coordination
+MODULE	MOD_223	Basic Medical Bay	1	Medical	S	Treatment	200	2.0	5500	720	MAT_T1_001	75	MAT_T2_015	50	COMP_005	6	Treats crew injuries and illness	Treats crew injuries and illness
+MODULE	MOD_224	Standard Infirmary	1	Medical	M	Treatment	420	4.2	12000	1080	MAT_T1_001	140	MAT_T2_015	95	COMP_006	10	Provides medical support	Provides medical support
+MODULE	MOD_225	Small Clone Bay	2	Medical	M	Clone	650	6.5	28000	1560	MAT_T2_008	200	MAT_T2_015	140	COMP_020	16	Treats crew injuries and illness	Treats crew injuries and illness
+MODULE	MOD_226	Light Life Support	1	Medical	S	Life Support	180	1.8	5000	660	MAT_T1_003	70	MAT_T2_009	45	COMP_007	5	Provides medical support	Provides medical support
+MODULE	MOD_227	Basic Crew Quarters	1	Medical	M	Quarters	350	3.5	10000	960	MAT_T1_001	120	MAT_T2_014	80	COMP_008	8	Provides medical support	Provides medical support
+MODULE	MOD_228	Improved Medical Bay	2	Medical	M	Treatment	720	7.2	35000	1800	MAT_T2_008	220	MAT_T2_015	155	COMP_025	19	Treats crew injuries and illness	Treats crew injuries and illness
+MODULE	MOD_229	Enhanced Infirmary	2	Medical	M	Treatment	800	8.0	40000	1980	MAT_T2_009	250	MAT_T2_015	175	COMP_026	21	Provides medical support	Provides medical support
+MODULE	MOD_230	Medium Clone Bay	2	Medical	L	Clone	1100	11.0	55000	2280	MAT_T2_010	350	MAT_T2_015	245	COMP_027	26	Treats crew injuries and illness	Treats crew injuries and illness
+MODULE	MOD_231	Improved Life Support	2	Medical	M	Life Support	680	6.8	32000	1680	MAT_T2_008	210	MAT_T2_013	150	COMP_028	18	Provides medical support	Provides medical support
+MODULE	MOD_232	Enhanced Crew Quarters	2	Medical	M	Quarters	750	7.5	38000	1860	MAT_T2_009	230	MAT_T2_014	165	COMP_029	20	Provides medical support	Provides medical support
+MODULE	MOD_233	Elite Medical Bay	3	Medical	L	Treatment	1500	15.0	105000	3000	MAT_T3_016	490	MAT_T3_019	360	COMP_055	45	Treats crew injuries and illness	Treats crew injuries and illness
+MODULE	MOD_234	Combat Infirmary	3	Medical	M	Treatment	1350	13.5	95000	2820	MAT_T3_016	440	MAT_T3_020	325	COMP_056	42	Provides medical support	Provides medical support
+MODULE	MOD_235	Large Clone Bay	3	Medical	L	Clone	1800	18.0	125000	3240	MAT_T3_021	590	MAT_T3_022	435	COMP_057	52	Treats crew injuries and illness	Treats crew injuries and illness
+MODULE	MOD_236	Heavy Life Support	3	Medical	L	Life Support	1400	14.0	98000	2880	MAT_T3_018	460	MAT_T3_019	340	COMP_058	43	Provides medical support	Provides medical support
+MODULE	MOD_237	Elite Crew Quarters	3	Medical	L	Quarters	1600	16.0	110000	3120	MAT_T3_016	520	MAT_T3_021	385	COMP_059	48	Provides medical support	Provides medical support
+MODULE	MOD_238	Quantum Medical Bay	4	Medical	XL	Treatment	5500	55.0	380000	5850	MAT_T4_023	1140	MAT_T4_025	840	COMP_090	115	Treats crew injuries and illness	Treats crew injuries and illness
+MODULE	MOD_239	Capital Clone Bay	4	Medical	XL	Clone	6200	62.0	425000	6300	MAT_T4_024	1280	MAT_T4_027	950	COMP_091	125	Treats crew injuries and illness	Treats crew injuries and illness
+MODULE	MOD_240	Siege Life Support	4	Medical	L	Life Support	5000	50.0	360000	5700	MAT_T4_025	1040	MAT_T4_026	770	COMP_092	108	Provides medical support	Provides medical support
+MODULE	MOD_241	Capital Crew Quarters	4	Medical	XL	Quarters	5800	58.0	405000	6150	MAT_T4_023	1200	MAT_T4_027	890	COMP_093	118	Provides medical support	Provides medical support
+MODULE	MOD_242	Titan Medical Complex	5	Medical	Station	Treatment	22000	220.0	2400000	11400	MAT_T5_028	4000	MAT_T5_031	2800	COMP_098	330	Provides medical support	Provides medical support
+MODULE	MOD_243	Mega Clone Facility	5	Medical	Station	Clone	25000	250.0	2700000	12000	MAT_T5_029	4500	MAT_T5_032	3200	COMP_099	360	Stores crew clone backups	Stores crew clone backups
+MODULE	MOD_244	Ultimate Life Support	5	Medical	Station	Life Support	23000	230.0	2500000	11700	MAT_T5_030	4200	MAT_T5_033	3000	COMP_100	340	Provides medical support	Provides medical support
+MODULE	MOD_245	Mega Crew Complex	5	Medical	Station	Quarters	24000	240.0	2600000	12000	MAT_T5_031	4300	MAT_T5_028	3100	COMP_098	350	Provides medical support	Provides medical support
+MODULE	MOD_246	Research Laboratory	3	Medical	L	Research	1700	17.0	120000	3180	MAT_T3_016	560	MAT_T3_018	410	COMP_060	50	Provides medical support	Provides medical support
+MODULE	MOD_247	Cryogenic Storage	3	Medical	M	Cryo	1250	12.5	88000	2700	MAT_T3_020	410	MAT_T3_022	305	COMP_061	39	Provides medical support	Provides medical support
+MODULE	MOD_248	Emergency Medical System	2	Medical	M	Emergency	580	5.8	30000	1620	MAT_T2_010	180	MAT_T2_015	130	COMP_030	15	Provides medical support	Provides medical support
+MODULE	MOD_249	Genetic Modifier Bay	4	Medical	L	Genetic	4600	46.0	335000	5400	MAT_T4_025	960	MAT_T4_026	710	COMP_094	102	Treats crew injuries and illness	Treats crew injuries and illness
+MODULE	MOD_250	Neural Interface Center	5	Medical	XL	Neural	20000	200.0	2200000	10800	MAT_T5_032	3600	MAT_T5_033	2600	COMP_099	310	Provides medical support	Provides medical support

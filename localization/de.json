@@ -1,0 +1,23 @@
+{
+  "ui_market": "Markt",
+  "ui_market_buy": "Kaufen",
+  "ui_market_sell": "Verkaufen",
+  "ui_market_place_order": "Order platzieren",
+  "ui_market_price": "Preis",
+  "ui_market_amount": "Menge",
+  "ui_market_total": "Gesamt",
+  "ui_market_stock": "Bestand",
+  "ui_market_trend": "Trend",
+  "ui_close": "Schließen",
+  "trend_crashing": "EINBRUCH",
+  "trend_declining": "FALLEND",
+  "trend_stable": "STABIL",
+  "trend_rising": "STEIGEND",
+  "trend_surging": "BOOM",
+  "timeframe_5min": "5 Minuten",
+  "timeframe_30min": "30 Minuten",
+  "timeframe_1h": "1 Stunde",
+  "timeframe_2h": "2 Stunden",
+  "timeframe_24h": "24 Stunden",
+  "timeframe_1week": "1 Woche"
+}

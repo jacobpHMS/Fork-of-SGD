@@ -1,0 +1,51 @@
+DATABASE	ID	NAME	TIER	CATEGORY	SIZE	SUBCATEGORY	MASS_KG	VOLUME_M3	BASE_PRICE	PRODUCTION_TIME_SEC	INPUT_1	INPUT_1_QTY	INPUT_2	INPUT_2_QTY	INPUT_3	INPUT_3_QTY	SPECIAL_NOTES	INFO_TEXT
+MODULE	MOD_151	Basic ECM Jammer	2	ECM	S	Jamming	180	1.8	12000	900	MAT_T2_008	85	MAT_T2_013	55	COMP_020	8	Disrupts enemy targeting systems	Disrupts enemy targeting systems
+MODULE	MOD_152	Standard ECM Suite	2	ECM	S	Electronic	220	2.2	15000	1080	MAT_T2_009	100	MAT_T2_013	65	COMP_021	9	Electronic warfare capabilities	Electronic warfare capabilities
+MODULE	MOD_153	Small Cloaking Device	2	ECM	M	Stealth	450	4.5	28000	1560	MAT_T2_010	180	MAT_T2_014	120	COMP_022	15	Electronic warfare capabilities	Electronic warfare capabilities
+MODULE	MOD_154	Light Dampener	2	ECM	S	Dampening	200	2.0	13000	960	MAT_T2_008	90	MAT_T2_011	60	COMP_023	8	Reduces enemy sensor range	Reduces enemy sensor range
+MODULE	MOD_155	Basic Target Painter	2	ECM	S	Targeting	190	1.9	12500	920	MAT_T2_009	88	MAT_T2_013	58	COMP_024	8	Electronic warfare capabilities	Electronic warfare capabilities
+MODULE	MOD_156	Improved ECM Jammer	3	ECM	M	Jamming	780	7.8	65000	2280	MAT_T3_016	260	MAT_T3_018	190	COMP_045	30	Disrupts enemy targeting systems	Disrupts enemy targeting systems
+MODULE	MOD_157	Enhanced ECM Suite	3	ECM	M	Electronic	850	8.5	72000	2520	MAT_T3_016	280	MAT_T3_020	205	COMP_046	32	Electronic warfare capabilities	Electronic warfare capabilities
+MODULE	MOD_158	Medium Cloaking Device	3	ECM	M	Stealth	950	9.5	78000	2640	MAT_T3_021	310	MAT_T3_022	225	COMP_047	35	Electronic warfare capabilities	Electronic warfare capabilities
+MODULE	MOD_159	Heavy Dampener	3	ECM	M	Dampening	820	8.2	68000	2400	MAT_T3_018	270	MAT_T3_019	200	COMP_048	31	Reduces enemy sensor range	Reduces enemy sensor range
+MODULE	MOD_160	Elite Target Painter	3	ECM	M	Targeting	800	8.0	66000	2340	MAT_T3_016	265	MAT_T3_021	195	COMP_049	30	Electronic warfare capabilities	Electronic warfare capabilities
+MODULE	MOD_161	Tactical ECM Suite	3	ECM	L	Electronic	1100	11.0	85000	2760	MAT_T3_016	360	MAT_T3_018	260	COMP_050	38	Electronic warfare capabilities	Electronic warfare capabilities
+MODULE	MOD_162	Warp Disruptor	3	ECM	M	Disruption	880	8.8	75000	2580	MAT_T3_020	290	MAT_T3_022	215	COMP_051	33	Electronic warfare capabilities	Electronic warfare capabilities
+MODULE	MOD_163	Sensor Booster	3	ECM	M	Enhancement	850	8.5	70000	2460	MAT_T3_016	280	MAT_T3_019	210	COMP_052	32	Electronic warfare capabilities	Electronic warfare capabilities
+MODULE	MOD_164	Quantum ECM Jammer	4	ECM	L	Jamming	3400	34.0	270000	4800	MAT_T4_023	710	MAT_T4_025	520	COMP_080	88	Disrupts enemy targeting systems	Disrupts enemy targeting systems
+MODULE	MOD_165	Capital ECM Suite	4	ECM	L	Electronic	3800	38.0	295000	5100	MAT_T4_023	790	MAT_T4_026	580	COMP_081	95	Electronic warfare capabilities	Electronic warfare capabilities
+MODULE	MOD_166	Siege Cloaking Device	4	ECM	XL	Stealth	4200	42.0	320000	5400	MAT_T4_024	870	MAT_T4_027	640	COMP_082	100	Electronic warfare capabilities	Electronic warfare capabilities
+MODULE	MOD_167	Quantum Dampener	4	ECM	L	Dampening	3600	36.0	280000	4950	MAT_T4_025	750	MAT_T4_026	560	COMP_083	92	Reduces enemy sensor range	Reduces enemy sensor range
+MODULE	MOD_168	Capital Target Painter	4	ECM	L	Targeting	3500	35.0	275000	4800	MAT_T4_026	730	MAT_T4_027	540	COMP_084	90	Electronic warfare capabilities	Electronic warfare capabilities
+MODULE	MOD_169	Titan ECM Suite	5	ECM	Station	Electronic	15000	150.0	1700000	9600	MAT_T5_028	2700	MAT_T5_031	1900	COMP_098	270	Electronic warfare capabilities	Electronic warfare capabilities
+MODULE	MOD_170	Mega Cloaking Device	5	ECM	XL	Stealth	17000	170.0	1900000	10200	MAT_T5_029	3000	MAT_T5_032	2100	COMP_099	290	Electronic warfare capabilities	Electronic warfare capabilities
+MODULE	MOD_171	Ultimate ECM System	5	ECM	Station	Electronic	19000	190.0	2100000	10800	MAT_T5_030	3400	MAT_T5_033	2400	COMP_100	310	Electronic warfare capabilities	Electronic warfare capabilities
+MODULE	MOD_172	Basic Mining Laser	2	Mining	S	Extraction	250	2.5	15000	1080	MAT_T2_008	95	MAT_T2_009	65	COMP_025	10	Extracts ore from asteroids	Extracts ore from asteroids
+MODULE	MOD_173	Standard Mining Laser	2	Mining	S	Extraction	280	2.8	17000	1200	MAT_T2_009	110	MAT_T2_010	75	COMP_026	11	Extracts ore from asteroids	Extracts ore from asteroids
+MODULE	MOD_174	Small Strip Miner	2	Mining	M	Strip	520	5.2	32000	1680	MAT_T2_010	200	MAT_T2_014	140	COMP_027	18	Enhances mining operations	Enhances mining operations
+MODULE	MOD_175	Light Ore Processor	2	Mining	S	Processing	300	3.0	18000	1260	MAT_T2_008	115	MAT_T2_013	80	COMP_028	12	Enhances mining operations	Enhances mining operations
+MODULE	MOD_176	Basic Ice Harvester	2	Mining	M	Ice	480	4.8	28000	1560	MAT_T2_009	185	MAT_T2_014	130	COMP_029	16	Enhances mining operations	Enhances mining operations
+MODULE	MOD_177	Improved Mining Laser	3	Mining	M	Extraction	920	9.2	75000	2520	MAT_T3_016	300	MAT_T3_018	220	COMP_055	33	Extracts ore from asteroids	Extracts ore from asteroids
+MODULE	MOD_178	Enhanced Mining Laser	3	Mining	M	Extraction	1000	10.0	82000	2700	MAT_T3_016	330	MAT_T3_020	240	COMP_056	36	Extracts ore from asteroids	Extracts ore from asteroids
+MODULE	MOD_179	Medium Strip Miner	3	Mining	L	Strip	1450	14.5	105000	2880	MAT_T3_021	480	MAT_T3_022	340	COMP_057	45	Enhances mining operations	Enhances mining operations
+MODULE	MOD_180	Heavy Ore Processor	3	Mining	M	Processing	950	9.5	78000	2580	MAT_T3_018	310	MAT_T3_019	230	COMP_058	34	Enhances mining operations	Enhances mining operations
+MODULE	MOD_181	Elite Ice Harvester	3	Mining	L	Ice	1350	13.5	98000	2760	MAT_T3_016	440	MAT_T3_021	320	COMP_059	42	Enhances mining operations	Enhances mining operations
+MODULE	MOD_182	Deep Core Miner	3	Mining	L	Deep Core	1500	15.0	110000	3000	MAT_T3_016	490	MAT_T3_018	360	COMP_060	46	Enhances mining operations	Enhances mining operations
+MODULE	MOD_183	Gas Harvester	3	Mining	M	Gas	1100	11.0	88000	2640	MAT_T3_020	360	MAT_T3_022	265	COMP_061	38	Enhances mining operations	Enhances mining operations
+MODULE	MOD_184	Quantum Mining Laser	4	Mining	L	Extraction	4100	41.0	310000	5100	MAT_T4_023	850	MAT_T4_025	630	COMP_085	98	Extracts ore from asteroids	Extracts ore from asteroids
+MODULE	MOD_185	Capital Strip Miner	4	Mining	XL	Strip	5600	56.0	385000	5700	MAT_T4_024	1150	MAT_T4_027	850	COMP_086	115	Enhances mining operations	Enhances mining operations
+MODULE	MOD_186	Siege Ore Processor	4	Mining	L	Processing	4300	43.0	325000	5250	MAT_T4_025	890	MAT_T4_026	660	COMP_087	102	Enhances mining operations	Enhances mining operations
+MODULE	MOD_187	Capital Ice Harvester	4	Mining	XL	Ice	5200	52.0	365000	5550	MAT_T4_023	1080	MAT_T4_027	800	COMP_088	110	Enhances mining operations	Enhances mining operations
+MODULE	MOD_188	Quantum Gas Harvester	4	Mining	L	Gas	4500	45.0	340000	5400	MAT_T4_026	930	MAT_T4_027	690	COMP_089	105	Enhances mining operations	Enhances mining operations
+MODULE	MOD_189	Titan Mining Laser	5	Mining	XL	Extraction	18000	180.0	1900000	10200	MAT_T5_028	3200	MAT_T5_031	2200	COMP_098	290	Extracts ore from asteroids	Extracts ore from asteroids
+MODULE	MOD_190	Mega Strip Miner	5	Mining	Station	Strip	22000	220.0	2300000	11400	MAT_T5_029	4000	MAT_T5_032	2700	COMP_099	330	Enhances mining operations	Enhances mining operations
+MODULE	MOD_191	Ultimate Ore Processor	5	Mining	XL	Processing	20000	200.0	2100000	10800	MAT_T5_030	3600	MAT_T5_033	2500	COMP_100	310	Enhances mining operations	Enhances mining operations
+MODULE	MOD_192	Anomaly Extractor	5	Mining	Station	Exotic	24000	240.0	2600000	12000	MAT_T5_031	4400	MAT_T5_033	3000	COMP_100	350	Enhances mining operations	Enhances mining operations
+MODULE	MOD_193	Void Harvester	5	Mining	XL	Void	21000	210.0	2400000	11400	MAT_T5_032	3800	MAT_T5_031	2800	COMP_099	320	Enhances mining operations	Enhances mining operations
+MODULE	MOD_194	Quantum Refinery Module	5	Mining	Station	Refinery	25000	250.0	2800000	12600	MAT_T5_028	4600	MAT_T5_030	3200	COMP_098	360	Enhances mining operations	Enhances mining operations
+MODULE	MOD_195	Mining Drone Bay	3	Mining	L	Drones	1200	12.0	92000	2700	MAT_T3_016	390	MAT_T3_021	290	COMP_062	40	Enhances mining operations	Enhances mining operations
+MODULE	MOD_196	Survey Scanner Module	2	Mining	M	Survey	420	4.2	24000	1440	MAT_T2_010	160	MAT_T2_013	110	COMP_030	14	Enhances mining operations	Enhances mining operations
+MODULE	MOD_197	Ore Compression Module	3	Mining	L	Compression	1400	14.0	100000	2880	MAT_T3_018	460	MAT_T3_019	340	COMP_063	43	Enhances mining operations	Enhances mining operations
+MODULE	MOD_198	Mining Foreman Link	4	Mining	L	Fleet	3900	39.0	305000	5100	MAT_T4_025	810	MAT_T4_026	600	COMP_090	96	Enhances mining operations	Enhances mining operations
+MODULE	MOD_199	Industrial Core	4	Mining	XL	Industrial	5400	54.0	375000	5700	MAT_T4_023	1120	MAT_T4_027	830	COMP_091	112	Enhances mining operations	Enhances mining operations
+MODULE	MOD_200	Mining Command Burst	5	Mining	Station	Command	19000	190.0	2000000	10800	MAT_T5_029	3400	MAT_T5_032	2400	COMP_099	300	Enhances mining operations	Enhances mining operations
